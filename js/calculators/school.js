@@ -48,7 +48,8 @@
     // ====================== КУДА ПОСТУПИТЬ ======================
     {
       id: 'ege-admission', title: 'Куда поступить по баллам ЕГЭ', title_en: 'University Admission by Score',
-      desc: 'Введите баллы — покажем вузы, куда вы проходите на бюджет и на платное.',
+      desc: 'Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.',
+      url: 'https://calc.podlevskikh.com/',
       tags: ['куда поступить', 'проходной балл', 'вуз', 'поступление', 'егэ', 'бюджет', 'платное', 'admission'],
       inputs: [
         { key: 'profile', label: 'Профильный предмет', options: PROFILES, default: 'phys' },
@@ -103,7 +104,8 @@
     // ====================== ПЕРЕВОД ПЕРВИЧНЫХ БАЛЛОВ ======================
     {
       id: 'ege-score-convert', title: 'Перевод первичных баллов ЕГЭ в тестовые', title_en: 'EGE Raw-to-Scaled Score',
-      desc: 'Сколько тестовых (100-балльных) баллов даст ваш первичный результат.',
+      desc: 'Перевод первичных баллов ЕГЭ в тестовые — открыть на calc.podlevskikh.com.',
+      url: 'https://calc.podlevskikh.com/',
       tags: ['перевод баллов', 'первичные баллы', 'тестовые баллы', 'шкала егэ', 'фипи', 'егэ', 'score conversion'],
       inputs: [
         { key: 'subj', label: 'Предмет', options: Object.keys(EGE_SCALES).map(k => ({ value: k, label: EGE_SCALES[k].name })), default: 'phys' },
@@ -132,7 +134,8 @@
     // ====================== ОГЭ: БАЛЛ → ОЦЕНКА ======================
     {
       id: 'oge-grade', title: 'ОГЭ: балл в оценку', title_en: 'OGE Score to Grade',
-      desc: 'Какая оценка по 5-балльной шкале выйдет за ваш первичный балл ОГЭ.',
+      desc: 'Перевод первичного балла ОГЭ в оценку — открыть на calc.podlevskikh.com.',
+      url: 'https://calc.podlevskikh.com/',
       tags: ['огэ', 'оценка', '9 класс', 'балл огэ', 'перевод огэ', 'oge'],
       inputs: [
         { key: 'subj', label: 'Предмет', options: Object.keys(OGE).map(k => ({ value: k, label: OGE[k].name })), default: 'math' },

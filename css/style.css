@@ -65,6 +65,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 80px; }
   transition: border-color .15s, transform .1s;
 }
 .card:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
+.card.external { border-style: dashed; }
+.card.external:hover { border-color: var(--accent-2); }
 .card h3 { margin: 0 0 6px; font-size: 16px; }
 .card p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.45; }
 .empty { color: var(--faint); padding: 40px 0; text-align: center; }

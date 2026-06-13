@@ -3,9 +3,9 @@
 > Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, экономика, статистика и быт. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
 
 ## Школа и экзамены
-- [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calculators.podlevskikh.com/calc/ege-admission.html): Введите баллы — покажем вузы, куда вы проходите на бюджет и на платное.
-- [Перевод первичных баллов ЕГЭ в тестовые (EGE Raw-to-Scaled Score)](https://calculators.podlevskikh.com/calc/ege-score-convert.html): Сколько тестовых (100-балльных) баллов даст ваш первичный результат.
-- [ОГЭ: балл в оценку (OGE Score to Grade)](https://calculators.podlevskikh.com/calc/oge-grade.html): Какая оценка по 5-балльной шкале выйдет за ваш первичный балл ОГЭ.
+- [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calc.podlevskikh.com/): Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.
+- [Перевод первичных баллов ЕГЭ в тестовые (EGE Raw-to-Scaled Score)](https://calc.podlevskikh.com/): Перевод первичных баллов ЕГЭ в тестовые — открыть на calc.podlevskikh.com.
+- [ОГЭ: балл в оценку (OGE Score to Grade)](https://calc.podlevskikh.com/): Перевод первичного балла ОГЭ в оценку — открыть на calc.podlevskikh.com.
 - [Средний балл аттестата (GPA / Average Grade)](https://calculators.podlevskikh.com/calc/average-grade.html): Среднее арифметическое оценок — для аттестата, медали, «красного» диплома.
 - [GPA — перевод оценок в 4.0 (GPA Converter (4.0 scale))](https://calculators.podlevskikh.com/calc/gpa-convert.html): Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).
 - [Какая оценка нужна, чтобы выйти на цель (Target Grade Needed)](https://calculators.podlevskikh.com/calc/target-grade.html): Сколько получить на следующей работе, чтобы средний балл стал нужным.

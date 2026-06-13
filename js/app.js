@@ -96,6 +96,16 @@ function CE_boot() {
     renderResults('');
   }
 
+  // карточка калькулятора: внутренняя (#/calc/id) или внешняя ссылка (d.url → открыть на другом сайте)
+  function calcCard(d) {
+    if (d.url) return el('a', { class: 'card external', href: d.url, target: '_blank', rel: 'noopener' },
+      el('h3', null, d.title + ' ↗'),
+      el('p', null, d.desc || ''));
+    return el('a', { class: 'card', href: '#/calc/' + d.id },
+      el('h3', null, d.title),
+      el('p', null, d.desc || ''));
+  }
+
   function matches(d, q) {
     if (!q) return true;
     const hay = (d.title + ' ' + (d.title_en || '') + ' ' + (d.desc || '') + ' ' + (d.tags || []).join(' ')).toLowerCase();
@@ -114,11 +124,7 @@ function CE_boot() {
         el('h2', null, el('span', { class: 'emoji' }, c.emoji), c.title,
           el('span', { class: 'count' }, String(items.length))));
       const grid = el('div', { class: 'grid' });
-      for (const d of items) {
-        grid.appendChild(el('a', { class: 'card', href: '#/calc/' + d.id },
-          el('h3', null, d.title),
-          el('p', null, d.desc || '')));
-      }
+      for (const d of items) grid.appendChild(calcCard(d));
       sec.appendChild(grid);
       wrap.appendChild(sec);
     }
@@ -132,6 +138,7 @@ function CE_boot() {
     opts = opts || {};
     const d = CE.byId[id];
     if (!d) { location.hash = '#/'; return; }
+    if (d.url) { window.location.href = d.url; return; }  // внешняя карточка — уводим на другой сайт
     app.innerHTML = '';
     const c = CE.CATEGORIES[d.cat];
 
@@ -249,8 +256,7 @@ function CE_boot() {
     if (related.length) {
       const sec = el('section', { class: 'related' }, el('h2', null, 'Похожие калькуляторы'));
       const grid = el('div', { class: 'grid' });
-      for (const r of related) grid.appendChild(el('a', { class: 'card', href: '#/calc/' + r.id },
-        el('h3', null, r.title), el('p', null, r.desc || '')));
+      for (const r of related) grid.appendChild(calcCard(r));
       sec.appendChild(grid);
       app.appendChild(sec);
     }

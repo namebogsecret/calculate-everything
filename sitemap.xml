@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://calculators.podlevskikh.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://calculators.podlevskikh.com/calc/ege-admission.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculators.podlevskikh.com/calc/ege-score-convert.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://calculators.podlevskikh.com/calc/oge-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/average-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/gpa-convert.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/target-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
