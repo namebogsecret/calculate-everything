@@ -7,6 +7,7 @@
 // Глобальный реестр. Модули калькуляторов вызывают CE.register(cat, [defs]).
 window.CE = (function () {
   const CATEGORIES = {
+    school:     { title: 'Школа и экзамены', en: 'School & Exams', emoji: '🎓', tut: true },
     physics:    { title: 'Физика',      en: 'Physics',     emoji: '⚛️', tut: true  },
     math:       { title: 'Математика',  en: 'Math',        emoji: '∑',  tut: true  },
     economics:  { title: 'Экономика',   en: 'Economics',   emoji: '💰', tut: false },
@@ -264,7 +265,8 @@ function CE_boot() {
           'Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). ' +
           'Разберём вашу задачу на бесплатной 20-минутной консультации.'),
         el('div', { class: 'cta-btns' },
-          el('a', { class: 'btn primary', href: 'https://calendly.com/vladimir-podlevskikh/30min', target: '_blank', rel: 'noopener' }, '📅 Записаться'),
+          el('a', { class: 'btn primary', href: 'https://tutor.podlevskikh.com', target: '_blank', rel: 'noopener' }, '🎓 Мой сайт репетитора'),
+          el('a', { class: 'btn', href: 'https://calendly.com/vladimir-podlevskikh/30min', target: '_blank', rel: 'noopener' }, '📅 Записаться'),
           el('a', { class: 'btn', href: 'https://t.me/VladimirPodlevskikh', target: '_blank', rel: 'noopener' }, '✈️ Telegram'),
           el('a', { class: 'btn', href: 'https://wa.me/37455873402', target: '_blank', rel: 'noopener' }, '💬 WhatsApp'))));
   }
@@ -282,12 +284,13 @@ function CE_boot() {
       document.title = 'Calculate Everything — калькуляторы: физика, математика, экономика, статистика';
     }
   }
-  // embed-режим (Трек 2): ?embed=<id>&brand=<hex> → один калькулятор для <iframe>
+  // embed-режим (Трек 2): ?embed=<id>&brand=<hex> (iframe) ИЛИ window.CE_EMBED={id,brand} (автономный файл)
   const qs = new URLSearchParams(location.search);
-  const embedId = qs.get('embed');
+  const ce = window.CE_EMBED || {};
+  const embedId = ce.id || qs.get('embed');
   if (embedId) {
     document.body.classList.add('embed');
-    const brand = qs.get('brand');
+    const brand = ce.brand || qs.get('brand');
     if (brand && /^[0-9a-fA-F]{3,8}$/.test(brand)) {
       document.documentElement.style.setProperty('--accent', '#' + brand);
     }

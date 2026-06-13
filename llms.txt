@@ -2,6 +2,14 @@
 
 > Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, экономика, статистика и быт. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
 
+## Школа и экзамены
+- [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calculators.podlevskikh.com/calc/ege-admission.html): Введите баллы — покажем вузы, куда вы проходите на бюджет и на платное.
+- [Перевод первичных баллов ЕГЭ в тестовые (EGE Raw-to-Scaled Score)](https://calculators.podlevskikh.com/calc/ege-score-convert.html): Сколько тестовых (100-балльных) баллов даст ваш первичный результат.
+- [ОГЭ: балл в оценку (OGE Score to Grade)](https://calculators.podlevskikh.com/calc/oge-grade.html): Какая оценка по 5-балльной шкале выйдет за ваш первичный балл ОГЭ.
+- [Средний балл аттестата (GPA / Average Grade)](https://calculators.podlevskikh.com/calc/average-grade.html): Среднее арифметическое оценок — для аттестата, медали, «красного» диплома.
+- [GPA — перевод оценок в 4.0 (GPA Converter (4.0 scale))](https://calculators.podlevskikh.com/calc/gpa-convert.html): Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).
+- [Какая оценка нужна, чтобы выйти на цель (Target Grade Needed)](https://calculators.podlevskikh.com/calc/target-grade.html): Сколько получить на следующей работе, чтобы средний балл стал нужным.
+
 ## Физика
 - [Закон Ома (Ohm's Law)](https://calculators.podlevskikh.com/calc/ohms-law.html): V = I · R. Заполните любые два — найду третье.
 - [Электрическая мощность (Electric Power)](https://calculators.podlevskikh.com/calc/electric-power.html): P = V · I. Мощность по напряжению и току.
@@ -27,6 +35,10 @@
 - [Комбинаторика: C, A, n! (Combinatorics)](https://calculators.podlevskikh.com/calc/combinatorics.html): Сочетания nCr, размещения nPr, факториал.
 - [Пропорция (Proportion)](https://calculators.podlevskikh.com/calc/proportion.html): a / b = c / x — найти x.
 - [Степень и корень (Power & Root)](https://calculators.podlevskikh.com/calc/power-root.html): xⁿ и корень n-й степени.
+- [Дроби — сложить, вычесть, умножить, разделить (Fraction Calculator)](https://calculators.podlevskikh.com/calc/fractions.html): a/b ∘ c/d с сокращением до несократимой дроби.
+- [Линейное уравнение (Linear Equation)](https://calculators.podlevskikh.com/calc/linear-equation.html): ax + b = 0 — найти корень.
+- [Производная в точке (численно) (Numerical Derivative)](https://calculators.podlevskikh.com/calc/derivative-point.html): Значение f′(x₀) методом центральной разности — для любой формулы.
+- [Определённый интеграл (численно) (Definite Integral)](https://calculators.podlevskikh.com/calc/definite-integral.html): ∫ₐᵇ f(x)dx методом Симпсона — площадь под кривой.
 
 ## Экономика
 - [Сложный процент (Compound Interest)](https://calculators.podlevskikh.com/calc/compound-interest.html): Рост вклада с капитализацией + регулярные пополнения.

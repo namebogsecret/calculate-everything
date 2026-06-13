@@ -1,0 +1,254 @@
+/* Школа и экзамены: ЕГЭ/ОГЭ, баллы, поступление. Воронка на репетиторство (tut:true). */
+(function () {
+  const F = (x, d) => window.CE.fmt(x, d);
+
+  // монотонная кусочно-линейная интерполяция по якорям [primary, secondary]
+  function interp(anchors, x) {
+    if (x <= anchors[0][0]) return anchors[0][1];
+    const last = anchors[anchors.length - 1];
+    if (x >= last[0]) return last[1];
+    for (let i = 1; i < anchors.length; i++) {
+      const [x0, y0] = anchors[i - 1], [x1, y1] = anchors[i];
+      if (x <= x1) return y0 + (y1 - y0) * (x - x0) / (x1 - x0);
+    }
+    return last[1];
+  }
+
+  // --- ОРИЕНТИРОВОЧНЫЕ шкалы перевода первичных баллов ЕГЭ 2024 (уточнять по ФИПИ) ---
+  const EGE_SCALES = {
+    math:  { name: 'Математика (профиль)', max: 32, min: 27, a: [[0,0],[6,27],[9,39],[12,50],[18,68],[23,80],[28,90],[32,100]] },
+    phys:  { name: 'Физика',               max: 45, min: 36, a: [[0,0],[11,36],[22,53],[30,68],[38,84],[45,100]] },
+    inf:   { name: 'Информатика',          max: 29, min: 40, a: [[0,0],[6,40],[12,57],[18,69],[24,85],[29,100]] },
+    rus:   { name: 'Русский язык',         max: 50, min: 36, a: [[0,0],[10,34],[16,46],[28,64],[40,82],[50,100]] },
+    chem:  { name: 'Химия',                max: 56, min: 36, a: [[0,0],[12,36],[24,55],[36,71],[48,88],[56,100]] },
+    bio:   { name: 'Биология',             max: 59, min: 36, a: [[0,0],[12,36],[24,54],[36,70],[48,87],[59,100]] },
+  };
+
+  // --- ОГЭ: пороги первичных баллов на оценку (2024, ориентир) ---
+  const OGE = {
+    math: { name: 'Математика', max: 31, g3: 8,  g4: 15, g5: 22, hint: 'для «3» нужно ≥2 балла по геометрии' },
+    phys: { name: 'Физика',     max: 45, g3: 11, g4: 23, g5: 35 },
+    inf:  { name: 'Информатика',max: 19, g3: 5,  g4: 11, g5: 16 },
+    rus:  { name: 'Русский',    max: 33, g3: 15, g4: 23, g5: 29 },
+    chem: { name: 'Химия',      max: 40, g3: 10, g4: 20, g5: 31 },
+  };
+
+  const PROFILES = [
+    { value: 'phys', label: 'Физика' },
+    { value: 'cs',   label: 'Информатика / математика' },
+    { value: 'chem', label: 'Химия' },
+    { value: 'bio',  label: 'Биология' },
+    { value: 'soc',  label: 'Обществознание' },
+  ];
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  window.CE.register('school', [
+
+    // ====================== КУДА ПОСТУПИТЬ ======================
+    {
+      id: 'ege-admission', title: 'Куда поступить по баллам ЕГЭ', title_en: 'University Admission by Score',
+      desc: 'Введите баллы — покажем вузы, куда вы проходите на бюджет и на платное.',
+      tags: ['куда поступить', 'проходной балл', 'вуз', 'поступление', 'егэ', 'бюджет', 'платное', 'admission'],
+      inputs: [
+        { key: 'profile', label: 'Профильный предмет', options: PROFILES, default: 'phys' },
+        { key: 'r', label: 'ЕГЭ: русский язык', default: 65, hint: 'тестовый балл 0–100' },
+        { key: 'm', label: 'ЕГЭ: математика (или 2-й предмет)', default: 60 },
+        { key: 'p', label: 'ЕГЭ: профильный предмет', default: 60 },
+      ],
+      compute(v) {
+        const data = window.CE_VUZ_DATA;
+        if (!data) return { note: 'Данные вузов не загружены.' };
+        if ([v.r, v.m, v.p].some(Number.isNaN)) return { note: 'Введите три балла ЕГЭ (0–100 каждый).' };
+        const total = v.r + v.m + v.p;
+        const rows = data.programs.filter(p => p.profile === v.profile);
+        const passB = rows.filter(p => total >= p.budget).sort((a, b) => b.budget - a.budget);
+        const passP = rows.filter(p => total >= p.paid && total < p.budget).sort((a, b) => b.paid - a.paid);
+        // ближайшая недостижимая цель — для воронки
+        const miss = rows.filter(p => total < p.budget).sort((a, b) => a.budget - b.budget)[0];
+
+        const out = [
+          { label: 'Ваша сумма (3 ЕГЭ)', value: total, unit: '/ 300', primary: true },
+          { label: 'Проходите на бюджет', value: passB.length, unit: 'программ' },
+          { label: 'Доступно платно (но не на бюджет)', value: passP.length, unit: 'программ' },
+        ];
+
+        const cell = (s, w) => `<td style="padding:4px 8px;border-bottom:1px solid #2a2f3a${w ? ';white-space:nowrap' : ''}">${s}</td>`;
+        const tag = (ok, val) => ok
+          ? `<span style="color:#3ddc84">✓ ${val}</span>`
+          : `<span style="color:#7a8194">✗ ${val}</span>`;
+        function table(title, list) {
+          if (!list.length) return `<p><b>${title}:</b> пока ничего — добери баллы (см. ниже).</p>`;
+          let h = `<p style="margin:.6em 0 .2em"><b>${title}:</b></p><div style="overflow-x:auto"><table style="border-collapse:collapse;font-size:.92em;min-width:520px">`;
+          h += `<tr style="text-align:left;color:#9aa2b1"><th style="padding:4px 8px">Вуз</th><th style="padding:4px 8px">Направление</th><th style="padding:4px 8px">Бюджет</th><th style="padding:4px 8px">Платное</th></tr>`;
+          for (const p of list) {
+            h += '<tr>' + cell(`<b>${esc(p.vuz)}</b><br><small style="color:#7a8194">${esc(p.city)}</small>`, 1)
+              + cell(esc(p.prog)) + cell(tag(total >= p.budget, p.budget), 1) + cell(tag(total >= p.paid, p.paid), 1) + '</tr>';
+          }
+          return h + '</table></div>';
+        }
+
+        let note = table('🎓 Проходите на бюджет', passB);
+        note += table('💳 Доступно на платное', passP);
+        if (miss) {
+          const gap = miss.budget - total;
+          note += `<p style="margin-top:.8em">📈 До бюджета в <b>${esc(miss.vuz)}</b> (${esc(miss.prog)}) не хватает <b>${gap}</b> ${gap === 1 ? 'балла' : 'баллов'}. Это ≈ ${Math.ceil(gap / 3)}–${Math.ceil(gap / 2)} баллов на один профильный предмет — реально добрать с репетитором.</p>`;
+        }
+        note += `<p style="color:#7a8194;font-size:.85em;margin-top:.8em">⚠️ ${esc(data.note)} Данные: конкурс ${data.year} г., обновлено ${data.updated}.</p>`;
+        return { outputs: out, note };
+      },
+      explain: '<p>Калькулятор сравнивает вашу сумму трёх ЕГЭ с проходными баллами прошлого года и показывает <b>два списка: бюджет и платное</b>. Зелёная «✓» — проходите, серая «✗» — пока нет. Внизу — на сколько баллов не хватает до ближайшего бюджета. Баллы прошлогодние, это <i>прикидка</i>, а не гарантия.</p>',
+    },
+
+    // ====================== ПЕРЕВОД ПЕРВИЧНЫХ БАЛЛОВ ======================
+    {
+      id: 'ege-score-convert', title: 'Перевод первичных баллов ЕГЭ в тестовые', title_en: 'EGE Raw-to-Scaled Score',
+      desc: 'Сколько тестовых (100-балльных) баллов даст ваш первичный результат.',
+      tags: ['перевод баллов', 'первичные баллы', 'тестовые баллы', 'шкала егэ', 'фипи', 'егэ', 'score conversion'],
+      inputs: [
+        { key: 'subj', label: 'Предмет', options: Object.keys(EGE_SCALES).map(k => ({ value: k, label: EGE_SCALES[k].name })), default: 'phys' },
+        { key: 'x', label: 'Первичный балл', default: 25 },
+      ],
+      compute(v) {
+        const s = EGE_SCALES[v.subj];
+        if (!s) return { note: 'Выберите предмет.' };
+        if (Number.isNaN(v.x)) return { note: `Введите первичный балл (0–${s.max}).` };
+        if (v.x < 0 || v.x > s.max) return { note: `Для предмета «${s.name}» первичный балл от 0 до ${s.max}.` };
+        const sec = Math.round(interp(s.a, v.x));
+        const passed = sec >= s.min;
+        const out = [
+          { label: 'Тестовый балл (≈)', value: sec, unit: '/ 100', primary: true },
+          { label: 'Минимальный порог', value: s.min, unit: 'балл' },
+          { label: 'Статус', text: passed ? '✓ порог пройден' : '✗ ниже порога' },
+        ];
+        let note = `Максимум по предмету — <b>${s.max}</b> первичных = 100 тестовых.`;
+        if (!passed) note += ` До порога не хватает ≈ ${s.min - sec} тестовых баллов.`;
+        note += ` <span style="color:#7a8194;font-size:.85em">⚠️ Шкала ориентировочная (по 2024 г.); точную таблицу смотрите на ФИПИ — она публикуется ежегодно.</span>`;
+        return { outputs: out, formula: 'тестовый = шкала(первичный) — нелинейный перевод ФИПИ', note };
+      },
+      explain: '<p>ЕГЭ оценивают сначала в <b>первичных</b> баллах (за конкретные задания), потом переводят в <b>тестовые</b> (0–100) по нелинейной шкале ФИПИ. В вуз и в аттестат идут тестовые. Калькулятор даёт ориентир перевода по шкале прошлого года.</p>',
+    },
+
+    // ====================== ОГЭ: БАЛЛ → ОЦЕНКА ======================
+    {
+      id: 'oge-grade', title: 'ОГЭ: балл в оценку', title_en: 'OGE Score to Grade',
+      desc: 'Какая оценка по 5-балльной шкале выйдет за ваш первичный балл ОГЭ.',
+      tags: ['огэ', 'оценка', '9 класс', 'балл огэ', 'перевод огэ', 'oge'],
+      inputs: [
+        { key: 'subj', label: 'Предмет', options: Object.keys(OGE).map(k => ({ value: k, label: OGE[k].name })), default: 'math' },
+        { key: 'x', label: 'Первичный балл', default: 15 },
+      ],
+      compute(v) {
+        const s = OGE[v.subj];
+        if (!s) return { note: 'Выберите предмет.' };
+        if (Number.isNaN(v.x)) return { note: `Введите балл (0–${s.max}).` };
+        let g = 2, next = s.g3, label = '«3»';
+        if (v.x >= s.g5) { g = 5; next = null; }
+        else if (v.x >= s.g4) { g = 4; next = s.g5; label = '«5»'; }
+        else if (v.x >= s.g3) { g = 3; next = s.g4; label = '«4»'; }
+        const out = [
+          { label: 'Оценка', value: g, primary: true },
+          { label: 'Из максимума', value: s.max, unit: 'баллов' },
+        ];
+        if (next) out.push({ label: `До оценки ${label}`, value: next - v.x, unit: 'балла' });
+        let note = `Пороги (${s.name}): «3» — от ${s.g3}, «4» — от ${s.g4}, «5» — от ${s.g5}.`;
+        if (s.hint) note += ` <i>${s.hint}.</i>`;
+        note += ` <span style="color:#7a8194;font-size:.85em">⚠️ Шкала 2024 г., уточняйте актуальную у ФИПИ/в школе.</span>`;
+        return { outputs: out, note };
+      },
+      explain: '<p>ОГЭ (9 класс) переводят из первичных баллов в школьную оценку 2–5 по порогам Рособрнадзора. Калькулятор показывает оценку и сколько баллов до следующей.</p>',
+    },
+
+    // ====================== СРЕДНИЙ БАЛЛ АТТЕСТАТА ======================
+    {
+      id: 'average-grade', title: 'Средний балл аттестата', title_en: 'GPA / Average Grade',
+      desc: 'Среднее арифметическое оценок — для аттестата, медали, «красного» диплома.',
+      tags: ['средний балл', 'аттестат', 'gpa', 'медаль', 'красный аттестат', 'оценки'],
+      inputs: [
+        { key: 'n5', label: 'Количество пятёрок', default: 10 },
+        { key: 'n4', label: 'Количество четвёрок', default: 5 },
+        { key: 'n3', label: 'Количество троек', default: 0 },
+        { key: 'n2', label: 'Количество двоек', default: 0 },
+      ],
+      compute(v) {
+        const c = [v.n5, v.n4, v.n3, v.n2].map(x => Number.isNaN(x) ? 0 : Math.max(0, Math.round(x)));
+        const n = c[0] + c[1] + c[2] + c[3];
+        if (n === 0) return { note: 'Введите количество оценок.' };
+        const sum = c[0] * 5 + c[1] * 4 + c[2] * 3 + c[3] * 2;
+        const avg = sum / n;
+        const out = [
+          { label: 'Средний балл', value: avg, digits: 2, primary: true },
+          { label: 'Всего оценок', value: n },
+        ];
+        let note;
+        if (c[3] > 0) note = 'С двойками аттестат не выдаётся — их нужно закрыть.';
+        else if (c[2] === 0 && c[1] === 0) note = '🥇 Все пятёрки — претендуете на золотую медаль и «красный» аттестат.';
+        else if (avg >= 4.5) note = 'Высокий средний балл — даёт бонусы при поступлении (до 10 баллов в ряде вузов) и именные стипендии.';
+        else note = 'Округление в аттестат — по правилам школы (обычно ≥4.5 → «5»).';
+        return { outputs: out, formula: '(5·n₅ + 4·n₄ + 3·n₃ + 2·n₂) ⁄ N', note };
+      },
+      explain: '<p>Средний балл аттестата = среднее арифметическое всех итоговых оценок. Влияет на медаль, «красный» аттестат, дополнительные баллы при поступлении и стипендии. Золотая медаль сейчас — только при всех «5».</p>',
+    },
+
+    // ====================== GPA (международная шкала) ======================
+    {
+      id: 'gpa-convert', title: 'GPA — перевод оценок в 4.0', title_en: 'GPA Converter (4.0 scale)',
+      desc: 'Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).',
+      tags: ['gpa', 'gpa 4.0', 'перевод оценок', 'зарубежный вуз', 'ects', 'американская шкала'],
+      inputs: [
+        { key: 'n5', label: 'Пятёрки', default: 10 },
+        { key: 'n4', label: 'Четвёрки', default: 5 },
+        { key: 'n3', label: 'Тройки', default: 0 },
+      ],
+      compute(v) {
+        const c = [v.n5, v.n4, v.n3].map(x => Number.isNaN(x) ? 0 : Math.max(0, Math.round(x)));
+        const n = c[0] + c[1] + c[2];
+        if (n === 0) return { note: 'Введите количество оценок.' };
+        const pts = c[0] * 4.0 + c[1] * 3.0 + c[2] * 2.0; // 5→A=4.0, 4→B=3.0, 3→C=2.0
+        const gpa = pts / n;
+        let letter = 'C';
+        if (gpa >= 3.7) letter = 'A'; else if (gpa >= 3.3) letter = 'A−/B+';
+        else if (gpa >= 3.0) letter = 'B'; else if (gpa >= 2.7) letter = 'B−';
+        return {
+          outputs: [
+            { label: 'GPA (4.0)', value: gpa, digits: 2, primary: true },
+            { label: 'Буквенно', text: letter },
+            { label: 'Всего предметов', value: n },
+          ],
+          formula: '5→A(4.0), 4→B(3.0), 3→C(2.0); GPA = Σ⁄N',
+          note: 'Распространённый перевод РФ→US. Часть вузов и WES считают по своим таблицам — уточняйте требования конкретной программы. ECTS: A≈«отлично», B/C≈«хорошо», D/E≈«удовл.».',
+        };
+      },
+      explain: '<p>Для поступления за рубеж оценки переводят в GPA по шкале 4.0. Базовый маппинг: 5=A=4.0, 4=B=3.0, 3=C=2.0. Калькулятор даёт средний GPA — ориентир для заявки (точный пересчёт делает вуз или WES).</p>',
+    },
+
+    // ====================== НУЖНАЯ ОЦЕНКА ======================
+    {
+      id: 'target-grade', title: 'Какая оценка нужна, чтобы выйти на цель', title_en: 'Target Grade Needed',
+      desc: 'Сколько получить на следующей работе, чтобы средний балл стал нужным.',
+      tags: ['нужная оценка', 'итоговая оценка', 'средний балл', 'четверть', 'исправить оценку'],
+      inputs: [
+        { key: 'cur', label: 'Текущий средний балл', default: 3.6 },
+        { key: 'n', label: 'Сколько оценок уже стоит', default: 5 },
+        { key: 'goal', label: 'Желаемый средний балл', default: 4.0 },
+        { key: 'k', label: 'Сколько работ впереди', default: 1 },
+      ],
+      compute(v) {
+        if ([v.cur, v.n, v.goal, v.k].some(Number.isNaN)) return { note: 'Заполните все поля.' };
+        if (v.k < 1) return { note: 'Впереди должна быть хотя бы 1 работа.' };
+        const needTotal = v.goal * (v.n + v.k) - v.cur * v.n;
+        const per = needTotal / v.k;
+        const out = [
+          { label: 'Нужный средний на оставшихся', value: per, digits: 2, primary: true },
+        ];
+        let note;
+        if (per > 5) note = '✗ Недостижимо за это число работ: даже на одни «5» цель не выйдет. Нужно больше работ или ниже цель — разберём стратегию на консультации.';
+        else if (per <= 3) note = '✓ Цель легко достижима — хватит даже троек.';
+        else note = `✓ Достижимо: получайте в среднем не ниже ${Math.ceil(per)} на каждой из ${v.k} оставшихся работ.`;
+        return { outputs: out, formula: 'нужно = (цель·(N+K) − средний·N) ⁄ K', note };
+      },
+      explain: '<p>Чтобы поднять средний балл до цели, новые оценки должны «перевесить» текущие. Формула: <code>нужно = (цель·(N+K) − текущий·N)/K</code>, где N — уже стоящих оценок, K — впереди. Если результат &gt;5 — за это число работ цель недостижима.</p>',
+    },
+
+  ]);
+})();

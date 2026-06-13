@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Производная в точке (численно) — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Производная в точке (численно). Значение f′(x₀) методом центральной разности — для любой формулы. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/derivative-point.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Производная в точке (численно) — калькулятор">
+  <meta property="og:description" content="Значение f′(x₀) методом центральной разности — для любой формулы.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/derivative-point.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/data-vuz.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Производная в точке (численно)", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/derivative-point.html", "inLanguage": "ru", "description": "Значение f′(x₀) методом центральной разности — для любой формулы.", "dateModified": "2026-06-13", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/#/cat/math"}, {"@type": "ListItem", "position": 3, "name": "Производная в точке (численно)", "item": "https://calculators.podlevskikh.com/calc/derivative-point.html"}]}]</script>
+</head>
+<body data-calc="derivative-point">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Производная в точке (численно)</h1><p class="en">Numerical Derivative</p><p class="desc">Значение f′(x₀) методом центральной разности — для любой формулы.</p></header><div class="calc-form"><div class="field"><label for="in_fx">f(x)</label><div class="in-wrap"><select id="in_fx"><option value="x*x">x²</option><option value="x*x*x">x³</option><option value="Math.sin(x)">sin x</option><option value="Math.cos(x)">cos x</option><option value="Math.exp(x)">eˣ</option><option value="Math.log(x)">ln x</option><option value="1/x">1/x</option><option value="Math.sqrt(x)">√x</option></select></div></div><div class="field"><label for="in_x0">Точка x₀</label><div class="in-wrap"><input id="in_x0" type="text" inputmode="decimal" placeholder=""></div></div></div><div class="calc-out" id="out"><div class="outputs"><div class="result primary"><span class="r-label">f′(x₀)</span><span class="r-val">12</span></div><div class="result"><span class="r-label">f(x₀)</span><span class="r-val">8</span></div><div class="result"><span class="r-label">f″(x₀) (≈)</span><span class="r-val">12,004</span></div></div><div class="formula">f′(x₀) ≈ [f(x₀+h) − f(x₀−h)] ⁄ 2h</div><p class="note">Численный метод (центральная разность). Для пошагового <i>символьного</i> дифференцирования — разберём на занятии.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Производная — мгновенная скорость изменения функции, наклон касательной. Калькулятор берёт её численно: <code>f′(x₀)≈[f(x₀+h)−f(x₀−h)]/2h</code> при малом h. Также даёт f″ — для исследования на выпуклость.</p></div></section><section class="cta"><div class="cta-inner"><h2>Застряли в математика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Мой сайт репетитора</a><a class="btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/quadratic.html"><h3>Квадратное уравнение</h3><p>ax² + bx + c = 0 — корни и дискриминант.</p></a><a class="card" href="/calc/percentage.html"><h3>Проценты</h3><p>Сколько процентов, % от числа, изменение в %.</p></a><a class="card" href="/calc/pythagorean.html"><h3>Теорема Пифагора</h3><p>a² + b² = c². Заполните любые два катета/гипотенузу.</p></a><a class="card" href="/calc/triangle-area.html"><h3>Площадь треугольника</h3><p>По основанию и высоте или по трём сторонам (Герон).</p></a><a class="card" href="/calc/circle.html"><h3>Круг и окружность</h3><p>Площадь, длина окружности, диаметр по радиусу.</p></a><a class="card" href="/calc/gcd-lcm.html"><h3>НОД и НОК</h3><p>Наибольший общий делитель и наименьшее общее кратное.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+      <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

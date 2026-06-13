@@ -198,5 +198,114 @@
       },
       explain: '<p>Возведение в степень и обратная операция — корень: <code>ⁿ√x = x^(1/n)</code>.</p>',
     },
+    {
+      id: 'fractions', title: 'Дроби — сложить, вычесть, умножить, разделить', title_en: 'Fraction Calculator',
+      desc: 'a/b ∘ c/d с сокращением до несократимой дроби.',
+      tags: ['дроби', 'дробь', 'сократить дробь', 'сложение дробей', 'fraction', 'нод'],
+      inputs: [
+        { key: 'a', label: 'Числитель 1 (a)', default: 1 },
+        { key: 'b', label: 'Знаменатель 1 (b)', default: 2 },
+        { key: 'op', label: 'Действие', options: [
+          { value: 'add', label: '+ сложить' }, { value: 'sub', label: '− вычесть' },
+          { value: 'mul', label: '× умножить' }, { value: 'div', label: '÷ разделить' },
+        ], default: 'add' },
+        { key: 'c', label: 'Числитель 2 (c)', default: 1 },
+        { key: 'd', label: 'Знаменатель 2 (d)', default: 3 },
+      ],
+      compute(v) {
+        const a = Math.round(v.a), b = Math.round(v.b), c = Math.round(v.c), d = Math.round(v.d);
+        if ([a, b, c, d].some(Number.isNaN)) return { note: 'Введите a, b, c, d.' };
+        if (b === 0 || d === 0) return { error: 'Знаменатель не может быть 0.' };
+        let num, den;
+        if (v.op === 'add') { num = a * d + c * b; den = b * d; }
+        else if (v.op === 'sub') { num = a * d - c * b; den = b * d; }
+        else if (v.op === 'mul') { num = a * c; den = b * d; }
+        else { if (c === 0) return { error: 'Деление на дробь 0/d невозможно.' }; num = a * d; den = b * c; }
+        const g = (function gcd(x, y) { x = Math.abs(x); y = Math.abs(y); while (y) { [x, y] = [y, x % y]; } return x || 1; })(num, den);
+        let sn = num / g, sd = den / g;
+        if (sd < 0) { sn = -sn; sd = -sd; }
+        const out = [{ label: 'Дробь', text: `${sn}/${sd}`, primary: true }, { label: 'Десятичная', value: sn / sd, digits: 6 }];
+        if (sd === 1) out.push({ label: 'Целое', value: sn });
+        return { outputs: out, formula: 'привести к общему знаменателю → сократить на НОД', note: g > 1 ? `Сократили на НОД = ${g}.` : 'Дробь уже несократима.' };
+      },
+      explain: '<p>Сложение/вычитание дробей — через общий знаменатель, умножение — «числитель на числитель», деление — умножением на обратную. Результат сокращается на НОД числителя и знаменателя.</p>',
+    },
+    {
+      id: 'linear-equation', title: 'Линейное уравнение', title_en: 'Linear Equation',
+      desc: 'ax + b = 0 — найти корень.',
+      tags: ['линейное уравнение', 'уравнение', 'корень', 'linear equation', '7 класс'],
+      inputs: [{ key: 'a', label: 'a', default: 2 }, { key: 'b', label: 'b', default: -6 }],
+      compute(v) {
+        if ([v.a, v.b].some(Number.isNaN)) return { note: 'Введите a и b.' };
+        if (v.a === 0) return { note: v.b === 0 ? 'a=0, b=0 → x — любое число (бесконечно решений).' : 'a=0, b≠0 → решений нет.' };
+        return { outputs: [{ label: 'x', value: -v.b / v.a, primary: true }], formula: 'ax + b = 0 → x = −b ⁄ a' };
+      },
+      explain: '<p>Линейное уравнение <code>ax+b=0</code> при <code>a≠0</code> имеет единственный корень <code>x=−b/a</code>. Если <code>a=0</code> — либо нет решений, либо их бесконечно много.</p>',
+    },
+    {
+      id: 'derivative-point', title: 'Производная в точке (численно)', title_en: 'Numerical Derivative',
+      desc: 'Значение f′(x₀) методом центральной разности — для любой формулы.',
+      tags: ['производная', 'derivative', 'дифференцирование', 'f прайм', 'матан', 'наклон касательной'],
+      inputs: [
+        { key: 'fx', label: 'f(x)', options: [
+          { value: 'x*x', label: 'x²' }, { value: 'x*x*x', label: 'x³' },
+          { value: 'Math.sin(x)', label: 'sin x' }, { value: 'Math.cos(x)', label: 'cos x' },
+          { value: 'Math.exp(x)', label: 'eˣ' }, { value: 'Math.log(x)', label: 'ln x' },
+          { value: '1/x', label: '1/x' }, { value: 'Math.sqrt(x)', label: '√x' },
+        ], default: 'x*x*x' },
+        { key: 'x0', label: 'Точка x₀', default: 2 },
+      ],
+      compute(v) {
+        if (Number.isNaN(v.x0)) return { note: 'Введите точку x₀.' };
+        let f;
+        try { f = new Function('x', 'return (' + v.fx + ');'); f(v.x0); }
+        catch (e) { return { error: 'Не удалось вычислить функцию.' }; }
+        const h = 1e-6;
+        const d1 = (f(v.x0 + h) - f(v.x0 - h)) / (2 * h);
+        const d2 = (f(v.x0 + h) - 2 * f(v.x0) + f(v.x0 - h)) / (h * h);
+        return {
+          outputs: [
+            { label: "f′(x₀)", value: d1, digits: 5, primary: true },
+            { label: "f(x₀)", value: f(v.x0), digits: 5 },
+            { label: "f″(x₀) (≈)", value: d2, digits: 3 },
+          ],
+          formula: "f′(x₀) ≈ [f(x₀+h) − f(x₀−h)] ⁄ 2h",
+          note: 'Численный метод (центральная разность). Для пошагового <i>символьного</i> дифференцирования — разберём на занятии.',
+        };
+      },
+      explain: '<p>Производная — мгновенная скорость изменения функции, наклон касательной. Калькулятор берёт её численно: <code>f′(x₀)≈[f(x₀+h)−f(x₀−h)]/2h</code> при малом h. Также даёт f″ — для исследования на выпуклость.</p>',
+    },
+    {
+      id: 'definite-integral', title: 'Определённый интеграл (численно)', title_en: 'Definite Integral',
+      desc: '∫ₐᵇ f(x)dx методом Симпсона — площадь под кривой.',
+      tags: ['интеграл', 'определённый интеграл', 'integral', 'площадь под графиком', 'симпсон', 'матан'],
+      inputs: [
+        { key: 'fx', label: 'f(x)', options: [
+          { value: 'x*x', label: 'x²' }, { value: 'x*x*x', label: 'x³' },
+          { value: 'Math.sin(x)', label: 'sin x' }, { value: 'Math.cos(x)', label: 'cos x' },
+          { value: 'Math.exp(x)', label: 'eˣ' }, { value: '1/x', label: '1/x' },
+          { value: 'Math.sqrt(x)', label: '√x' },
+        ], default: 'x*x' },
+        { key: 'a', label: 'Нижний предел a', default: 0 },
+        { key: 'b', label: 'Верхний предел b', default: 1 },
+      ],
+      compute(v) {
+        if ([v.a, v.b].some(Number.isNaN)) return { note: 'Введите пределы a и b.' };
+        let f;
+        try { f = new Function('x', 'return (' + v.fx + ');'); f((v.a + v.b) / 2); }
+        catch (e) { return { error: 'Не удалось вычислить функцию.' }; }
+        const n = 1000; const h = (v.b - v.a) / n;
+        let s = f(v.a) + f(v.b);
+        for (let i = 1; i < n; i++) s += (i % 2 ? 4 : 2) * f(v.a + i * h);
+        const val = s * h / 3;
+        if (!isFinite(val)) return { error: 'Интеграл расходится или функция не определена на отрезке.' };
+        return {
+          outputs: [{ label: '∫ₐᵇ f(x)dx', value: val, digits: 6, primary: true }],
+          formula: 'метод Симпсона: (h⁄3)·[f₀ + 4f₁ + 2f₂ + … + fₙ]',
+          note: 'Численный результат (n=1000). Для аналитического взятия первообразной — разберём приёмы на занятии.',
+        };
+      },
+      explain: '<p>Определённый интеграл — площадь между графиком f(x) и осью x на [a,b]. Калькулятор считает его методом Симпсона (параболическая аппроксимация) — точно для большинства гладких функций.</p>',
+    },
   ]);
 })();
