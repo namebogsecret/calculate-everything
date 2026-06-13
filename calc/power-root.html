@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Степень и корень — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Степень и корень. xⁿ и корень n-й степени. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/power-root.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Степень и корень — калькулятор">
+  <meta property="og:description" content="xⁿ и корень n-й степени.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/power-root.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Степень и корень", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/power-root.html", "inLanguage": "ru", "description": "xⁿ и корень n-й степени.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/#/cat/math"}, {"@type": "ListItem", "position": 3, "name": "Степень и корень", "item": "https://calculators.podlevskikh.com/calc/power-root.html"}]}]</script>
+</head>
+<body data-calc="power-root">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Степень и корень</h1><p class="en">Power &amp; Root</p><p class="desc">xⁿ и корень n-й степени.</p></header><div class="calc-form"><div class="field"><label for="in_x">Основание x</label><div class="in-wrap"><input id="in_x" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_n">Показатель n</label><div class="in-wrap"><input id="in_n" type="text" inputmode="decimal" placeholder=""></div></div></div><div class="calc-out" id="out"><p class="note">Введите x и n.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Возведение в степень и обратная операция — корень: <code>ⁿ√x = x^(1/n)</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Степень <code>xⁿ</code> — это умножение числа <code>x</code> само на себя <code>n</code> раз. Корень <code>ⁿ√x</code> — обратная операция: какое число в степени <code>n</code> даёт <code>x</code>. Калькулятор вычисляет степени и корни любой кратности и опирается на единый язык дробных показателей, где корень — это степень с дробным показателем.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Определение: <span class="eq">xⁿ = x · x · … · x</span> (<code>n</code> множителей). Корень как дробная степень: <span class="eq">ⁿ√x = x^(1/n)</span>.</p>
+<p>Ключевые свойства степеней:</p>
+<p><span class="eq">xᵃ · xᵇ = x^(a+b)</span> &nbsp; <span class="eq">xᵃ / xᵇ = x^(a−b)</span> &nbsp; <span class="eq">(xᵃ)ᵇ = x^(a·b)</span></p>
+<p><span class="eq">x⁰ = 1</span> &nbsp; <span class="eq">x^(−n) = 1 / xⁿ</span></p>
+<p>Почему корень — это степень <code>1/n</code>? По правилу <code>(x^(1/n))ⁿ = x^(n/n) = x¹ = x</code> — то есть <code>x^(1/n)</code>, возведённое в <code>n</code>-ю степень, даёт <code>x</code>, а это и есть определение корня.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Для целой степени перемножьте основание само на себя нужное число раз.</li>
+<li>Отрицательный показатель означает «единица делить на ту же степень».</li>
+<li>Для корня <code>ⁿ√x</code> найдите число, которое в <code>n</code>-й степени даёт <code>x</code>.</li>
+<li>Дробную степень <code>x^(m/n)</code> читайте как <code>ⁿ√(xᵐ)</code> — сначала корень или сначала степень, результат тот же.</li>
+<li>Упрощайте выражения свойствами, прежде чем считать.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Вычислим <span class="eq">8^(2/3)</span>. Это <code>(³√8)²</code>.</p>
+<p>Кубический корень: <span class="eq">³√8 = 2</span> (так как <code>2³ = 8</code>). Возводим в квадрат: <span class="eq">2² = 4</span>.</p>
+<p>Проверка другим путём: <code>8² = 64</code>, затем <code>³√64 = 4</code> ✓ — порядок не важен.</p>
+<p>Отрицательная степень: <span class="eq">2^(−3) = 1 / 2³ = 1 / 8 = 0.125</span>.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Степени описывают рост и масштаб: площадь (<code>²</code>), объём (<code>³</code>), сложные проценты, экспоненциальный рост, научная запись больших чисел. В ОГЭ и ЕГЭ это преобразование выражений (задания на степени и корни), в IB Mathematics — laws of exponents и surds, в AP — экспоненциальные функции. Дробные степени — мост между алгеброй и анализом.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Складывают основания вместо показателей: <code>x² · x³ = x⁵</code>, а не <code>x⁶</code> и не <code>(2x)⁵</code>.</li>
+<li>Считают <code>x⁰ = 0</code> — на самом деле любое ненулевое число в нулевой степени равно 1.</li>
+<li>Трактуют <code>x^(−2)</code> как отрицательное число, хотя это <code>1/x²</code> (всегда положительно при действительном <code>x</code>).</li>
+<li>Извлекают корень чётной степени из отрицательного числа — в действительных числах это не определено.</li>
+<li>Путают <code>(xᵃ)ᵇ = x^(a·b)</code> со степенью степени, добавляя показатели вместо умножения.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в математика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/quadratic.html"><h3>Квадратное уравнение</h3><p>ax² + bx + c = 0 — корни и дискриминант.</p></a><a class="card" href="/calc/percentage.html"><h3>Проценты</h3><p>Сколько процентов, % от числа, изменение в %.</p></a><a class="card" href="/calc/pythagorean.html"><h3>Теорема Пифагора</h3><p>a² + b² = c². Заполните любые два катета/гипотенузу.</p></a><a class="card" href="/calc/triangle-area.html"><h3>Площадь треугольника</h3><p>По основанию и высоте или по трём сторонам (Герон).</p></a><a class="card" href="/calc/circle.html"><h3>Круг и окружность</h3><p>Площадь, длина окружности, диаметр по радиусу.</p></a><a class="card" href="/calc/gcd-lcm.html"><h3>НОД и НОК</h3><p>Наибольший общий делитель и наименьшее общее кратное.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

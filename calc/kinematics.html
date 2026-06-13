@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Равноускоренное движение — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Равноускоренное движение. v = v₀ + a·t и s = v₀·t + a·t²/2. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/kinematics.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Равноускоренное движение — калькулятор">
+  <meta property="og:description" content="v = v₀ + a·t и s = v₀·t + a·t²/2.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/kinematics.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Равноускоренное движение", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/kinematics.html", "inLanguage": "ru", "description": "v = v₀ + a·t и s = v₀·t + a·t²/2.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Физика", "item": "https://calculators.podlevskikh.com/#/cat/physics"}, {"@type": "ListItem", "position": 3, "name": "Равноускоренное движение", "item": "https://calculators.podlevskikh.com/calc/kinematics.html"}]}]</script>
+</head>
+<body data-calc="kinematics">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚛️ Физика</span></nav><header class="calc-head"><h1>Равноускоренное движение</h1><p class="en">Uniform Acceleration</p><p class="desc">v = v₀ + a·t и s = v₀·t + a·t²/2.</p></header><div class="calc-form"><div class="field"><label for="in_v0">Начальная скорость v₀</label><div class="in-wrap"><input id="in_v0" type="text" inputmode="decimal" placeholder=""><span class="unit">м/с</span></div></div><div class="field"><label for="in_a">Ускорение a</label><div class="in-wrap"><input id="in_a" type="text" inputmode="decimal" placeholder=""><span class="unit">м/с²</span></div></div><div class="field"><label for="in_t">Время t</label><div class="in-wrap"><input id="in_t" type="text" inputmode="decimal" placeholder=""><span class="unit">с</span></div></div></div><div class="calc-out" id="out"><p class="note">Введите v₀, a и t.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Кинематика равноускоренного движения по прямой. <code>v = v₀ + a·t</code>, <code>s = v₀·t + ½·a·t²</code>. При a&lt;0 — торможение.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Равноускоренное движение — это движение с постоянным ускорением: разгон автомобиля, торможение, падение тел. Кинематические формулы позволяют, зная начальную скорость и ускорение, предсказать скорость и положение тела в любой момент времени.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Две основные формулы:</p>
+<p><span class="eq">v = v₀ + a · t</span></p>
+<p><span class="eq">s = v₀ · t + a · t² ⁄ 2</span></p>
+<p>Первая получается из определения ускорения: ускорение — это прирост скорости за секунду, поэтому за время <code>t</code> скорость меняется на <code>a · t</code>. Вторая — это путь как площадь под графиком скорости: равномерная часть <code>v₀ · t</code> плюс «треугольник» от ускорения <code>a · t² ⁄ 2</code>.</p>
+<p>Единицы СИ: скорость <code>v</code>, <code>v₀</code> — м/с, ускорение <code>a</code> — м/с², время <code>t</code> — с, путь <code>s</code> — м. Знак ускорения отрицателен при торможении.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Выпишите начальную скорость <code>v₀</code>, ускорение <code>a</code> и время <code>t</code>.</li>
+<li>Расставьте знаки: разгон — <code>a</code> положительно, торможение — отрицательно.</li>
+<li>Скорость в конце найдите по <code>v = v₀ + a · t</code>.</li>
+<li>Путь найдите по <code>s = v₀ · t + a · t² ⁄ 2</code>, сперва возведя <code>t</code> в квадрат.</li>
+<li>Проверьте единицы и здравый смысл результата.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Автомобиль трогается со скоростью <code>v₀ = 10 м/с</code> и разгоняется с ускорением <code>a = 2 м/с²</code> в течение <code>t = 5 с</code>. Найдите конечную скорость и пройденный путь.</p>
+<p>Скорость: <span class="eq">v = v₀ + a · t = 10 + 2 · 5 = 20 м/с</span>.</p>
+<p>Путь: <span class="eq">s = v₀ · t + a · t² ⁄ 2 = 10 · 5 + 2 · 25 ⁄ 2 = 50 + 25 = 75 м</span>.</p>
+<p>За 5 секунд автомобиль разогнался до <b>20 м/с</b> и проехал <b>75 м</b>.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Эти формулы описывают разгон и торможение транспорта, движение тел в спорте, расчёт тормозного пути. Они — ядро механики в ОГЭ и ЕГЭ, а также в IB Physics (Kinematics) и AP Physics 1. Их понимание открывает дорогу к свободному падению и движению по наклонной плоскости.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Забывают, что при торможении ускорение отрицательное, и получают неверный знак.</li>
+<li>Возводят в квадрат всё выражение <code>a · t</code> вместо только времени <code>t</code>.</li>
+<li>Путают путь <code>s</code> и перемещение, когда направление движения меняется.</li>
+<li>Применяют формулы к неравноускоренному движению, где ускорение непостоянно.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в физика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/ohms-law.html"><h3>Закон Ома</h3><p>V = I · R. Заполните любые два — найду третье.</p></a><a class="card" href="/calc/electric-power.html"><h3>Электрическая мощность</h3><p>P = V · I. Мощность по напряжению и току.</p></a><a class="card" href="/calc/newton-second.html"><h3>Второй закон Ньютона</h3><p>F = m · a. Сила, масса, ускорение.</p></a><a class="card" href="/calc/free-fall.html"><h3>Свободное падение</h3><p>Время, скорость и высота падения (g = 9.81).</p></a><a class="card" href="/calc/projectile.html"><h3>Бросок под углом</h3><p>Дальность, высота и время полёта.</p></a><a class="card" href="/calc/kinetic-energy.html"><h3>Кинетическая энергия</h3><p>E = m·v²/2.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

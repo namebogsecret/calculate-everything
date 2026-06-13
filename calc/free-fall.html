@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Свободное падение — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Свободное падение. Время, скорость и высота падения (g = 9.81). Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/free-fall.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Свободное падение — калькулятор">
+  <meta property="og:description" content="Время, скорость и высота падения (g = 9.81).">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/free-fall.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Свободное падение", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/free-fall.html", "inLanguage": "ru", "description": "Время, скорость и высота падения (g = 9.81).", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Физика", "item": "https://calculators.podlevskikh.com/#/cat/physics"}, {"@type": "ListItem", "position": 3, "name": "Свободное падение", "item": "https://calculators.podlevskikh.com/calc/free-fall.html"}]}]</script>
+</head>
+<body data-calc="free-fall">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚛️ Физика</span></nav><header class="calc-head"><h1>Свободное падение</h1><p class="en">Free Fall</p><p class="desc">Время, скорость и высота падения (g = 9.81).</p></header><div class="calc-form"><div class="field"><label for="in_h">Высота h</label><div class="in-wrap"><input id="in_h" type="text" inputmode="decimal" placeholder=""><span class="unit">м</span></div></div><div class="field"><label for="in_g">Ускорение g</label><div class="in-wrap"><input id="in_g" type="text" inputmode="decimal" placeholder=""><span class="unit">м/с²</span></div></div></div><div class="calc-out" id="out"><p class="note">Введите высоту h ≥ 0.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Тело падает из состояния покоя с высоты <code>h</code>. Время <code>t = √(2h/g)</code>, скорость у земли <code>v = √(2gh)</code>. На Земле g ≈ 9.81 м/с².</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Свободное падение — это движение тела только под действием силы тяжести, без учёта сопротивления воздуха. Расчёт позволяет узнать, сколько времени тело будет падать с заданной высоты и с какой скоростью оно достигнет земли.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Время падения и конечная скорость:</p>
+<p><span class="eq">t = √(2h ⁄ g)</span></p>
+<p><span class="eq">v = g · t</span></p>
+<p>Это частный случай равноускоренного движения с начальной скоростью ноль. Из <code>h = g · t² ⁄ 2</code> выражаем время: <code>t² = 2h ⁄ g</code>, отсюда <code>t = √(2h ⁄ g)</code>. Скорость растёт линейно: <code>v = g · t</code>.</p>
+<p>Единицы СИ: высота <code>h</code> — метры, время <code>t</code> — секунды, скорость <code>v</code> — м/с. Ускорение свободного падения у поверхности Земли <code>g ≈ 9,81 м/с²</code> (часто округляют до 10).</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Запишите высоту <code>h</code> в метрах и значение <code>g</code>.</li>
+<li>Вычислите <code>2h ⁄ g</code>.</li>
+<li>Извлеките квадратный корень — это время падения <code>t</code>.</li>
+<li>Умножьте <code>g · t</code> — получите конечную скорость <code>v</code>.</li>
+<li>Проверьте: чем больше высота, тем больше и время, и скорость.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Тело падает без начальной скорости с высоты <code>h = 20 м</code>. Найдите время падения и конечную скорость (<code>g = 9,81 м/с²</code>).</p>
+<p>Время: <span class="eq">t = √(2 · 20 ⁄ 9,81) = √(40 ⁄ 9,81) = √4,077 ≈ 2,02 с</span>.</p>
+<p>Скорость: <span class="eq">v = g · t = 9,81 · 2,02 ≈ 19,8 м/с</span>.</p>
+<p>Тело падает около <b>2,02 секунды</b> и ударяется о землю со скоростью примерно <b>19,8 м/с</b> (около 71 км/ч).</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Свободное падение объясняет полёт прыгуна с трамплина, падение капель дождя, работу датчиков. Тема входит в ОГЭ и ЕГЭ по физике, в IB Physics (Motion) и AP Physics 1. Это первый шаг к броску под углом и движению с сопротивлением воздуха.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Забывают множитель 2 под корнем и считают <code>t = √(h ⁄ g)</code>.</li>
+<li>Путают высоту и скорость, подставляя не ту величину.</li>
+<li>Учитывают сопротивление воздуха там, где модель свободного падения его игнорирует.</li>
+<li>Берут <code>g = 9,81</code>, но затем округляют слишком грубо и теряют точность в ответе.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в физика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/ohms-law.html"><h3>Закон Ома</h3><p>V = I · R. Заполните любые два — найду третье.</p></a><a class="card" href="/calc/electric-power.html"><h3>Электрическая мощность</h3><p>P = V · I. Мощность по напряжению и току.</p></a><a class="card" href="/calc/newton-second.html"><h3>Второй закон Ньютона</h3><p>F = m · a. Сила, масса, ускорение.</p></a><a class="card" href="/calc/kinematics.html"><h3>Равноускоренное движение</h3><p>v = v₀ + a·t и s = v₀·t + a·t²/2.</p></a><a class="card" href="/calc/projectile.html"><h3>Бросок под углом</h3><p>Дальность, высота и время полёта.</p></a><a class="card" href="/calc/kinetic-energy.html"><h3>Кинетическая энергия</h3><p>E = m·v²/2.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

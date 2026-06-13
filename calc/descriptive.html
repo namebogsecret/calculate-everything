@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Описательная статистика — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Описательная статистика. Среднее, медиана, мода, дисперсия, СКО по списку чисел. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/descriptive.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Описательная статистика — калькулятор">
+  <meta property="og:description" content="Среднее, медиана, мода, дисперсия, СКО по списку чисел.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/descriptive.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Описательная статистика", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/descriptive.html", "inLanguage": "ru", "description": "Среднее, медиана, мода, дисперсия, СКО по списку чисел.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Статистика", "item": "https://calculators.podlevskikh.com/#/cat/statistics"}, {"@type": "ListItem", "position": 3, "name": "Описательная статистика", "item": "https://calculators.podlevskikh.com/calc/descriptive.html"}]}]</script>
+</head>
+<body data-calc="descriptive">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">📊 Статистика</span></nav><header class="calc-head"><h1>Описательная статистика</h1><p class="en">Descriptive Statistics</p><p class="desc">Среднее, медиана, мода, дисперсия, СКО по списку чисел.</p></header><div class="calc-form"><div class="field"><label for="in_data">Числа (через пробел, запятую или с новой строки)</label><div class="in-wrap"><input id="in_data" type="text" inputmode="decimal" placeholder="например: 4 8 15 16 23 42"></div></div></div><div class="calc-out" id="out"><p class="note">Введите хотя бы одно число.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Базовые меры: среднее (центр), медиана (устойчива к выбросам), мода (самое частое), дисперсия и стандартное отклонение (разброс). Выборочная дисперсия делит на <code>n−1</code> (поправка Бесселя), генеральная — на <code>n</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Описательная статистика сжимает набор чисел до нескольких показателей, которые отвечают на два вопроса: «где центр данных?» и «насколько данные разбросаны?». Центр описывают <b>среднее</b>, <b>медиана</b> и <b>мода</b>; разброс — <b>дисперсия</b> и <b>стандартное отклонение</b> (СКО). Вместе они дают портрет выборки, не показывая каждое значение по отдельности.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Среднее (арифметическое) — это «сумма, поделённая поровну»:</p>
+<p><span class="eq">x̄ = (Σx) / n</span></p>
+<p>где <code>Σx</code> — сумма всех значений, <code>n</code> — их количество. <b>Медиана</b> — значение в середине упорядоченного ряда (при чётном n — среднее двух центральных). <b>Мода</b> — наиболее часто встречающееся значение.</p>
+<p>Разброс измеряют через квадраты отклонений от среднего. Выборочная дисперсия:</p>
+<p><span class="eq">s² = Σ(x − x̄)² / (n − 1)</span></p>
+<p>а генеральная (когда данные — это вся совокупность):</p>
+<p><span class="eq">σ² = Σ(x − x̄)² / n</span></p>
+<p>Деление на <code>n − 1</code> (поправка Бесселя) исправляет систематическое занижение разброса: выборочное среднее «подогнано» под сами данные, поэтому отклонения от него чуть меньше истинных, и одна степень свободы «теряется». СКО — корень из дисперсии: <span class="eq">σ = √σ²</span>, <span class="eq">s = √s²</span>. Оно возвращает разброс в исходные единицы измерения.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Сложите все значения и поделите на их число — получите среднее <code>x̄</code>.</li>
+<li>Упорядочьте значения по возрастанию; найдите центральное — это медиана.</li>
+<li>Найдите самое частое значение — это мода.</li>
+<li>Для каждого значения вычислите отклонение <code>x − x̄</code> и возведите в квадрат.</li>
+<li>Сложите квадраты отклонений: получите <code>Σ(x − x̄)²</code>.</li>
+<li>Поделите на <code>n − 1</code> (выборка) или на <code>n</code> (генеральная) — это дисперсия.</li>
+<li>Извлеките корень — это стандартное отклонение.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Набор: <code>2, 4, 4, 4, 5, 5, 7, 9</code> (n = 8).</p>
+<p><b>Среднее:</b> сумма = 2+4+4+4+5+5+7+9 = 40, значит x̄ = 40 / 8 = <b>5</b>.</p>
+<p><b>Медиана:</b> ряд уже упорядочен, два центральных — 4 и 5, медиана = (4 + 5) / 2 = <b>4.5</b>.</p>
+<p><b>Мода:</b> чаще всего встречается 4 (три раза) → мода = <b>4</b>.</p>
+<p><b>Квадраты отклонений от 5:</b> (2−5)²=9; (4−5)²=1 трижды → 3; (5−5)²=0 дважды → 0; (7−5)²=4; (9−5)²=16. Сумма = 9 + 3 + 0 + 4 + 16 = <b>32</b>.</p>
+<p><b>Генеральная дисперсия:</b> σ² = 32 / 8 = <b>4</b>, σ = √4 = <b>2</b>.</p>
+<p><b>Выборочная дисперсия:</b> s² = 32 / 7 ≈ <b>4.571</b>, s = √4.571 ≈ <b>2.138</b>.</p>
+</div>
+
+<h2>Где применяется / интерпретация</h2>
+<p>Среднее удобно для симметричных данных, но его «тянут» выбросы (одна огромная зарплата сдвигает среднее по фирме). Медиана устойчива к выбросам — поэтому доходы и цены чаще описывают именно ею. СКО показывает типичное отклонение от центра: при σ = 2 и среднем 5 большинство значений лежит примерно в диапазоне 3–7. Сравнивая два набора с одинаковым средним, смотрят на СКО: меньше — данные стабильнее.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Путают дисперсию и СКО: дисперсия — в квадратах единиц, СКО — в исходных. Сравнивать с данными надо СКО.</li>
+<li>Делят на <code>n</code> там, где это выборка из большей совокупности — нужна поправка Бесселя (<code>n − 1</code>).</li>
+<li>Считают, что «мода всегда одна»: набор может быть бимодальным или не иметь моды вовсе.</li>
+<li>Забывают упорядочить ряд перед поиском медианы.</li>
+<li>Описывают средним сильно асимметричные данные с выбросами — медиана честнее.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в статистика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/z-score.html"><h3>Z-оценка (стандартизация)</h3><p>На сколько σ значение отклоняется от среднего + перцентиль.</p></a><a class="card" href="/calc/normal-prob.html"><h3>Вероятность по нормальному распределению</h3><p>P(X &lt; x), P(X &gt; x), P(a &lt; X &lt; b).</p></a><a class="card" href="/calc/confidence-interval.html"><h3>Доверительный интервал для среднего</h3><p>CI для среднего по выборке (z-интервал).</p></a><a class="card" href="/calc/correlation.html"><h3>Корреляция Пирсона</h3><p>Коэффициент r между двумя рядами.</p></a><a class="card" href="/calc/linear-regression.html"><h3>Линейная регрессия (МНК)</h3><p>Прямая y = a·x + b методом наименьших квадратов.</p></a><a class="card" href="/calc/binomial.html"><h3>Биномиальная вероятность</h3><p>P(ровно k успехов из n), а также ≤k и ≥k.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

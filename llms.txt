@@ -1,0 +1,58 @@
+# Calculate Everything
+
+> Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, экономика, статистика и быт. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
+
+## Физика
+- [Закон Ома (Ohm's Law)](https://calculators.podlevskikh.com/calc/ohms-law.html): V = I · R. Заполните любые два — найду третье.
+- [Электрическая мощность (Electric Power)](https://calculators.podlevskikh.com/calc/electric-power.html): P = V · I. Мощность по напряжению и току.
+- [Второй закон Ньютона (Newton's 2nd Law)](https://calculators.podlevskikh.com/calc/newton-second.html): F = m · a. Сила, масса, ускорение.
+- [Равноускоренное движение (Uniform Acceleration)](https://calculators.podlevskikh.com/calc/kinematics.html): v = v₀ + a·t и s = v₀·t + a·t²/2.
+- [Свободное падение (Free Fall)](https://calculators.podlevskikh.com/calc/free-fall.html): Время, скорость и высота падения (g = 9.81).
+- [Бросок под углом (Projectile Motion)](https://calculators.podlevskikh.com/calc/projectile.html): Дальность, высота и время полёта.
+- [Кинетическая энергия (Kinetic Energy)](https://calculators.podlevskikh.com/calc/kinetic-energy.html): E = m·v²/2.
+- [Потенциальная энергия (Potential Energy)](https://calculators.podlevskikh.com/calc/potential-energy.html): E = m·g·h.
+- [Плотность (Density)](https://calculators.podlevskikh.com/calc/density.html): ρ = m / V. Заполните любые два.
+- [Давление (Pressure)](https://calculators.podlevskikh.com/calc/pressure.html): P = F / A. Заполните любые два.
+- [Волна: скорость · частота · длина (Wave Equation)](https://calculators.podlevskikh.com/calc/wave.html): v = f · λ. Заполните любые два.
+- [Тонкая линза (Thin Lens)](https://calculators.podlevskikh.com/calc/thin-lens.html): 1/f = 1/d₀ + 1/dᵢ.
+
+## Математика
+- [Квадратное уравнение (Quadratic Equation)](https://calculators.podlevskikh.com/calc/quadratic.html): ax² + bx + c = 0 — корни и дискриминант.
+- [Проценты (Percentage)](https://calculators.podlevskikh.com/calc/percentage.html): Сколько процентов, % от числа, изменение в %.
+- [Теорема Пифагора (Pythagorean Theorem)](https://calculators.podlevskikh.com/calc/pythagorean.html): a² + b² = c². Заполните любые два катета/гипотенузу.
+- [Площадь треугольника (Triangle Area)](https://calculators.podlevskikh.com/calc/triangle-area.html): По основанию и высоте или по трём сторонам (Герон).
+- [Круг и окружность (Circle)](https://calculators.podlevskikh.com/calc/circle.html): Площадь, длина окружности, диаметр по радиусу.
+- [НОД и НОК (GCD & LCM)](https://calculators.podlevskikh.com/calc/gcd-lcm.html): Наибольший общий делитель и наименьшее общее кратное.
+- [Логарифм (Logarithm)](https://calculators.podlevskikh.com/calc/logarithm.html): log по любому основанию, ln, lg.
+- [Комбинаторика: C, A, n! (Combinatorics)](https://calculators.podlevskikh.com/calc/combinatorics.html): Сочетания nCr, размещения nPr, факториал.
+- [Пропорция (Proportion)](https://calculators.podlevskikh.com/calc/proportion.html): a / b = c / x — найти x.
+- [Степень и корень (Power & Root)](https://calculators.podlevskikh.com/calc/power-root.html): xⁿ и корень n-й степени.
+
+## Экономика
+- [Сложный процент (Compound Interest)](https://calculators.podlevskikh.com/calc/compound-interest.html): Рост вклада с капитализацией + регулярные пополнения.
+- [Кредит / ипотека (Loan & Mortgage)](https://calculators.podlevskikh.com/calc/loan-payment.html): Аннуитетный платёж, переплата, полная стоимость.
+- [CAGR — среднегодовой рост (CAGR)](https://calculators.podlevskikh.com/calc/cagr.html): Среднегодовая доходность инвестиции.
+- [ROI — рентабельность (Return on Investment)](https://calculators.podlevskikh.com/calc/roi.html): Прибыль относительно вложений в %.
+- [NPV — чистая приведённая стоимость (Net Present Value)](https://calculators.podlevskikh.com/calc/npv.html): Дисконтирование равных годовых потоков.
+- [Точка безубыточности (Break-Even Point)](https://calculators.podlevskikh.com/calc/break-even.html): Сколько единиц продать, чтобы выйти в ноль.
+- [Инфляция / покупательная способность (Inflation)](https://calculators.podlevskikh.com/calc/inflation.html): Сколько будут стоить деньги через N лет.
+- [НДС / налог: выделить и начислить (VAT / Sales Tax)](https://calculators.podlevskikh.com/calc/vat.html): Добавить налог к сумме или выделить из суммы.
+- [Скидка (Discount)](https://calculators.podlevskikh.com/calc/discount.html): Цена после скидки и сколько сэкономлено.
+- [Чаевые и счёт на компанию (Tip Calculator)](https://calculators.podlevskikh.com/calc/tip.html): Чаевые и деление счёта поровну.
+
+## Статистика
+- [Описательная статистика (Descriptive Statistics)](https://calculators.podlevskikh.com/calc/descriptive.html): Среднее, медиана, мода, дисперсия, СКО по списку чисел.
+- [Z-оценка (стандартизация) (Z-Score)](https://calculators.podlevskikh.com/calc/z-score.html): На сколько σ значение отклоняется от среднего + перцентиль.
+- [Вероятность по нормальному распределению (Normal Distribution)](https://calculators.podlevskikh.com/calc/normal-prob.html): P(X < x), P(X > x), P(a < X < b).
+- [Доверительный интервал для среднего (Confidence Interval)](https://calculators.podlevskikh.com/calc/confidence-interval.html): CI для среднего по выборке (z-интервал).
+- [Корреляция Пирсона (Pearson Correlation)](https://calculators.podlevskikh.com/calc/correlation.html): Коэффициент r между двумя рядами.
+- [Линейная регрессия (МНК) (Linear Regression)](https://calculators.podlevskikh.com/calc/linear-regression.html): Прямая y = a·x + b методом наименьших квадратов.
+- [Биномиальная вероятность (Binomial Probability)](https://calculators.podlevskikh.com/calc/binomial.html): P(ровно k успехов из n), а также ≤k и ≥k.
+
+## На каждый день
+- [Индекс массы тела (ИМТ) (BMI)](https://calculators.podlevskikh.com/calc/bmi.html): ИМТ по росту и весу + категория.
+- [Температура: °C ⇄ °F ⇄ K (Temperature Converter)](https://calculators.podlevskikh.com/calc/temperature.html): Перевод между Цельсием, Фаренгейтом и Кельвином.
+- [Конвертер длины (Length Converter)](https://calculators.podlevskikh.com/calc/length-converter.html): м, км, см, мм, миля, фут, дюйм, ярд.
+- [Конвертер массы (Weight Converter)](https://calculators.podlevskikh.com/calc/weight-converter.html): кг, г, т, фунт, унция, стоун.
+- [Стоимость поездки по топливу (Fuel Cost)](https://calculators.podlevskikh.com/calc/fuel-cost.html): Расход, литры и деньги на дорогу.
+- [Сколько дней между датами (Date Difference)](https://calculators.podlevskikh.com/calc/date-diff.html): Дни, недели и месяцы между двумя датами.

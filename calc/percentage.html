@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Проценты — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Проценты. Сколько процентов, % от числа, изменение в %. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/percentage.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Проценты — калькулятор">
+  <meta property="og:description" content="Сколько процентов, % от числа, изменение в %.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/percentage.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Проценты", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/percentage.html", "inLanguage": "ru", "description": "Сколько процентов, % от числа, изменение в %.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/#/cat/math"}, {"@type": "ListItem", "position": 3, "name": "Проценты", "item": "https://calculators.podlevskikh.com/calc/percentage.html"}]}]</script>
+</head>
+<body data-calc="percentage">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Проценты</h1><p class="en">Percentage</p><p class="desc">Сколько процентов, % от числа, изменение в %.</p></header><div class="calc-form"><div class="field"><label for="in_mode">Что считаем</label><div class="in-wrap"><select id="in_mode"><option value="of">X% от числа Y</option><option value="is">X — это сколько % от Y</option><option value="chg">Изменение от Y₁ к Y₂ в %</option></select></div></div><div class="field"><label for="in_a">X (или Y₁)</label><div class="in-wrap"><input id="in_a" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_b">Y (или Y₂)</label><div class="in-wrap"><input id="in_b" type="text" inputmode="decimal" placeholder=""></div></div></div><div class="calc-out" id="out"><p class="note">Введите оба числа.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Три самых частых вопроса о процентах: «сколько составит X% от Y», «какую долю в % составляет X от Y» и «на сколько % изменилась величина».</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Процент — это сотая доля числа: <code>1%</code> от величины равен этой величине, делённой на 100. Калькулятор решает три типовые задачи: найти «сколько будет <code>X%</code> от <code>Y</code>», найти «какую долю составляет <code>X</code> от <code>Y</code>» и найти процентное изменение от старого значения к новому. По сути всё сводится к одной идее: процент — это удобная запись дроби со знаменателем 100.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Три рабочие формулы:</p>
+<p><span class="eq">X% от Y = (X / 100) · Y</span></p>
+<p><span class="eq">доля = (X / Y) · 100%</span></p>
+<p><span class="eq">изменение = ((Y₂ − Y₁) / Y₁) · 100%</span></p>
+<p>Все растут из определения: слово «процент» (per cent) буквально значит «на сотню». Поэтому <code>X%</code> = <code>X/100</code>. Чтобы перевести долю обратно в проценты, умножаем на 100. В формуле изменения базой всегда служит исходное значение <code>Y₁</code> — именно от него мы измеряем рост или падение.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Определите тип задачи: ищете часть, долю или изменение.</li>
+<li>Для части: разделите процент на 100 и умножьте на целое.</li>
+<li>Для доли: разделите часть на целое и умножьте результат на 100.</li>
+<li>Для изменения: найдите разность <code>Y₂ − Y₁</code>, разделите на <code>Y₁</code>, умножьте на 100.</li>
+<li>Положительный результат изменения — рост, отрицательный — снижение.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p><b>Часть:</b> сколько будет 15% от 240? <span class="eq">(15 / 100) · 240 = 0.15 · 240 = 36</span>.</p>
+<p><b>Доля:</b> какую долю составляет 36 от 240? <span class="eq">(36 / 240) · 100% = 0.15 · 100% = 15%</span> — обратная задача сходится.</p>
+<p><b>Изменение:</b> цена выросла с 240 до 300. <span class="eq">((300 − 240) / 240) · 100% = (60 / 240) · 100% = 0.25 · 100% = 25%</span> — рост на 25%.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Проценты — самый практичный навык: скидки и наценки, НДС, банковские ставки, инфляция, доля в опросах. В ОГЭ это задания 1–5 и текстовые задачи про сплавы и растворы; в ЕГЭ — финансовая задача 17. В IB и SAT встречаются percentage change и percentage error. Понимание «база — это всегда исходное» защищает от типичной путаницы.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Складывают и вычитают проценты как абсолютные числа: рост на 25%, затем падение на 25% НЕ возвращает к старому значению.</li>
+<li>Берут неверную базу: процентное изменение считают от нового значения, а нужно от старого <code>Y₁</code>.</li>
+<li>Забывают перевести дробь обратно в проценты — умножить на 100.</li>
+<li>Путают «X% от Y» и «Y% от X» — порядок важен только в формулировке, числовой результат одинаков, но интерпретация разная.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в математика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/quadratic.html"><h3>Квадратное уравнение</h3><p>ax² + bx + c = 0 — корни и дискриминант.</p></a><a class="card" href="/calc/pythagorean.html"><h3>Теорема Пифагора</h3><p>a² + b² = c². Заполните любые два катета/гипотенузу.</p></a><a class="card" href="/calc/triangle-area.html"><h3>Площадь треугольника</h3><p>По основанию и высоте или по трём сторонам (Герон).</p></a><a class="card" href="/calc/circle.html"><h3>Круг и окружность</h3><p>Площадь, длина окружности, диаметр по радиусу.</p></a><a class="card" href="/calc/gcd-lcm.html"><h3>НОД и НОК</h3><p>Наибольший общий делитель и наименьшее общее кратное.</p></a><a class="card" href="/calc/logarithm.html"><h3>Логарифм</h3><p>log по любому основанию, ln, lg.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

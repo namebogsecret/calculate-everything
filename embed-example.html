@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculate Everything — встраиваемый виджет (демо)</title>
+  <style>
+    body { font: 16px/1.6 system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #1a2030; }
+    h1 { letter-spacing: -.02em; }
+    code, pre { background: #f3f5f8; border-radius: 6px; }
+    pre { padding: 14px 16px; overflow-x: auto; font-size: 13.5px; border: 1px solid #e2e6ec; }
+    .demo { margin: 24px 0; }
+    iframe { width: 100%; border: 1px solid #e2e6ec; border-radius: 14px; }
+    .muted { color: #6b7686; }
+  </style>
+</head>
+<body>
+  <h1>Встраиваемый калькулятор-виджет</h1>
+  <p class="muted">Любой калькулятор Calculate Everything вставляется на сайт одной строкой — под ваш бренд (параметр <code>brand</code> — HEX-цвет без #).</p>
+
+  <h3>Кредитный калькулятор под брендом клиента</h3>
+  <pre>&lt;iframe src="https://calculators.podlevskikh.com/?embed=loan-payment&amp;brand=0a7cff"
+        width="100%" height="560" style="border:0;border-radius:14px"&gt;&lt;/iframe&gt;</pre>
+  <div class="demo">
+    <iframe src="/?embed=loan-payment&brand=0a7cff" height="560" title="Кредитный калькулятор"></iframe>
+  </div>
+
+  <h3>Калькулятор ИМТ (другой бренд)</h3>
+  <pre>&lt;iframe src="https://calculators.podlevskikh.com/?embed=bmi&amp;brand=18b07a" width="100%" height="500"&gt;&lt;/iframe&gt;</pre>
+  <div class="demo">
+    <iframe src="/?embed=bmi&brand=18b07a" height="500" title="Калькулятор ИМТ"></iframe>
+  </div>
+
+  <p class="muted">Доступные <code>embed</code>-id — любой из 45 калькуляторов (см. <a href="/llms.txt">llms.txt</a>). Виджет считается полностью на стороне клиента, без обращений к серверу.</p>
+</body>
+</html>

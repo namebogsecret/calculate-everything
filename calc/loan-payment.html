@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кредит / ипотека — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Кредит / ипотека. Аннуитетный платёж, переплата, полная стоимость. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/loan-payment.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Кредит / ипотека — калькулятор">
+  <meta property="og:description" content="Аннуитетный платёж, переплата, полная стоимость.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/loan-payment.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Кредит / ипотека", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/loan-payment.html", "inLanguage": "ru", "description": "Аннуитетный платёж, переплата, полная стоимость.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Экономика", "item": "https://calculators.podlevskikh.com/#/cat/economics"}, {"@type": "ListItem", "position": 3, "name": "Кредит / ипотека", "item": "https://calculators.podlevskikh.com/calc/loan-payment.html"}]}]</script>
+</head>
+<body data-calc="loan-payment">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💰 Экономика</span></nav><header class="calc-head"><h1>Кредит / ипотека</h1><p class="en">Loan &amp; Mortgage</p><p class="desc">Аннуитетный платёж, переплата, полная стоимость.</p></header><div class="calc-form"><div class="field"><label for="in_P">Сумма кредита</label><div class="in-wrap"><input id="in_P" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_r">Ставка в год</label><div class="in-wrap"><input id="in_r" type="text" inputmode="decimal" placeholder=""><span class="unit">%</span></div></div><div class="field"><label for="in_years">Срок</label><div class="in-wrap"><input id="in_years" type="text" inputmode="decimal" placeholder=""><span class="unit">лет</span></div></div></div><div class="calc-out" id="out"><p class="note">Введите сумму, ставку и срок.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Аннуитетный кредит — равный платёж каждый месяц. Формула учитывает месячную ставку <code>i=r/12</code> и число платежей <code>N</code>. Переплата = сумма всех платежей минус тело долга.</p></div></section><article class="article">
+<h2>Что это и зачем считать</h2>
+<p>Аннуитетный платёж — это одинаковая ежемесячная сумма, которой вы гасите кредит или ипотеку. В каждом платеже часть идёт на проценты, а часть на тело долга, но общая сумма не меняется. Расчёт нужен, чтобы заранее понять, потянете ли вы платёж, и сколько в итоге переплатите банку.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Для суммы кредита <code>P</code> под годовую ставку <code>r</code> на <code>лет</code> лет аннуитетный платёж равен:</p>
+<p><span class="eq">Платёж = P · i · (1 + i)ᴺ / ((1 + i)ᴺ − 1)</span></p>
+<p>где <code>i = r / 12</code> — месячная ставка (доля), а <code>N = лет · 12</code> — число платежей. Формула выводится из условия, что приведённая стоимость всех будущих платежей равна выданной сумме <code>P</code>: банк даёт деньги сегодня, а вы возвращаете их потоком одинаковых сумм, дисконтированных по ставке <code>i</code>.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Переведите годовую ставку в долю и найдите месячную: <code>i = (r/100) / 12</code>.</li>
+<li>Посчитайте число платежей: <code>N = лет · 12</code>.</li>
+<li>Возведите <code>(1 + i)</code> в степень <code>N</code> — обозначим это <code>A</code>.</li>
+<li>Числитель: <code>P · i · A</code>.</li>
+<li>Знаменатель: <code>A − 1</code>.</li>
+<li>Платёж = числитель / знаменатель.</li>
+<li>Переплата = Платёж · N − P.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Ипотека <b>3 000 000 ₽</b> под <b>12% годовых</b> на <b>20 лет</b>.</p>
+<p>Месячная ставка: <code>i = 0,12 / 12 = 0,01</code>. Число платежей: <code>N = 20·12 = 240</code>.</p>
+<p>Множитель: <code>A = (1,01)²⁴⁰ ≈ 10,8926</code>.</p>
+<p>Числитель: <code>3 000 000 · 0,01 · 10,8926 = 326 778</code>.</p>
+<p>Знаменатель: <code>10,8926 − 1 = 9,8926</code>.</p>
+<p>Платёж: <code>326 778 / 9,8926 ≈ 33 033 ₽</code> в месяц.</p>
+<p>За весь срок: <code>33 033 · 240 = 7 927 920 ₽</code>. Переплата: <code>7 927 920 − 3 000 000 = 4 927 920 ₽</code> — почти полтора тела кредита уходит на проценты.</p>
+</div>
+
+<h2>Где применяется / как использовать</h2>
+<p>Аннуитет — стандартная схема ипотеки, автокредитов и потребительских займов. Зная платёж, можно проверить требование банка «платёж ≤ 40–50% дохода». Сократив срок или ставку, вы резко уменьшаете переплату — попробуйте подставить разные значения и сравнить.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Берут годовую ставку вместо месячной (<code>i = r/12</code>).</li>
+<li>Считают <code>N</code> в годах, а не в месяцах.</li>
+<li>Путают аннуитет с дифференцированным платежом (там сумма уменьшается со временем).</li>
+<li>Забывают, что переплата = все платежи минус тело, а не просто «ставка × срок».</li>
+</ul>
+</div>
+</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/compound-interest.html"><h3>Сложный процент</h3><p>Рост вклада с капитализацией + регулярные пополнения.</p></a><a class="card" href="/calc/cagr.html"><h3>CAGR — среднегодовой рост</h3><p>Среднегодовая доходность инвестиции.</p></a><a class="card" href="/calc/roi.html"><h3>ROI — рентабельность</h3><p>Прибыль относительно вложений в %.</p></a><a class="card" href="/calc/npv.html"><h3>NPV — чистая приведённая стоимость</h3><p>Дисконтирование равных годовых потоков.</p></a><a class="card" href="/calc/break-even.html"><h3>Точка безубыточности</h3><p>Сколько единиц продать, чтобы выйти в ноль.</p></a><a class="card" href="/calc/inflation.html"><h3>Инфляция / покупательная способность</h3><p>Сколько будут стоить деньги через N лет.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

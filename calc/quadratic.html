@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Квадратное уравнение — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Квадратное уравнение. ax² + bx + c = 0 — корни и дискриминант. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/quadratic.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Квадратное уравнение — калькулятор">
+  <meta property="og:description" content="ax² + bx + c = 0 — корни и дискриминант.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/quadratic.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Квадратное уравнение", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/quadratic.html", "inLanguage": "ru", "description": "ax² + bx + c = 0 — корни и дискриминант.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/#/cat/math"}, {"@type": "ListItem", "position": 3, "name": "Квадратное уравнение", "item": "https://calculators.podlevskikh.com/calc/quadratic.html"}]}]</script>
+</head>
+<body data-calc="quadratic">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Квадратное уравнение</h1><p class="en">Quadratic Equation</p><p class="desc">ax² + bx + c = 0 — корни и дискриминант.</p></header><div class="calc-form"><div class="field"><label for="in_a">a</label><div class="in-wrap"><input id="in_a" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_b">b</label><div class="in-wrap"><input id="in_b" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_c">c</label><div class="in-wrap"><input id="in_c" type="text" inputmode="decimal" placeholder=""></div></div></div><div class="calc-out" id="out"><div class="outputs"><div class="result"><span class="r-label">Дискриминант D</span><span class="r-val">0</span></div><div class="result primary"><span class="r-label">x (двойной)</span><span class="r-val">-0</span></div></div><div class="formula">x = (−b ± √D) ⁄ 2a,&nbsp; D = b² − 4ac</div></div><section class="explain"><h2>Как это работает</h2><div><p>Уравнение <code>ax²+bx+c=0</code> решается через дискриминант <code>D=b²−4ac</code>. Если D&gt;0 — два корня, D=0 — один, D&lt;0 — комплексные. Корни: <code>x = (−b±√D)/2a</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Квадратное уравнение — это равенство вида <span class="eq">ax² + bx + c = 0</span>, где <code>a ≠ 0</code>. Калькулятор находит его корни — те значения <code>x</code>, при которых левая часть обращается в ноль. Геометрически это точки, где парабола <code>y = ax² + bx + c</code> пересекает ось <code>x</code>. Корней может быть два, один или ни одного (в действительных числах) — это решает дискриминант.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Главная величина — дискриминант: <span class="eq">D = b² − 4ac</span>. Корни даёт формула:</p>
+<p><span class="eq">x = (−b ± √D) / (2a)</span></p>
+<p>Откуда она? Делим всё на <code>a</code> и «достраиваем до полного квадрата»: <span class="eq">x² + (b/a)x + c/a = 0</span> переписываем как <span class="eq">(x + b/2a)² = (b² − 4ac) / 4a²</span>. Извлекаем корень из обеих частей и получаем формулу. Если <code>D &gt; 0</code> — два корня, если <code>D = 0</code> — один (двойной), если <code>D &lt; 0</code> — действительных корней нет.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Приведите уравнение к виду <code>ax² + bx + c = 0</code> и выпишите <code>a</code>, <code>b</code>, <code>c</code> с их знаками.</li>
+<li>Вычислите дискриминант <code>D = b² − 4ac</code>.</li>
+<li>Посмотрите на знак <code>D</code>: при <code>D &lt; 0</code> действительных корней нет — стоп.</li>
+<li>Извлеките <code>√D</code>.</li>
+<li>Подставьте в формулу: <code>x₁ = (−b + √D)/(2a)</code> и <code>x₂ = (−b − √D)/(2a)</code>.</li>
+<li>Проверьте корни по теореме Виета: <code>x₁ + x₂ = −b/a</code>, <code>x₁ · x₂ = c/a</code>.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Решим <span class="eq">2x² − 7x + 3 = 0</span>. Здесь <code>a = 2</code>, <code>b = −7</code>, <code>c = 3</code>.</p>
+<p>Дискриминант: <span class="eq">D = (−7)² − 4·2·3 = 49 − 24 = 25</span>. Значит <code>√D = 5</code>.</p>
+<p>Корни: <span class="eq">x₁ = (7 + 5) / 4 = 12/4 = 3</span> и <span class="eq">x₂ = (7 − 5) / 4 = 2/4 = 0.5</span>.</p>
+<p>Проверка по Виета: сумма <code>3 + 0.5 = 3.5 = 7/2 = −b/a</code> ✓; произведение <code>3 · 0.5 = 1.5 = 3/2 = c/a</code> ✓.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Квадратные уравнения — это база школьной алгебры (ОГЭ задание 9 и 20, ЕГЭ профиль) и фундамент для физики (высота брошенного тела, время полёта), экономики (точка безубыточности) и геометрии. В IB Mathematics и AP Precalculus та же формула называется the quadratic formula, а дискриминант — discriminant. Без неё не обойтись при поиске вершины параболы и решении систем.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Теряют знак <code>b</code>: в формуле стоит <code>−b</code>, а при <code>b = −7</code> это <code>+7</code>, а не <code>−7</code>.</li>
+<li>Делят только числитель на <code>2a</code>, забыв, что <code>(2a)</code> в знаменателе у всего выражения <code>−b ± √D</code>.</li>
+<li>Считают, что при <code>D &lt; 0</code> корней «один» — действительных нет вовсе.</li>
+<li>Путают <code>b²</code> с <code>2b</code>: при <code>b = −7</code> это <code>49</code>, а не <code>−14</code>.</li>
+<li>Не приводят к нулю в правой части — формула работает только для <code>… = 0</code>.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в математика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/percentage.html"><h3>Проценты</h3><p>Сколько процентов, % от числа, изменение в %.</p></a><a class="card" href="/calc/pythagorean.html"><h3>Теорема Пифагора</h3><p>a² + b² = c². Заполните любые два катета/гипотенузу.</p></a><a class="card" href="/calc/triangle-area.html"><h3>Площадь треугольника</h3><p>По основанию и высоте или по трём сторонам (Герон).</p></a><a class="card" href="/calc/circle.html"><h3>Круг и окружность</h3><p>Площадь, длина окружности, диаметр по радиусу.</p></a><a class="card" href="/calc/gcd-lcm.html"><h3>НОД и НОК</h3><p>Наибольший общий делитель и наименьшее общее кратное.</p></a><a class="card" href="/calc/logarithm.html"><h3>Логарифм</h3><p>log по любому основанию, ln, lg.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

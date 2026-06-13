@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стоимость поездки по топливу — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Стоимость поездки по топливу. Расход, литры и деньги на дорогу. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/fuel-cost.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Стоимость поездки по топливу — калькулятор">
+  <meta property="og:description" content="Расход, литры и деньги на дорогу.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/fuel-cost.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Стоимость поездки по топливу", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/fuel-cost.html", "inLanguage": "ru", "description": "Расход, литры и деньги на дорогу.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/#/cat/everyday"}, {"@type": "ListItem", "position": 3, "name": "Стоимость поездки по топливу", "item": "https://calculators.podlevskikh.com/calc/fuel-cost.html"}]}]</script>
+</head>
+<body data-calc="fuel-cost">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🧮 На каждый день</span></nav><header class="calc-head"><h1>Стоимость поездки по топливу</h1><p class="en">Fuel Cost</p><p class="desc">Расход, литры и деньги на дорогу.</p></header><div class="calc-form"><div class="field"><label for="in_dist">Расстояние</label><div class="in-wrap"><input id="in_dist" type="text" inputmode="decimal" placeholder=""><span class="unit">км</span></div></div><div class="field"><label for="in_cons">Расход</label><div class="in-wrap"><input id="in_cons" type="text" inputmode="decimal" placeholder=""><span class="unit">л/100км</span></div></div><div class="field"><label for="in_price">Цена топлива</label><div class="in-wrap"><input id="in_price" type="text" inputmode="decimal" placeholder=""><span class="unit">/л</span></div></div></div><div class="calc-out" id="out"><div class="outputs"><div class="result"><span class="r-label">Нужно топлива</span><span class="r-val">8<span class="r-unit"> л</span></span></div><div class="result primary"><span class="r-label">Стоимость</span><span class="r-val">9,6</span></div><div class="result"><span class="r-label">Цена за км</span><span class="r-val">0,096</span></div></div><div class="formula">Литры = расстояние · расход ⁄ 100</div></div><section class="explain"><h2>Как это работает</h2><div><p>Литры = расстояние × расход на 100 км / 100. Умножаем на цену литра — получаем стоимость поездки.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Калькулятор стоимости поездки по топливу оценивает, сколько денег вы потратите на бензин или дизель за конкретный маршрут. Он связывает три параметра: расстояние, расход топлива автомобиля (на 100 км) и цену за литр. На выходе — объём израсходованного топлива, общая стоимость и цена за один километр.</p>
+
+<h2>Формула / коэффициенты</h2>
+<p>Сначала считаем объём топлива, затем умножаем на цену:</p>
+<p><span class="eq">Литры = расстояние (км) · расход (л/100км) / 100</span></p>
+<p><span class="eq">Стоимость = литры · цена за литр</span></p>
+<p><span class="eq">Цена за км = стоимость / расстояние</span></p>
+<p>Деление на 100 в первой формуле — потому что расход задаётся на 100 км пробега.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Умножьте расстояние на расход топлива.</li>
+<li>Разделите результат на 100 — получите литры на весь маршрут.</li>
+<li>Умножьте литры на цену за литр — получите полную стоимость.</li>
+<li>Разделите стоимость на расстояние, чтобы узнать цену километра.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Поездка на 450 км, расход 7.5 л/100км, цена топлива 60 за литр.</p>
+<p>Литры: 450 · 7.5 / 100 = 3375 / 100 = <b>33.75 л</b>.</p>
+<p>Стоимость: 33.75 · 60 = <b>2025</b>.</p>
+<p>Цена за км: 2025 / 450 = <b>4.5</b> за километр.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Калькулятор помогает планировать бюджет путешествий и командировок, сравнивать стоимость поездки на машине и на общественном транспорте, делить расходы на топливо между попутчиками и оценивать выгоду экономичных автомобилей. Им же удобно прикидывать ежемесячные траты на дорогу до работы.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Забывают делить на 100 — тогда литры завышаются в 100 раз.</li>
+<li>Берут паспортный расход вместо реального: в городе, зимой и с кондиционером расход выше заявленного.</li>
+<li>Считают только путь в одну сторону, забывая про обратную дорогу.</li>
+<li>Игнорируют разницу цен на маршруте — на трассе и в разных регионах цена за литр отличается.</li>
+</ul>
+</div>
+</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/bmi.html"><h3>Индекс массы тела (ИМТ)</h3><p>ИМТ по росту и весу + категория.</p></a><a class="card" href="/calc/temperature.html"><h3>Температура: °C ⇄ °F ⇄ K</h3><p>Перевод между Цельсием, Фаренгейтом и Кельвином.</p></a><a class="card" href="/calc/length-converter.html"><h3>Конвертер длины</h3><p>м, км, см, мм, миля, фут, дюйм, ярд.</p></a><a class="card" href="/calc/weight-converter.html"><h3>Конвертер массы</h3><p>кг, г, т, фунт, унция, стоун.</p></a><a class="card" href="/calc/date-diff.html"><h3>Сколько дней между датами</h3><p>Дни, недели и месяцы между двумя датами.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

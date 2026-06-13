@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAGR — среднегодовой рост — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="CAGR — среднегодовой рост. Среднегодовая доходность инвестиции. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/cagr.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CAGR — среднегодовой рост — калькулятор">
+  <meta property="og:description" content="Среднегодовая доходность инвестиции.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/cagr.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "CAGR — среднегодовой рост", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/cagr.html", "inLanguage": "ru", "description": "Среднегодовая доходность инвестиции.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Экономика", "item": "https://calculators.podlevskikh.com/#/cat/economics"}, {"@type": "ListItem", "position": 3, "name": "CAGR — среднегодовой рост", "item": "https://calculators.podlevskikh.com/calc/cagr.html"}]}]</script>
+</head>
+<body data-calc="cagr">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💰 Экономика</span></nav><header class="calc-head"><h1>CAGR — среднегодовой рост</h1><p class="en">CAGR</p><p class="desc">Среднегодовая доходность инвестиции.</p></header><div class="calc-form"><div class="field"><label for="in_begin">Начальная стоимость</label><div class="in-wrap"><input id="in_begin" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_end">Конечная стоимость</label><div class="in-wrap"><input id="in_end" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_years">Срок</label><div class="in-wrap"><input id="in_years" type="text" inputmode="decimal" placeholder=""><span class="unit">лет</span></div></div></div><div class="calc-out" id="out"><p class="note">Введите положительные значения.</p></div><section class="explain"><h2>Как это работает</h2><div><p>CAGR (Compound Annual Growth Rate) — какой постоянный годовой процент дал бы тот же итоговый результат. Корректнее «среднего», т.к. учитывает капитализацию.</p></div></section><article class="article">
+<h2>Что это и зачем считать</h2>
+<p>CAGR (Compound Annual Growth Rate) — среднегодовой темп роста с учётом сложного процента. Он отвечает на вопрос: «На сколько процентов в год должна была расти величина, чтобы из начального значения за столько-то лет получить конечное?» Это честный способ сравнить доходность инвестиций или рост бизнеса за разные периоды.</p>
+
+<h2>Формула и откуда она</h2>
+<p><span class="eq">CAGR = (Конец / Начало)^(1 / лет) − 1</span></p>
+<p>Здесь <code>Начало</code> — стоимость в начале, <code>Конец</code> — в конце, <code>лет</code> — число лет между ними. Логика: при постоянном годовом росте <code>g</code> справедливо <code>Конец = Начало·(1 + g)^лет</code>. Решая это уравнение относительно <code>g</code>, извлекаем корень степени <code>лет</code> из отношения <code>Конец/Начало</code> и вычитаем единицу.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Разделите конечное значение на начальное: <code>Конец / Начало</code>.</li>
+<li>Возведите результат в степень <code>1 / лет</code> (это корень степени «лет»).</li>
+<li>Вычтите 1.</li>
+<li>Умножьте на 100, чтобы получить проценты.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Инвестиция выросла со <b>100 000 ₽</b> до <b>200 000 ₽</b> за <b>5 лет</b>.</p>
+<p>Отношение: <code>200 000 / 100 000 = 2</code>.</p>
+<p>Степень: <code>2^(1/5) = 2^0,2 ≈ 1,148698</code>.</p>
+<p>Вычитаем 1: <code>1,148698 − 1 = 0,148698</code>.</p>
+<p>CAGR ≈ <b>14,87% в год</b>.</p>
+<p>Проверка: <code>100 000 · 1,1487⁵ ≈ 100 000 · 2,00 = 200 000 ₽</code> — сходится. Хотя капитал удвоился (рост +100% за 5 лет), среднегодовой темп не 20%, а лишь ≈14,9% именно из-за сложного процента.</p>
+</div>
+
+<h2>Где применяется / как использовать</h2>
+<p>CAGR используют для оценки доходности портфеля, выручки компании, числа пользователей — везде, где нужно сгладить колебания и получить один сопоставимый показатель «в год». Удобно сравнивать активы за разные сроки: 60% за 4 года и 80% за 6 лет легко сравнить только через CAGR.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Считают простой среднегодовой прирост (общий рост / число лет) вместо геометрического — это завышает результат.</li>
+<li>Берут степень <code>лет</code> вместо <code>1/лет</code>.</li>
+<li>Применяют CAGR при отрицательном начальном значении — формула не работает.</li>
+<li>Забывают, что CAGR не показывает волатильность: ровный и «качельный» путь к тому же итогу дают одинаковый CAGR.</li>
+</ul>
+</div>
+</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/compound-interest.html"><h3>Сложный процент</h3><p>Рост вклада с капитализацией + регулярные пополнения.</p></a><a class="card" href="/calc/loan-payment.html"><h3>Кредит / ипотека</h3><p>Аннуитетный платёж, переплата, полная стоимость.</p></a><a class="card" href="/calc/roi.html"><h3>ROI — рентабельность</h3><p>Прибыль относительно вложений в %.</p></a><a class="card" href="/calc/npv.html"><h3>NPV — чистая приведённая стоимость</h3><p>Дисконтирование равных годовых потоков.</p></a><a class="card" href="/calc/break-even.html"><h3>Точка безубыточности</h3><p>Сколько единиц продать, чтобы выйти в ноль.</p></a><a class="card" href="/calc/inflation.html"><h3>Инфляция / покупательная способность</h3><p>Сколько будут стоить деньги через N лет.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

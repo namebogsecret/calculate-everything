@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сколько дней между датами — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Сколько дней между датами. Дни, недели и месяцы между двумя датами. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/date-diff.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Сколько дней между датами — калькулятор">
+  <meta property="og:description" content="Дни, недели и месяцы между двумя датами.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/date-diff.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Сколько дней между датами", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/date-diff.html", "inLanguage": "ru", "description": "Дни, недели и месяцы между двумя датами.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/#/cat/everyday"}, {"@type": "ListItem", "position": 3, "name": "Сколько дней между датами", "item": "https://calculators.podlevskikh.com/calc/date-diff.html"}]}]</script>
+</head>
+<body data-calc="date-diff">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🧮 На каждый день</span></nav><header class="calc-head"><h1>Сколько дней между датами</h1><p class="en">Date Difference</p><p class="desc">Дни, недели и месяцы между двумя датами.</p></header><div class="calc-form"><div class="field"><label for="in_d1">Дата 1 (ГГГГ-ММ-ДД)</label><div class="in-wrap"><input id="in_d1" type="text" inputmode="decimal" placeholder="2026-01-01"></div></div><div class="field"><label for="in_d2">Дата 2 (ГГГГ-ММ-ДД)</label><div class="in-wrap"><input id="in_d2" type="text" inputmode="decimal" placeholder="2026-12-31"></div></div></div><div class="calc-out" id="out"><p class="note">Введите обе даты в формате ГГГГ-ММ-ДД.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Разница в днях между датами; недели, месяцы и годы — производные оценки. Используйте формат ГГГГ-ММ-ДД.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Калькулятор разницы дат считает, сколько дней (а также недель, месяцев и лет) прошло между двумя датами. Это полезно для подсчёта возраста, срока до события, длительности проекта или количества дней отпуска. Даты задаются в формате <code>ГГГГ-ММ-ДД</code> (например, 2024-03-20).</p>
+
+<h2>Формула / коэффициенты</h2>
+<p>Базовая величина — разница в днях. Остальные единицы получаются делением:</p>
+<p><span class="eq">дни = дата₂ − дата₁</span></p>
+<p><span class="eq">недели = дни / 7</span></p>
+<p><span class="eq">месяцы ≈ дни / 30.44</span></p>
+<p><span class="eq">годы ≈ дни / 365.25</span></p>
+<p>Коэффициент 30.44 — это средняя длина месяца (365.25 / 12), а 365.25 учитывает високосные годы (в среднем один лишний день раз в 4 года).</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Запишите обе даты в формате ГГГГ-ММ-ДД.</li>
+<li>Посчитайте число дней от первой даты до конца её месяца, прибавьте полные месяцы между ними, затем дни в последнем месяце.</li>
+<li>Не забудьте: в феврале 28 дней, а в високосном году — 29 (год делится на 4, но века — только если делятся на 400).</li>
+<li>Разделите полученные дни на 7, 30.44 или 365.25 для недель, месяцев и лет.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Сколько дней между 2024-01-15 и 2024-03-20? (2024 — високосный год, в феврале 29 дней.)</p>
+<p>Остаток января: 31 − 15 = 16 дней.</p>
+<p>Весь февраль: 29 дней.</p>
+<p>Часть марта: 20 дней.</p>
+<p>Итого: 16 + 29 + 20 = <b>65 дней</b>.</p>
+<p>В неделях: 65 / 7 ≈ <b>9.29 недели</b>. В месяцах: 65 / 30.44 ≈ <b>2.14 месяца</b>.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Расчёт нужен при определении возраста и стажа, подсчёте срока беременности, дней до дедлайна или отпуска, длительности подписок и кредитов, а также при юридических вычислениях сроков. Точный подсчёт дней важен везде, где есть штрафы или проценты «за день».</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Считают месяцы как ровно 30 дней — за год накапливается ошибка в несколько дней.</li>
+<li>Забывают про високосный февраль (29 дней), что сдвигает результат на день.</li>
+<li>Путают порядок дат — тогда разница получается отрицательной.</li>
+<li>Спорят, включать ли обе граничные даты: для длительности обычно считают разницу, а не «оба конца» (между 1-м и 2-м числом — 1 день, а не 2).</li>
+</ul>
+</div>
+</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/bmi.html"><h3>Индекс массы тела (ИМТ)</h3><p>ИМТ по росту и весу + категория.</p></a><a class="card" href="/calc/temperature.html"><h3>Температура: °C ⇄ °F ⇄ K</h3><p>Перевод между Цельсием, Фаренгейтом и Кельвином.</p></a><a class="card" href="/calc/length-converter.html"><h3>Конвертер длины</h3><p>м, км, см, мм, миля, фут, дюйм, ярд.</p></a><a class="card" href="/calc/weight-converter.html"><h3>Конвертер массы</h3><p>кг, г, т, фунт, унция, стоун.</p></a><a class="card" href="/calc/fuel-cost.html"><h3>Стоимость поездки по топливу</h3><p>Расход, литры и деньги на дорогу.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

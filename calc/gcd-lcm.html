@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>НОД и НОК — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="НОД и НОК. Наибольший общий делитель и наименьшее общее кратное. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/gcd-lcm.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="НОД и НОК — калькулятор">
+  <meta property="og:description" content="Наибольший общий делитель и наименьшее общее кратное.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/gcd-lcm.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "НОД и НОК", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/gcd-lcm.html", "inLanguage": "ru", "description": "Наибольший общий делитель и наименьшее общее кратное.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/#/cat/math"}, {"@type": "ListItem", "position": 3, "name": "НОД и НОК", "item": "https://calculators.podlevskikh.com/calc/gcd-lcm.html"}]}]</script>
+</head>
+<body data-calc="gcd-lcm">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>НОД и НОК</h1><p class="en">GCD &amp; LCM</p><p class="desc">Наибольший общий делитель и наименьшее общее кратное.</p></header><div class="calc-form"><div class="field"><label for="in_a">Число a</label><div class="in-wrap"><input id="in_a" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_b">Число b</label><div class="in-wrap"><input id="in_b" type="text" inputmode="decimal" placeholder=""></div></div></div><div class="calc-out" id="out"><p class="note">Введите два целых числа.</p></div><section class="explain"><h2>Как это работает</h2><div><p>НОД находится алгоритмом Евклида, НОК — через <code>НОК(a,b)=a·b/НОД(a,b)</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>НОД (наибольший общий делитель) двух чисел — самое большое число, на которое оба делятся без остатка. НОК (наименьшее общее кратное) — наименьшее число, которое делится на оба. Калькулятор находит обе величины: НОД нужен для сокращения дробей, НОК — для приведения дробей к общему знаменателю.</p>
+
+<h2>Формула и откуда она</h2>
+<p>НОД находят алгоритмом Евклида: <span class="eq">НОД(a, b) = НОД(b, a mod b)</span>, повторяя, пока второе число не станет нулём; тогда первое — это НОД. Идея: общий делитель чисел <code>a</code> и <code>b</code> делит и их остаток, поэтому замена пары <code>(a, b)</code> на <code>(b, остаток)</code> сохраняет НОД, но уменьшает числа.</p>
+<p>НОК выражается через НОД: <span class="eq">НОК(a, b) = a · b / НОД(a, b)</span>. Это работает, потому что произведение <code>a·b</code> учитывает каждый общий простой множитель дважды, а деление на НОД убирает лишнюю копию.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Возьмите большее число <code>a</code> и меньшее <code>b</code>.</li>
+<li>Найдите остаток от деления <code>a</code> на <code>b</code>.</li>
+<li>Замените пару: новое <code>a = b</code>, новое <code>b = остаток</code>.</li>
+<li>Повторяйте, пока остаток не станет 0; последний ненулевой делитель — это НОД.</li>
+<li>Для НОК умножьте исходные числа и разделите на найденный НОД.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Найдём НОД и НОК чисел <code>48</code> и <code>36</code>.</p>
+<p>Алгоритм Евклида: <span class="eq">48 mod 36 = 12</span> → <span class="eq">36 mod 12 = 0</span>. Остаток ноль, значит <code>НОД(48, 36) = 12</code>.</p>
+<p>НОК: <span class="eq">НОК = 48 · 36 / 12 = 1728 / 12 = 144</span>.</p>
+<p>Проверка: <code>144 / 48 = 3</code> и <code>144 / 36 = 4</code> — оба делятся нацело ✓.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>НОД сокращает дроби (<code>36/48 = 3/4</code> после деления на 12), НОК даёт общий знаменатель при сложении дробей. В задачах ОГЭ это «через сколько дней события совпадут» (НОК) и распределение поровну (НОД). В программировании алгоритм Евклида — классика. В IB и AP — основа теории чисел, простых множителей и работы с рациональными выражениями.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Путают НОД и НОК: НОД ≤ меньшего числа, НОК ≥ большего.</li>
+<li>В алгоритме Евклида берут частное вместо остатка.</li>
+<li>Считают НОК как простое произведение <code>a·b</code>, забывая разделить на НОД.</li>
+<li>Останавливают алгоритм при остатке 1, хотя НОД тогда равен 1 (числа взаимно простые) — это валидный ответ.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в математика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/quadratic.html"><h3>Квадратное уравнение</h3><p>ax² + bx + c = 0 — корни и дискриминант.</p></a><a class="card" href="/calc/percentage.html"><h3>Проценты</h3><p>Сколько процентов, % от числа, изменение в %.</p></a><a class="card" href="/calc/pythagorean.html"><h3>Теорема Пифагора</h3><p>a² + b² = c². Заполните любые два катета/гипотенузу.</p></a><a class="card" href="/calc/triangle-area.html"><h3>Площадь треугольника</h3><p>По основанию и высоте или по трём сторонам (Герон).</p></a><a class="card" href="/calc/circle.html"><h3>Круг и окружность</h3><p>Площадь, длина окружности, диаметр по радиусу.</p></a><a class="card" href="/calc/logarithm.html"><h3>Логарифм</h3><p>log по любому основанию, ln, lg.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

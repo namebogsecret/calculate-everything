@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Логарифм — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Логарифм. log по любому основанию, ln, lg. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/logarithm.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Логарифм — калькулятор">
+  <meta property="og:description" content="log по любому основанию, ln, lg.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/logarithm.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Логарифм", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/logarithm.html", "inLanguage": "ru", "description": "log по любому основанию, ln, lg.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/#/cat/math"}, {"@type": "ListItem", "position": 3, "name": "Логарифм", "item": "https://calculators.podlevskikh.com/calc/logarithm.html"}]}]</script>
+</head>
+<body data-calc="logarithm">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Логарифм</h1><p class="en">Logarithm</p><p class="desc">log по любому основанию, ln, lg.</p></header><div class="calc-form"><div class="field"><label for="in_x">Аргумент x</label><div class="in-wrap"><input id="in_x" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_base">Основание</label><div class="in-wrap"><input id="in_base" type="text" inputmode="decimal" placeholder=""></div></div></div><div class="calc-out" id="out"><p class="note">x должен быть &gt; 0.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Логарифм по любому основанию через натуральный: <code>log_b(x)=ln x / ln b</code>. ln — основание e, lg — основание 10.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Логарифм <code>log_b(x)</code> отвечает на вопрос: «в какую степень нужно возвести основание <code>b</code>, чтобы получить <code>x</code>?» То есть если <code>b^y = x</code>, то <code>y = log_b(x)</code>. Логарифм — это обратная операция к возведению в степень. Калькулятор находит логарифм по любому основанию, сводя его к натуральному.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Формула перехода к новому основанию: <span class="eq">log_b(x) = ln(x) / ln(b)</span>, где <code>ln</code> — натуральный логарифм (основание <code>e ≈ 2.718</code>). Она позволяет вычислить логарифм по любому основанию через стандартный <code>ln</code>.</p>
+<p>Ключевые свойства, вытекающие из правил степеней:</p>
+<p><span class="eq">log_b(x · y) = log_b(x) + log_b(y)</span></p>
+<p><span class="eq">log_b(x / y) = log_b(x) − log_b(y)</span></p>
+<p><span class="eq">log_b(xⁿ) = n · log_b(x)</span></p>
+<p>Произведение превращается в сумму, потому что при умножении степеней их показатели складываются — логарифм просто читает этот показатель.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Запишите, что ищете: <code>log_b(x) = ?</code></li>
+<li>Спросите себя: <code>b</code> в какой степени даёт <code>x</code>?</li>
+<li>Если <code>x</code> — точная степень <code>b</code>, ответ виден сразу (например <code>log₂8 = 3</code>, так как <code>2³ = 8</code>).</li>
+<li>Иначе используйте переход: <code>log_b(x) = ln(x) / ln(b)</code>.</li>
+<li>Для сложных выражений сначала упростите свойствами (сумма/разность/степень).</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Вычислим <span class="eq">log₈(32)</span>. Это «8 в какой степени равно 32?». Точного целого нет, переходим к основанию 2.</p>
+<p><span class="eq">log₈(32) = log₂(32) / log₂(8) = 5 / 3 ≈ 1.667</span> (так как <code>2⁵ = 32</code> и <code>2³ = 8</code>).</p>
+<p>Проверка: <span class="eq">8^(5/3) = (2³)^(5/3) = 2⁵ = 32</span> ✓.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Логарифмы измеряют величины, меняющиеся в разы: шкала pH, децибелы, звёздные величины, шкала Рихтера, сложные проценты и период полураспада. В ЕГЭ профиль это задания 5 и 13 (логарифмические уравнения и неравенства), в IB Mathematics — logarithms и натуральный <code>ln</code>, в AP Calculus — производная и интеграл логарифма. Свойства логарифмов превращают сложные произведения в простые суммы.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Думают, что <code>log(x + y) = log(x) + log(y)</code> — нет, в сумму превращается логарифм ПРОИЗВЕДЕНИЯ.</li>
+<li>Берут логарифм нуля или отрицательного числа — он не определён.</li>
+<li>Путают, что в знаменателе формулы перехода стоит <code>ln(b)</code> (основание), а не <code>ln(x)</code>.</li>
+<li>Забывают, что основание должно быть положительным и не равным 1.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в математика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/quadratic.html"><h3>Квадратное уравнение</h3><p>ax² + bx + c = 0 — корни и дискриминант.</p></a><a class="card" href="/calc/percentage.html"><h3>Проценты</h3><p>Сколько процентов, % от числа, изменение в %.</p></a><a class="card" href="/calc/pythagorean.html"><h3>Теорема Пифагора</h3><p>a² + b² = c². Заполните любые два катета/гипотенузу.</p></a><a class="card" href="/calc/triangle-area.html"><h3>Площадь треугольника</h3><p>По основанию и высоте или по трём сторонам (Герон).</p></a><a class="card" href="/calc/circle.html"><h3>Круг и окружность</h3><p>Площадь, длина окружности, диаметр по радиусу.</p></a><a class="card" href="/calc/gcd-lcm.html"><h3>НОД и НОК</h3><p>Наибольший общий делитель и наименьшее общее кратное.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

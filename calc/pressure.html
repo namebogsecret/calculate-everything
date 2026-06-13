@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Давление — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Давление. P = F / A. Заполните любые два. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/pressure.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Давление — калькулятор">
+  <meta property="og:description" content="P = F / A. Заполните любые два.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/pressure.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Давление", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/pressure.html", "inLanguage": "ru", "description": "P = F / A. Заполните любые два.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Физика", "item": "https://calculators.podlevskikh.com/#/cat/physics"}, {"@type": "ListItem", "position": 3, "name": "Давление", "item": "https://calculators.podlevskikh.com/calc/pressure.html"}]}]</script>
+</head>
+<body data-calc="pressure">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚛️ Физика</span></nav><header class="calc-head"><h1>Давление</h1><p class="en">Pressure</p><p class="desc">P = F / A. Заполните любые два.</p></header><div class="calc-form"><div class="field"><label for="in_F">Сила F</label><div class="in-wrap"><input id="in_F" type="text" inputmode="decimal" placeholder="оставьте пустым, чтобы найти"><span class="unit">Н</span></div></div><div class="field"><label for="in_A">Площадь A</label><div class="in-wrap"><input id="in_A" type="text" inputmode="decimal" placeholder="оставьте пустым, чтобы найти"><span class="unit">м²</span></div></div><div class="field"><label for="in_P">Давление P</label><div class="in-wrap"><input id="in_P" type="text" inputmode="decimal" placeholder="оставьте пустым, чтобы найти"><span class="unit">Па</span></div></div></div><div class="calc-out" id="out"><p class="note">Заполните любые два поля — третье вычислю.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Давление <code>P = F/A</code> (паскаль = Н/м²). Атмосферное ≈ 101 325 Па.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Давление показывает, с какой силой объект давит на каждый квадратный метр поверхности. Одна и та же сила на маленькой площади создаёт большое давление (острый гвоздь протыкает доску), а на большой площади — маленькое (широкие лыжи не проваливаются в снег).</p>
+
+<h2>Формула и откуда она</h2>
+<p>Давление определяется как:</p>
+<p><span class="eq">P = F ⁄ A</span></p>
+<p>Сила <code>F</code> прижатия, делённая на площадь <code>A</code>, на которую она распределена. Чем меньше площадь, тем больше давление при той же силе. Отсюда сила <span class="eq">F = P · A</span> и площадь <span class="eq">A = F ⁄ P</span>.</p>
+<p>Единицы СИ: сила <code>F</code> — ньютоны, площадь <code>A</code> — квадратные метры, давление <code>P</code> — паскали (<code>Па</code>). 1 Па = 1 Н/м². Атмосферное давление ≈ 101 325 Па.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Найдите силу в ньютонах (вес тела — это <code>m · g</code>).</li>
+<li>Переведите площадь в квадратные метры (см² → м², делите на 10000).</li>
+<li>Разделите силу на площадь: <code>P = F ⁄ A</code>.</li>
+<li>Получите давление в паскалях.</li>
+<li>При необходимости переведите в килопаскали (÷1000).</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Сила <code>F = 500 Н</code> распределена на площадь <code>A = 0,02 м²</code>. Найдите давление.</p>
+<p>По формуле <span class="eq">P = F ⁄ A = 500 ⁄ 0,02 = 25 000 Па</span>.</p>
+<p>Давление составляет <b>25 000 Па</b>, или 25 кПа. Если ту же силу приложить к вдвое меньшей площади (0,01 м²), давление вырастет вдвое — до 50 000 Па.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Понятие давления используют в гидравлике, при расчёте фундаментов, шин, режущих инструментов, в водолазном деле. Тема входит в физику 7 класса, ОГЭ и ЕГЭ (раздел «Давление твёрдых тел, жидкостей и газов»), а также в IB Physics и AP Physics (Fluids).</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Берут площадь в см² вместо м² (разница в 10000 раз).</li>
+<li>Подставляют массу (кг) вместо силы (Н), забывая умножить на <code>g</code>.</li>
+<li>Путают давление и силу — это разные величины.</li>
+<li>Делят площадь на силу вместо силы на площадь.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в физика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/ohms-law.html"><h3>Закон Ома</h3><p>V = I · R. Заполните любые два — найду третье.</p></a><a class="card" href="/calc/electric-power.html"><h3>Электрическая мощность</h3><p>P = V · I. Мощность по напряжению и току.</p></a><a class="card" href="/calc/newton-second.html"><h3>Второй закон Ньютона</h3><p>F = m · a. Сила, масса, ускорение.</p></a><a class="card" href="/calc/kinematics.html"><h3>Равноускоренное движение</h3><p>v = v₀ + a·t и s = v₀·t + a·t²/2.</p></a><a class="card" href="/calc/free-fall.html"><h3>Свободное падение</h3><p>Время, скорость и высота падения (g = 9.81).</p></a><a class="card" href="/calc/projectile.html"><h3>Бросок под углом</h3><p>Дальность, высота и время полёта.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вероятность по нормальному распределению — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Вероятность по нормальному распределению. P(X &lt; x), P(X &gt; x), P(a &lt; X &lt; b). Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/normal-prob.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Вероятность по нормальному распределению — калькулятор">
+  <meta property="og:description" content="P(X &lt; x), P(X &gt; x), P(a &lt; X &lt; b).">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/normal-prob.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Вероятность по нормальному распределению", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/normal-prob.html", "inLanguage": "ru", "description": "P(X < x), P(X > x), P(a < X < b).", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Статистика", "item": "https://calculators.podlevskikh.com/#/cat/statistics"}, {"@type": "ListItem", "position": 3, "name": "Вероятность по нормальному распределению", "item": "https://calculators.podlevskikh.com/calc/normal-prob.html"}]}]</script>
+</head>
+<body data-calc="normal-prob">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">📊 Статистика</span></nav><header class="calc-head"><h1>Вероятность по нормальному распределению</h1><p class="en">Normal Distribution</p><p class="desc">P(X &lt; x), P(X &gt; x), P(a &lt; X &lt; b).</p></header><div class="calc-form"><div class="field"><label for="in_mean">Среднее μ</label><div class="in-wrap"><input id="in_mean" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_sd">СКО σ</label><div class="in-wrap"><input id="in_sd" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_a">Граница a</label><div class="in-wrap"><input id="in_a" type="text" inputmode="decimal" placeholder="оставьте пустым, чтобы найти"></div></div><div class="field"><label for="in_b">Граница b (для интервала)</label><div class="in-wrap"><input id="in_b" type="text" inputmode="decimal" placeholder="оставьте пустым, чтобы найти"></div></div></div><div class="calc-out" id="out"><p class="note">Введите границу a (и при желании b для интервала).</p></div><section class="explain"><h2>Как это работает</h2><div><p>Φ — функция распределения стандартной нормали. Вероятность попадания в интервал — разность значений Φ на границах. Используется приближение erf (погрешность &lt;1e−4).</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Нормальное распределение (колоколообразная кривая Гаусса) описывает множество природных величин: рост, ошибки измерений, суммы многих случайных факторов. Расчёт «вероятности по нормальному распределению» отвечает на вопрос: какова доля значений, попадающих ниже заданного порога <code>x</code> (или между двумя порогами)? Геометрически это площадь под кривой.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Вероятность «значение меньше x» — это функция распределения (CDF), обозначаемая Φ для стандартного случая:</p>
+<p><span class="eq">P(X &lt; x) = Φ((x − μ) / σ)</span></p>
+<p>Здесь <code>μ</code> — среднее, <code>σ</code> — СКО. Выражение <code>(x − μ)/σ</code> — это уже знакомая z-оценка: мы стандартизируем порог, переводя любое нормальное распределение к единому стандартному N(0, 1). Φ(z) — площадь под стандартной кривой слева от z; её значения берут из таблицы или калькулятора, поскольку интеграл не выражается через элементарные функции.</p>
+<p>Полезный ориентир — <b>правило 68–95–99.7</b>: примерно 68% значений лежат в пределах ±1σ от среднего, 95% — в пределах ±2σ, 99.7% — в пределах ±3σ.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Стандартизируйте порог: z = (x − μ) / σ.</li>
+<li>Найдите Φ(z) по таблице нормального распределения — это P(X &lt; x).</li>
+<li>Для «больше x» возьмите 1 − Φ(z).</li>
+<li>Для интервала [a, b]: Φ((b−μ)/σ) − Φ((a−μ)/σ).</li>
+<li>Если нужна быстрая прикидка для целых σ — примените правило 68–95–99.7.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>IQ распределён нормально с μ = 100 и σ = 15. Какова вероятность встретить человека с IQ меньше 130?</p>
+<p><b>Стандартизация:</b> z = (130 − 100) / 15 = 30 / 15 = <b>2</b>.</p>
+<p><b>CDF:</b> P(X &lt; 130) = Φ(2) ≈ <b>0.9772</b>, то есть около 97.7%.</p>
+<p><b>Проверка правилом 68–95–99.7:</b> 130 — это μ + 2σ. В пределах ±2σ лежит 95%, значит за пределами — 5%, поровну по хвостам — 2.5% сверху. Тогда ниже 130: 100% − 2.5% = 97.5% — совпадает с 97.72% (точное значение чуть выше из-за округления правила).</p>
+</div>
+
+<h2>Где применяется / интерпретация</h2>
+<p>Используется в контроле качества (доля деталей в допуске), психометрии (IQ, тесты), финансах (оценка риска), биологии. Площадь = вероятность = доля популяции. Важно помнить: модель нормальна лишь приблизительно — реальные данные могут иметь скос или более тяжёлые хвосты, и тогда крайние вероятности (события «3+ сигмы») оцениваются особенно неточно.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Забывают, что Φ даёт вероятность «меньше x»; для «больше» нужно 1 − Φ(z).</li>
+<li>Применяют нормальную модель к явно ненормальным данным (доходы, время ожидания — обычно скошены).</li>
+<li>Путают σ и σ² при стандартизации.</li>
+<li>Округляют правило 68–95–99.7 и принимают приближение за точное значение.</li>
+<li>При расчёте интервала вычитают площади «не в том порядке», получая отрицательную вероятность.</li>
+</ul></div>
+</article><section class="cta"><div class="cta-inner"><h2>Застряли в статистика?</h2><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/descriptive.html"><h3>Описательная статистика</h3><p>Среднее, медиана, мода, дисперсия, СКО по списку чисел.</p></a><a class="card" href="/calc/z-score.html"><h3>Z-оценка (стандартизация)</h3><p>На сколько σ значение отклоняется от среднего + перцентиль.</p></a><a class="card" href="/calc/confidence-interval.html"><h3>Доверительный интервал для среднего</h3><p>CI для среднего по выборке (z-интервал).</p></a><a class="card" href="/calc/correlation.html"><h3>Корреляция Пирсона</h3><p>Коэффициент r между двумя рядами.</p></a><a class="card" href="/calc/linear-regression.html"><h3>Линейная регрессия (МНК)</h3><p>Прямая y = a·x + b методом наименьших квадратов.</p></a><a class="card" href="/calc/binomial.html"><h3>Биномиальная вероятность</h3><p>P(ровно k успехов из n), а также ≤k и ≥k.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

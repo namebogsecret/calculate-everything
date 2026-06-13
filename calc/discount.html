@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Скидка — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Скидка. Цена после скидки и сколько сэкономлено. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/discount.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Скидка — калькулятор">
+  <meta property="og:description" content="Цена после скидки и сколько сэкономлено.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/discount.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Скидка", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/discount.html", "inLanguage": "ru", "description": "Цена после скидки и сколько сэкономлено.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Экономика", "item": "https://calculators.podlevskikh.com/#/cat/economics"}, {"@type": "ListItem", "position": 3, "name": "Скидка", "item": "https://calculators.podlevskikh.com/calc/discount.html"}]}]</script>
+</head>
+<body data-calc="discount">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💰 Экономика</span></nav><header class="calc-head"><h1>Скидка</h1><p class="en">Discount</p><p class="desc">Цена после скидки и сколько сэкономлено.</p></header><div class="calc-form"><div class="field"><label for="in_price">Цена</label><div class="in-wrap"><input id="in_price" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_disc">Скидка</label><div class="in-wrap"><input id="in_disc" type="text" inputmode="decimal" placeholder=""><span class="unit">%</span></div></div></div><div class="calc-out" id="out"><p class="note">Введите цену и скидку.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Цена со скидкой = исходная цена × (1 − процент/100).</p></div></section><article class="article">
+<h2>Что это и зачем считать</h2>
+<p>Скидка — это уменьшение цены на определённый процент. Расчёт итоговой цены после скидки нужен буквально каждый день: на распродажах, при оценке акций, расчёте оптовых условий и сравнении предложений. Понимание формулы защищает от маркетинговых уловок вроде «скидка 70%» там, где выгода на деле меньше.</p>
+
+<h2>Формула и откуда она</h2>
+<p><span class="eq">Итог = Цена · (1 − скидка / 100)</span></p>
+<p>где <code>Цена</code> — цена до скидки, <code>скидка</code> — размер скидки в процентах. Выражение <code>скидка / 100</code> переводит проценты в долю, а <code>(1 − доля)</code> — это доля цены, которую вы платите. Сама величина скидки в деньгах равна <code>Цена · скидка / 100</code>.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Переведите скидку в долю: <code>скидка / 100</code>.</li>
+<li>Вычтите её из единицы: <code>1 − скидка/100</code> — это доля, которую платим.</li>
+<li>Умножьте цену на эту долю — получите итоговую цену.</li>
+<li>Размер скидки в рублях = Цена − Итог.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Куртка стоит <b>5000 ₽</b>, скидка <b>30%</b>.</p>
+<p>Доля к оплате: <code>1 − 30/100 = 1 − 0,3 = 0,7</code>.</p>
+<p>Итоговая цена: <code>5000 · 0,7 = 3500 ₽</code>.</p>
+<p>Экономия: <code>5000 − 3500 = 1500 ₽</code>. Проверка: <code>5000 · 0,30 = 1500 ₽</code> — совпадает.</p>
+</div>
+
+<h2>Где применяется / как использовать</h2>
+<p>Формула применяется в рознице, при расчёте промокодов и оптовых прайсов. Важный нюанс: две скидки подряд (например, 20% и затем 10%) <b>не складываются</b> в 30%. Сначала цена умножается на 0,8, потом на 0,9, итог — множитель 0,72, то есть фактическая скидка 28%, а не 30%.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Складывают последовательные скидки (20% + 10% ≠ 30%).</li>
+<li>Умножают цену на <code>скидку/100</code> и забывают, что это сумма скидки, а не итоговая цена.</li>
+<li>Путают, от какой цены считается скидка (от исходной, а не от уже сниженной).</li>
+<li>Округляют до вычисления, искажая копейки.</li>
+</ul>
+</div>
+</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/compound-interest.html"><h3>Сложный процент</h3><p>Рост вклада с капитализацией + регулярные пополнения.</p></a><a class="card" href="/calc/loan-payment.html"><h3>Кредит / ипотека</h3><p>Аннуитетный платёж, переплата, полная стоимость.</p></a><a class="card" href="/calc/cagr.html"><h3>CAGR — среднегодовой рост</h3><p>Среднегодовая доходность инвестиции.</p></a><a class="card" href="/calc/roi.html"><h3>ROI — рентабельность</h3><p>Прибыль относительно вложений в %.</p></a><a class="card" href="/calc/npv.html"><h3>NPV — чистая приведённая стоимость</h3><p>Дисконтирование равных годовых потоков.</p></a><a class="card" href="/calc/break-even.html"><h3>Точка безубыточности</h3><p>Сколько единиц продать, чтобы выйти в ноль.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>

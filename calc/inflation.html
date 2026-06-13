@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Инфляция / покупательная способность — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Инфляция / покупательная способность. Сколько будут стоить деньги через N лет. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/inflation.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Инфляция / покупательная способность — калькулятор">
+  <meta property="og:description" content="Сколько будут стоить деньги через N лет.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/inflation.html">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Инфляция / покупательная способность", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/inflation.html", "inLanguage": "ru", "description": "Сколько будут стоить деньги через N лет.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Экономика", "item": "https://calculators.podlevskikh.com/#/cat/economics"}, {"@type": "ListItem", "position": 3, "name": "Инфляция / покупательная способность", "item": "https://calculators.podlevskikh.com/calc/inflation.html"}]}]</script>
+</head>
+<body data-calc="inflation">
+  <div class="topbar"><div class="topbar-inner">
+      <a class="logo" href="/">Calculate <em>Everything</em></a>
+      <span class="sub">калькуляторы на все случаи жизни</span>
+    </div></div>
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💰 Экономика</span></nav><header class="calc-head"><h1>Инфляция / покупательная способность</h1><p class="en">Inflation</p><p class="desc">Сколько будут стоить деньги через N лет.</p></header><div class="calc-form"><div class="field"><label for="in_amount">Сумма сегодня</label><div class="in-wrap"><input id="in_amount" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_rate">Инфляция в год</label><div class="in-wrap"><input id="in_rate" type="text" inputmode="decimal" placeholder=""><span class="unit">%</span></div></div><div class="field"><label for="in_years">Срок</label><div class="in-wrap"><input id="in_years" type="text" inputmode="decimal" placeholder=""><span class="unit">лет</span></div></div></div><div class="calc-out" id="out"><p class="note">Заполните поля.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Инфляция снижает покупательную способность денег: на ту же сумму через годы можно купить меньше. Калькулятор показывает реальную стоимость сегодняшней суммы в будущем и необходимую индексацию.</p></div></section><article class="article">
+<h2>Что это и зачем считать</h2>
+<p>Инфляция обесценивает деньги: на одну и ту же сумму со временем можно купить меньше. Расчёт реальной (покупательной) стоимости показывает, сколько в сегодняшних деньгах будут «стоить» ваши будущие рубли. Это важно при планировании накоплений, пенсии и при оценке, не съест ли инфляция доход по вкладу.</p>
+
+<h2>Формула и откуда она</h2>
+<p><span class="eq">Реальная = Сумма / (1 + i)ᵗ</span></p>
+<p>где <code>Сумма</code> — номинальная сумма в будущем, <code>i</code> — годовая инфляция (доля), <code>t</code> — число лет. Логика обратна сложному проценту: если цены каждый год растут в <code>(1 + i)</code> раз, то покупательная способность фиксированной суммы каждый год делится на <code>(1 + i)</code>. За <code>t</code> лет — делится на <code>(1 + i)ᵗ</code>.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Переведите инфляцию в долю: проценты делим на 100.</li>
+<li>Прибавьте 1: получите множитель <code>(1 + i)</code>.</li>
+<li>Возведите его в степень <code>t</code> (число лет).</li>
+<li>Разделите номинальную сумму на этот множитель — получите реальную стоимость в сегодняшних деньгах.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Через <b>5 лет</b> у вас будет <b>1 000 000 ₽</b>. Средняя инфляция <b>7% в год</b>. Сколько это в сегодняшних деньгах?</p>
+<p>Множитель: <code>(1 + 0,07)⁵ = 1,07⁵ ≈ 1,40255</code>.</p>
+<p>Реальная стоимость: <code>1 000 000 / 1,40255 ≈ 712 986 ₽</code>.</p>
+<p>То есть миллион через 5 лет по покупательной способности равен примерно <b>713 000 ₽</b> сегодня — инфляция «съела» около 287 000 ₽. Чтобы просто сохранить покупательную способность, вклад должен приносить не меньше 7% годовых.</p>
+</div>
+
+<h2>Где применяется / как использовать</h2>
+<p>Расчёт нужен, чтобы оценивать реальную доходность (ставка по вкладу минус инфляция), планировать целевые суммы на будущее с поправкой на рост цен, сравнивать зарплаты и цены разных лет. Если ставка по вкладу ниже инфляции, реальная доходность отрицательна — деньги тают.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Просто вычитают «инфляция × лет» из суммы вместо деления на <code>(1+i)ᵗ</code> — это даёт неточный результат на длинных сроках.</li>
+<li>Путают номинальную и реальную доходность.</li>
+<li>Берут инфляцию в процентах (7) вместо доли (0,07).</li>
+<li>Считают, что доходность 7% при инфляции 7% даёт прибыль — на самом деле реальный доход около нуля.</li>
+</ul>
+</div>
+</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/compound-interest.html"><h3>Сложный процент</h3><p>Рост вклада с капитализацией + регулярные пополнения.</p></a><a class="card" href="/calc/loan-payment.html"><h3>Кредит / ипотека</h3><p>Аннуитетный платёж, переплата, полная стоимость.</p></a><a class="card" href="/calc/cagr.html"><h3>CAGR — среднегодовой рост</h3><p>Среднегодовая доходность инвестиции.</p></a><a class="card" href="/calc/roi.html"><h3>ROI — рентабельность</h3><p>Прибыль относительно вложений в %.</p></a><a class="card" href="/calc/npv.html"><h3>NPV — чистая приведённая стоимость</h3><p>Дисконтирование равных годовых потоков.</p></a><a class="card" href="/calc/break-even.html"><h3>Точка безубыточности</h3><p>Сколько единиц продать, чтобы выйти в ноль.</p></a></div></section></main>
+  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+    </div></div>
+  <script>CE_boot();</script>
+</body>
+</html>
