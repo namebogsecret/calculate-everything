@@ -1,8 +1,8 @@
 # Calculate Everything
 
-> Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, экономика, статистика и быт. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
+> Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, химия, статистика, экономика, IT, здоровье и быт. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
 
-## Школа и экзамены
+## [Школа и экзамены](https://calculators.podlevskikh.com/cat/school.html)
 - [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calc.podlevskikh.com/): Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.
 - [Перевод первичных баллов ЕГЭ в тестовые (EGE Raw-to-Scaled Score)](https://calc.podlevskikh.com/): Перевод первичных баллов ЕГЭ в тестовые — открыть на calc.podlevskikh.com.
 - [ОГЭ: балл в оценку (OGE Score to Grade)](https://calc.podlevskikh.com/): Перевод первичного балла ОГЭ в оценку — открыть на calc.podlevskikh.com.
@@ -10,7 +10,7 @@
 - [GPA — перевод оценок в 4.0 (GPA Converter (4.0 scale))](https://calculators.podlevskikh.com/calc/gpa-convert.html): Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).
 - [Какая оценка нужна, чтобы выйти на цель (Target Grade Needed)](https://calculators.podlevskikh.com/calc/target-grade.html): Сколько получить на следующей работе, чтобы средний балл стал нужным.
 
-## Физика
+## [Физика](https://calculators.podlevskikh.com/cat/physics.html)
 - [Закон Ома (Ohm's Law)](https://calculators.podlevskikh.com/calc/ohms-law.html): V = I · R. Заполните любые два — найду третье.
 - [Электрическая мощность (Electric Power)](https://calculators.podlevskikh.com/calc/electric-power.html): P = V · I. Мощность по напряжению и току.
 - [Второй закон Ньютона (Newton's 2nd Law)](https://calculators.podlevskikh.com/calc/newton-second.html): F = m · a. Сила, масса, ускорение.
@@ -24,7 +24,7 @@
 - [Волна: скорость · частота · длина (Wave Equation)](https://calculators.podlevskikh.com/calc/wave.html): v = f · λ. Заполните любые два.
 - [Тонкая линза (Thin Lens)](https://calculators.podlevskikh.com/calc/thin-lens.html): 1/f = 1/d₀ + 1/dᵢ.
 
-## Математика
+## [Математика](https://calculators.podlevskikh.com/cat/math.html)
 - [Квадратное уравнение (Quadratic Equation)](https://calculators.podlevskikh.com/calc/quadratic.html): ax² + bx + c = 0 — корни и дискриминант.
 - [Проценты (Percentage)](https://calculators.podlevskikh.com/calc/percentage.html): Сколько процентов, % от числа, изменение в %.
 - [Теорема Пифагора (Pythagorean Theorem)](https://calculators.podlevskikh.com/calc/pythagorean.html): a² + b² = c². Заполните любые два катета/гипотенузу.
@@ -40,8 +40,29 @@
 - [Производная в точке (численно) (Numerical Derivative)](https://calculators.podlevskikh.com/calc/derivative-point.html): Значение f′(x₀) методом центральной разности — для любой формулы.
 - [Производная функции (символьно) (Symbolic Derivative)](https://calculators.podlevskikh.com/calc/derivative-symbolic.html): f′(x) в виде формулы для любого выражения — sin, cos, eˣ, ln, степени, цепное правило.
 - [Определённый интеграл (численно) (Definite Integral)](https://calculators.podlevskikh.com/calc/definite-integral.html): ∫ₐᵇ f(x)dx методом Симпсона — площадь под кривой.
+- [Объём и площадь шара (Sphere)](https://calculators.podlevskikh.com/calc/sphere.html): V = 4⁄3·π·r³ и площадь поверхности S = 4πr² по радиусу.
+- [Объём и площадь куба (Cube)](https://calculators.podlevskikh.com/calc/cube.html): V = a³, полная поверхность S = 6a² и диагональ по ребру.
+- [Объём и площадь цилиндра (Cylinder)](https://calculators.podlevskikh.com/calc/cylinder.html): V = πr²h, боковая и полная поверхность по радиусу и высоте.
+- [Объём и площадь конуса (Cone)](https://calculators.podlevskikh.com/calc/cone.html): Образующая, объём 1⁄3·πr²h, боковая и полная поверхность.
+- [Объём и площадь параллелепипеда (Rectangular Box)](https://calculators.podlevskikh.com/calc/rectangular-box.html): V = a·b·c, полная поверхность и диагональ по трём измерениям.
+- [Объём пирамиды (Pyramid)](https://calculators.podlevskikh.com/calc/pyramid.html): Правильная пирамида с квадратом в основании: объём и поверхность.
 
-## Экономика
+## [Химия](https://calculators.podlevskikh.com/cat/chemistry.html)
+- [Молярная масса по формуле (Molar Mass)](https://calculators.podlevskikh.com/calc/molar-mass.html): Молярная масса вещества по химической формуле (H2O, Ca(OH)2, Al2(SO4)3).
+- [Концентрация раствора (молярность) (Solution Concentration)](https://calculators.podlevskikh.com/calc/solution-concentration.html): Молярная концентрация раствора по массе вещества, его молярной массе и объёму.
+- [pH раствора (pH Calculator)](https://calculators.podlevskikh.com/calc/ph.html): pH, pOH, концентрации ионов водорода и гидроксида, среда раствора.
+- [Уравнение идеального газа (PV=nRT) (Ideal Gas Law)](https://calculators.podlevskikh.com/calc/ideal-gas.html): Решает уравнение состояния идеального газа PV=nRT относительно P, V, n или T.
+
+## [Статистика](https://calculators.podlevskikh.com/cat/statistics.html)
+- [Описательная статистика (Descriptive Statistics)](https://calculators.podlevskikh.com/calc/descriptive.html): Среднее, медиана, мода, дисперсия, СКО по списку чисел.
+- [Z-оценка (стандартизация) (Z-Score)](https://calculators.podlevskikh.com/calc/z-score.html): На сколько σ значение отклоняется от среднего + перцентиль.
+- [Вероятность по нормальному распределению (Normal Distribution)](https://calculators.podlevskikh.com/calc/normal-prob.html): P(X < x), P(X > x), P(a < X < b).
+- [Доверительный интервал для среднего (Confidence Interval)](https://calculators.podlevskikh.com/calc/confidence-interval.html): CI для среднего по выборке (z-интервал).
+- [Корреляция Пирсона (Pearson Correlation)](https://calculators.podlevskikh.com/calc/correlation.html): Коэффициент r между двумя рядами.
+- [Линейная регрессия (МНК) (Linear Regression)](https://calculators.podlevskikh.com/calc/linear-regression.html): Прямая y = a·x + b методом наименьших квадратов.
+- [Биномиальная вероятность (Binomial Probability)](https://calculators.podlevskikh.com/calc/binomial.html): P(ровно k успехов из n), а также ≤k и ≥k.
+
+## [Экономика](https://calculators.podlevskikh.com/cat/economics.html)
 - [Сложный процент (Compound Interest)](https://calculators.podlevskikh.com/calc/compound-interest.html): Рост вклада с капитализацией + регулярные пополнения.
 - [Кредит / ипотека (Loan & Mortgage)](https://calculators.podlevskikh.com/calc/loan-payment.html): Аннуитетный платёж, переплата, полная стоимость.
 - [CAGR — среднегодовой рост (CAGR)](https://calculators.podlevskikh.com/calc/cagr.html): Среднегодовая доходность инвестиции.
@@ -52,17 +73,30 @@
 - [НДС / налог: выделить и начислить (VAT / Sales Tax)](https://calculators.podlevskikh.com/calc/vat.html): Добавить налог к сумме или выделить из суммы.
 - [Скидка (Discount)](https://calculators.podlevskikh.com/calc/discount.html): Цена после скидки и сколько сэкономлено.
 - [Чаевые и счёт на компанию (Tip Calculator)](https://calculators.podlevskikh.com/calc/tip.html): Чаевые и деление счёта поровну.
+- [Зарплата на руки (НДФЛ) (Net Salary after Income Tax)](https://calculators.podlevskikh.com/calc/salary-net-ndfl.html): Сколько остаётся после НДФЛ — прогрессивная шкала 2025 или плоские 13%.
+- [Ипотека с досрочным погашением (Mortgage with Early Repayment)](https://calculators.podlevskikh.com/calc/mortgage-early-payoff.html): На сколько доплата в месяц сокращает срок и переплату.
+- [Вклад с капитализацией процентов (Deposit with Compounding)](https://calculators.podlevskikh.com/calc/deposit-capitalization.html): Сумма вклада в конце с учётом капитализации и пополнений.
+- [Налоговый вычет за обучение (Education Tax Deduction)](https://calculators.podlevskikh.com/calc/tax-deduction-education.html): Сколько вернёт государство за платное обучение (13% в пределах лимита).
 
-## Статистика
-- [Описательная статистика (Descriptive Statistics)](https://calculators.podlevskikh.com/calc/descriptive.html): Среднее, медиана, мода, дисперсия, СКО по списку чисел.
-- [Z-оценка (стандартизация) (Z-Score)](https://calculators.podlevskikh.com/calc/z-score.html): На сколько σ значение отклоняется от среднего + перцентиль.
-- [Вероятность по нормальному распределению (Normal Distribution)](https://calculators.podlevskikh.com/calc/normal-prob.html): P(X < x), P(X > x), P(a < X < b).
-- [Доверительный интервал для среднего (Confidence Interval)](https://calculators.podlevskikh.com/calc/confidence-interval.html): CI для среднего по выборке (z-интервал).
-- [Корреляция Пирсона (Pearson Correlation)](https://calculators.podlevskikh.com/calc/correlation.html): Коэффициент r между двумя рядами.
-- [Линейная регрессия (МНК) (Linear Regression)](https://calculators.podlevskikh.com/calc/linear-regression.html): Прямая y = a·x + b методом наименьших квадратов.
-- [Биномиальная вероятность (Binomial Probability)](https://calculators.podlevskikh.com/calc/binomial.html): P(ровно k успехов из n), а также ≤k и ≥k.
+## [IT и программирование](https://calculators.podlevskikh.com/cat/it.html)
+- [Перевод систем счисления (HEX · BIN · DEC · OCT) (Number Base Converter)](https://calculators.podlevskikh.com/calc/number-base.html): Перевод между двоичной, восьмеричной, десятичной и шестнадцатеричной системами.
+- [Калькулятор подсетей CIDR (IPv4) (CIDR Subnet Calculator)](https://calculators.podlevskikh.com/calc/cidr.html): Маска, адрес сети, broadcast, диапазон и число хостов по записи CIDR.
+- [Конвертер цвета HEX ⇄ RGB ⇄ HSL (Color Converter)](https://calculators.podlevskikh.com/calc/color-converter.html): Перевод цвета между HEX, RGB и HSL.
+- [Base64: кодирование и декодирование (Base64 Encode / Decode)](https://calculators.podlevskikh.com/calc/base64.html): Перевод текста в Base64 и обратно с поддержкой UTF-8 (кириллица).
+- [Unix-timestamp ⇄ дата (Unix Timestamp Converter)](https://calculators.podlevskikh.com/calc/timestamp.html): Перевод Unix-времени (секунды) в дату и обратно.
+- [Конвертер размера данных (Data Size Converter)](https://calculators.podlevskikh.com/calc/data-size.html): Перевод между байтами, битами, КБ, МБ, ГБ, ТБ (двоичная мера).
+- [Энтропия и надёжность пароля (Password Entropy)](https://calculators.podlevskikh.com/calc/password-entropy.html): Оценка энтропии пароля в битах и времени полного перебора.
 
-## На каждый день
+## [Здоровье и тело](https://calculators.podlevskikh.com/cat/health.html)
+- [Калории: BMR и TDEE (Calories: BMR & TDEE)](https://calculators.podlevskikh.com/calc/calories-tdee.html): Базовый обмен и суточная норма калорий по формуле Миффлина — Сан-Жеора.
+- [Идеальный вес (Ideal Weight)](https://calculators.podlevskikh.com/calc/ideal-weight.html): Диапазон нормального веса по ИМТ и формулы Девайна, Робинсона, Миллера.
+- [Процент жира (метод ВМФ США) (Body Fat (US Navy))](https://calculators.podlevskikh.com/calc/body-fat.html): Оценка процента жира по обхватам шеи, талии и бёдер.
+- [Норма воды в день (Daily Water Intake)](https://calculators.podlevskikh.com/calc/water-intake.html): Сколько воды пить в сутки по весу и уровню активности.
+- [Срок родов (ПДР) (Due Date)](https://calculators.podlevskikh.com/calc/due-date.html): Предполагаемая дата родов и текущий срок беременности по формуле Негеле.
+- [Калькулятор овуляции (Ovulation Calculator)](https://calculators.podlevskikh.com/calc/ovulation.html): Дата овуляции, фертильное окно и следующие месячные по циклу.
+- [Срок беременности по неделям (Pregnancy Week)](https://calculators.podlevskikh.com/calc/pregnancy-week.html): Текущий срок беременности в неделях, акушерский месяц, триместр и ПДР.
+
+## [На каждый день](https://calculators.podlevskikh.com/cat/everyday.html)
 - [Индекс массы тела (ИМТ) (BMI)](https://calculators.podlevskikh.com/calc/bmi.html): ИМТ по росту и весу + категория.
 - [Температура: °C ⇄ °F ⇄ K (Temperature Converter)](https://calculators.podlevskikh.com/calc/temperature.html): Перевод между Цельсием, Фаренгейтом и Кельвином.
 - [Конвертер длины (Length Converter)](https://calculators.podlevskikh.com/calc/length-converter.html): м, км, см, мм, миля, фут, дюйм, ярд.
@@ -70,3 +104,7 @@
 - [Конвертер валют (Currency Converter)](https://calculators.podlevskikh.com/calc/currency-converter.html): Перевод по курсу: рубль, доллар, евро, драм, дирхам, франк, лари, тенге — 51 валюта.
 - [Стоимость поездки по топливу (Fuel Cost)](https://calculators.podlevskikh.com/calc/fuel-cost.html): Расход, литры и деньги на дорогу.
 - [Сколько дней между датами (Date Difference)](https://calculators.podlevskikh.com/calc/date-diff.html): Дни, недели и месяцы между двумя датами.
+- [Калькулятор возраста (Age Calculator)](https://calculators.podlevskikh.com/calc/age-calc.html): Точный возраст в годах, месяцах и днях по дате рождения.
+- [Сколько дней до даты (Days Until)](https://calculators.podlevskikh.com/calc/days-until.html): Сколько дней, недель и месяцев осталось до события.
+- [Рабочие дни между датами (Working Days)](https://calculators.podlevskikh.com/calc/working-days.html): Количество рабочих и выходных дней в периоде.
+- [Возраст собаки или кошки по-человечески (Pet Age)](https://calculators.podlevskikh.com/calc/pet-age.html): Перевод возраста питомца в «человеческие» годы.

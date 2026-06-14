@@ -123,6 +123,20 @@ function StepsCard({steps, open, setOpen}){
   );
 }
 function Explain({html}){ if(!html) return null; return <div className="explain" dangerouslySetInnerHTML={{__html:html}}/>; }
+function Faq({items}){
+  if(!items || !items.length) return null;
+  return (
+    <div className="faq">
+      <h2>Частые вопросы</h2>
+      { items.map((qa,i)=>(
+        <details className="faq-item" key={i}>
+          <summary className="faq-q">{qa.q}</summary>
+          <div className="faq-a" dangerouslySetInnerHTML={{__html:qa.a}}/>
+        </details>
+      )) }
+    </div>
+  );
+}
 function FormulaChip({html}){ if(!html) return null; return <div className="formula mono" dangerouslySetInnerHTML={{__html:html}}/>; }
 
 /* ---------- монетизация: воронка на репетиторство + футер ---------- */
@@ -250,7 +264,7 @@ function RootViewM({route, nav, theme, setTheme, query, setQuery, favs, toggleFa
             ? (matches.length ? <ListM calcs={matches} nav={nav} favs={favs} toggleFav={toggleFav}/>
                               : <div className="empty"><div className="big">🔍</div><div className="muted">Ничего не найдено по запросу «{query}»</div></div>)
             : route.v==='favs' ? <FavsM nav={nav} favs={favs} toggleFav={toggleFav} recents={recents}/>
-            : route.v==='all'  ? <CatSectionsM cats={window.CATS} nav={nav} favs={favs} toggleFav={toggleFav} note="Каталог пополняется — скоро IT, здоровье, даты и другие разделы."/>
+            : route.v==='all'  ? <CatSectionsM cats={window.CATS} nav={nav} favs={favs} toggleFav={toggleFav} note="Полный каталог по разделам. Формула и пошаговое решение есть в каждом калькуляторе."/>
             : <HomeM nav={nav} favs={favs} toggleFav={toggleFav} recents={recents} cats={homeCats}/> }
           <AppFooter/>
         </div>
@@ -335,6 +349,7 @@ function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRe
                 <ResultCard hero={hero} rest={rest} res={res} loading={loading} onCopy={()=>copyVal(hero,showToast)}/>
                 <StepsCard steps={res&&res.steps} open={openSteps} setOpen={setOpenSteps}/>
                 <Explain html={calc.explain}/>
+                <Faq items={calc.faq}/>
               </> }
           <TutorCTA cat={cat}/>
           <AppFooter/>
@@ -397,7 +412,7 @@ function DesktopApp({route, nav, theme, setTheme, query, setQuery, favs, toggleF
               { q
                 ? <><div className="sec"><h2>Найдено: {matches.length}</h2></div>{ matches.length? <CardGrid calcs={matches} nav={nav} favs={favs} toggleFav={toggleFav}/> : <div className="empty"><div className="big">🔍</div><div className="muted">Ничего не найдено по запросу «{query}»</div></div> }</>
                 : route.v==='favs' ? <FavsD nav={nav} favs={favs} toggleFav={toggleFav} recents={recents}/>
-                : route.v==='all'  ? <><h1 className="dt-h1">Все калькуляторы</h1><p className="dt-lead">Полный каталог по разделам.</p><SectionsD cats={window.CATS} nav={nav} favs={favs} toggleFav={toggleFav} note="Каталог пополняется — скоро IT, здоровье, даты и другие разделы."/></>
+                : route.v==='all'  ? <><h1 className="dt-h1">Все калькуляторы</h1><p className="dt-lead">Полный каталог по разделам.</p><SectionsD cats={window.CATS} nav={nav} favs={favs} toggleFav={toggleFav} note="Полный каталог по разделам. Формула и пошаговое решение есть в каждом калькуляторе."/></>
                 : <HomeD nav={nav} favs={favs} toggleFav={toggleFav} recents={recents} cats={homeCats}/> }
               <AppFooter/>
             </div> }
@@ -481,6 +496,7 @@ function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
               <Explain html={calc.explain}/>
             </div>
           </div> }
+      { !calc.external && <Faq items={calc.faq}/> }
       <TutorCTA cat={cat}/>
       <AppFooter/>
     </div>

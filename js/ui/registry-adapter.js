@@ -47,11 +47,14 @@
     school:     { glyph: 'А⁺', cls: 'g-school',   tab: 'home'  },
     physics:    { glyph: 'Ω',  cls: 'g-physics',  tab: 'home'  },
     math:       { glyph: '∑',  cls: 'g-math',     tab: 'home'  },
+    chemistry:  { glyph: '⚗',  cls: 'g-chem',     tab: 'home'  },
     statistics: { glyph: 'σ',  cls: 'g-stats',    tab: 'other' },
     economics:  { glyph: '₽',  cls: 'g-econ',     tab: 'other' },
+    it:         { glyph: '01', cls: 'g-it',       tab: 'other' },
+    health:     { glyph: '♥',  cls: 'g-health',   tab: 'other' },
     everyday:   { glyph: '≈',  cls: 'g-everyday', tab: 'other' }
   };
-  var ORDER = ['school', 'physics', 'math', 'statistics', 'economics', 'everyday'];
+  var ORDER = ['school', 'physics', 'math', 'chemistry', 'statistics', 'economics', 'it', 'health', 'everyday'];
   window.CATS = ORDER.filter(function (id) { return CE.CATEGORIES[id]; }).map(function (id) {
     var m = CATMETA[id] || { glyph: '·', cls: 'g-everyday', tab: 'other' };
     return { id: id, name: CE.CATEGORIES[id].title, glyph: m.glyph, cls: m.cls, tab: m.tab, tut: !!CE.CATEGORIES[id].tut };
@@ -158,6 +161,7 @@
       sub: def.sub,                 // обычно undefined → строка падает на desc
       desc: def.desc,
       explain: def.explain,         // HTML
+      faq: def.faq,                 // [{q,a}] — частые вопросы
       fields: fields,
       compute: def.compute ? wrapCompute(def, fields) : null
     };

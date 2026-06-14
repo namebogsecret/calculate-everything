@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://calculators.podlevskikh.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/school.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/physics.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/math.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/chemistry.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/statistics.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/economics.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/it.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/health.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/everyday.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/average-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/gpa-convert.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/target-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -55,4 +64,36 @@
   <url><loc>https://calculators.podlevskikh.com/calc/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/fuel-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/date-diff.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/molar-mass.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/solution-concentration.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/ph.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/ideal-gas.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/number-base.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/cidr.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/color-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/base64.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/timestamp.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/data-size.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/password-entropy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/calories-tdee.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/ideal-weight.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/body-fat.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/water-intake.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/due-date.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/ovulation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/pregnancy-week.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/sphere.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/cube.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/cylinder.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/cone.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/rectangular-box.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/pyramid.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/salary-net-ndfl.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/mortgage-early-payoff.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/deposit-capitalization.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/tax-deduction-education.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/age-calc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/days-until.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/working-days.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/pet-age.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

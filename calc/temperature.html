@@ -20,67 +20,32 @@
   <script src="/js/calculators/economics.js"></script>
   <script src="/js/calculators/statistics.js"></script>
   <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/calculators/chemistry.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/everyday-extra.js"></script>
   <script src="/js/articles/school.js"></script>
   <script src="/js/articles/physics.js"></script>
   <script src="/js/articles/math.js"></script>
   <script src="/js/articles/economics.js"></script>
   <script src="/js/articles/statistics.js"></script>
   <script src="/js/articles/everyday.js"></script>
-  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Температура: °C ⇄ °F ⇄ K", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/temperature.html", "inLanguage": "ru", "description": "Перевод между Цельсием, Фаренгейтом и Кельвином.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/#/cat/everyday"}, {"@type": "ListItem", "position": 3, "name": "Температура: °C ⇄ °F ⇄ K", "item": "https://calculators.podlevskikh.com/calc/temperature.html"}]}]</script>
+  <script src="/js/articles/chemistry.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/everyday-extra.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Температура: °C ⇄ °F ⇄ K", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/temperature.html", "inLanguage": "ru", "description": "Перевод между Цельсием, Фаренгейтом и Кельвином.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/cat/everyday.html"}, {"@type": "ListItem", "position": 3, "name": "Температура: °C ⇄ °F ⇄ K", "item": "https://calculators.podlevskikh.com/calc/temperature.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как перевести Цельсий в Фаренгейт?", "acceptedAnswer": {"@type": "Answer", "text": "Умножьте температуру в Цельсиях на 9, разделите на 5 и прибавьте 32: °F = °C × 9/5 + 32 . Например, 20 °C превращается в 20 × 9/5 + 32 = 68 °F ."}}, {"@type": "Question", "name": "Как перевести Фаренгейт обратно в Цельсий?", "acceptedAnswer": {"@type": "Answer", "text": "Вычтите 32, затем умножьте на 5 и разделите на 9: °C = (°F − 32) × 5/9 . Так 98.6 °F (температура тела) даёт (98.6 − 32) × 5/9 = 37 °C ."}}, {"@type": "Question", "name": "Чем Кельвин отличается от Цельсия?", "acceptedAnswer": {"@type": "Answer", "text": "Шаг шкалы одинаков (1 K = 1 °C), но Кельвин отсчитывается от абсолютного нуля. Перевод простой: K = °C + 273.15 , поэтому 0 °C — это 273.15 K."}}, {"@type": "Question", "name": "При какой температуре °C и °F совпадают?", "acceptedAnswer": {"@type": "Answer", "text": "Шкалы пересекаются в одной точке: −40 °C = −40 °F . Это удобный ориентир для самопроверки перевода."}}]}]</script>
 </head>
 <body data-calc="temperature">
   <div class="topbar"><div class="topbar-inner">
       <a class="logo" href="/">Calculate <em>Everything</em></a>
       <span class="sub">калькуляторы на все случаи жизни</span>
     </div></div>
-  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🧮 На каждый день</span></nav><header class="calc-head"><h1>Температура: °C ⇄ °F ⇄ K</h1><p class="en">Temperature Converter</p><p class="desc">Перевод между Цельсием, Фаренгейтом и Кельвином.</p></header><div class="calc-form"><div class="field"><label for="in_val">Значение</label><div class="in-wrap"><input id="in_val" type="text" inputmode="decimal" placeholder=""></div></div><div class="field"><label for="in_from">Из шкалы</label><div class="in-wrap"><select id="in_from"><option value="C">°C Цельсий</option><option value="F">°F Фаренгейт</option><option value="K">K Кельвин</option></select></div></div></div><div class="calc-out" id="out"><p class="note">Введите значение.</p></div><section class="explain"><h2>Как это работает</h2><div><p>0 °C = 32 °F = 273.15 K. Кельвин отсчитывается от абсолютного нуля.</p></div></section><article class="article">
-<h2>Что это и что показывает</h2>
-<p>Температура измеряется в разных шкалах: Цельсия (°C) — бытовой стандарт в большинстве стран, Фаренгейта (°F) — используется в США, и Кельвина (K) — абсолютная шкала в науке. Конвертер позволяет перевести одно и то же значение температуры между этими шкалами, не меняя физического смысла — меняется лишь «отсчёт» и «шаг» шкалы.</p>
-
-<h2>Формула / коэффициенты</h2>
-<p>Перевод из Цельсия в Фаренгейт и Кельвин:</p>
-<p><span class="eq">°F = °C · 9/5 + 32</span></p>
-<p><span class="eq">K = °C + 273.15</span></p>
-<p>Обратный перевод:</p>
-<p><span class="eq">°C = (°F − 32) · 5/9</span></p>
-<p><span class="eq">°C = K − 273.15</span></p>
-<p>Опорные точки для проверки:</p>
-<table>
-<tbody><tr><th>Описание</th><th>°C</th><th>°F</th><th>K</th></tr>
-<tr><td>Замерзание воды</td><td>0</td><td>32</td><td>273.15</td></tr>
-<tr><td>Кипение воды</td><td>100</td><td>212</td><td>373.15</td></tr>
-<tr><td>Абсолютный нуль</td><td>−273.15</td><td>−459.67</td><td>0</td></tr>
-</tbody></table>
-
-<h2>Как посчитать вручную (по шагам)</h2>
-<ol>
-<li>Чтобы перевести °C в °F: умножьте градусы Цельсия на 9, разделите на 5, прибавьте 32.</li>
-<li>Чтобы перевести °C в K: просто прибавьте 273.15.</li>
-<li>Чтобы перевести °F в °C: вычтите 32, затем умножьте на 5 и разделите на 9.</li>
-<li>Проверьте результат по опорным точкам выше.</li>
-</ol>
-
-<div class="example">
-<h4>Разбор примера</h4>
-<p>Температура тела человека — 37 °C. Переведём в Фаренгейт и Кельвин.</p>
-<p>В Фаренгейт: 37 · 9/5 + 32 = 66.6 + 32 = <b>98.6 °F</b>.</p>
-<p>В Кельвин: 37 + 273.15 = <b>310.15 K</b>.</p>
-<p>Знаменитые «98.6 °F» нормальной температуры — это и есть 37 °C.</p>
-</div>
-
-<h2>Где применяется</h2>
-<p>Конвертер незаменим при чтении американских рецептов и прогнозов погоды, в путешествиях между странами с разными шкалами, в науке и инженерии (Кельвин обязателен в термодинамике и газовых законах) и в медицине при сравнении показаний термометров разных стандартов.</p>
-
-<div class="mistakes">
-<h4>Частые ошибки</h4>
-<ul>
-<li>Путают порядок действий при переводе °F в °C: сначала вычитают 32, и только потом умножают на 5/9, а не наоборот.</li>
-<li>Прибавляют 273 вместо точного 273.15 — для бытовых задач незначительно, для точных расчётов ошибка.</li>
-<li>Считают, что 0 °F = 0 °C — это разные точки: 0 °F ≈ −17.78 °C.</li>
-<li>Пишут «градусы Кельвина»: правильно просто «кельвины» (K), без знака градуса.</li>
-</ul>
-</div>
-</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/bmi.html"><h3>Индекс массы тела (ИМТ)</h3><p>ИМТ по росту и весу + категория.</p></a><a class="card" href="/calc/length-converter.html"><h3>Конвертер длины</h3><p>м, км, см, мм, миля, фут, дюйм, ярд.</p></a><a class="card" href="/calc/weight-converter.html"><h3>Конвертер массы</h3><p>кг, г, т, фунт, унция, стоун.</p></a><a class="card" href="/calc/currency-converter.html"><h3>Конвертер валют</h3><p>Перевод по курсу: рубль, доллар, евро, драм, дирхам, франк, лари, тенге — 51 валюта.</p></a><a class="card" href="/calc/fuel-cost.html"><h3>Стоимость поездки по топливу</h3><p>Расход, литры и деньги на дорогу.</p></a><a class="card" href="/calc/date-diff.html"><h3>Сколько дней между датами</h3><p>Дни, недели и месяцы между двумя датами.</p></a></div></section></main>
+  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-everyday">≈</span><div class="dt-dhead-tx"><h1>Температура: °C ⇄ °F ⇄ K</h1><p>Перевод между Цельсием, Фаренгейтом и Кельвином.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Значение</label><div class="inwrap"><input id="in_val" inputmode="decimal" placeholder="0" value=""></div></div><div class="field"><label>Из шкалы</label><div class="seg-wrap"><div class="seg"><button class="on">°C Цельсий</button><button class="">°F Фаренгейт</button><button class="">K Кельвин</button></div></div></div></div></div><div class="dt-col"><div class="result placeholder">Введите значение.</div><div class="explain"><p>0 °C = 32 °F = 273.15 K. Кельвин отсчитывается от абсолютного нуля.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Как перевести Цельсий в Фаренгейт?</summary><div class="faq-a"><p>Умножьте температуру в Цельсиях на 9, разделите на 5 и прибавьте 32: <code>°F = °C × 9/5 + 32</code>. Например, 20 °C превращается в <code>20 × 9/5 + 32 = 68 °F</code>.</p></div></details><details class="faq-item"><summary class="faq-q">Как перевести Фаренгейт обратно в Цельсий?</summary><div class="faq-a"><p>Вычтите 32, затем умножьте на 5 и разделите на 9: <code>°C = (°F − 32) × 5/9</code>. Так 98.6 °F (температура тела) даёт <code>(98.6 − 32) × 5/9 = 37 °C</code>.</p></div></details><details class="faq-item"><summary class="faq-q">Чем Кельвин отличается от Цельсия?</summary><div class="faq-a"><p>Шаг шкалы одинаков (1 K = 1 °C), но Кельвин отсчитывается от абсолютного нуля. Перевод простой: <code>K = °C + 273.15</code>, поэтому 0 °C — это 273.15 K.</p></div></details><details class="faq-item"><summary class="faq-q">При какой температуре °C и °F совпадают?</summary><div class="faq-a"><p>Шкалы пересекаются в одной точке: <code>−40 °C = −40 °F</code>. Это удобный ориентир для самопроверки перевода.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
   <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).

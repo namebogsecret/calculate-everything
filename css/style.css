@@ -151,6 +151,18 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 80px; }
 .article th, .article td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
 .article th { background: var(--bg-2); color: var(--muted); }
 
+/* FAQ — частые вопросы (SEO: FAQPage) */
+.faq { margin: 40px 0 0; max-width: 760px; }
+.faq > h2 { font-size: 24px; margin: 0 0 14px; letter-spacing: -.01em; }
+.faq-item { border: 1px solid var(--line); border-radius: 12px; padding: 4px 16px; margin: 10px 0; background: var(--bg-2); }
+.faq-item[open] { background: var(--bg); }
+.faq-q { cursor: pointer; font-weight: 600; padding: 12px 0; color: var(--txt); list-style: none; }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::before { content: "＋"; color: var(--accent); margin-right: 10px; font-weight: 400; }
+.faq-item[open] .faq-q::before { content: "－"; }
+.faq-a { color: #c4cedd; line-height: 1.7; padding: 0 0 14px 26px; }
+.faq-a p { margin: 0 0 10px; }
+
 .cta { margin: 44px 0 0; }
 .cta-inner {
   background: linear-gradient(135deg, rgba(87,199,255,.10), rgba(125,240,194,.06));

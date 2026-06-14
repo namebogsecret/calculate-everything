@@ -10,8 +10,11 @@ window.CE = (function () {
     school:     { title: 'Школа и экзамены', en: 'School & Exams', emoji: '🎓', tut: true },
     physics:    { title: 'Физика',      en: 'Physics',     emoji: '⚛️', tut: true  },
     math:       { title: 'Математика',  en: 'Math',        emoji: '∑',  tut: true  },
-    economics:  { title: 'Экономика',   en: 'Economics',   emoji: '💰', tut: false },
+    chemistry:  { title: 'Химия',       en: 'Chemistry',   emoji: '⚗️', tut: true  },
     statistics: { title: 'Статистика',  en: 'Statistics',  emoji: '📊', tut: true  },
+    economics:  { title: 'Экономика',   en: 'Economics',   emoji: '💰', tut: false },
+    it:         { title: 'IT и программирование', en: 'IT & Programming', emoji: '💻', tut: false },
+    health:     { title: 'Здоровье и тело', en: 'Health & Body', emoji: '🏥', tut: false },
     everyday:   { title: 'На каждый день', en: 'Everyday',  emoji: '🧮', tut: false },
   };
 
@@ -274,6 +277,17 @@ function CE_boot() {
     const art = (window.CE_ARTICLES || {})[d.id];
     if (art) {
       app.appendChild(el('article', { class: 'article', html: art }));
+    }
+
+    // FAQ — частые вопросы (SEO: FAQPage JSON-LD генерит build-pages.py из d.faq)
+    if (d.faq && d.faq.length) {
+      const sec = el('section', { class: 'faq' }, el('h2', null, 'Частые вопросы'));
+      for (const qa of d.faq) {
+        sec.appendChild(el('details', { class: 'faq-item' },
+          el('summary', { class: 'faq-q' }, qa.q),
+          el('div', { class: 'faq-a', html: qa.a })));
+      }
+      app.appendChild(sec);
     }
 
     // ВОРОНКА: для предметов, где Vladimir репетитор — CTA на бронь

@@ -20,65 +20,32 @@
   <script src="/js/calculators/economics.js"></script>
   <script src="/js/calculators/statistics.js"></script>
   <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/calculators/chemistry.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/everyday-extra.js"></script>
   <script src="/js/articles/school.js"></script>
   <script src="/js/articles/physics.js"></script>
   <script src="/js/articles/math.js"></script>
   <script src="/js/articles/economics.js"></script>
   <script src="/js/articles/statistics.js"></script>
   <script src="/js/articles/everyday.js"></script>
-  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Индекс массы тела (ИМТ)", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/bmi.html", "inLanguage": "ru", "description": "ИМТ по росту и весу + категория.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/#/cat/everyday"}, {"@type": "ListItem", "position": 3, "name": "Индекс массы тела (ИМТ)", "item": "https://calculators.podlevskikh.com/calc/bmi.html"}]}]</script>
+  <script src="/js/articles/chemistry.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/everyday-extra.js"></script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Индекс массы тела (ИМТ)", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/bmi.html", "inLanguage": "ru", "description": "ИМТ по росту и весу + категория.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/cat/everyday.html"}, {"@type": "ListItem", "position": 3, "name": "Индекс массы тела (ИМТ)", "item": "https://calculators.podlevskikh.com/calc/bmi.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как посчитать ИМТ вручную?", "acceptedAnswer": {"@type": "Answer", "text": "Разделите вес в килограммах на квадрат роста в метрах: ИМТ = вес / рост² . Например, при весе 70 кг и росте 1.75 м получится 70 / (1.75 × 1.75) = 22.9 — это норма."}}, {"@type": "Question", "name": "Какой ИМТ считается нормальным?", "acceptedAnswer": {"@type": "Answer", "text": "По классификации ВОЗ норма — от 18.5 до 24.9. Ниже 18.5 — недостаток веса, от 25 до 30 — избыточный вес, выше 30 — ожирение. Эти границы одинаковы для мужчин и женщин."}}, {"@type": "Question", "name": "Почему ИМТ не всегда точен?", "acceptedAnswer": {"@type": "Answer", "text": "Индекс не различает мышцы и жир. У спортсмена с развитой мускулатурой ИМТ может попасть в зону избытка, хотя жира мало. Для пожилых, детей и беременных ИМТ тоже трактуют с поправками."}}, {"@type": "Question", "name": "Частая ошибка при расчёте ИМТ?", "acceptedAnswer": {"@type": "Answer", "text": "Самая частая ошибка — подставить рост в сантиметрах вместо метров. Рост 175 см нужно перевести в 1.75 м , иначе результат окажется в сотни раз меньше нормы."}}]}]</script>
 </head>
 <body data-calc="bmi">
   <div class="topbar"><div class="topbar-inner">
       <a class="logo" href="/">Calculate <em>Everything</em></a>
       <span class="sub">калькуляторы на все случаи жизни</span>
     </div></div>
-  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🧮 На каждый день</span></nav><header class="calc-head"><h1>Индекс массы тела (ИМТ)</h1><p class="en">BMI</p><p class="desc">ИМТ по росту и весу + категория.</p></header><div class="calc-form"><div class="field"><label for="in_w">Вес</label><div class="in-wrap"><input id="in_w" type="text" inputmode="decimal" placeholder=""><span class="unit">кг</span></div></div><div class="field"><label for="in_h">Рост</label><div class="in-wrap"><input id="in_h" type="text" inputmode="decimal" placeholder=""><span class="unit">см</span></div></div></div><div class="calc-out" id="out"><p class="note">Введите вес и рост.</p></div><section class="explain"><h2>Как это работает</h2><div><p>Индекс массы тела <code>ИМТ = вес(кг) / рост²(м)</code>. ВОЗ: &lt;18.5 недостаток, 18.5–25 норма, 25–30 избыток, &gt;30 ожирение. Не учитывает мышечную массу.</p></div></section><article class="article">
-<h2>Что это и что показывает</h2>
-<p>Индекс массы тела (ИМТ, англ. BMI) — это простое числовое соотношение веса и роста, которое позволяет грубо оценить, соответствует ли масса тела росту. ИМТ не измеряет жир напрямую, но даёт быстрый ориентир для скрининга: есть ли недостаток веса, норма, избыток или ожирение. Именно поэтому им пользуются врачи на первичном приёме и страховые компании.</p>
-
-<h2>Формула / коэффициенты</h2>
-<p>Формула предельно проста — вес в килограммах делится на квадрат роста в метрах:</p>
-<p><span class="eq">ИМТ = вес (кг) / рост² (м)</span></p>
-<p>Категории по классификации ВОЗ:</p>
-<table>
-<tbody><tr><th>ИМТ</th><th>Категория</th></tr>
-<tr><td>&lt; 18.5</td><td>Недостаток массы</td></tr>
-<tr><td>18.5 – 25</td><td>Норма</td></tr>
-<tr><td>25 – 30</td><td>Избыточная масса</td></tr>
-<tr><td>&gt; 30</td><td>Ожирение</td></tr>
-</tbody></table>
-
-<h2>Как посчитать вручную (по шагам)</h2>
-<ol>
-<li>Переведите рост в метры: если он в сантиметрах, разделите на 100. Например, 180 см = 1.80 м.</li>
-<li>Возведите рост в квадрат: <code>1.80 · 1.80</code>.</li>
-<li>Разделите вес в килограммах на полученное число.</li>
-<li>Сравните результат с таблицей категорий ВОЗ.</li>
-</ol>
-
-<div class="example">
-<h4>Разбор примера</h4>
-<p>Человек ростом 180 см и весом 80 кг.</p>
-<p>Рост в метрах: 180 / 100 = 1.80 м.</p>
-<p>Квадрат роста: 1.80² = 3.24.</p>
-<p>ИМТ: 80 / 3.24 ≈ <b>24.69</b>.</p>
-<p>Значение 24.69 попадает в диапазон 18.5–25 — это <b>норма</b> (хотя и у верхней границы).</p>
-</div>
-
-<h2>Где применяется</h2>
-<p>ИМТ используют для первичного скрининга состояния здоровья, при оформлении медицинских страховок, в спортивной медицине как отправную точку, а также в эпидемиологии для оценки доли населения с ожирением. Это самый распространённый и быстрый показатель «нормы веса».</p>
-
-<div class="mistakes">
-<h4>Частые ошибки</h4>
-<ul>
-<li>Подставляют рост в сантиметрах вместо метров — тогда ИМТ выходит абсурдно маленьким (например, 80 / 180² = 0.0025).</li>
-<li>Забывают возвести рост в квадрат и делят просто на рост.</li>
-<li>Считают ИМТ единственным критерием здоровья: у спортсменов с большой мышечной массой ИМТ завышен, хотя жира мало. Мышцы тяжелее жира, поэтому ИМТ не отличает мышцы от жира.</li>
-<li>Применяют взрослые категории к детям и подросткам — для них используются отдельные перцентильные таблицы.</li>
-</ul>
-</div>
-</article><section class="related"><h2>Похожие калькуляторы</h2><div class="grid"><a class="card" href="/calc/temperature.html"><h3>Температура: °C ⇄ °F ⇄ K</h3><p>Перевод между Цельсием, Фаренгейтом и Кельвином.</p></a><a class="card" href="/calc/length-converter.html"><h3>Конвертер длины</h3><p>м, км, см, мм, миля, фут, дюйм, ярд.</p></a><a class="card" href="/calc/weight-converter.html"><h3>Конвертер массы</h3><p>кг, г, т, фунт, унция, стоун.</p></a><a class="card" href="/calc/currency-converter.html"><h3>Конвертер валют</h3><p>Перевод по курсу: рубль, доллар, евро, драм, дирхам, франк, лари, тенге — 51 валюта.</p></a><a class="card" href="/calc/fuel-cost.html"><h3>Стоимость поездки по топливу</h3><p>Расход, литры и деньги на дорогу.</p></a><a class="card" href="/calc/date-diff.html"><h3>Сколько дней между датами</h3><p>Дни, недели и месяцы между двумя датами.</p></a></div></section></main>
+  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-everyday">≈</span><div class="dt-dhead-tx"><h1>Индекс массы тела (ИМТ)</h1><p>ИМТ по росту и весу + категория.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Вес</label><div class="inwrap"><input id="in_w" inputmode="decimal" placeholder="0" value=""><span class="unit">кг</span></div></div><div class="field"><label>Рост</label><div class="inwrap"><input id="in_h" inputmode="decimal" placeholder="0" value="175"><span class="unit">см</span></div></div></div></div><div class="dt-col"><div class="result placeholder">Введите вес и рост.</div><div class="explain"><p>Индекс массы тела <code>ИМТ = вес(кг) / рост²(м)</code>. ВОЗ: &lt;18.5 недостаток, 18.5–25 норма, 25–30 избыток, &gt;30 ожирение. Не учитывает мышечную массу.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Как посчитать ИМТ вручную?</summary><div class="faq-a"><p>Разделите вес в килограммах на квадрат роста в метрах: <code>ИМТ = вес / рост²</code>. Например, при весе 70 кг и росте 1.75 м получится <code>70 / (1.75 × 1.75) = 22.9</code> — это норма.</p></div></details><details class="faq-item"><summary class="faq-q">Какой ИМТ считается нормальным?</summary><div class="faq-a"><p>По классификации ВОЗ норма — от 18.5 до 24.9. Ниже 18.5 — недостаток веса, от 25 до 30 — избыточный вес, выше 30 — ожирение. Эти границы одинаковы для мужчин и женщин.</p></div></details><details class="faq-item"><summary class="faq-q">Почему ИМТ не всегда точен?</summary><div class="faq-a"><p>Индекс не различает мышцы и жир. У спортсмена с развитой мускулатурой ИМТ может попасть в зону избытка, хотя жира мало. Для пожилых, детей и беременных ИМТ тоже трактуют с поправками.</p></div></details><details class="faq-item"><summary class="faq-q">Частая ошибка при расчёте ИМТ?</summary><div class="faq-a"><p>Самая частая ошибка — подставить рост в сантиметрах вместо метров. Рост 175 см нужно перевести в <code>1.75 м</code>, иначе результат окажется в сотни раз меньше нормы.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
   <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
