@@ -36,6 +36,9 @@
   --c-it:      #3b7a8c;
   --c-health:  #d05b6a;
   --c-everyday:#6b7384;
+  --c-construction:#b6792e;
+  --c-cooking: #c25b46;
+  --c-generators:#4a7d4e;
 }
 
 html[data-theme="dark"]{
@@ -61,6 +64,9 @@ html[data-theme="dark"]{
   --c-it:      #5aa0b3;
   --c-health:  #e67885;
   --c-everyday:#9aa3b4;
+  --c-construction:#d39a4f;
+  --c-cooking: #e07a64;
+  --c-generators:#5fa063;
 }
 
 *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
@@ -159,6 +165,7 @@ body{
 .g-math{background:var(--c-math);} .g-stats{background:var(--c-stats);}
 .g-econ{background:var(--c-econ);} .g-everyday{background:var(--c-everyday);}
 .g-chem{background:var(--c-chem);} .g-it{background:var(--c-it);} .g-health{background:var(--c-health);}
+.g-construction{background:var(--c-construction);} .g-cooking{background:var(--c-cooking);} .g-generators{background:var(--c-generators);}
 
 /* ===== list (iOS grouped) ===== */
 .list{ background:var(--surface); border-radius:var(--radius); box-shadow:var(--shadow);
@@ -309,6 +316,29 @@ body{
 
 .explain{ padding:12px 4px 2px; color:var(--ink-2); font-size:.9rem; line-height:1.55; }
 .explain b{ color:var(--ink); font-weight:600; }
+
+/* Полная статья «теория за расчётом» (на страницах /calc/*.html) */
+.app-article{ margin-top:20px; padding-top:16px; border-top:1px solid var(--line-2);
+  color:var(--ink-2); font-size:.94rem; line-height:1.62; }
+.app-article h2{ color:var(--ink); font-size:1.05rem; font-weight:740; letter-spacing:-.02em;
+  margin:22px 0 8px; padding-left:2px; }
+.app-article h2:first-child{ margin-top:0; }
+.app-article h3{ color:var(--ink); font-size:.98rem; font-weight:680; margin:16px 0 6px; }
+.app-article p{ margin:0 0 10px; }
+.app-article b,.app-article strong{ color:var(--ink); font-weight:640; }
+.app-article ul,.app-article ol{ margin:0 0 12px; padding-left:22px; }
+.app-article li{ margin:3px 0; }
+.app-article code{ font-family:ui-monospace,monospace; font-size:.86em; background:var(--field);
+  color:var(--ink); padding:1px 5px; border-radius:6px; }
+.app-article .eq{ display:inline-block; font-family:ui-monospace,monospace; color:var(--ink);
+  background:var(--surface-2); border:1px solid var(--line); border-radius:8px;
+  padding:3px 9px; margin:2px 0; }
+.app-article table{ border-collapse:collapse; margin:6px 0 14px; font-size:.9rem; width:100%; }
+.app-article th,.app-article td{ border:1px solid var(--line); padding:6px 10px; text-align:left; }
+.app-article th{ background:var(--surface-2); color:var(--ink); font-weight:640; }
+.app-article a{ color:var(--accent); text-decoration:none; font-weight:560; }
+.app-article a:hover{ text-decoration:underline; }
+.dt-content .app-article{ max-width:760px; }
 
 /* FAQ — частые вопросы */
 .faq{ margin-top:18px; }

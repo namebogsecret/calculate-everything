@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Молярная масса по формуле — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Молярная масса по формуле. Молярная масса вещества по химической формуле (H2O, Ca(OH)2, Al2(SO4)3). Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/molar-mass.html">
@@ -10,47 +10,115 @@
   <meta property="og:title" content="Молярная масса по формуле — калькулятор">
   <meta property="og:description" content="Молярная масса вещества по химической формуле (H2O, Ca(OH)2, Al2(SO4)3).">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/molar-mass.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Молярная масса по формуле", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/molar-mass.html", "inLanguage": "ru", "description": "Молярная масса вещества по химической формуле (H2O, Ca(OH)2, Al2(SO4)3).", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Химия", "item": "https://calculators.podlevskikh.com/cat/chemistry.html"}, {"@type": "ListItem", "position": 3, "name": "Молярная масса по формуле", "item": "https://calculators.podlevskikh.com/calc/molar-mass.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему важен регистр букв в формуле?", "acceptedAnswer": {"@type": "Answer", "text": "Символ элемента — это одна заглавная и, возможно, одна строчная буква. Co — кобальт, а CO — оксид углерода (углерод + кислород). Поэтому cO2 или co2 распознаны не будут."}}, {"@type": "Question", "name": "Поддерживаются ли скобки?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Круглые и квадратные скобки с множителем работают: Ca(OH)2 , Al2(SO4)3 , K4[Fe(CN)6] . Множитель применяется ко всем атомам внутри группы."}}, {"@type": "Question", "name": "Чем молярная масса отличается от молекулярной?", "acceptedAnswer": {"@type": "Answer", "text": "Численно они совпадают: молекулярная масса измеряется в а.е.м. (атомных единицах), а молярная — в г/моль. Вода: молекулярная масса 18.0 а.е.м., молярная масса 18.0 г/моль."}}, {"@type": "Question", "name": "Можно ли считать кристаллогидраты вроде CuSO4·5H2O?", "acceptedAnswer": {"@type": "Answer", "text": "Точку-разделитель калькулятор не парсит. Раскройте формулу вручную и сложите: введите CuSO4, затем H10O5 как добавку — или посчитайте две части и сложите результаты."}}]}]</script>
 </head>
 <body data-calc="molar-mass">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-chem">⚗</span><div class="dt-dhead-tx"><h1>Молярная масса по формуле</h1><p>Молярная масса вещества по химической формуле (H2O, Ca(OH)2, Al2(SO4)3).</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="formula mono">M = Σ (атомная масса · число атомов)</div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field col"><label>Химическая формула <small>Регистр важен: Co — кобальт, CO — оксид углерода.</small></label><input id="in_formula" class="mono" placeholder="Ca(OH)2" spellcheck="false" autocapitalize="off" value="H2O"></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">Молярная масса</div><div class="res-val">18,015<span class="u">г/моль</span></div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra one"><div class="cell"><div class="k">Всего атомов</div><div class="v mono">3</div></div></div></div><div class="steps"><button class="steps-h open"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h10M4 12h16M4 17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></span> Пошаговое решение <span class="ar"><svg viewBox="0 0 24 24" fill="none"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="steps-body"><ol><li><span class="fx">H: 1,008 × 2 = 2,016 г/моль</span></li><li><span class="fx">O: 15,999 × 1 = 15,999 г/моль</span></li><li><span class="fx">Сумма: M = 18,015 г/моль</span></li></ol></div></div><div class="explain"><p>Молярная масса <code>M</code> равна сумме атомных масс всех атомов в формуле. Парсер раскрывает скобки и множители: для <code>Ca(OH)2</code> группа <code>OH</code> берётся дважды. Результат — в граммах на моль.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Почему важен регистр букв в формуле?</summary><div class="faq-a"><p>Символ элемента — это одна заглавная и, возможно, одна строчная буква. <code>Co</code> — кобальт, а <code>CO</code> — оксид углерода (углерод + кислород). Поэтому <code>cO2</code> или <code>co2</code> распознаны не будут.</p></div></details><details class="faq-item"><summary class="faq-q">Поддерживаются ли скобки?</summary><div class="faq-a"><p>Да. Круглые и квадратные скобки с множителем работают: <code>Ca(OH)2</code>, <code>Al2(SO4)3</code>, <code>K4[Fe(CN)6]</code>. Множитель применяется ко всем атомам внутри группы.</p></div></details><details class="faq-item"><summary class="faq-q">Чем молярная масса отличается от молекулярной?</summary><div class="faq-a"><p>Численно они совпадают: молекулярная масса измеряется в а.е.м. (атомных единицах), а молярная — в г/моль. Вода: молекулярная масса 18.0 а.е.м., молярная масса 18.0 г/моль.</p></div></details><details class="faq-item"><summary class="faq-q">Можно ли считать кристаллогидраты вроде CuSO4·5H2O?</summary><div class="faq-a"><p>Точку-разделитель калькулятор не парсит. Раскройте формулу вручную и сложите: введите CuSO4, затем H10O5 как добавку — или посчитайте две части и сложите результаты.</p></div></details></div><section class="app-cta"><div class="cta-h">Трудности с разделом «Химия»?</div><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a><a class="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></section><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚗️ Химия</span></nav><header class="calc-head"><h1>Молярная масса по формуле</h1><p class="en">Molar Mass</p><p class="desc">Молярная масса вещества по химической формуле (H2O, Ca(OH)2, Al2(SO4)3).</p></header><section class="explain"><h2>Как это работает</h2><div><p>Молярная масса <code>M</code> равна сумме атомных масс всех атомов в формуле. Парсер раскрывает скобки и множители: для <code>Ca(OH)2</code> группа <code>OH</code> берётся дважды. Результат — в граммах на моль.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Молярная масса (англ. molar mass) — это масса одного моля вещества, выраженная в граммах на моль (г/моль). Один моль — это число Авогадро частиц, примерно 6.022·10²³ структурных единиц. Зная молярную массу, вы переводите граммы в моли и обратно, а это основа любого химического расчёта: от приготовления раствора до составления уравнения реакции. По формуле вещества калькулятор раскрывает скобки, считает атомы каждого элемента и складывает их атомные массы.</p>
+<p>Я Владимир, окончил физический факультет МГУ им. Ломоносова и больше 20 лет преподаю физику и математику. Молярная масса — первое, на чём спотыкаются школьники при подготовке к ОГЭ, ЕГЭ и международным экзаменам, поэтому ниже разберу её предельно подробно.</p>
+
+<h2>Формула</h2>
+<p>Молярная масса вещества равна сумме произведений атомной массы каждого элемента на число его атомов в формуле:</p>
+<p><span class="eq">M = Σ (атомная масса · число атомов)</span></p>
+<p>Атомные массы берутся из периодической таблицы. Опорные значения, которые стоит помнить:</p>
+<table>
+<tr><th>Элемент</th><th>Символ</th><th>Атомная масса, г/моль</th></tr>
+<tr><td>Водород</td><td><code>H</code></td><td>1.008</td></tr>
+<tr><td>Углерод</td><td><code>C</code></td><td>12.011</td></tr>
+<tr><td>Азот</td><td><code>N</code></td><td>14.007</td></tr>
+<tr><td>Кислород</td><td><code>O</code></td><td>15.999</td></tr>
+<tr><td>Натрий</td><td><code>Na</code></td><td>22.990</td></tr>
+<tr><td>Сера</td><td><code>S</code></td><td>32.06</td></tr>
+<tr><td>Хлор</td><td><code>Cl</code></td><td>35.45</td></tr>
+<tr><td>Кальций</td><td><code>Ca</code></td><td>40.078</td></tr>
+</table>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Разберите формулу на элементы и определите число атомов каждого, раскрыв скобки (индекс после скобки умножает все атомы внутри).</li>
+<li>Найдите атомную массу каждого элемента в периодической таблице.</li>
+<li>Умножьте атомную массу на число атомов этого элемента.</li>
+<li>Сложите вклады всех элементов — получите молярную массу в г/моль.</li>
+</ol>
+
+<div class="example">
+<h4>Пример</h4>
+<p>Найдём молярную массу гидроксида кальция <code>Ca(OH)2</code>.</p>
+<p>Раскрываем скобку: кальций Ca — 1 атом, кислород O — 2 атома, водород H — 2 атома.</p>
+<p>Ca: 40.078 · 1 = 40.078</p>
+<p>O: 15.999 · 2 = 31.998</p>
+<p>H: 1.008 · 2 = 2.016</p>
+<p>Сумма: 40.078 + 31.998 + 2.016 = <b>74.092 г/моль</b>.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Молярная масса нужна, чтобы рассчитать массу реагентов для реакции по уравнению, приготовить раствор заданной концентрации, найти выход продукта, определить эмпирическую формулу по результатам анализа. В быту и промышленности это пересчёт между «сколько грамм» и «сколько молекул». Без неё невозможна стехиометрия — ядро школьной и вузовской химии.</p>
+
+<div class="mistakes">
+<h4>Осторожно</h4>
+<ul>
+<li>Путают регистр: <code>Co</code> (кобальт) и <code>CO</code> (оксид углерода) — совершенно разные вещества с разной массой.</li>
+<li>Забывают умножить на индекс после скобки: в <code>Al2(SO4)3</code> внутри скобки три группы SO₄, то есть 3 серы и 12 кислородов.</li>
+<li>Берут атомную массу за единицу для всех элементов — водород действительно около 1, но углерод 12, кислород 16.</li>
+<li>Считают индекс показателем степени: цифра в формуле — это множитель числа атомов, а не возведение в степень.</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Почему важен регистр букв в формуле?</summary><div class="faq-a"><p>Символ элемента — это одна заглавная и, возможно, одна строчная буква. <code>Co</code> — кобальт, а <code>CO</code> — оксид углерода (углерод + кислород). Поэтому <code>cO2</code> или <code>co2</code> распознаны не будут.</p></div></details><details class="faq-item"><summary class="faq-q">Поддерживаются ли скобки?</summary><div class="faq-a"><p>Да. Круглые и квадратные скобки с множителем работают: <code>Ca(OH)2</code>, <code>Al2(SO4)3</code>, <code>K4[Fe(CN)6]</code>. Множитель применяется ко всем атомам внутри группы.</p></div></details><details class="faq-item"><summary class="faq-q">Чем молярная масса отличается от молекулярной?</summary><div class="faq-a"><p>Численно они совпадают: молекулярная масса измеряется в а.е.м. (атомных единицах), а молярная — в г/моль. Вода: молекулярная масса 18.0 а.е.м., молярная масса 18.0 г/моль.</p></div></details><details class="faq-item"><summary class="faq-q">Можно ли считать кристаллогидраты вроде CuSO4·5H2O?</summary><div class="faq-a"><p>Точку-разделитель калькулятор не парсит. Раскройте формулу вручную и сложите: введите CuSO4, затем H10O5 как добавку — или посчитайте две части и сложите результаты.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

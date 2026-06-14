@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Срок родов (ПДР) — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Срок родов (ПДР). Предполагаемая дата родов и текущий срок беременности по формуле Негеле. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/due-date.html">
@@ -10,47 +10,107 @@
   <meta property="og:title" content="Срок родов (ПДР) — калькулятор">
   <meta property="og:description" content="Предполагаемая дата родов и текущий срок беременности по формуле Негеле.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/due-date.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Срок родов (ПДР)", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/due-date.html", "inLanguage": "ru", "description": "Предполагаемая дата родов и текущий срок беременности по формуле Негеле.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Здоровье и тело", "item": "https://calculators.podlevskikh.com/cat/health.html"}, {"@type": "ListItem", "position": 3, "name": "Срок родов (ПДР)", "item": "https://calculators.podlevskikh.com/calc/due-date.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Почему срок считают от месячных, а не от зачатия?", "acceptedAnswer": {"@type": "Answer", "text": "Точную дату зачатия знают редко, а первый день последних месячных женщина обычно помнит. Поэтому «акушерский» срок отсчитывают от ПДПМ — он примерно на 2 недели больше «эмбрионального»."}}, {"@type": "Question", "name": "У меня нерегулярный цикл — формула подойдёт?", "acceptedAnswer": {"@type": "Answer", "text": "При нерегулярном или длинном цикле точность падает: овуляция смещается. Введите свою длину цикла, но всё равно опирайтесь на датировку по УЗИ первого триместра — она надёжнее."}}, {"@type": "Question", "name": "Насколько точна ПДР?", "acceptedAnswer": {"@type": "Answer", "text": "В сам день ПДР рождается лишь около 5% детей; нормой считаются роды в пределах ±2 недель. Это ориентир для планирования, а не медицинский прогноз — следите за наблюдением у врача."}}]}]</script>
 </head>
 <body data-calc="due-date">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-health">♥</span><div class="dt-dhead-tx"><h1>Срок родов (ПДР)</h1><p>Предполагаемая дата родов и текущий срок беременности по формуле Негеле.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Первый день последних месячных (ГГГГ-ММ-ДД)</label><div class="inwrap"><input id="in_lmp" type="date" value=""></div></div><div class="field"><label>Длина цикла</label><div class="inwrap"><input id="in_cycle" inputmode="decimal" placeholder="0" value="28"><span class="unit">дней</span></div></div></div></div><div class="dt-col"><div class="result placeholder">Введите первый день последних месячных в формате ГГГГ-ММ-ДД.</div><div class="explain"><p>Формула Негеле отсчитывает от первого дня последних месячных (ПДПМ) 280 дней (40 недель) и поправляется на длину цикла. Это справочная оценка: роды в норме происходят с 37-й по 42-ю неделю, поэтому ПДР — ориентир, а не гарантированная дата, и не замена УЗИ и наблюдению врача.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Почему срок считают от месячных, а не от зачатия?</summary><div class="faq-a"><p>Точную дату зачатия знают редко, а первый день последних месячных женщина обычно помнит. Поэтому «акушерский» срок отсчитывают от ПДПМ — он примерно на 2 недели больше «эмбрионального».</p></div></details><details class="faq-item"><summary class="faq-q">У меня нерегулярный цикл — формула подойдёт?</summary><div class="faq-a"><p>При нерегулярном или длинном цикле точность падает: овуляция смещается. Введите свою длину цикла, но всё равно опирайтесь на датировку по УЗИ первого триместра — она надёжнее.</p></div></details><details class="faq-item"><summary class="faq-q">Насколько точна ПДР?</summary><div class="faq-a"><p>В сам день ПДР рождается лишь около 5% детей; нормой считаются роды в пределах ±2 недель. Это ориентир для планирования, а не медицинский прогноз — следите за наблюдением у врача.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🏥 Здоровье и тело</span></nav><header class="calc-head"><h1>Срок родов (ПДР)</h1><p class="en">Due Date</p><p class="desc">Предполагаемая дата родов и текущий срок беременности по формуле Негеле.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Формула Негеле отсчитывает от первого дня последних месячных (ПДПМ) 280 дней (40 недель) и поправляется на длину цикла. Это справочная оценка: роды в норме происходят с 37-й по 42-ю неделю, поэтому ПДР — ориентир, а не гарантированная дата, и не замена УЗИ и наблюдению врача.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Калькулятор предполагаемой даты родов (ПДР) определяет, когда ориентировочно появится малыш, и заодно показывает текущий срок беременности и триместр. Расчёт строится на дате первого дня последних месячных и формуле Негеле — классическом акушерском методе.</p>
+
+<h2>Формула</h2>
+<p>К первому дню последних месячных (ПДПМ) прибавляют 280 дней (40 недель) и поправку на длину цикла:</p>
+<p><span class="eq">ПДР = ПДПМ + 280 + (длина цикла − 28) дней</span></p>
+<p>Текущий срок и триместр:</p>
+<table>
+<tr><th>Срок</th><th>Триместр</th></tr>
+<tr><td>до 14 недель</td><td>1-й</td></tr>
+<tr><td>14–27 недель</td><td>2-й</td></tr>
+<tr><td>28 недель и больше</td><td>3-й</td></tr>
+</table>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Запишите дату первого дня последних месячных.</li>
+<li>Прибавьте 280 дней (40 недель).</li>
+<li>Если ваш цикл не 28 дней, прибавьте (или вычтите) разницу: цикл 30 → +2 дня.</li>
+<li>Для текущего срока вычтите ПДПМ из сегодняшней даты и разделите на 7 (недели).</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>ПДПМ = 1 января 2026, цикл 28 дней.</p>
+<p>ПДР = 1 января + 280 дней = <b>8 октября 2026</b>.</p>
+<p>Если цикл 30 дней, добавляем 2 дня → 10 октября 2026.</p>
+<p>На 1 марта 2026 прошло 59 дней → срок ≈ 8 недель 3 дня, 1-й триместр.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>ПДР нужна для планирования отпуска по беременности, записи на скрининги и УЗИ, расчёта декретных выплат и подготовки к родам. Врачи используют её как точку отсчёта для контроля развития беременности.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Считают ПДР точной датой: в неё рождается лишь около 5% детей, норма — ±2 недели.</li>
+<li>Не учитывают длину цикла при нерегулярных или длинных циклах.</li>
+<li>Путают срок от месячных (акушерский) со сроком от зачатия — разница ~2 недели.</li>
+<li>Полагаются только на формулу. Это ориентир, а не диагноз: точную дату ставит врач по УЗИ, и калькулятор не заменяет наблюдение.</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Почему срок считают от месячных, а не от зачатия?</summary><div class="faq-a"><p>Точную дату зачатия знают редко, а первый день последних месячных женщина обычно помнит. Поэтому «акушерский» срок отсчитывают от ПДПМ — он примерно на 2 недели больше «эмбрионального».</p></div></details><details class="faq-item"><summary class="faq-q">У меня нерегулярный цикл — формула подойдёт?</summary><div class="faq-a"><p>При нерегулярном или длинном цикле точность падает: овуляция смещается. Введите свою длину цикла, но всё равно опирайтесь на датировку по УЗИ первого триместра — она надёжнее.</p></div></details><details class="faq-item"><summary class="faq-q">Насколько точна ПДР?</summary><div class="faq-a"><p>В сам день ПДР рождается лишь около 5% детей; нормой считаются роды в пределах ±2 недель. Это ориентир для планирования, а не медицинский прогноз — следите за наблюдением у врача.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

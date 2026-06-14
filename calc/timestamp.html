@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Unix-timestamp ⇄ дата — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Unix-timestamp ⇄ дата. Перевод Unix-времени (секунды) в дату и обратно. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/timestamp.html">
@@ -10,47 +10,102 @@
   <meta property="og:title" content="Unix-timestamp ⇄ дата — калькулятор">
   <meta property="og:description" content="Перевод Unix-времени (секунды) в дату и обратно.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/timestamp.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Unix-timestamp ⇄ дата", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/timestamp.html", "inLanguage": "ru", "description": "Перевод Unix-времени (секунды) в дату и обратно.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "IT и программирование", "item": "https://calculators.podlevskikh.com/cat/it.html"}, {"@type": "ListItem", "position": 3, "name": "Unix-timestamp ⇄ дата", "item": "https://calculators.podlevskikh.com/calc/timestamp.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое «эпоха Unix»?", "acceptedAnswer": {"@type": "Answer", "text": "Это нулевая точка отсчёта: 00:00:00 UTC 1 января 1970 года. Все timestamp измеряются как число секунд от этого момента."}}, {"@type": "Question", "name": "Секунды или миллисекунды?", "acceptedAnswer": {"@type": "Answer", "text": "Классический Unix-timestamp — в секундах (10 цифр для нынешних дат). JavaScript и многие API используют миллисекунды (13 цифр). Калькулятор показывает оба."}}, {"@type": "Question", "name": "Что за «проблема 2038 года»?", "acceptedAnswer": {"@type": "Answer", "text": "32-битное знаковое целое переполнится 19 января 2038 года. Современные системы используют 64-битное время и от этого не страдают."}}, {"@type": "Question", "name": "Почему время в UTC, а не в моём поясе?", "acceptedAnswer": {"@type": "Answer", "text": "Timestamp абсолютен и не зависит от пояса. Калькулятор показывает и UTC, и локальное время вашего браузера для удобства."}}]}]</script>
 </head>
 <body data-calc="timestamp">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-it">01</span><div class="dt-dhead-tx"><h1>Unix-timestamp ⇄ дата</h1><p>Перевод Unix-времени (секунды) в дату и обратно.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Направление</label><div class="inwrap"><select id="in_mode"><option value="ts">Timestamp → дата</option><option value="date">Дата → timestamp</option></select></div></div><div class="field"><label>Значение</label><div class="inwrap"><input id="in_value" inputmode="decimal" placeholder="0" value="1700000000"></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">ISO 8601 (UTC)</div><div class="res-val">2023-11-14T22:13:20.000Z</div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra"><div class="cell"><div class="k">Дата и время (UTC)</div><div class="v mono">Tue, 14 Nov 2023 22:13:20 GMT</div></div><div class="cell"><div class="k">Локальное время</div><div class="v mono">15.11.2023, 02:13:20</div></div><div class="cell"><div class="k">Timestamp (мс)</div><div class="v mono">1700000000000</div></div></div></div><div class="explain"><p>Unix-timestamp — число секунд, прошедших с 1 января 1970 года (UTC), без учёта високосных секунд. В JavaScript <code>Date</code> работает в миллисекундах, поэтому секунды умножаются/делятся на 1000.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что такое «эпоха Unix»?</summary><div class="faq-a"><p>Это нулевая точка отсчёта: 00:00:00 UTC 1 января 1970 года. Все timestamp измеряются как число секунд от этого момента.</p></div></details><details class="faq-item"><summary class="faq-q">Секунды или миллисекунды?</summary><div class="faq-a"><p>Классический Unix-timestamp — в секундах (10 цифр для нынешних дат). JavaScript и многие API используют миллисекунды (13 цифр). Калькулятор показывает оба.</p></div></details><details class="faq-item"><summary class="faq-q">Что за «проблема 2038 года»?</summary><div class="faq-a"><p>32-битное знаковое целое переполнится 19 января 2038 года. Современные системы используют 64-битное время и от этого не страдают.</p></div></details><details class="faq-item"><summary class="faq-q">Почему время в UTC, а не в моём поясе?</summary><div class="faq-a"><p>Timestamp абсолютен и не зависит от пояса. Калькулятор показывает и UTC, и локальное время вашего браузера для удобства.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💻 IT и программирование</span></nav><header class="calc-head"><h1>Unix-timestamp ⇄ дата</h1><p class="en">Unix Timestamp Converter</p><p class="desc">Перевод Unix-времени (секунды) в дату и обратно.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Unix-timestamp — число секунд, прошедших с 1 января 1970 года (UTC), без учёта високосных секунд. В JavaScript <code>Date</code> работает в миллисекундах, поэтому секунды умножаются/делятся на 1000.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Unix-timestamp — это число секунд, прошедших с полуночи 1 января 1970 года по UTC. Такой формат удобен компьютерам: одно целое число однозначно задаёт момент времени без привязки к часовому поясу. Калькулятор переводит timestamp в человекочитаемую дату и обратно — дату в timestamp.</p>
+
+<h2>Формула / как устроено</h2>
+<p>Timestamp измеряется в секундах, а JavaScript-объект <code>Date</code> — в миллисекундах, поэтому при переводе нужен множитель 1000:</p>
+<p><span class="eq">дата = new Date(секунды · 1000)</span></p>
+<p><span class="eq">timestamp = Date.parse(строка) / 1000</span></p>
+<p>Точкой отсчёта (эпохой) служит 00:00:00 UTC 1 января 1970 года. Високосные секунды в Unix-времени не учитываются.</p>
+
+<h2>Как посчитать вручную</h2>
+<ol>
+<li>Чтобы из timestamp получить дату: умножьте секунды на 1000 и подставьте в конструктор даты.</li>
+<li>Грубая прикидка года: разделите timestamp на 31 557 600 (секунд в году) и прибавьте 1970.</li>
+<li>Чтобы из даты получить timestamp: возьмите разницу в секундах между датой и началом эпохи.</li>
+<li>Учитывайте часовой пояс: timestamp всегда в UTC, локальное время может отличаться.</li>
+</ol>
+
+<div class="example">
+<h4>Пример</h4>
+<p>Timestamp <code>1700000000</code>.</p>
+<p>Прикидка года: 1 700 000 000 / 31 557 600 ≈ 53.9 года после 1970 → примерно конец 2023 года.</p>
+<p>Точное значение: <code>2023-11-14T22:13:20Z</code> (UTC).</p>
+<p>В миллисекундах это <code>1700000000000</code> — именно так его ждёт JavaScript.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Timestamp используют для хранения времени в базах данных, в логах серверов, при работе с API (поля created_at, expires_in), для вычисления разницы между событиями и в системах кэширования. Это универсальный формат, не зависящий от локали и часового пояса, поэтому его удобно сравнивать и сортировать.</p>
+
+<div class="mistakes">
+<h4>Осторожно</h4>
+<ul>
+<li>Путают секунды и миллисекунды: 10-значное число — секунды, 13-значное — миллисекунды. Ошибка в 1000 раз сдвигает дату на тысячелетия.</li>
+<li>Забывают про часовой пояс и считают локальное время равным UTC.</li>
+<li>Игнорируют «проблему 2038 года» в старых 32-битных системах.</li>
+<li>Передают дату без указания зоны и удивляются сдвигу — без зоны браузер трактует её как локальную.</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что такое «эпоха Unix»?</summary><div class="faq-a"><p>Это нулевая точка отсчёта: 00:00:00 UTC 1 января 1970 года. Все timestamp измеряются как число секунд от этого момента.</p></div></details><details class="faq-item"><summary class="faq-q">Секунды или миллисекунды?</summary><div class="faq-a"><p>Классический Unix-timestamp — в секундах (10 цифр для нынешних дат). JavaScript и многие API используют миллисекунды (13 цифр). Калькулятор показывает оба.</p></div></details><details class="faq-item"><summary class="faq-q">Что за «проблема 2038 года»?</summary><div class="faq-a"><p>32-битное знаковое целое переполнится 19 января 2038 года. Современные системы используют 64-битное время и от этого не страдают.</p></div></details><details class="faq-item"><summary class="faq-q">Почему время в UTC, а не в моём поясе?</summary><div class="faq-a"><p>Timestamp абсолютен и не зависит от пояса. Калькулятор показывает и UTC, и локальное время вашего браузера для удобства.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

@@ -10,6 +10,9 @@
   <url><loc>https://calculators.podlevskikh.com/cat/it.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calculators.podlevskikh.com/cat/health.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calculators.podlevskikh.com/cat/everyday.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/construction.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/cooking.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/cat/generators.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/average-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/gpa-convert.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/target-grade.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -96,4 +99,16 @@
   <url><loc>https://calculators.podlevskikh.com/calc/days-until.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/working-days.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/pet-age.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/paint-area.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/wallpaper-rolls.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/tile-laminate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/concrete-volume.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/recipe-scale.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/oven-temp.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/cooking-units.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/dough-hydration.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/password-gen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/random-number.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/uuid-gen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/lorem-ipsum.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

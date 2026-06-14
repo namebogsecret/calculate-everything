@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Конвертер длины — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Конвертер длины. м, км, см, мм, миля, фут, дюйм, ярд. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/length-converter.html">
@@ -10,47 +10,110 @@
   <meta property="og:title" content="Конвертер длины — калькулятор">
   <meta property="og:description" content="м, км, см, мм, миля, фут, дюйм, ярд.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/length-converter.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Конвертер длины", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/length-converter.html", "inLanguage": "ru", "description": "м, км, см, мм, миля, фут, дюйм, ярд.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "На каждый день", "item": "https://calculators.podlevskikh.com/cat/everyday.html"}, {"@type": "ListItem", "position": 3, "name": "Конвертер длины", "item": "https://calculators.podlevskikh.com/calc/length-converter.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Сколько сантиметров в одном дюйме?", "acceptedAnswer": {"@type": "Answer", "text": "Ровно 2.54 см . Чтобы перевести дюймы в сантиметры, умножьте число дюймов на 2.54: например, 10 дюймов — это 25.4 см ."}}, {"@type": "Question", "name": "Чем отличается сухопутная миля от морской?", "acceptedAnswer": {"@type": "Answer", "text": "Сухопутная миля равна 1609.344 м , а морская — 1852 м . Морская миля длиннее и используется в навигации и авиации, она равна одной минуте дуги меридиана."}}, {"@type": "Question", "name": "Как перевести футы в метры?", "acceptedAnswer": {"@type": "Answer", "text": "Умножьте число футов на 0.3048 . Например, рост 6 футов — это 6 × 0.3048 = 1.83 м . Обратно: метры делим на 0.3048."}}, {"@type": "Question", "name": "Сколько футов в одном метре?", "acceptedAnswer": {"@type": "Answer", "text": "Примерно 3.281 фута (точнее, 1 / 0.3048). В одном метре также 100 см или около 39.37 дюйма."}}]}]</script>
 </head>
 <body data-calc="length-converter">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-everyday">≈</span><div class="dt-dhead-tx"><h1>Конвертер длины</h1><p>м, км, см, мм, миля, фут, дюйм, ярд.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Значение</label><div class="inwrap"><input id="in_val" inputmode="decimal" placeholder="0" value="1"></div></div><div class="field"><label>Из</label><div class="inwrap"><select id="in_from"><option value="1">метр</option><option value="1000">километр</option><option value="0.01">см</option><option value="0.001">мм</option><option value="1609.344">миля</option><option value="0.3048">фут</option><option value="0.0254">дюйм</option><option value="0.9144">ярд</option><option value="1852">морская миля</option></select></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">км</div><div class="res-val">0,001</div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra"><div class="cell"><div class="k">метр</div><div class="v mono">1</div></div><div class="cell"><div class="k">см</div><div class="v mono">100</div></div><div class="cell"><div class="k">мм</div><div class="v mono">1&nbsp;000</div></div><div class="cell"><div class="k">миля</div><div class="v mono">0,0006</div></div><div class="cell"><div class="k">ярд</div><div class="v mono">1,0936</div></div><div class="cell"><div class="k">фут</div><div class="v mono">3,2808</div></div><div class="cell"><div class="k">дюйм</div><div class="v mono">39,3701</div></div><div class="cell"><div class="k">морская миля</div><div class="v mono">0,0005</div></div></div></div><div class="explain"><p>Все длины приводятся к метрам, затем переводятся в нужные единицы. 1 миля = 1609.344 м, 1 фут = 0.3048 м, 1 дюйм = 2.54 см.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Сколько сантиметров в одном дюйме?</summary><div class="faq-a"><p>Ровно <code>2.54 см</code>. Чтобы перевести дюймы в сантиметры, умножьте число дюймов на 2.54: например, 10 дюймов — это <code>25.4 см</code>.</p></div></details><details class="faq-item"><summary class="faq-q">Чем отличается сухопутная миля от морской?</summary><div class="faq-a"><p>Сухопутная миля равна <code>1609.344 м</code>, а морская — <code>1852 м</code>. Морская миля длиннее и используется в навигации и авиации, она равна одной минуте дуги меридиана.</p></div></details><details class="faq-item"><summary class="faq-q">Как перевести футы в метры?</summary><div class="faq-a"><p>Умножьте число футов на <code>0.3048</code>. Например, рост 6 футов — это <code>6 × 0.3048 = 1.83 м</code>. Обратно: метры делим на 0.3048.</p></div></details><details class="faq-item"><summary class="faq-q">Сколько футов в одном метре?</summary><div class="faq-a"><p>Примерно <code>3.281 фута</code> (точнее, 1 / 0.3048). В одном метре также 100 см или около 39.37 дюйма.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🧮 На каждый день</span></nav><header class="calc-head"><h1>Конвертер длины</h1><p class="en">Length Converter</p><p class="desc">м, км, см, мм, миля, фут, дюйм, ярд.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Все длины приводятся к метрам, затем переводятся в нужные единицы. 1 миля = 1609.344 м, 1 фут = 0.3048 м, 1 дюйм = 2.54 см.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Конвертер длины переводит расстояния между метрической системой (метры, километры) и единицами других систем — милями, ярдами, футами, дюймами, морскими милями. Все эти единицы измеряют одну и ту же величину — длину, — отличаются только размером «эталона». Конвертер сводит их к общему знаменателю через точные коэффициенты в метрах.</p>
+
+<h2>Формула / коэффициенты</h2>
+<p>Универсальный приём: переведите исходную единицу в метры (умножив на её коэффициент), затем разделите на коэффициент целевой единицы:</p>
+<p><span class="eq">метры = значение · коэффициент_источника</span></p>
+<p>Точные значения одной единицы в метрах:</p>
+<table>
+<tr><th>Единица</th><th>В метрах</th></tr>
+<tr><td>1 дюйм (inch)</td><td>0.0254</td></tr>
+<tr><td>1 фут (foot)</td><td>0.3048</td></tr>
+<tr><td>1 ярд (yard)</td><td>0.9144</td></tr>
+<tr><td>1 миля (mile)</td><td>1609.344</td></tr>
+<tr><td>1 морская миля</td><td>1852</td></tr>
+</table>
+<p>Полезные связи: 1 фут = 12 дюймов, 1 ярд = 3 фута, 1 миля = 1760 ярдов.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Найдите коэффициент исходной единицы (сколько в ней метров) в таблице.</li>
+<li>Умножьте число на этот коэффициент — получите длину в метрах.</li>
+<li>Если нужна другая неметрическая единица, разделите метры на её коэффициент.</li>
+<li>Для километров разделите метры на 1000.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Сколько метров в 5 милях?</p>
+<p>Коэффициент мили: 1 миля = 1609.344 м.</p>
+<p>5 · 1609.344 = <b>8046.72 м</b>, то есть около 8.05 км.</p>
+<p>Проверка через ярды: 5 миль = 5 · 1760 = 8800 ярдов; 8800 · 0.9144 = 8046.72 м — совпадает.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Конвертер нужен при чтении американских и британских технических спецификаций, в навигации и авиации (морские мили, узлы), при покупке материалов с зарубежными размерами, в спорте (дистанции в милях и ярдах) и в инженерных расчётах, где чертежи приходят в дюймах.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Путают сухопутную милю (1609.344 м) с морской (1852 м) — разница около 15%.</li>
+<li>Округляют 1609.344 до «1600» — на длинных дистанциях накапливается заметная ошибка.</li>
+<li>Считают, что фут = 30 см ровно; на самом деле 0.3048 м.</li>
+<li>Умножают на коэффициент вместо деления при обратном переводе (из метров в футы нужно делить на 0.3048).</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Сколько сантиметров в одном дюйме?</summary><div class="faq-a"><p>Ровно <code>2.54 см</code>. Чтобы перевести дюймы в сантиметры, умножьте число дюймов на 2.54: например, 10 дюймов — это <code>25.4 см</code>.</p></div></details><details class="faq-item"><summary class="faq-q">Чем отличается сухопутная миля от морской?</summary><div class="faq-a"><p>Сухопутная миля равна <code>1609.344 м</code>, а морская — <code>1852 м</code>. Морская миля длиннее и используется в навигации и авиации, она равна одной минуте дуги меридиана.</p></div></details><details class="faq-item"><summary class="faq-q">Как перевести футы в метры?</summary><div class="faq-a"><p>Умножьте число футов на <code>0.3048</code>. Например, рост 6 футов — это <code>6 × 0.3048 = 1.83 м</code>. Обратно: метры делим на 0.3048.</p></div></details><details class="faq-item"><summary class="faq-q">Сколько футов в одном метре?</summary><div class="faq-a"><p>Примерно <code>3.281 фута</code> (точнее, 1 / 0.3048). В одном метре также 100 см или около 39.37 дюйма.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

@@ -40,24 +40,33 @@
   };
 
   /* ---------- категории: CE.CATEGORIES → форма дизайна ----------
-     Главная (tab:'home')  = Школа, Физика, Математика  (фокус ученика)
-     Другое  (tab:'other') = Статистика, Экономика, Каждый день
+     Главная (tab:'home') = предметное ядро, где Vladimir репетитор (tut:true):
+       Школа · Физика · Математика · Химия · Статистика.
+     Вкладка «Все» (#/all) = полный каталог (все разделы, включая донорские
+     tut:false: Экономика, IT, Здоровье, Быт, Стройка, Кухня, Генераторы).
+     tab выводится из флага tut — один источник правды, не дублируем разметку.
      Glyph/cls совпадают с классами в css/app.css (.g-*). */
   var CATMETA = {
-    school:     { glyph: 'А⁺', cls: 'g-school',   tab: 'home'  },
-    physics:    { glyph: 'Ω',  cls: 'g-physics',  tab: 'home'  },
-    math:       { glyph: '∑',  cls: 'g-math',     tab: 'home'  },
-    chemistry:  { glyph: '⚗',  cls: 'g-chem',     tab: 'home'  },
-    statistics: { glyph: 'σ',  cls: 'g-stats',    tab: 'other' },
-    economics:  { glyph: '₽',  cls: 'g-econ',     tab: 'other' },
-    it:         { glyph: '01', cls: 'g-it',       tab: 'other' },
-    health:     { glyph: '♥',  cls: 'g-health',   tab: 'other' },
-    everyday:   { glyph: '≈',  cls: 'g-everyday', tab: 'other' }
+    school:      { glyph: 'А⁺', cls: 'g-school'   },
+    physics:     { glyph: 'Ω',  cls: 'g-physics'  },
+    math:        { glyph: '∑',  cls: 'g-math'     },
+    chemistry:   { glyph: '⚗',  cls: 'g-chem'     },
+    statistics:  { glyph: 'σ',  cls: 'g-stats'    },
+    economics:   { glyph: '₽',  cls: 'g-econ'     },
+    it:          { glyph: '01', cls: 'g-it'       },
+    health:      { glyph: '♥',  cls: 'g-health'   },
+    everyday:    { glyph: '≈',  cls: 'g-everyday' },
+    construction:{ glyph: '⌂',  cls: 'g-construction' },
+    cooking:     { glyph: '♨',  cls: 'g-cooking'  },
+    generators:  { glyph: '⚙',  cls: 'g-generators' }
   };
-  var ORDER = ['school', 'physics', 'math', 'chemistry', 'statistics', 'economics', 'it', 'health', 'everyday'];
+  var ORDER = ['school', 'physics', 'math', 'chemistry', 'statistics', 'economics',
+               'it', 'health', 'everyday', 'construction', 'cooking', 'generators'];
   window.CATS = ORDER.filter(function (id) { return CE.CATEGORIES[id]; }).map(function (id) {
-    var m = CATMETA[id] || { glyph: '·', cls: 'g-everyday', tab: 'other' };
-    return { id: id, name: CE.CATEGORIES[id].title, glyph: m.glyph, cls: m.cls, tab: m.tab, tut: !!CE.CATEGORIES[id].tut };
+    var m = CATMETA[id] || { glyph: '·', cls: 'g-everyday' };
+    var tut = !!CE.CATEGORIES[id].tut;
+    return { id: id, name: CE.CATEGORIES[id].title, glyph: m.glyph, cls: m.cls,
+             tab: tut ? 'home' : 'other', tut: tut };
   });
   window.catById = function (id) { return window.CATS.find(function (c) { return c.id === id; }); };
 

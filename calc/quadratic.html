@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Квадратное уравнение — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Квадратное уравнение. ax² + bx + c = 0 — корни и дискриминант. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/quadratic.html">
@@ -10,47 +10,100 @@
   <meta property="og:title" content="Квадратное уравнение — калькулятор">
   <meta property="og:description" content="ax² + bx + c = 0 — корни и дискриминант.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/quadratic.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Квадратное уравнение", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/quadratic.html", "inLanguage": "ru", "description": "ax² + bx + c = 0 — корни и дискриминант.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/cat/math.html"}, {"@type": "ListItem", "position": 3, "name": "Квадратное уравнение", "item": "https://calculators.podlevskikh.com/calc/quadratic.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что показывает знак дискриминанта?", "acceptedAnswer": {"@type": "Answer", "text": "Дискриминант D=b²−4ac определяет число действительных корней: при D>0 их два, при D=0 один (двойной), при D действительных нет — корни комплексные."}}, {"@type": "Question", "name": "Что делать, если a равно 0?", "acceptedAnswer": {"@type": "Answer", "text": "Тогда уравнение не квадратное, а линейное: bx+c=0 , и корень один — x=−c/b . Калькулятор это распознаёт и переключается на линейный случай автоматически."}}, {"@type": "Question", "name": "Как найти корни по теореме Виета?", "acceptedAnswer": {"@type": "Answer", "text": "Для приведённого уравнения x²+px+q=0 сумма корней равна −p , а произведение — q . Это удобно для устной проверки целых корней, но дискриминант надёжнее в общем случае."}}, {"@type": "Question", "name": "Почему при отрицательном D корни комплексные?", "acceptedAnswer": {"@type": "Answer", "text": "Под корнем оказывается отрицательное число, а квадратного корня из отрицательного среди действительных чисел нет. Поэтому вводят мнимую единицу i , и корни принимают вид x = (−b ± i√(−D)) / 2a ."}}]}]</script>
 </head>
 <body data-calc="quadratic">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-math">∑</span><div class="dt-dhead-tx"><h1>Квадратное уравнение</h1><p>ax² + bx + c = 0 — корни и дискриминант.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="formula mono">x = (−b ± √D) ⁄ 2a,&nbsp; D = b² − 4ac</div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>a</label><div class="inwrap"><input id="in_a" inputmode="decimal" placeholder="0" value="1"></div></div><div class="field"><label>b</label><div class="inwrap"><input id="in_b" inputmode="decimal" placeholder="0" value="0"></div></div><div class="field"><label>c</label><div class="inwrap"><input id="in_c" inputmode="decimal" placeholder="0" value="0"></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">x (двойной)</div><div class="res-val">0</div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra one"><div class="cell"><div class="k">Дискриминант D</div><div class="v mono">0</div></div></div></div><div class="explain"><p>Уравнение <code>ax²+bx+c=0</code> решается через дискриминант <code>D=b²−4ac</code>. Если D&gt;0 — два корня, D=0 — один, D&lt;0 — комплексные. Корни: <code>x = (−b±√D)/2a</code>.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что показывает знак дискриминанта?</summary><div class="faq-a"><p>Дискриминант <code>D=b²−4ac</code> определяет число действительных корней: при <code>D&gt;0</code> их два, при <code>D=0</code> один (двойной), при <code>D&lt;0</code> действительных нет — корни комплексные.</p></div></details><details class="faq-item"><summary class="faq-q">Что делать, если a равно 0?</summary><div class="faq-a"><p>Тогда уравнение не квадратное, а линейное: <code>bx+c=0</code>, и корень один — <code>x=−c/b</code>. Калькулятор это распознаёт и переключается на линейный случай автоматически.</p></div></details><details class="faq-item"><summary class="faq-q">Как найти корни по теореме Виета?</summary><div class="faq-a"><p>Для приведённого уравнения <code>x²+px+q=0</code> сумма корней равна <code>−p</code>, а произведение — <code>q</code>. Это удобно для устной проверки целых корней, но дискриминант надёжнее в общем случае.</p></div></details><details class="faq-item"><summary class="faq-q">Почему при отрицательном D корни комплексные?</summary><div class="faq-a"><p>Под корнем оказывается отрицательное число, а квадратного корня из отрицательного среди действительных чисел нет. Поэтому вводят мнимую единицу <code>i</code>, и корни принимают вид <code>x = (−b ± i√(−D)) / 2a</code>.</p></div></details></div><section class="app-cta"><div class="cta-h">Трудности с разделом «Математика»?</div><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a><a class="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></section><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Квадратное уравнение</h1><p class="en">Quadratic Equation</p><p class="desc">ax² + bx + c = 0 — корни и дискриминант.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Уравнение <code>ax²+bx+c=0</code> решается через дискриминант <code>D=b²−4ac</code>. Если D&gt;0 — два корня, D=0 — один, D&lt;0 — комплексные. Корни: <code>x = (−b±√D)/2a</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Квадратное уравнение — это равенство вида <span class="eq">ax² + bx + c = 0</span>, где <code>a ≠ 0</code>. Калькулятор находит его корни — те значения <code>x</code>, при которых левая часть обращается в ноль. Геометрически это точки, где парабола <code>y = ax² + bx + c</code> пересекает ось <code>x</code>. Корней может быть два, один или ни одного (в действительных числах) — это решает дискриминант.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Главная величина — дискриминант: <span class="eq">D = b² − 4ac</span>. Корни даёт формула:</p>
+<p><span class="eq">x = (−b ± √D) / (2a)</span></p>
+<p>Откуда она? Делим всё на <code>a</code> и «достраиваем до полного квадрата»: <span class="eq">x² + (b/a)x + c/a = 0</span> переписываем как <span class="eq">(x + b/2a)² = (b² − 4ac) / 4a²</span>. Извлекаем корень из обеих частей и получаем формулу. Если <code>D &gt; 0</code> — два корня, если <code>D = 0</code> — один (двойной), если <code>D &lt; 0</code> — действительных корней нет.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Приведите уравнение к виду <code>ax² + bx + c = 0</code> и выпишите <code>a</code>, <code>b</code>, <code>c</code> с их знаками.</li>
+<li>Вычислите дискриминант <code>D = b² − 4ac</code>.</li>
+<li>Посмотрите на знак <code>D</code>: при <code>D &lt; 0</code> действительных корней нет — стоп.</li>
+<li>Извлеките <code>√D</code>.</li>
+<li>Подставьте в формулу: <code>x₁ = (−b + √D)/(2a)</code> и <code>x₂ = (−b − √D)/(2a)</code>.</li>
+<li>Проверьте корни по теореме Виета: <code>x₁ + x₂ = −b/a</code>, <code>x₁ · x₂ = c/a</code>.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Решим <span class="eq">2x² − 7x + 3 = 0</span>. Здесь <code>a = 2</code>, <code>b = −7</code>, <code>c = 3</code>.</p>
+<p>Дискриминант: <span class="eq">D = (−7)² − 4·2·3 = 49 − 24 = 25</span>. Значит <code>√D = 5</code>.</p>
+<p>Корни: <span class="eq">x₁ = (7 + 5) / 4 = 12/4 = 3</span> и <span class="eq">x₂ = (7 − 5) / 4 = 2/4 = 0.5</span>.</p>
+<p>Проверка по Виета: сумма <code>3 + 0.5 = 3.5 = 7/2 = −b/a</code> ✓; произведение <code>3 · 0.5 = 1.5 = 3/2 = c/a</code> ✓.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Квадратные уравнения — это база школьной алгебры (ОГЭ задание 9 и 20, ЕГЭ профиль) и фундамент для физики (высота брошенного тела, время полёта), экономики (точка безубыточности) и геометрии. В IB Mathematics и AP Precalculus та же формула называется the quadratic formula, а дискриминант — discriminant. Без неё не обойтись при поиске вершины параболы и решении систем.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Теряют знак <code>b</code>: в формуле стоит <code>−b</code>, а при <code>b = −7</code> это <code>+7</code>, а не <code>−7</code>.</li>
+<li>Делят только числитель на <code>2a</code>, забыв, что <code>(2a)</code> в знаменателе у всего выражения <code>−b ± √D</code>.</li>
+<li>Считают, что при <code>D &lt; 0</code> корней «один» — действительных нет вовсе.</li>
+<li>Путают <code>b²</code> с <code>2b</code>: при <code>b = −7</code> это <code>49</code>, а не <code>−14</code>.</li>
+<li>Не приводят к нулю в правой части — формула работает только для <code>… = 0</code>.</li>
+</ul></div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что показывает знак дискриминанта?</summary><div class="faq-a"><p>Дискриминант <code>D=b²−4ac</code> определяет число действительных корней: при <code>D&gt;0</code> их два, при <code>D=0</code> один (двойной), при <code>D&lt;0</code> действительных нет — корни комплексные.</p></div></details><details class="faq-item"><summary class="faq-q">Что делать, если a равно 0?</summary><div class="faq-a"><p>Тогда уравнение не квадратное, а линейное: <code>bx+c=0</code>, и корень один — <code>x=−c/b</code>. Калькулятор это распознаёт и переключается на линейный случай автоматически.</p></div></details><details class="faq-item"><summary class="faq-q">Как найти корни по теореме Виета?</summary><div class="faq-a"><p>Для приведённого уравнения <code>x²+px+q=0</code> сумма корней равна <code>−p</code>, а произведение — <code>q</code>. Это удобно для устной проверки целых корней, но дискриминант надёжнее в общем случае.</p></div></details><details class="faq-item"><summary class="faq-q">Почему при отрицательном D корни комплексные?</summary><div class="faq-a"><p>Под корнем оказывается отрицательное число, а квадратного корня из отрицательного среди действительных чисел нет. Поэтому вводят мнимую единицу <code>i</code>, и корни принимают вид <code>x = (−b ± i√(−D)) / 2a</code>.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

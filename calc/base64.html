@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Base64: кодирование и декодирование — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Base64: кодирование и декодирование. Перевод текста в Base64 и обратно с поддержкой UTF-8 (кириллица). Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/base64.html">
@@ -10,47 +10,101 @@
   <meta property="og:title" content="Base64: кодирование и декодирование — калькулятор">
   <meta property="og:description" content="Перевод текста в Base64 и обратно с поддержкой UTF-8 (кириллица).">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/base64.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Base64: кодирование и декодирование", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/base64.html", "inLanguage": "ru", "description": "Перевод текста в Base64 и обратно с поддержкой UTF-8 (кириллица).", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "IT и программирование", "item": "https://calculators.podlevskikh.com/cat/it.html"}, {"@type": "ListItem", "position": 3, "name": "Base64: кодирование и декодирование", "item": "https://calculators.podlevskikh.com/calc/base64.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Зачем нужен Base64?", "acceptedAnswer": {"@type": "Answer", "text": "Чтобы передавать двоичные данные (картинки, файлы) по каналам, рассчитанным на текст: вложения email, data-URI в CSS/HTML, токены в JSON. Это не шифрование — данные легко раскодировать обратно."}}, {"@type": "Question", "name": "Почему в конце бывают знаки =?", "acceptedAnswer": {"@type": "Answer", "text": "Это padding (дополнение). Когда длина входа не кратна 3 байтам, результат дополняется одним или двумя = до кратности 4 символам."}}, {"@type": "Question", "name": "Base64 защищает данные?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Это обратимое кодирование, а не шифрование. Любой может декодировать строку. Для защиты нужны шифрование или хеширование."}}, {"@type": "Question", "name": "Почему кириллица иногда превращается в мусор?", "acceptedAnswer": {"@type": "Answer", "text": "Наивный btoa работает только с латиницей. Этот калькулятор сначала кодирует строку в UTF-8, поэтому «Привет» декодируется корректно."}}]}]</script>
 </head>
 <body data-calc="base64">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-it">01</span><div class="dt-dhead-tx"><h1>Base64: кодирование и декодирование</h1><p>Перевод текста в Base64 и обратно с поддержкой UTF-8 (кириллица).</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Текст или Base64</label><div class="inwrap"><input id="in_text" spellcheck="false" autocapitalize="off" value="Привет, мир!"></div></div><div class="field"><label>Направление</label><div class="inwrap"><select id="in_mode"><option value="enc">Текст → Base64</option><option value="dec">Base64 → текст</option></select></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">Base64</div><div class="res-val">0J/RgNC40LLQtdGCLCDQvNC40YAh</div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div></div><div class="explain"><p>Base64 кодирует 3 байта (24 бита) в 4 печатных символа из алфавита A–Z, a–z, 0–9, + и /. Для UTF-8-безопасности применяется <code>btoa(unescape(encodeURIComponent(s)))</code> при кодировании и обратная цепочка при декодировании — иначе кириллица ломается.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Зачем нужен Base64?</summary><div class="faq-a"><p>Чтобы передавать двоичные данные (картинки, файлы) по каналам, рассчитанным на текст: вложения email, data-URI в CSS/HTML, токены в JSON. Это не шифрование — данные легко раскодировать обратно.</p></div></details><details class="faq-item"><summary class="faq-q">Почему в конце бывают знаки =?</summary><div class="faq-a"><p>Это padding (дополнение). Когда длина входа не кратна 3 байтам, результат дополняется одним или двумя <code>=</code> до кратности 4 символам.</p></div></details><details class="faq-item"><summary class="faq-q">Base64 защищает данные?</summary><div class="faq-a"><p>Нет. Это обратимое кодирование, а не шифрование. Любой может декодировать строку. Для защиты нужны шифрование или хеширование.</p></div></details><details class="faq-item"><summary class="faq-q">Почему кириллица иногда превращается в мусор?</summary><div class="faq-a"><p>Наивный <code>btoa</code> работает только с латиницей. Этот калькулятор сначала кодирует строку в UTF-8, поэтому «Привет» декодируется корректно.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💻 IT и программирование</span></nav><header class="calc-head"><h1>Base64: кодирование и декодирование</h1><p class="en">Base64 Encode / Decode</p><p class="desc">Перевод текста в Base64 и обратно с поддержкой UTF-8 (кириллица).</p></header><section class="explain"><h2>Как это работает</h2><div><p>Base64 кодирует 3 байта (24 бита) в 4 печатных символа из алфавита A–Z, a–z, 0–9, + и /. Для UTF-8-безопасности применяется <code>btoa(unescape(encodeURIComponent(s)))</code> при кодировании и обратная цепочка при декодировании — иначе кириллица ломается.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Base64 — это способ представить любые данные (текст, картинки, файлы) с помощью 64 печатных символов: A–Z, a–z, 0–9, плюс и слэш. Калькулятор кодирует строку в Base64 и декодирует обратно, корректно работая с кириллицей за счёт UTF-8. Это не шифрование, а кодирование: результат легко вернуть к исходному виду.</p>
+
+<h2>Формула / как устроено</h2>
+<p>Base64 берёт данные по 3 байта (24 бита) и нарезает их на 4 группы по 6 бит. Каждая 6-битная группа (значение 0–63) заменяется символом из алфавита Base64.</p>
+<p><span class="eq">3 байта (24 бита) → 4 символа Base64</span></p>
+<p>Для безопасной работы с не-латиницей строка сначала кодируется в UTF-8: <code>btoa(unescape(encodeURIComponent(s)))</code>. Декодирование выполняет обратную цепочку.</p>
+
+<h2>Как посчитать вручную</h2>
+<ol>
+<li>Переведите каждый символ строки в его байты (для ASCII — код символа).</li>
+<li>Сгруппируйте биты по 3 байта и перепишите их как 4 группы по 6 бит.</li>
+<li>Каждую 6-битную группу замените символом из таблицы Base64.</li>
+<li>Если байтов не кратно 3 — дополните результат знаками <code>=</code> до кратности 4 символам.</li>
+</ol>
+
+<div class="example">
+<h4>Пример</h4>
+<p>Закодируем слово <code>Hi</code> (2 байта: 72 и 105).</p>
+<p>Биты: 01001000 01101001 → группы по 6: 010010 000110 1001(00).</p>
+<p>Это значения 18, 6, 36 → символы <code>S</code>, <code>G</code>, <code>k</code>. Недостаёт байта, поэтому хвост дополняется одним <code>=</code>.</p>
+<p>Итог: <code>SGk=</code>.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Base64 используют для вложений в email (MIME), встраивания картинок в HTML и CSS через data-URI, передачи бинарных данных в JSON и XML, кодирования токенов (например, JWT состоит из Base64URL-частей) и хранения ключей. Это стандартный «клей» между двоичным миром и текстовыми протоколами.</p>
+
+<div class="mistakes">
+<h4>Осторожно</h4>
+<ul>
+<li>Принимают Base64 за шифрование — данные раскодирует кто угодно, секреты так не защищают.</li>
+<li>Кодируют кириллицу наивным <code>btoa</code> без UTF-8 — получают ошибку или «кракозябры».</li>
+<li>Теряют padding-символы <code>=</code> при копировании — строка перестаёт декодироваться.</li>
+<li>Путают обычный Base64 и Base64URL (где <code>+</code> и <code>/</code> заменены на <code>-</code> и <code>_</code> для безопасной вставки в URL).</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Зачем нужен Base64?</summary><div class="faq-a"><p>Чтобы передавать двоичные данные (картинки, файлы) по каналам, рассчитанным на текст: вложения email, data-URI в CSS/HTML, токены в JSON. Это не шифрование — данные легко раскодировать обратно.</p></div></details><details class="faq-item"><summary class="faq-q">Почему в конце бывают знаки =?</summary><div class="faq-a"><p>Это padding (дополнение). Когда длина входа не кратна 3 байтам, результат дополняется одним или двумя <code>=</code> до кратности 4 символам.</p></div></details><details class="faq-item"><summary class="faq-q">Base64 защищает данные?</summary><div class="faq-a"><p>Нет. Это обратимое кодирование, а не шифрование. Любой может декодировать строку. Для защиты нужны шифрование или хеширование.</p></div></details><details class="faq-item"><summary class="faq-q">Почему кириллица иногда превращается в мусор?</summary><div class="faq-a"><p>Наивный <code>btoa</code> работает только с латиницей. Этот калькулятор сначала кодирует строку в UTF-8, поэтому «Привет» декодируется корректно.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

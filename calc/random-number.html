@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Генератор случайных чисел — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Генератор случайных чисел. Случайные целые числа в заданном диапазоне с суммой и средним. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/random-number.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Генератор случайных чисел — калькулятор">
+  <meta property="og:description" content="Случайные целые числа в заданном диапазоне с суммой и средним.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/random-number.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/data-vuz.js"></script>
+  <script src="/js/calculators/data-rates.js"></script>
+  <script src="/js/calculators/chemistry.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/calculators/everyday-extra.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/articles/chemistry.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Генератор случайных чисел", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/random-number.html", "inLanguage": "ru", "description": "Случайные целые числа в заданном диапазоне с суммой и средним.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Генераторы", "item": "https://calculators.podlevskikh.com/cat/generators.html"}, {"@type": "ListItem", "position": 3, "name": "Генератор случайных чисел", "item": "https://calculators.podlevskikh.com/calc/random-number.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Числа могут повторяться?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Каждое значение выбирается независимо, поэтому в выборке возможны повторы — как при подбрасывании кубика. Это не выборка «без возврата»."}}, {"@type": "Question", "name": "Границы диапазона тоже выпадают?", "acceptedAnswer": {"@type": "Answer", "text": "Да, диапазон включительный: и минимум, и максимум входят в набор возможных значений. Для диапазона 1–6 выпадают все числа от 1 до 6."}}, {"@type": "Question", "name": "Можно использовать для розыгрыша или жребия?", "acceptedAnswer": {"@type": "Answer", "text": "Для бытовых нужд — да. Числа берутся из криптогенератора браузера и распределены равномерно. Для официальных лотерей нужны сертифицированные ГСЧ, но для жеребьёвки в чате этого достаточно."}}, {"@type": "Question", "name": "Сколько чисел можно сгенерировать за раз?", "acceptedAnswer": {"@type": "Answer", "text": "От 1 до 100. Если нужно больше — запустите генерацию несколько раз; результат обновляется при каждом изменении полей."}}]}]</script>
+</head>
+<body data-calc="random-number">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚙️ Генераторы</span></nav><header class="calc-head"><h1>Генератор случайных чисел</h1><p class="en">Random Number Generator</p><p class="desc">Случайные целые числа в заданном диапазоне с суммой и средним.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Калькулятор генерирует заданное число целых значений из диапазона <code>[мин; макс]</code> включительно (ширина = макс − мин + 1) и при количестве больше одного показывает их сумму и среднее. Каждое число выбирается независимо, повторы возможны.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Генератор случайных чисел выдаёт заданное количество целых значений из диапазона <code>[минимум; максимум]</code> включительно. Калькулятор показывает сами числа, а при количестве больше одного — их сумму и среднее. Это инструмент для жеребьёвки, выбора победителя, моделирования бросков кубика и любых задач, где нужен непредвзятый случайный выбор.</p>
+
+<h2>Как устроено</h2>
+<p>Ширина диапазона равна <code>макс − мин + 1</code> (обе границы входят). Из криптогенератора берётся случайный индекс в этом промежутке и сдвигается к началу диапазона:</p>
+<p><span class="eq">число = минимум + случайный_индекс</span></p>
+<p><span class="eq">ширина = максимум − минимум + 1</span></p>
+<p>Каждое число выбирается независимо, поэтому повторы возможны. Среднее = сумма / количество.</p>
+
+<h2>Пример</h2>
+<p>Нужно 5 чисел из диапазона 1–100.</p>
+<p>Ширина диапазона: 100 − 1 + 1 = 100. Каждое из пяти чисел — независимый выбор из этих ста значений.</p>
+<p>Допустим, выпало <code>7, 42, 42, 88, 13</code>. Сумма = 192, среднее = 192 / 5 = 38.4. Обратите внимание: число 42 повторилось — это нормально для независимой выборки.</p>
+
+<h2>Где применяется</h2>
+<p>Случайные числа нужны для розыгрышей и конкурсов, жеребьёвки участников, выбора случайной выборки для проверки, имитации игральных костей и рулетки, генерации тестовых данных. Сумма и среднее помогают, когда числа моделируют очки или результаты бросков.</p>
+
+<h2>Частые ошибки</h2>
+<ul>
+<li>Ждут, что границы не выпадут: на самом деле диапазон включительный — и минимум, и максимум возможны.</li>
+<li>Рассчитывают на выборку «без повторов»: здесь каждое число независимо, дубликаты допустимы.</li>
+<li>Ставят минимум больше максимума — калькулятор сообщит об ошибке.</li>
+<li>Применяют бытовой ГСЧ для официальных лотерей: для них нужны сертифицированные генераторы, хотя для жеребьёвки в чате этого хватает.</li>
+</ul>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Числа могут повторяться?</summary><div class="faq-a"><p>Да. Каждое значение выбирается независимо, поэтому в выборке возможны повторы — как при подбрасывании кубика. Это не выборка «без возврата».</p></div></details><details class="faq-item"><summary class="faq-q">Границы диапазона тоже выпадают?</summary><div class="faq-a"><p>Да, диапазон включительный: и минимум, и максимум входят в набор возможных значений. Для диапазона 1–6 выпадают все числа от 1 до 6.</p></div></details><details class="faq-item"><summary class="faq-q">Можно использовать для розыгрыша или жребия?</summary><div class="faq-a"><p>Для бытовых нужд — да. Числа берутся из криптогенератора браузера и распределены равномерно. Для официальных лотерей нужны сертифицированные ГСЧ, но для жеребьёвки в чате этого достаточно.</p></div></details><details class="faq-item"><summary class="faq-q">Сколько чисел можно сгенерировать за раз?</summary><div class="faq-a"><p>От 1 до 100. Если нужно больше — запустите генерацию несколько раз; результат обновляется при каждом изменении полей.</p></div></details></section>  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+      <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
+</body>
+</html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>GPA — перевод оценок в 4.0 — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="GPA — перевод оценок в 4.0. Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов). Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/gpa-convert.html">
@@ -10,47 +10,64 @@
   <meta property="og:title" content="GPA — перевод оценок в 4.0 — калькулятор">
   <meta property="og:description" content="Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/gpa-convert.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "GPA — перевод оценок в 4.0", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/gpa-convert.html", "inLanguage": "ru", "description": "Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Школа и экзамены", "item": "https://calculators.podlevskikh.com/cat/school.html"}, {"@type": "ListItem", "position": 3, "name": "GPA — перевод оценок в 4.0", "item": "https://calculators.podlevskikh.com/calc/gpa-convert.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как российские оценки переводятся в GPA 4.0?", "acceptedAnswer": {"@type": "Answer", "text": "Базовый маппинг такой: пятёрка = A = 4.0 , четвёрка = B = 3.0 , тройка = C = 2.0 . Средний GPA — это сумма этих баллов, делённая на число предметов. Калькулятор считает именно так."}}, {"@type": "Question", "name": "Какой GPA считается хорошим для зарубежного вуза?", "acceptedAnswer": {"@type": "Answer", "text": "Ориентир: 3.5 и выше — сильная заявка, 3.0–3.5 — средняя, ниже 3.0 многие программы считают слабой. Но требования сильно зависят от страны и конкретного университета, поэтому всегда смотрите порог нужной программы."}}, {"@type": "Question", "name": "Считают ли вузы GPA точно так же?", "acceptedAnswer": {"@type": "Answer", "text": "Не всегда. Часть университетов и службы вроде WES применяют свои таблицы перевода и учитывают часы или кредиты по каждому предмету. Этот результат — ориентир для самопроверки, официальный пересчёт делает приёмная комиссия."}}, {"@type": "Question", "name": "Что такое буквенные оценки A, B, C?", "acceptedAnswer": {"@type": "Answer", "text": "Это американская буквенная шкала, привязанная к GPA: A — отлично (около 4.0), B — хорошо (около 3.0), C — удовлетворительно (около 2.0). В Европе похожую роль играет шкала ECTS, где A примерно соответствует «отлично»."}}]}]</script>
 </head>
 <body data-calc="gpa-convert">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-school">А⁺</span><div class="dt-dhead-tx"><h1>GPA — перевод оценок в 4.0</h1><p>Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="formula mono">5→A(4.0), 4→B(3.0), 3→C(2.0); GPA = Σ⁄N</div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Пятёрки</label><div class="inwrap"><input id="in_n5" inputmode="decimal" placeholder="0" value="10"></div></div><div class="field"><label>Четвёрки</label><div class="inwrap"><input id="in_n4" inputmode="decimal" placeholder="0" value="5"></div></div><div class="field"><label>Тройки</label><div class="inwrap"><input id="in_n3" inputmode="decimal" placeholder="0" value="0"></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">GPA (4.0)</div><div class="res-val">3,67</div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra"><div class="cell"><div class="k">Буквенно</div><div class="v mono">A−/B+</div></div><div class="cell"><div class="k">Всего предметов</div><div class="v mono">15</div></div></div></div><div class="explain"><p>Для поступления за рубеж оценки переводят в GPA по шкале 4.0. Базовый маппинг: 5=A=4.0, 4=B=3.0, 3=C=2.0. Калькулятор даёт средний GPA — ориентир для заявки (точный пересчёт делает вуз или WES).</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Как российские оценки переводятся в GPA 4.0?</summary><div class="faq-a"><p>Базовый маппинг такой: пятёрка = A = <code>4.0</code>, четвёрка = B = <code>3.0</code>, тройка = C = <code>2.0</code>. Средний GPA — это сумма этих баллов, делённая на число предметов. Калькулятор считает именно так.</p></div></details><details class="faq-item"><summary class="faq-q">Какой GPA считается хорошим для зарубежного вуза?</summary><div class="faq-a"><p>Ориентир: 3.5 и выше — сильная заявка, 3.0–3.5 — средняя, ниже 3.0 многие программы считают слабой. Но требования сильно зависят от страны и конкретного университета, поэтому всегда смотрите порог нужной программы.</p></div></details><details class="faq-item"><summary class="faq-q">Считают ли вузы GPA точно так же?</summary><div class="faq-a"><p>Не всегда. Часть университетов и службы вроде WES применяют свои таблицы перевода и учитывают часы или кредиты по каждому предмету. Этот результат — ориентир для самопроверки, официальный пересчёт делает приёмная комиссия.</p></div></details><details class="faq-item"><summary class="faq-q">Что такое буквенные оценки A, B, C?</summary><div class="faq-a"><p>Это американская буквенная шкала, привязанная к GPA: A — отлично (около 4.0), B — хорошо (около 3.0), C — удовлетворительно (около 2.0). В Европе похожую роль играет шкала ECTS, где A примерно соответствует «отлично».</p></div></details></div><section class="app-cta"><div class="cta-h">Трудности с разделом «Школа и экзамены»?</div><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a><a class="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></section><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🎓 Школа и экзамены</span></nav><header class="calc-head"><h1>GPA — перевод оценок в 4.0</h1><p class="en">GPA Converter (4.0 scale)</p><p class="desc">Российские 5/4/3 → американский GPA 4.0 и буквы A–F (для зарубежных вузов).</p></header><section class="explain"><h2>Как это работает</h2><div><p>Для поступления за рубеж оценки переводят в GPA по шкале 4.0. Базовый маппинг: 5=A=4.0, 4=B=3.0, 3=C=2.0. Калькулятор даёт средний GPA — ориентир для заявки (точный пересчёт делает вуз или WES).</p></div></section><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Как российские оценки переводятся в GPA 4.0?</summary><div class="faq-a"><p>Базовый маппинг такой: пятёрка = A = <code>4.0</code>, четвёрка = B = <code>3.0</code>, тройка = C = <code>2.0</code>. Средний GPA — это сумма этих баллов, делённая на число предметов. Калькулятор считает именно так.</p></div></details><details class="faq-item"><summary class="faq-q">Какой GPA считается хорошим для зарубежного вуза?</summary><div class="faq-a"><p>Ориентир: 3.5 и выше — сильная заявка, 3.0–3.5 — средняя, ниже 3.0 многие программы считают слабой. Но требования сильно зависят от страны и конкретного университета, поэтому всегда смотрите порог нужной программы.</p></div></details><details class="faq-item"><summary class="faq-q">Считают ли вузы GPA точно так же?</summary><div class="faq-a"><p>Не всегда. Часть университетов и службы вроде WES применяют свои таблицы перевода и учитывают часы или кредиты по каждому предмету. Этот результат — ориентир для самопроверки, официальный пересчёт делает приёмная комиссия.</p></div></details><details class="faq-item"><summary class="faq-q">Что такое буквенные оценки A, B, C?</summary><div class="faq-a"><p>Это американская буквенная шкала, привязанная к GPA: A — отлично (около 4.0), B — хорошо (около 3.0), C — удовлетворительно (около 2.0). В Европе похожую роль играет шкала ECTS, где A примерно соответствует «отлично».</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

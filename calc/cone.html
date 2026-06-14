@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Объём и площадь конуса — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Объём и площадь конуса. Образующая, объём 1⁄3·πr²h, боковая и полная поверхность. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/cone.html">
@@ -10,47 +10,98 @@
   <meta property="og:title" content="Объём и площадь конуса — калькулятор">
   <meta property="og:description" content="Образующая, объём 1⁄3·πr²h, боковая и полная поверхность.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/cone.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Объём и площадь конуса", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/cone.html", "inLanguage": "ru", "description": "Образующая, объём 1⁄3·πr²h, боковая и полная поверхность.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/cat/math.html"}, {"@type": "ListItem", "position": 3, "name": "Объём и площадь конуса", "item": "https://calculators.podlevskikh.com/calc/cone.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое образующая конуса?", "acceptedAnswer": {"@type": "Answer", "text": "Это отрезок от вершины до края основания по боковой поверхности. Её длина l = √(r²+h²) — гипотенуза прямоугольного треугольника из высоты и радиуса."}}, {"@type": "Question", "name": "Почему объём конуса втрое меньше цилиндра?", "acceptedAnswer": {"@type": "Answer", "text": "Конус и цилиндр с одинаковыми основанием и высотой соотносятся как 1:3 — это классический результат: V = 1⁄3·πr²h ."}}, {"@type": "Question", "name": "В боковой поверхности используется высота или образующая?", "acceptedAnswer": {"@type": "Answer", "text": "Именно образующая l , а не высота: Sбок = πr·l . Частая ошибка — подставить туда h."}}]}]</script>
 </head>
 <body data-calc="cone">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-math">∑</span><div class="dt-dhead-tx"><h1>Объём и площадь конуса</h1><p>Образующая, объём 1⁄3·πr²h, боковая и полная поверхность.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Радиус основания r</label><div class="inwrap"><input id="in_r" inputmode="decimal" placeholder="0" value=""></div></div><div class="field"><label>Высота h</label><div class="inwrap"><input id="in_h" inputmode="decimal" placeholder="0" value=""></div></div></div></div><div class="dt-col"><div class="result placeholder">Введите радиус r и высоту h.</div><div class="explain"><p>Конус задаётся радиусом основания <code>r</code> и высотой <code>h</code>. Сначала находим образующую (наклонную сторону) по теореме Пифагора <code>l = √(r²+h²)</code>. Объём — треть от цилиндра той же высоты: <code>V = 1⁄3·πr²h</code>. Боковая поверхность <code>Sбок = πr·l</code>, полная добавляет основание: <code>Sполн = πr·(r+l)</code>. Единицы нейтральны: «ед.³» и «ед.²».</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что такое образующая конуса?</summary><div class="faq-a"><p>Это отрезок от вершины до края основания по боковой поверхности. Её длина <code>l = √(r²+h²)</code> — гипотенуза прямоугольного треугольника из высоты и радиуса.</p></div></details><details class="faq-item"><summary class="faq-q">Почему объём конуса втрое меньше цилиндра?</summary><div class="faq-a"><p>Конус и цилиндр с одинаковыми основанием и высотой соотносятся как 1:3 — это классический результат: <code>V = 1⁄3·πr²h</code>.</p></div></details><details class="faq-item"><summary class="faq-q">В боковой поверхности используется высота или образующая?</summary><div class="faq-a"><p>Именно образующая <code>l</code>, а не высота: <code>Sбок = πr·l</code>. Частая ошибка — подставить туда h.</p></div></details></div><section class="app-cta"><div class="cta-h">Трудности с разделом «Математика»?</div><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a><a class="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></section><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Объём и площадь конуса</h1><p class="en">Cone</p><p class="desc">Образующая, объём 1⁄3·πr²h, боковая и полная поверхность.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Конус задаётся радиусом основания <code>r</code> и высотой <code>h</code>. Сначала находим образующую (наклонную сторону) по теореме Пифагора <code>l = √(r²+h²)</code>. Объём — треть от цилиндра той же высоты: <code>V = 1⁄3·πr²h</code>. Боковая поверхность <code>Sбок = πr·l</code>, полная добавляет основание: <code>Sполн = πr·(r+l)</code>. Единицы нейтральны: «ед.³» и «ед.²».</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Конус — тело с круглым основанием радиуса <code>r</code> и одной вершиной на высоте <code>h</code> над центром основания. Калькулятор находит образующую (наклонную сторону), объём, боковую и полную поверхность. Я Владимир, преподаю математику; на занятиях показываю, что конус — это «треть цилиндра» по объёму и что для его поверхности нужна не высота, а образующая.</p>
+
+<h2>Формула</h2>
+<p>Образующая (наклонная высота): <span class="eq">l = √(r² + h²)</span>. Объём: <span class="eq">V = 1⁄3 · π · r² · h</span>. Боковая поверхность: <span class="eq">Sбок = π · r · l</span>. Полная поверхность: <span class="eq">Sполн = π · r · (r + l)</span>.</p>
+<p>Образующая — гипотенуза прямоугольного треугольника с катетами <code>r</code> и <code>h</code>, поэтому по теореме Пифагора <code>l = √(r²+h²)</code>. Именно <code>l</code>, а не <code>h</code>, входит в «площадь поверхности конуса».</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Найдите образующую: <code>l = √(r² + h²)</code>.</li>
+<li>Для объёма посчитайте <code>πr²h</code> и разделите на 3.</li>
+<li>Для боковой поверхности умножьте <code>π · r · l</code>.</li>
+<li>Для полной прибавьте площадь основания <code>πr²</code>.</li>
+<li>Итог: <code>Sполн = πr·(r + l)</code>.</li>
+</ol>
+
+<div class="example"><h4>Пример</h4>
+<p>Радиус <code>r = 3</code>, высота <code>h = 4</code>.</p>
+<p>Образующая: <span class="eq">l = √(3² + 4²) = √(9 + 16) = √25 = 5</span> ед.</p>
+<p>Объём: <span class="eq">V = 1⁄3 · π · 3² · 4 = 1⁄3 · π · 36 = 12π ≈ 37.70</span> куб. ед.</p>
+<p>Боковая: <span class="eq">Sбок = π · 3 · 5 = 15π ≈ 47.12</span> кв. ед.</p>
+<p>Полная: <span class="eq">Sполн = π · 3 · (3 + 5) = 24π ≈ 75.40</span> кв. ед.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Конус входит в стереометрию ОГЭ и ЕГЭ (тела вращения, задания на объём и поверхность). В быту это объём «рожка», воронки, кучи песка; боковая поверхность — раскрой материала на колпак. В физике конус возникает в задачах на сыпучие тела и потоки. В IB/AP — volume of a cone и slant height (образующая).</p>
+
+<div class="mistakes"><h4>Осторожно</h4><ul>
+<li>В боковую поверхность подставляют высоту <code>h</code> вместо образующей <code>l</code>.</li>
+<li>Забывают множитель <code>1⁄3</code> в объёме — получают объём цилиндра.</li>
+<li>Считают образующую как сумму <code>r + h</code> вместо <code>√(r²+h²)</code>.</li>
+<li>Путают боковую и полную поверхность (последняя включает основание).</li>
+</ul></div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что такое образующая конуса?</summary><div class="faq-a"><p>Это отрезок от вершины до края основания по боковой поверхности. Её длина <code>l = √(r²+h²)</code> — гипотенуза прямоугольного треугольника из высоты и радиуса.</p></div></details><details class="faq-item"><summary class="faq-q">Почему объём конуса втрое меньше цилиндра?</summary><div class="faq-a"><p>Конус и цилиндр с одинаковыми основанием и высотой соотносятся как 1:3 — это классический результат: <code>V = 1⁄3·πr²h</code>.</p></div></details><details class="faq-item"><summary class="faq-q">В боковой поверхности используется высота или образующая?</summary><div class="faq-a"><p>Именно образующая <code>l</code>, а не высота: <code>Sбок = πr·l</code>. Частая ошибка — подставить туда h.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

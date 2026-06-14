@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Пропорция — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Пропорция. a / b = c / x — найти x. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/proportion.html">
@@ -10,47 +10,96 @@
   <meta property="og:title" content="Пропорция — калькулятор">
   <meta property="og:description" content="a / b = c / x — найти x.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/proportion.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Пропорция", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/proportion.html", "inLanguage": "ru", "description": "a / b = c / x — найти x.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Математика", "item": "https://calculators.podlevskikh.com/cat/math.html"}, {"@type": "ListItem", "position": 3, "name": "Пропорция", "item": "https://calculators.podlevskikh.com/calc/proportion.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Что такое основное свойство пропорции?", "acceptedAnswer": {"@type": "Answer", "text": "В верной пропорции произведение крайних членов равно произведению средних: из a/b=c/x следует a·x=b·c . Отсюда и берётся перекрёстное умножение."}}, {"@type": "Question", "name": "Как решать задачи на прямую пропорциональность?", "acceptedAnswer": {"@type": "Answer", "text": "Составьте пропорцию так, чтобы одноимённые величины стояли друг под другом (например, метры под метрами, рубли под рублями), затем выразите неизвестное перекрёстным умножением."}}, {"@type": "Question", "name": "Что делать при обратной пропорциональности?", "acceptedAnswer": {"@type": "Answer", "text": "Если при росте одной величины другая убывает (скорость и время в пути), произведение величин постоянно: a·b=c·x . Тогда x=a·b/c , а не как в прямой пропорции."}}, {"@type": "Question", "name": "Почему a не может быть равно нулю?", "acceptedAnswer": {"@type": "Answer", "text": "В формуле x=b·c/a происходит деление на a. Деление на ноль не определено, к тому же дробь a/b с нулевым числителем не задаёт осмысленного отношения."}}]}]</script>
 </head>
 <body data-calc="proportion">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-math">∑</span><div class="dt-dhead-tx"><h1>Пропорция</h1><p>a / b = c / x — найти x.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>a</label><div class="inwrap"><input id="in_a" inputmode="decimal" placeholder="0" value=""></div></div><div class="field"><label>b</label><div class="inwrap"><input id="in_b" inputmode="decimal" placeholder="0" value=""></div></div><div class="field"><label>c</label><div class="inwrap"><input id="in_c" inputmode="decimal" placeholder="0" value=""></div></div></div></div><div class="dt-col"><div class="result placeholder">Введите a, b, c.</div><div class="explain"><p>Из пропорции <code>a/b = c/x</code> неизвестное находится перекрёстным умножением: <code>x = b·c/a</code>.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что такое основное свойство пропорции?</summary><div class="faq-a"><p>В верной пропорции произведение крайних членов равно произведению средних: из <code>a/b=c/x</code> следует <code>a·x=b·c</code>. Отсюда и берётся перекрёстное умножение.</p></div></details><details class="faq-item"><summary class="faq-q">Как решать задачи на прямую пропорциональность?</summary><div class="faq-a"><p>Составьте пропорцию так, чтобы одноимённые величины стояли друг под другом (например, метры под метрами, рубли под рублями), затем выразите неизвестное перекрёстным умножением.</p></div></details><details class="faq-item"><summary class="faq-q">Что делать при обратной пропорциональности?</summary><div class="faq-a"><p>Если при росте одной величины другая убывает (скорость и время в пути), произведение величин постоянно: <code>a·b=c·x</code>. Тогда <code>x=a·b/c</code>, а не как в прямой пропорции.</p></div></details><details class="faq-item"><summary class="faq-q">Почему a не может быть равно нулю?</summary><div class="faq-a"><p>В формуле <code>x=b·c/a</code> происходит деление на a. Деление на ноль не определено, к тому же дробь <code>a/b</code> с нулевым числителем не задаёт осмысленного отношения.</p></div></details></div><section class="app-cta"><div class="cta-h">Трудности с разделом «Математика»?</div><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a><a class="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></section><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">∑ Математика</span></nav><header class="calc-head"><h1>Пропорция</h1><p class="en">Proportion</p><p class="desc">a / b = c / x — найти x.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Из пропорции <code>a/b = c/x</code> неизвестное находится перекрёстным умножением: <code>x = b·c/a</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Пропорция — это равенство двух отношений: <span class="eq">a / b = c / x</span>. Она говорит, что величины меняются согласованно: во сколько раз больше одно, во столько же больше другое. Калькулятор находит неизвестный член пропорции — приём, который решает огромный пласт задач на масштаб, скорость, рецепты и цены.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Из <span class="eq">a / b = c / x</span> неизвестное находится перекрёстным умножением: <span class="eq">a · x = b · c</span>, откуда <span class="eq">x = b · c / a</span>.</p>
+<p>Почему «крест-накрест»? Умножим обе части равенства на <code>b · x</code> — знаменатели сократятся, и получится <code>a · x = c · b</code>. Это главное свойство пропорции: произведение крайних членов равно произведению средних.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Запишите пропорцию так, чтобы одинаковые по смыслу величины стояли друг под другом.</li>
+<li>Перемножьте крест-накрест известные члены.</li>
+<li>Разделите полученное произведение на оставшийся известный член.</li>
+<li>Результат — искомое <code>x</code>.</li>
+<li>Проверьте: подставьте <code>x</code> и убедитесь, что оба отношения равны.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Если 4 кг яблок стоят 360 рублей, сколько стоят 7 кг? Составим пропорцию <span class="eq">4 / 360 = 7 / x</span>.</p>
+<p>Перекрёстное умножение: <span class="eq">4 · x = 360 · 7 = 2520</span>, значит <span class="eq">x = 2520 / 4 = 630</span> рублей.</p>
+<p>Проверка: <code>360 / 4 = 90</code> руб/кг и <code>630 / 7 = 90</code> руб/кг — цена за кг одинакова ✓.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Пропорции — рабочая лошадка прикладной математики: масштаб карт и чертежей, пересчёт рецептов, валютные курсы, концентрации растворов, задачи на движение. В ОГЭ и ЕГЭ это задачи на проценты, смеси и прямую/обратную пропорциональность. В IB и SAT — ratio and proportion, unit rates, scale factors. Понимание, какие величины ставить «друг под друга», важнее самой арифметики.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Перепутывают порядок величин — записывают <code>4 / 360 = x / 7</code> вместо <code>4 / 360 = 7 / x</code>.</li>
+<li>Применяют прямую пропорцию там, где зависимость обратная (чем больше рабочих — тем меньше времени).</li>
+<li>Делят на неверный член после перекрёстного умножения.</li>
+<li>Смешивают разные единицы измерения (кг и граммы) в одном отношении.</li>
+</ul></div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Что такое основное свойство пропорции?</summary><div class="faq-a"><p>В верной пропорции произведение крайних членов равно произведению средних: из <code>a/b=c/x</code> следует <code>a·x=b·c</code>. Отсюда и берётся перекрёстное умножение.</p></div></details><details class="faq-item"><summary class="faq-q">Как решать задачи на прямую пропорциональность?</summary><div class="faq-a"><p>Составьте пропорцию так, чтобы одноимённые величины стояли друг под другом (например, метры под метрами, рубли под рублями), затем выразите неизвестное перекрёстным умножением.</p></div></details><details class="faq-item"><summary class="faq-q">Что делать при обратной пропорциональности?</summary><div class="faq-a"><p>Если при росте одной величины другая убывает (скорость и время в пути), произведение величин постоянно: <code>a·b=c·x</code>. Тогда <code>x=a·b/c</code>, а не как в прямой пропорции.</p></div></details><details class="faq-item"><summary class="faq-q">Почему a не может быть равно нулю?</summary><div class="faq-a"><p>В формуле <code>x=b·c/a</code> происходит деление на a. Деление на ноль не определено, к тому же дробь <code>a/b</code> с нулевым числителем не задаёт осмысленного отношения.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

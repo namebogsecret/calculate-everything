@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Зарплата на руки (НДФЛ) — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Зарплата на руки (НДФЛ). Сколько остаётся после НДФЛ — прогрессивная шкала 2025 или плоские 13%. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/salary-net-ndfl.html">
@@ -10,47 +10,113 @@
   <meta property="og:title" content="Зарплата на руки (НДФЛ) — калькулятор">
   <meta property="og:description" content="Сколько остаётся после НДФЛ — прогрессивная шкала 2025 или плоские 13%.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/salary-net-ndfl.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Зарплата на руки (НДФЛ)", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/salary-net-ndfl.html", "inLanguage": "ru", "description": "Сколько остаётся после НДФЛ — прогрессивная шкала 2025 или плоские 13%.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Экономика", "item": "https://calculators.podlevskikh.com/cat/economics.html"}, {"@type": "ListItem", "position": 3, "name": "Зарплата на руки (НДФЛ)", "item": "https://calculators.podlevskikh.com/calc/salary-net-ndfl.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "С какой суммы начинается повышенный НДФЛ?", "acceptedAnswer": {"@type": "Answer", "text": "Повышенная ставка 15% применяется к части годового дохода свыше 2,4 млн ₽ (200 000 ₽ в месяц). Доход до этого порога облагается по 13% независимо от итоговой суммы."}}, {"@type": "Question", "name": "Считается ли налог со всей зарплаты или только с превышения?", "acceptedAnswer": {"@type": "Answer", "text": "Только с превышения. Это маржинальная (ступенчатая) шкала: каждая «скобка» дохода облагается своей ставкой. Поэтому эффективная ставка всегда ниже верхней."}}, {"@type": "Question", "name": "Учитываются ли здесь страховые взносы?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Страховые взносы платит работодатель сверх вашей зарплаты, они не уменьшают сумму на руки. Калькулятор считает только НДФЛ."}}, {"@type": "Question", "name": "Можно ли вернуть часть НДФЛ?", "acceptedAnswer": {"@type": "Answer", "text": "Да, через налоговые вычеты — за обучение, лечение, покупку жилья, ИИС. Вернуть можно до 13% от потраченного в пределах лимитов."}}]}]</script>
 </head>
 <body data-calc="salary-net-ndfl">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-econ">₽</span><div class="dt-dhead-tx"><h1>Зарплата на руки (НДФЛ)</h1><p>Сколько остаётся после НДФЛ — прогрессивная шкала 2025 или плоские 13%.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="formula mono">НДФЛ = Σ (часть дохода в скобке × ставка скобки)</div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Зарплата до налога (gross)</label><div class="inwrap"><input id="in_gross" inputmode="decimal" placeholder="0" value="100000"><span class="unit">₽</span></div></div><div class="field"><label>Период</label><div class="seg-wrap"><div class="seg"><button class="on">в месяц</button><button class="">в год</button></div></div></div><div class="field"><label>Шкала налога</label><div class="inwrap"><select id="in_scale"><option value="2025">Прогрессивная шкала 2025</option><option value="flat13">Плоские 13%</option></select></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">На руки в месяц</div><div class="res-val">87&nbsp;000<span class="u">₽</span></div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra"><div class="cell"><div class="k">На руки в год</div><div class="v mono">1&nbsp;044&nbsp;000 ₽</div></div><div class="cell"><div class="k">НДФЛ за год</div><div class="v mono">156&nbsp;000 ₽</div></div><div class="cell"><div class="k">Эффективная ставка</div><div class="v mono">13 %</div></div></div></div><div class="steps"><button class="steps-h open"><span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h10M4 12h16M4 17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></span> Пошаговое решение <span class="ar"><svg viewBox="0 0 24 24" fill="none"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></button><div class="steps-body"><ol><li><span class="fx">0–2&nbsp;400&nbsp;000 ₽ · 13% от 1&nbsp;200&nbsp;000 ₽ = 156&nbsp;000 ₽</span></li></ol></div></div><div class="explain"><p>Зарплата «на руки» — это начисленная зарплата (gross) за вычетом НДФЛ. С 2025 года действует прогрессивная шкала: 13% до 2,4 млн ₽ в год, 15% с части 2,4–5 млн, 18% с части 5–20 млн, 20% с части 20–50 млн и 22% свыше. Ставка повышается только для суммы сверх порога, а не для всего дохода.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">С какой суммы начинается повышенный НДФЛ?</summary><div class="faq-a"><p>Повышенная ставка 15% применяется к части годового дохода свыше 2,4 млн ₽ (200 000 ₽ в месяц). Доход до этого порога облагается по 13% независимо от итоговой суммы.</p></div></details><details class="faq-item"><summary class="faq-q">Считается ли налог со всей зарплаты или только с превышения?</summary><div class="faq-a"><p>Только с превышения. Это маржинальная (ступенчатая) шкала: каждая «скобка» дохода облагается своей ставкой. Поэтому эффективная ставка всегда ниже верхней.</p></div></details><details class="faq-item"><summary class="faq-q">Учитываются ли здесь страховые взносы?</summary><div class="faq-a"><p>Нет. Страховые взносы платит работодатель сверх вашей зарплаты, они не уменьшают сумму на руки. Калькулятор считает только НДФЛ.</p></div></details><details class="faq-item"><summary class="faq-q">Можно ли вернуть часть НДФЛ?</summary><div class="faq-a"><p>Да, через налоговые вычеты — за обучение, лечение, покупку жилья, ИИС. Вернуть можно до 13% от потраченного в пределах лимитов.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">💰 Экономика</span></nav><header class="calc-head"><h1>Зарплата на руки (НДФЛ)</h1><p class="en">Net Salary after Income Tax</p><p class="desc">Сколько остаётся после НДФЛ — прогрессивная шкала 2025 или плоские 13%.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Зарплата «на руки» — это начисленная зарплата (gross) за вычетом НДФЛ. С 2025 года действует прогрессивная шкала: 13% до 2,4 млн ₽ в год, 15% с части 2,4–5 млн, 18% с части 5–20 млн, 20% с части 20–50 млн и 22% свыше. Ставка повышается только для суммы сверх порога, а не для всего дохода.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Калькулятор зарплаты на руки показывает, сколько денег вы реально получите после удержания НДФЛ (налога на доходы физических лиц). Начисленная зарплата (gross) и зарплата «на руки» (net) различаются на сумму налога: работодатель удерживает его и перечисляет в бюджет, а вам выдаёт остаток. Расчёт нужен, чтобы понять настоящий доход, сравнить офферы и спланировать бюджет.</p>
+
+<h2>Формула / как считается</h2>
+<p>С 2025 года в России действует пятиступенчатая прогрессивная шкала НДФЛ. Налог считается по «скобкам»: каждая часть годового дохода облагается своей ставкой.</p>
+<table>
+<tr><th>Часть годового дохода</th><th>Ставка</th></tr>
+<tr><td>до 2 400 000 ₽</td><td>13%</td></tr>
+<tr><td>от 2,4 до 5 млн ₽</td><td>15%</td></tr>
+<tr><td>от 5 до 20 млн ₽</td><td>18%</td></tr>
+<tr><td>от 20 до 50 млн ₽</td><td>20%</td></tr>
+<tr><td>свыше 50 млн ₽</td><td>22%</td></tr>
+</table>
+<p>Итоговый налог — это сумма налога по каждой скобке. Зарплата на руки:</p>
+<p><span class="eq">На руки = Начислено − НДФЛ</span></p>
+<p>Важно: повышенная ставка применяется только к части дохода сверх порога, а не ко всей сумме. Поэтому эффективная (средняя) ставка всегда ниже верхней.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Приведите доход к году: месячную зарплату умножьте на 12.</li>
+<li>Разбейте годовой доход на скобки по таблице.</li>
+<li>Для каждой скобки умножьте её часть дохода на ставку этой скобки.</li>
+<li>Сложите налог по всем скобкам — это годовой НДФЛ.</li>
+<li>Вычтите налог из годового дохода и разделите на 12 — получите сумму на руки в месяц.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Зарплата <b>100 000 ₽ в месяц</b>, прогрессивная шкала 2025.</p>
+<p>Годовой доход: <code>100 000 · 12 = 1 200 000 ₽</code>.</p>
+<p>Весь доход укладывается в первую скобку (до 2,4 млн), значит ставка 13%.</p>
+<p>НДФЛ за год: <code>1 200 000 · 0,13 = 156 000 ₽</code>.</p>
+<p>На руки за год: <code>1 200 000 − 156 000 = 1 044 000 ₽</code>.</p>
+<p>На руки в месяц: <code>1 044 000 / 12 = 87 000 ₽</code>. Эффективная ставка здесь ровно 13%, потому что доход не вышел за первый порог.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Расчёт используют при оценке оффера (работодатель часто называет gross, а жить вы будете на net), при планировании семейного бюджета, при оформлении ипотеки, где банк смотрит на чистый доход. Полезно сравнить прогрессивную шкалу с плоскими 13%, чтобы увидеть, на сколько вырос налог для высоких зарплат.</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Считают, что при превышении порога вся зарплата облагается повышенной ставкой — это не так, повышается только часть сверх порога.</li>
+<li>Путают начисленную зарплату и зарплату на руки в оффере.</li>
+<li>Прибавляют к удержаниям страховые взносы — их платит работодатель сверх зарплаты, на руки они не влияют.</li>
+<li>Забывают про налоговые вычеты, которые позволяют вернуть часть удержанного НДФЛ.</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">С какой суммы начинается повышенный НДФЛ?</summary><div class="faq-a"><p>Повышенная ставка 15% применяется к части годового дохода свыше 2,4 млн ₽ (200 000 ₽ в месяц). Доход до этого порога облагается по 13% независимо от итоговой суммы.</p></div></details><details class="faq-item"><summary class="faq-q">Считается ли налог со всей зарплаты или только с превышения?</summary><div class="faq-a"><p>Только с превышения. Это маржинальная (ступенчатая) шкала: каждая «скобка» дохода облагается своей ставкой. Поэтому эффективная ставка всегда ниже верхней.</p></div></details><details class="faq-item"><summary class="faq-q">Учитываются ли здесь страховые взносы?</summary><div class="faq-a"><p>Нет. Страховые взносы платит работодатель сверх вашей зарплаты, они не уменьшают сумму на руки. Калькулятор считает только НДФЛ.</p></div></details><details class="faq-item"><summary class="faq-q">Можно ли вернуть часть НДФЛ?</summary><div class="faq-a"><p>Да, через налоговые вычеты — за обучение, лечение, покупку жилья, ИИС. Вернуть можно до 13% от потраченного в пределах лимитов.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Генератор UUID (v4) — онлайн-калькулятор · Calculate Everything</title>
+  <meta name="description" content="Генератор UUID (v4). Случайные идентификаторы UUID версии 4 по стандарту RFC 4122. Формула, пошаговое решение и пояснение.">
+  <link rel="canonical" href="https://calculators.podlevskikh.com/calc/uuid-gen.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Генератор UUID (v4) — калькулятор">
+  <meta property="og:description" content="Случайные идентификаторы UUID версии 4 по стандарту RFC 4122.">
+  <meta property="og:url" content="https://calculators.podlevskikh.com/calc/uuid-gen.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/calculators/data-vuz.js"></script>
+  <script src="/js/calculators/data-rates.js"></script>
+  <script src="/js/calculators/chemistry.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
+  <script src="/js/calculators/everyday-extra.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
+  <script src="/js/articles/chemistry.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Генератор UUID (v4)", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/uuid-gen.html", "inLanguage": "ru", "description": "Случайные идентификаторы UUID версии 4 по стандарту RFC 4122.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Генераторы", "item": "https://calculators.podlevskikh.com/cat/generators.html"}, {"@type": "ListItem", "position": 3, "name": "Генератор UUID (v4)", "item": "https://calculators.podlevskikh.com/calc/uuid-gen.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Насколько вероятно совпадение двух UUID?", "acceptedAnswer": {"@type": "Answer", "text": "Пренебрежимо мало. В версии 4 случайны 122 бита — это около 5.3·10³⁶ вариантов. Чтобы получить хотя бы одно совпадение с заметной вероятностью, нужно сгенерировать порядка миллиардов миллиардов идентификаторов."}}, {"@type": "Question", "name": "Чем UUID v4 отличается от v1?", "acceptedAnswer": {"@type": "Answer", "text": "v1 строится на времени и MAC-адресе (предсказуем и раскрывает железо), а v4 полностью случаен. Для большинства задач v4 предпочтительнее: он не утекает метаданных."}}, {"@type": "Question", "name": "Что означают версия и вариант?", "acceptedAnswer": {"@type": "Answer", "text": "Цифра 4 в третьей группе фиксирует версию (случайная), а первый символ четвёртой группы (8, 9, A или B) — вариант RFC 4122. Эти биты выставляются принудительно, остальные случайны."}}, {"@type": "Question", "name": "Идентификаторы генерируются на сервере?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, всё считается в браузере локальным криптогенератором. UUID можно безопасно использовать как ключи в базе, имена файлов или request-id."}}]}]</script>
+</head>
+<body data-calc="uuid-gen">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚙️ Генераторы</span></nav><header class="calc-head"><h1>Генератор UUID (v4)</h1><p class="en">UUID v4 Generator</p><p class="desc">Случайные идентификаторы UUID версии 4 по стандарту RFC 4122.</p></header><section class="explain"><h2>Как это работает</h2><div><p>UUID v4 — это 128 случайных бит, записанных как <code>xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx</code>, где цифра <code>4</code> задаёт версию, а <code>y</code> — вариант (8, 9, A или B). Биты берутся из <code>crypto.getRandomValues</code>, поэтому идентификаторы непредсказуемы.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>UUID (Universally Unique Identifier) — это 128-битный идентификатор, который можно сгенерировать где угодно без согласования с центральным сервером и почти гарантированно не получить дубликат. Калькулятор создаёт UUID версии 4 — полностью случайные — по стандарту RFC 4122 и выдаёт от одного до пятидесяти штук за раз.</p>
+
+<h2>Как устроено</h2>
+<p>Берутся 16 случайных байт из <code>crypto.getRandomValues</code>, после чего два поля выставляются принудительно: версия (цифра <code>4</code>) и вариант (старшие биты = <code>10</code>). Остальные 122 бита остаются случайными. Запись — пять групп шестнадцатеричных цифр через дефис:</p>
+<p><span class="eq">xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx</span></p>
+<p>Здесь <code>4</code> — версия, а <code>y</code> принимает значения 8, 9, A или B (вариант RFC 4122).</p>
+
+<h2>Пример</h2>
+<p>Сгенерированный UUID выглядит так: <code>3f2a9c10-7b4e-4d6a-9f31-1c8b5e2a7d04</code>.</p>
+<p>Третья группа начинается с <code>4</code> — это версия 4 (случайная). Четвёртая начинается с <code>9</code> — допустимый вариант. Остальные цифры случайны, поэтому два независимо сгенерированных UUID практически никогда не совпадут.</p>
+
+<h2>Где применяется</h2>
+<p>UUID используют как первичные ключи в базах данных, имена временных файлов, идентификаторы запросов (request-id) в логах, ключи сессий и сообщений в распределённых системах. Их главное достоинство — генерировать можно на любом узле параллельно, не опасаясь коллизий и не обращаясь к общему счётчику.</p>
+
+<h2>Безопасность и надёжность</h2>
+<ul>
+<li>Вероятность совпадения двух UUID v4 пренебрежимо мала: 122 случайных бита — это около 5.3·10³⁶ вариантов.</li>
+<li>Идентификаторы генерируются локально в браузере криптостойким источником — они непредсказуемы и не утекают на сервер.</li>
+<li>UUID v4 не раскрывает время и оборудование (в отличие от v1), поэтому безопаснее для публичных идентификаторов.</li>
+<li>UUID — это идентификатор, а не секрет: не используйте его как пароль или токен доступа.</li>
+</ul>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Насколько вероятно совпадение двух UUID?</summary><div class="faq-a"><p>Пренебрежимо мало. В версии 4 случайны 122 бита — это около 5.3·10³⁶ вариантов. Чтобы получить хотя бы одно совпадение с заметной вероятностью, нужно сгенерировать порядка миллиардов миллиардов идентификаторов.</p></div></details><details class="faq-item"><summary class="faq-q">Чем UUID v4 отличается от v1?</summary><div class="faq-a"><p>v1 строится на времени и MAC-адресе (предсказуем и раскрывает железо), а v4 полностью случаен. Для большинства задач v4 предпочтительнее: он не утекает метаданных.</p></div></details><details class="faq-item"><summary class="faq-q">Что означают версия и вариант?</summary><div class="faq-a"><p>Цифра <code>4</code> в третьей группе фиксирует версию (случайная), а первый символ четвёртой группы (8, 9, A или B) — вариант RFC 4122. Эти биты выставляются принудительно, остальные случайны.</p></div></details><details class="faq-item"><summary class="faq-q">Идентификаторы генерируются на сервере?</summary><div class="faq-a"><p>Нет, всё считается в браузере локальным криптогенератором. UUID можно безопасно использовать как ключи в базе, имена файлов или request-id.</p></div></details></section>  <div class="footer"><div class="footer-inner">
+      Calculate Everything · формула + пошаговое решение к каждому расчёту.
+      Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
+      <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
+</body>
+</html>

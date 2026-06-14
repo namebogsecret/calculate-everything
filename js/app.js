@@ -16,6 +16,9 @@ window.CE = (function () {
     it:         { title: 'IT и программирование', en: 'IT & Programming', emoji: '💻', tut: false },
     health:     { title: 'Здоровье и тело', en: 'Health & Body', emoji: '🏥', tut: false },
     everyday:   { title: 'На каждый день', en: 'Everyday',  emoji: '🧮', tut: false },
+    construction:{ title: 'Стройка и ремонт', en: 'Construction & Repair', emoji: '🧱', tut: false },
+    cooking:    { title: 'Кухня и кулинария', en: 'Cooking', emoji: '🍳', tut: false },
+    generators: { title: 'Генераторы', en: 'Generators', emoji: '⚙️', tut: false },
   };
 
   const registry = [];          // все калькуляторы

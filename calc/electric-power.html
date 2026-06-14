@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Электрическая мощность — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Электрическая мощность. P = V · I. Мощность по напряжению и току. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/electric-power.html">
@@ -10,47 +10,99 @@
   <meta property="og:title" content="Электрическая мощность — калькулятор">
   <meta property="og:description" content="P = V · I. Мощность по напряжению и току.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/electric-power.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Электрическая мощность", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/electric-power.html", "inLanguage": "ru", "description": "P = V · I. Мощность по напряжению и току.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Физика", "item": "https://calculators.podlevskikh.com/cat/physics.html"}, {"@type": "ListItem", "position": 3, "name": "Электрическая мощность", "item": "https://calculators.podlevskikh.com/calc/electric-power.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Чему равна электрическая мощность?", "acceptedAnswer": {"@type": "Answer", "text": "Мощность равна произведению напряжения на силу тока: P = V·I . Измеряется в ваттах (Вт), 1 Вт = 1 В · 1 А = 1 Дж/с."}}, {"@type": "Question", "name": "Как найти мощность, если известно только сопротивление?", "acceptedAnswer": {"@type": "Answer", "text": "Через закон Ома можно подставить V = I·R или I = V/R и получить P = I²·R либо P = V²/R . Удобно, когда не хватает одной из величин."}}, {"@type": "Question", "name": "Чем отличается ватт от ватт-часа?", "acceptedAnswer": {"@type": "Answer", "text": "Ватт — это мощность (скорость расхода энергии), а ватт-час — энергия, потреблённая за время. Энергия = мощность × время, поэтому прибор на 100 Вт за 1 час израсходует 100 Вт·ч = 0.1 кВт·ч."}}, {"@type": "Question", "name": "Почему лампа на 100 Вт ярче лампы на 60 Вт?", "acceptedAnswer": {"@type": "Answer", "text": "При одинаковом напряжении сети большая мощность означает больший ток и больше энергии, выделяемой в секунду, поэтому такая лампа светит ярче."}}]}]</script>
 </head>
 <body data-calc="electric-power">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-physics">Ω</span><div class="dt-dhead-tx"><h1>Электрическая мощность</h1><p>P = V · I. Мощность по напряжению и току.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Мощность P</label><div class="inwrap"><input id="in_P" inputmode="decimal" placeholder="—" value=""><span class="unit">Вт</span></div></div><div class="field"><label>Напряжение V</label><div class="inwrap"><input id="in_V" inputmode="decimal" placeholder="—" value=""><span class="unit">В</span></div></div><div class="field"><label>Сила тока I</label><div class="inwrap"><input id="in_I" inputmode="decimal" placeholder="—" value=""><span class="unit">А</span></div></div></div></div><div class="dt-col"><div class="result placeholder">Заполните любые два поля — третье вычислю.</div><div class="explain"><p>Электрическая мощность <code>P = V·I</code> (ватт). Также <code>P = I²·R = V²/R</code>.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Чему равна электрическая мощность?</summary><div class="faq-a"><p>Мощность равна произведению напряжения на силу тока: <code>P = V·I</code>. Измеряется в ваттах (Вт), 1 Вт = 1 В · 1 А = 1 Дж/с.</p></div></details><details class="faq-item"><summary class="faq-q">Как найти мощность, если известно только сопротивление?</summary><div class="faq-a"><p>Через закон Ома можно подставить <code>V = I·R</code> или <code>I = V/R</code> и получить <code>P = I²·R</code> либо <code>P = V²/R</code>. Удобно, когда не хватает одной из величин.</p></div></details><details class="faq-item"><summary class="faq-q">Чем отличается ватт от ватт-часа?</summary><div class="faq-a"><p>Ватт — это мощность (скорость расхода энергии), а ватт-час — энергия, потреблённая за время. Энергия = мощность × время, поэтому прибор на 100 Вт за 1 час израсходует 100 Вт·ч = 0.1 кВт·ч.</p></div></details><details class="faq-item"><summary class="faq-q">Почему лампа на 100 Вт ярче лампы на 60 Вт?</summary><div class="faq-a"><p>При одинаковом напряжении сети большая мощность означает больший ток и больше энергии, выделяемой в секунду, поэтому такая лампа светит ярче.</p></div></details></div><section class="app-cta"><div class="cta-h">Трудности с разделом «Физика»?</div><p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p><div class="cta-btns"><a class="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a><a class="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a><a class="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a><a class="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a></div></section><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">⚛️ Физика</span></nav><header class="calc-head"><h1>Электрическая мощность</h1><p class="en">Electric Power</p><p class="desc">P = V · I. Мощность по напряжению и току.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Электрическая мощность <code>P = V·I</code> (ватт). Также <code>P = I²·R = V²/R</code>.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Электрическая мощность показывает, сколько энергии прибор потребляет (или выделяет) за единицу времени. Именно по мощности мы понимаем, насколько «прожорлив» обогреватель, какой провод выдержит нагрузку и сколько мы заплатим за электричество.</p>
+
+<h2>Формула и откуда она</h2>
+<p>Базовая формула мощности через напряжение и ток:</p>
+<p><span class="eq">P = V · I</span></p>
+<p>Она следует из определения: мощность — это работа тока за секунду, а работа равна заряду, умноженному на напряжение. Подставив закон Ома <code>V = I · R</code>, получаем ещё две удобные формы:</p>
+<p><span class="eq">P = I² · R</span>&nbsp; и &nbsp;<span class="eq">P = V² ⁄ R</span></p>
+<p>Первую применяют, когда известны ток и сопротивление, вторую — когда известны напряжение и сопротивление. Единица мощности в СИ — ватт (<code>Вт</code>); 1 Вт = 1 В · 1 А.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Выпишите известные величины и переведите их в СИ.</li>
+<li>Выберите формулу под имеющиеся данные: <code>V·I</code>, <code>I²·R</code> или <code>V²/R</code>.</li>
+<li>Подставьте числа; при <code>I²·R</code> сначала возведите ток в квадрат.</li>
+<li>Получите мощность в ваттах; при необходимости переведите в киловатты (÷1000).</li>
+<li>Для расчёта энергии умножьте мощность на время.</li>
+</ol>
+
+<div class="example"><h4>Разбор примера</h4>
+<p>Лампа подключена к сети <code>V = 12 В</code>, через неё течёт ток <code>I = 3 А</code>. Найдите мощность.</p>
+<p>По формуле <span class="eq">P = V · I = 12 · 3 = 36 Вт</span>.</p>
+<p>Лампа потребляет <b>36 ватт</b>. Проверим через сопротивление: <code>R = V ⁄ I = 12 ⁄ 3 = 4 Ом</code>, тогда <code>P = V² ⁄ R = 144 ⁄ 4 = 36 Вт</code> — тот же результат.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Расчёт мощности нужен при выборе бытовой техники, проводки, автоматов защиты и при оценке счёта за электроэнергию. Тема входит в физику 8 класса, ОГЭ и ЕГЭ, а также в IB Physics и AP Physics (раздел DC circuits). Понимание формы <code>I²·R</code> объясняет, почему провода греются именно из-за тока.</p>
+
+<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<li>Забывают возвести ток в квадрат в формуле <code>P = I² · R</code>.</li>
+<li>Путают мощность (Вт) и энергию (Вт·ч или Дж): энергия — это мощность, умноженная на время.</li>
+<li>Берут не ту форму формулы для имеющихся данных и считают лишние величины.</li>
+<li>Смешивают вольты и киловатты, забывая о переводе единиц.</li>
+</ul></div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Чему равна электрическая мощность?</summary><div class="faq-a"><p>Мощность равна произведению напряжения на силу тока: <code>P = V·I</code>. Измеряется в ваттах (Вт), 1 Вт = 1 В · 1 А = 1 Дж/с.</p></div></details><details class="faq-item"><summary class="faq-q">Как найти мощность, если известно только сопротивление?</summary><div class="faq-a"><p>Через закон Ома можно подставить <code>V = I·R</code> или <code>I = V/R</code> и получить <code>P = I²·R</code> либо <code>P = V²/R</code>. Удобно, когда не хватает одной из величин.</p></div></details><details class="faq-item"><summary class="faq-q">Чем отличается ватт от ватт-часа?</summary><div class="faq-a"><p>Ватт — это мощность (скорость расхода энергии), а ватт-час — энергия, потреблённая за время. Энергия = мощность × время, поэтому прибор на 100 Вт за 1 час израсходует 100 Вт·ч = 0.1 кВт·ч.</p></div></details><details class="faq-item"><summary class="faq-q">Почему лампа на 100 Вт ярче лампы на 60 Вт?</summary><div class="faq-a"><p>При одинаковом напряжении сети большая мощность означает больший ток и больше энергии, выделяемой в секунду, поэтому такая лампа светит ярче.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

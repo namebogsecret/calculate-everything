@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Норма воды в день — онлайн-калькулятор · Calculate Everything</title>
   <meta name="description" content="Норма воды в день. Сколько воды пить в сутки по весу и уровню активности. Формула, пошаговое решение и пояснение.">
   <link rel="canonical" href="https://calculators.podlevskikh.com/calc/water-intake.html">
@@ -10,47 +10,107 @@
   <meta property="og:title" content="Норма воды в день — калькулятор">
   <meta property="og:description" content="Сколько воды пить в сутки по весу и уровню активности.">
   <meta property="og:url" content="https://calculators.podlevskikh.com/calc/water-intake.html">
+  <meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
   <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
-  <script src="/js/calculators/school.js"></script>
-  <script src="/js/calculators/physics.js"></script>
-  <script src="/js/calculators/math.js"></script>
-  <script src="/js/calculators/economics.js"></script>
-  <script src="/js/calculators/statistics.js"></script>
-  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
-  <script src="/js/calculators/it.js"></script>
-  <script src="/js/calculators/health.js"></script>
-  <script src="/js/calculators/math-solids.js"></script>
-  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/construction.js"></script>
+  <script src="/js/calculators/cooking.js"></script>
+  <script src="/js/calculators/economics.js"></script>
+  <script src="/js/calculators/everyday.js"></script>
   <script src="/js/calculators/everyday-extra.js"></script>
-  <script src="/js/articles/school.js"></script>
-  <script src="/js/articles/physics.js"></script>
-  <script src="/js/articles/math.js"></script>
-  <script src="/js/articles/economics.js"></script>
-  <script src="/js/articles/statistics.js"></script>
-  <script src="/js/articles/everyday.js"></script>
+  <script src="/js/calculators/finance-extra.js"></script>
+  <script src="/js/calculators/generators.js"></script>
+  <script src="/js/calculators/health.js"></script>
+  <script src="/js/calculators/it.js"></script>
+  <script src="/js/calculators/math.js"></script>
+  <script src="/js/calculators/math-solids.js"></script>
+  <script src="/js/calculators/physics.js"></script>
+  <script src="/js/calculators/school.js"></script>
+  <script src="/js/calculators/statistics.js"></script>
   <script src="/js/articles/chemistry.js"></script>
-  <script src="/js/articles/it.js"></script>
-  <script src="/js/articles/health.js"></script>
-  <script src="/js/articles/math-solids.js"></script>
-  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/construction.js"></script>
+  <script src="/js/articles/cooking.js"></script>
+  <script src="/js/articles/economics.js"></script>
+  <script src="/js/articles/everyday.js"></script>
   <script src="/js/articles/everyday-extra.js"></script>
+  <script src="/js/articles/finance-extra.js"></script>
+  <script src="/js/articles/generators.js"></script>
+  <script src="/js/articles/health.js"></script>
+  <script src="/js/articles/it.js"></script>
+  <script src="/js/articles/math.js"></script>
+  <script src="/js/articles/math-solids.js"></script>
+  <script src="/js/articles/physics.js"></script>
+  <script src="/js/articles/school.js"></script>
+  <script src="/js/articles/statistics.js"></script>
+  <script src="/js/ui/registry-adapter.js"></script>
+  <script>
+  (function(){ try{
+    var th = JSON.parse(localStorage.getItem('ce_theme')||'"light"');
+    document.documentElement.setAttribute('data-theme', th==='dark'?'dark':'light');
+  }catch(e){} })();
+  </script>
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Норма воды в день", "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "url": "https://calculators.podlevskikh.com/calc/water-intake.html", "inLanguage": "ru", "description": "Сколько воды пить в сутки по весу и уровню активности.", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "provider": {"@type": "Person", "name": "Vladimir Podlevskikh", "description": "Преподаватель физики и математики — МГУ, 20+ лет, IB/AP/SAT/ЕГЭ", "url": "https://t.me/VladimirPodlevskikh"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Калькуляторы", "item": "https://calculators.podlevskikh.com/"}, {"@type": "ListItem", "position": 2, "name": "Здоровье и тело", "item": "https://calculators.podlevskikh.com/cat/health.html"}, {"@type": "ListItem", "position": 3, "name": "Норма воды в день", "item": "https://calculators.podlevskikh.com/calc/water-intake.html"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Это только чистая вода?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. В суточную норму входит вся жидкость: чай, кофе, супы, сочные фрукты и овощи. Примерно 20–30% воды человек получает из еды, поэтому всю норму выпивать «стаканами» не нужно."}}, {"@type": "Question", "name": "Можно ли пить слишком много?", "acceptedAnswer": {"@type": "Answer", "text": "Да, избыток воды за короткое время опасен (гипонатриемия — вымывание натрия). Пейте равномерно в течение дня и ориентируйтесь на жажду и цвет мочи (светло-жёлтый — норма)."}}, {"@type": "Question", "name": "Подходит ли норма при беременности или болезни?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, это общий ориентир для здорового взрослого. При беременности, лактации, болезнях сердца и почек объём жидкости назначает врач — калькулятор это не учитывает."}}]}]</script>
 </head>
 <body data-calc="water-intake">
-  <div class="topbar"><div class="topbar-inner">
-      <a class="logo" href="/">Calculate <em>Everything</em></a>
-      <span class="sub">калькуляторы на все случаи жизни</span>
-    </div></div>
-  <main id="app"><div class="dt-shell"><aside class="dt-side"><div class="dt-brand"><span class="mk">=</span> Калькуляторы</div><div class="search dt-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="m20 20-3.2-3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><input placeholder="Поиск…" value=""></div><nav class="dt-nav"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5M6 10v9h12v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>Главная</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.8" stroke="currentColor" stroke-width="2"></rect></svg><span>Все калькуляторы</span><span class="ct">89</span></button><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg><span>Избранное</span></button></nav><div class="dt-sidecats"><div class="dt-sectitle">Разделы</div><button class="dt-catlink"><span class="glyph g-school">А⁺</span><span class="nm">Школа и экзамены</span><span class="ct">6</span></button><button class="dt-catlink"><span class="glyph g-physics">Ω</span><span class="nm">Физика</span><span class="ct">12</span></button><button class="dt-catlink"><span class="glyph g-math">∑</span><span class="nm">Математика</span><span class="ct">21</span></button><button class="dt-catlink"><span class="glyph g-chem">⚗</span><span class="nm">Химия</span><span class="ct">4</span></button><button class="dt-catlink"><span class="glyph g-stats">σ</span><span class="nm">Статистика</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-econ">₽</span><span class="nm">Экономика</span><span class="ct">14</span></button><button class="dt-catlink"><span class="glyph g-it">01</span><span class="nm">IT и программирование</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-health">♥</span><span class="nm">Здоровье и тело</span><span class="ct">7</span></button><button class="dt-catlink"><span class="glyph g-everyday">≈</span><span class="nm">На каждый день</span><span class="ct">11</span></button></div><div class="dt-side-foot"><button class="dt-navbtn"><svg viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8 8 0 0 1 9.5 4 7.5 7.5 0 1 0 20 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg><span>Тёмная тема</span></button></div></aside><main class="dt-main"><div class="dt-content fadein"><button class="dt-back"><svg viewBox="0 0 24 24" fill="none"><path d="m15 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg> Назад</button><div class="dt-dhead"><span class="glyph g-health">♥</span><div class="dt-dhead-tx"><h1>Норма воды в день</h1><p>Сколько воды пить в сутки по весу и уровню активности.</p></div><button class="iconbtn ghost" aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></div><div class="formula mono">Вода (мл) = вес (кг) · коэффициент (30–40 мл/кг)</div><div class="dt-detail"><div class="dt-col"><div class="card"><div class="card-h">Данные</div><div class="field"><label>Вес</label><div class="inwrap"><input id="in_weight" inputmode="decimal" placeholder="0" value="70"><span class="unit">кг</span></div></div><div class="field"><label>Активность / климат</label><div class="inwrap"><select id="in_activity"><option value="30">Низкая активность</option><option value="35">Средняя</option><option value="40">Высокая / жара</option></select></div></div></div></div><div class="dt-col"><div class="result"><div class="res-main"><div><div class="res-lbl">Норма воды</div><div class="res-val">2,45<span class="u">л/сут</span></div></div><button class="copybtn"><svg viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="11" height="11" rx="2.5" stroke="currentColor" stroke-width="1.9"></rect><path d="M5 15V6a2 2 0 0 1 2-2h8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path></svg> Копировать</button></div><div class="res-extra"><div class="cell"><div class="k">В миллилитрах</div><div class="v mono">2&nbsp;450 мл/сут</div></div><div class="cell"><div class="k">Стаканов по 250 мл</div><div class="v mono">9,8</div></div></div></div><div class="explain"><p>Распространённый ориентир — 30–40 мл воды на килограмм веса в сутки, больше при жаре и нагрузках. В эту норму входит и жидкость из пищи. Цифра справочная: реальная потребность зависит от климата, рациона и здоровья, поэтому это ориентир, а не медицинское предписание.</p></div></div></div><div class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Это только чистая вода?</summary><div class="faq-a"><p>Нет. В суточную норму входит вся жидкость: чай, кофе, супы, сочные фрукты и овощи. Примерно 20–30% воды человек получает из еды, поэтому всю норму выпивать «стаканами» не нужно.</p></div></details><details class="faq-item"><summary class="faq-q">Можно ли пить слишком много?</summary><div class="faq-a"><p>Да, избыток воды за короткое время опасен (гипонатриемия — вымывание натрия). Пейте равномерно в течение дня и ориентируйтесь на жажду и цвет мочи (светло-жёлтый — норма).</p></div></details><details class="faq-item"><summary class="faq-q">Подходит ли норма при беременности или болезни?</summary><div class="faq-a"><p>Нет, это общий ориентир для здорового взрослого. При беременности, лактации, болезнях сердца и почек объём жидкости назначает врач — калькулятор это не учитывает.</p></div></details></div><footer class="app-foot"><p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p><p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p><p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p><p class="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p></footer></div></main></div><div class="toast"></div></main>
-  <div class="footer"><div class="footer-inner">
+  <main id="app"><nav class="crumbs"><a href="/">← Все калькуляторы</a><span> · </span><span class="crumb-cat">🏥 Здоровье и тело</span></nav><header class="calc-head"><h1>Норма воды в день</h1><p class="en">Daily Water Intake</p><p class="desc">Сколько воды пить в сутки по весу и уровню активности.</p></header><section class="explain"><h2>Как это работает</h2><div><p>Распространённый ориентир — 30–40 мл воды на килограмм веса в сутки, больше при жаре и нагрузках. В эту норму входит и жидкость из пищи. Цифра справочная: реальная потребность зависит от климата, рациона и здоровья, поэтому это ориентир, а не медицинское предписание.</p></div></section><article class="article">
+<h2>Что это и что показывает</h2>
+<p>Калькулятор нормы воды оценивает, сколько жидкости в сутки стоит потреблять взрослому человеку с учётом веса и уровня активности. Он переводит абстрактные «8 стаканов» в конкретные литры и миллилитры под ваше тело. Важно: норма включает не только чистую воду, но и жидкость из еды и напитков.</p>
+
+<h2>Формула</h2>
+<p>Распространённый ориентир — 30–40 мл воды на килограмм веса:</p>
+<p><span class="eq">Вода (мл) = вес (кг) · коэффициент</span></p>
+<table>
+<tr><th>Условия</th><th>Коэффициент (мл/кг)</th></tr>
+<tr><td>Низкая активность, прохладно</td><td>30</td></tr>
+<tr><td>Средняя активность</td><td>35</td></tr>
+<tr><td>Высокая активность / жара</td><td>40</td></tr>
+</table>
+<p>Один стакан принимается за 250 мл, литр — за 1000 мл.</p>
+
+<h2>Как посчитать вручную (по шагам)</h2>
+<ol>
+<li>Возьмите свой вес в килограммах.</li>
+<li>Выберите коэффициент по образу жизни и климату.</li>
+<li>Умножьте вес на коэффициент — получите миллилитры в сутки.</li>
+<li>Разделите на 1000 для литров и на 250 для числа стаканов.</li>
+</ol>
+
+<div class="example">
+<h4>Разбор примера</h4>
+<p>Человек весом 70 кг, средняя активность (коэффициент 35).</p>
+<p>Вода: 70 · 35 = <b>2450 мл</b>, то есть ≈ 2.45 л в сутки.</p>
+<p>В стаканах: 2450 / 250 ≈ <b>10 стаканов</b>.</p>
+<p>Из них около четверти приходит с едой — пить «руками» нужно меньше.</p>
+</div>
+
+<h2>Где применяется</h2>
+<p>Норму используют для построения питьевого режима, при тренировках и в жару, для контроля гидратации во время диеты, а также чтобы не забывать пить в течение рабочего дня. Это удобный личный ориентир вместо универсальных «8 стаканов».</p>
+
+<div class="mistakes">
+<h4>Частые ошибки</h4>
+<ul>
+<li>Считают, что всю норму надо выпить чистой водой — забывают про супы, чай, фрукты.</li>
+<li>Выпивают объём залпом вместо равномерного распределения за день.</li>
+<li>Игнорируют сигналы тела — жажду и цвет мочи (светло-жёлтый — норма).</li>
+<li>Применяют норму при беременности или болезнях сердца и почек. Это ориентир для здорового взрослого, а не медицинское предписание — режим при заболеваниях назначает врач.</li>
+</ul>
+</div>
+</article><section class="faq"><h2>Частые вопросы</h2><details class="faq-item"><summary class="faq-q">Это только чистая вода?</summary><div class="faq-a"><p>Нет. В суточную норму входит вся жидкость: чай, кофе, супы, сочные фрукты и овощи. Примерно 20–30% воды человек получает из еды, поэтому всю норму выпивать «стаканами» не нужно.</p></div></details><details class="faq-item"><summary class="faq-q">Можно ли пить слишком много?</summary><div class="faq-a"><p>Да, избыток воды за короткое время опасен (гипонатриемия — вымывание натрия). Пейте равномерно в течение дня и ориентируйтесь на жажду и цвет мочи (светло-жёлтый — норма).</p></div></details><details class="faq-item"><summary class="faq-q">Подходит ли норма при беременности или болезни?</summary><div class="faq-a"><p>Нет, это общий ориентир для здорового взрослого. При беременности, лактации, болезнях сердца и почек объём жидкости назначает врач — калькулятор это не учитывает.</p></div></details></section>  <div class="footer"><div class="footer-inner">
       Calculate Everything · формула + пошаговое решение к каждому расчёту.
       Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> (МГУ, IB/AP/SAT, 20+ лет).
       <br>Готовишься к экзаменам? → <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ</a>.
-    </div></div>
-  <script>CE_boot();</script>
+    </div></div></main>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <script type="text/babel" src="/js/ui/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="/js/ui/app.jsx"></script>
 </body>
 </html>

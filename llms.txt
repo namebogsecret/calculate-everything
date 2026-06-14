@@ -1,6 +1,9 @@
 # Calculate Everything
 
-> Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, химия, статистика, экономика, IT, здоровье и быт. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
+> Бесплатные онлайн-калькуляторы с формулой, пошаговым решением и разбором теории: физика, математика, химия, статистика, экономика, IT, здоровье, быт, стройка, кухня и генераторы. Физику и математику ведёт репетитор Владимир (МГУ, IB/AP/SAT, 20+ лет).
+
+- Главная (предметное ядро — школа, физика, математика, химия, статистика): https://calculators.podlevskikh.com/
+- Все калькуляторы (полный каталог по разделам): https://calculators.podlevskikh.com/#/all
 
 ## [Школа и экзамены](https://calculators.podlevskikh.com/cat/school.html)
 - [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calc.podlevskikh.com/): Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.
@@ -108,3 +111,21 @@
 - [Сколько дней до даты (Days Until)](https://calculators.podlevskikh.com/calc/days-until.html): Сколько дней, недель и месяцев осталось до события.
 - [Рабочие дни между датами (Working Days)](https://calculators.podlevskikh.com/calc/working-days.html): Количество рабочих и выходных дней в периоде.
 - [Возраст собаки или кошки по-человечески (Pet Age)](https://calculators.podlevskikh.com/calc/pet-age.html): Перевод возраста питомца в «человеческие» годы.
+
+## [Стройка и ремонт](https://calculators.podlevskikh.com/cat/construction.html)
+- [Расход краски на стены (Wall Paint Calculator)](https://calculators.podlevskikh.com/calc/paint-area.html): Сколько литров краски нужно на стены по площади, расходу и числу слоёв.
+- [Сколько рулонов обоев (Wallpaper Rolls Calculator)](https://calculators.podlevskikh.com/calc/wallpaper-rolls.html): Число рулонов обоев по периметру комнаты, высоте стен и размеру рулона.
+- [Плитка и ламинат: сколько упаковок (Tile & Laminate Packs Calculator)](https://calculators.podlevskikh.com/calc/tile-laminate.html): Число упаковок плитки или ламината по площади пола, площади упаковки и запасу на подрезку.
+- [Объём бетона для плиты или стяжки (Concrete Volume Calculator)](https://calculators.podlevskikh.com/calc/concrete-volume.html): Объём и масса бетона для плиты, стяжки или фундамента по длине, ширине и толщине.
+
+## [Кухня и кулинария](https://calculators.podlevskikh.com/cat/cooking.html)
+- [Пересчёт порций рецепта (Recipe Portion Scaler)](https://calculators.podlevskikh.com/calc/recipe-scale.html): Множитель и новое количество ингредиента при изменении числа порций.
+- [Температура духовки: °C ⇄ °F ⇄ газовая отметка (Oven Temperature Converter)](https://calculators.podlevskikh.com/calc/oven-temp.html): Перевод температуры духовки между °C, °F и газовыми отметками.
+- [Кухонные меры: стаканы и ложки в граммы (Cooking Units to Grams)](https://calculators.podlevskikh.com/calc/cooking-units.html): Перевод стаканов, ложек и миллилитров в граммы с учётом плотности продукта.
+- [Гидратация теста (пекарский процент) (Dough Hydration Calculator)](https://calculators.podlevskikh.com/calc/dough-hydration.html): Процент гидратации теста по весу муки и воды.
+
+## [Генераторы](https://calculators.podlevskikh.com/cat/generators.html)
+- [Генератор паролей (Password Generator)](https://calculators.podlevskikh.com/calc/password-gen.html): Случайный надёжный пароль из выбранных наборов символов прямо в браузере.
+- [Генератор случайных чисел (Random Number Generator)](https://calculators.podlevskikh.com/calc/random-number.html): Случайные целые числа в заданном диапазоне с суммой и средним.
+- [Генератор UUID (v4) (UUID v4 Generator)](https://calculators.podlevskikh.com/calc/uuid-gen.html): Случайные идентификаторы UUID версии 4 по стандарту RFC 4122.
+- [Генератор Lorem ipsum (Lorem Ipsum Generator)](https://calculators.podlevskikh.com/calc/lorem-ipsum.html): Текст-рыба Lorem ipsum заданного объёма для макетов и вёрстки.

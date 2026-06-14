@@ -138,6 +138,12 @@ function Faq({items}){
   );
 }
 function FormulaChip({html}){ if(!html) return null; return <div className="formula mono" dangerouslySetInnerHTML={{__html:html}}/>; }
+/* Полная статья «теория за расчётом» (SEO + образование + воронка).
+   HTML лежит в window.CE_ARTICLES[id] — загружается на страницах /calc/*.html
+   (js/articles/*.js). На лёгкой главной статьи не подключены → компонент молча
+   ничего не рисует, как и было; полный разбор живёт на странице калькулятора. */
+function Article({id}){ const html=(window.CE_ARTICLES||{})[id]; if(!html) return null;
+  return <article className="app-article" dangerouslySetInnerHTML={{__html:html}}/>; }
 
 /* ---------- монетизация: воронка на репетиторство + футер ---------- */
 function TutorCTA({cat}){
@@ -331,7 +337,7 @@ function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRe
   return (
     <>
       <header className="topbar">
-        <button className="iconbtn ghost back" onClick={()=>history.length>1?history.back():nav('/')} aria-label="Назад">{I.back}</button>
+        <button className="iconbtn ghost back" onClick={()=>goBack(nav)} aria-label="Назад">{I.back}</button>
         <div className="tb-title">{calc.title}</div>
         { !calc.external && <button className={'iconbtn'+(fav?'':' ghost')} onClick={()=>{toggleFav(calc.id);showToast(fav?'Убрано из избранного':'Добавлено в избранное');}} aria-label="Избранное" style={fav?{color:'#e8b23a'}:null}>{fav?I.starF:I.starO}</button> }
       </header>
@@ -349,6 +355,7 @@ function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRe
                 <ResultCard hero={hero} rest={rest} res={res} loading={loading} onCopy={()=>copyVal(hero,showToast)}/>
                 <StepsCard steps={res&&res.steps} open={openSteps} setOpen={setOpenSteps}/>
                 <Explain html={calc.explain}/>
+                <Article id={calc.id}/>
                 <Faq items={calc.faq}/>
               </> }
           <TutorCTA cat={cat}/>
@@ -425,8 +432,8 @@ function HomeD({nav, favs, toggleFav, recents, cats}){
   const recentCalcs = recents.map(byId).filter(Boolean).slice(0,6);
   return (
     <>
-      <h1 className="dt-h1">Калькуляторы на каждый день</h1>
-      <p className="dt-lead">Физика · математика · экзамены. Формула и пошаговое решение к каждому расчёту.</p>
+      <h1 className="dt-h1">Калькуляторы для учёбы и экзаменов</h1>
+      <p className="dt-lead">Школа · физика · математика · химия · статистика — с формулой и пошаговым решением к каждому. Бытовые, финансовые, IT и другие — во вкладке «Все калькуляторы».</p>
       { recentCalcs.length>0 && <><div className="sec"><h2>Недавние</h2></div><CardGrid calcs={recentCalcs} nav={nav} favs={favs} toggleFav={toggleFav}/></> }
       <SectionsD cats={cats} nav={nav} favs={favs} toggleFav={toggleFav}/>
     </>
@@ -479,7 +486,7 @@ function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
   useEffect(()=>{ pushRecent(calc.id); setOpenSteps(true); },[calc.id]);
   return (
     <div className="dt-content fadein" key={calc.id}>
-      <button className="dt-back" onClick={()=>history.length>1?history.back():nav('/')}>{I.back} Назад</button>
+      <button className="dt-back" onClick={()=>goBack(nav)}>{I.back} Назад</button>
       <div className="dt-dhead">
         <span className={'glyph '+cat.cls}>{cat.glyph}</span>
         <div className="dt-dhead-tx"><h1>{calc.title}</h1><p>{calc.desc}</p></div>
@@ -496,7 +503,7 @@ function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
               <Explain html={calc.explain}/>
             </div>
           </div> }
-      { !calc.external && <Faq items={calc.faq}/> }
+      { !calc.external && <><Article id={calc.id}/><Faq items={calc.faq}/></> }
       <TutorCTA cat={cat}/>
       <AppFooter/>
     </div>
@@ -540,7 +547,18 @@ function parseHash(){
   if(h==='all') return {v:'all'};
   if(h==='favs') return {v:'favs'};
   if(h && byId(decodeURIComponent(h))) return {v:'calc', id:decodeURIComponent(h)}; // голый #/<id>
+  // статическая страница /calc/<id>.html: пустой hash + <body data-calc="id">.
+  // Монтируемся сразу на этот калькулятор — URL остаётся чистым (без #).
+  if(!h){ const dc = document.body && document.body.dataset && document.body.dataset.calc;
+    if(dc && byId(dc)) return {v:'calc', id:dc}; }
   return {v:'home'};
+}
+// «Назад»: внутри SPA — history.back; при прямом заходе на /calc/*.html (истории нет)
+// уводим на настоящую главную «/», а не на #/ поверх текущего файла.
+function goBack(nav){
+  if(history.length>1){ history.back(); return; }
+  if(document.body && document.body.dataset && document.body.dataset.calc){ location.href='/'; return; }
+  nav('/');
 }
 
 ReactDOM.createRoot(document.getElementById('app')).render(<App/>);
