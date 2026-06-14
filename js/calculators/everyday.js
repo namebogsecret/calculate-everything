@@ -2,6 +2,40 @@
 (function () {
   const F = (x, d) => window.CE.fmt(x, d);
 
+  // Валюты конвертера (код → подпись с флагом). Курсы — в js/calculators/data-rates.js
+  // (window.CE_RATES, генерируется bin/update-rates.py, обновляется cron'ом раз в день).
+  const CUR = [
+    // мажоры и «домашние»
+    ['USD', '🇺🇸 USD — Доллар США'], ['EUR', '🇪🇺 EUR — Евро'], ['RUB', '🇷🇺 RUB — Рубль'],
+    ['GBP', '🇬🇧 GBP — Фунт стерлингов'], ['CHF', '🇨🇭 CHF — Швейц. франк'], ['CNY', '🇨🇳 CNY — Юань'],
+    ['JPY', '🇯🇵 JPY — Иена'], ['TRY', '🇹🇷 TRY — Турецкая лира'],
+    // Кавказ / Центральная Азия
+    ['AMD', '🇦🇲 AMD — Армянский драм'], ['GEL', '🇬🇪 GEL — Грузинский лари'], ['KZT', '🇰🇿 KZT — Тенге'],
+    ['KGS', '🇰🇬 KGS — Сом'], ['UZS', '🇺🇿 UZS — Узб. сум'],
+    // Залив + Израиль (премиальный рынок репетиторства)
+    ['AED', '🇦🇪 AED — Дирхам ОАЭ'], ['QAR', '🇶🇦 QAR — Катарский риал'], ['SAR', '🇸🇦 SAR — Саудовский риял'],
+    ['KWD', '🇰🇼 KWD — Кувейтский динар'], ['BHD', '🇧🇭 BHD — Бахрейнский динар'], ['OMR', '🇴🇲 OMR — Оманский риал'],
+    ['ILS', '🇮🇱 ILS — Шекель'],
+    // Азия
+    ['HKD', '🇭🇰 HKD — Гонконгский доллар'], ['SGD', '🇸🇬 SGD — Сингап. доллар'], ['KRW', '🇰🇷 KRW — Вона'],
+    ['TWD', '🇹🇼 TWD — Тайв. доллар'], ['INR', '🇮🇳 INR — Рупия'], ['THB', '🇹🇭 THB — Бат'],
+    ['VND', '🇻🇳 VND — Донг'], ['IDR', '🇮🇩 IDR — Индон. рупия'], ['MYR', '🇲🇾 MYR — Ринггит'],
+    // Скандинавия
+    ['NOK', '🇳🇴 NOK — Норв. крона'], ['SEK', '🇸🇪 SEK — Швед. крона'], ['DKK', '🇩🇰 DKK — Дат. крона'],
+    ['ISK', '🇮🇸 ISK — Исл. крона'],
+    // Европа + Балканы
+    ['PLN', '🇵🇱 PLN — Злотый'], ['CZK', '🇨🇿 CZK — Чеш. крона'], ['HUF', '🇭🇺 HUF — Форинт'],
+    ['RON', '🇷🇴 RON — Рум. лей'], ['BGN', '🇧🇬 BGN — Лев'], ['RSD', '🇷🇸 RSD — Серб. динар'],
+    ['ALL', '🇦🇱 ALL — Алб. лек'],
+    // Америки
+    ['CLP', '🇨🇱 CLP — Чил. песо'], ['UYU', '🇺🇾 UYU — Уруг. песо'], ['BRL', '🇧🇷 BRL — Реал'],
+    ['MXN', '🇲🇽 MXN — Мекс. песо'], ['ARS', '🇦🇷 ARS — Арг. песо'], ['PYG', '🇵🇾 PYG — Гуарани'],
+    ['BOB', '🇧🇴 BOB — Боливиано'], ['CAD', '🇨🇦 CAD — Канад. доллар'],
+    // прочее
+    ['MUR', '🇲🇺 MUR — Маврик. рупия'], ['AUD', '🇦🇺 AUD — Австрал. доллар'], ['NZD', '🇳🇿 NZD — Новозел. доллар'],
+  ];
+  const curOpts = CUR.map(([value, label]) => ({ value, label }));
+
   window.CE.register('everyday', [
     {
       id: 'bmi', title: 'Индекс массы тела (ИМТ)', title_en: 'BMI',
@@ -61,6 +95,37 @@
         return { outputs: u.map(([n, f]) => ({ label: n, value: kg / f, digits: 4 })) };
       },
       explain: '<p>Приведение к килограммам и обратно. 1 фунт = 0.4536 кг, 1 унция = 28.35 г.</p>',
+    },
+    {
+      id: 'currency-converter', title: 'Конвертер валют', title_en: 'Currency Converter',
+      desc: 'Перевод по курсу: рубль, доллар, евро, драм, дирхам, франк, лари, тенге — 51 валюта.',
+      tags: ['валюта', 'курс', 'конвертер валют', 'доллар', 'евро', 'рубль', 'драм', 'дирхам', 'франк', 'шекель', 'риал', 'currency', 'exchange rate'],
+      inputs: [
+        { key: 'amount', label: 'Сумма', default: 100 },
+        { key: 'from', label: 'Из валюты', options: curOpts, default: 'USD' },
+        { key: 'to', label: 'В валюту', options: curOpts, default: 'RUB' },
+      ],
+      compute(v) {
+        const R = window.CE_RATES;
+        if (!R || !R.perUSD) return { note: 'Курсы валют не загружены.' };
+        if (Number.isNaN(v.amount)) return { note: 'Введите сумму.' };
+        const pf = R.perUSD[v.from], pt = R.perUSD[v.to];
+        if (!pf || !pt) return { error: 'Нет курса для выбранной валюты.' };
+        const res = v.amount * pt / pf;
+        const rate = pt / pf, inv = pf / pt;
+        const dg = res !== 0 && Math.abs(res) < 1 ? 4 : 2;
+        const du = R.updated ? R.updated.split('-').reverse().join('.') : '';
+        return {
+          outputs: [
+            { label: `${F(v.amount, 2)} ${v.from} =`, text: `${F(res, dg)} ${v.to}`, primary: true },
+            { label: `1 ${v.from}`, text: `${F(rate, 4)} ${v.to}` },
+            { label: `1 ${v.to}`, text: `${F(inv, 4)} ${v.from}` },
+          ],
+          formula: `Сумма × (курс ${v.to} к USD) ⁄ (курс ${v.from} к USD)`,
+          note: `Курс на <b>${du}</b> · обновляется ежедневно (источник open.er-api.com). Справочно: банк/обменник дают свой курс со спредом.`,
+        };
+      },
+      explain: '<p>Все валюты приведены к доллару США как опорному: <code>результат = сумма · perUSD[в] / perUSD[из]</code>. Курсы тянутся из открытого источника и обновляются раз в сутки автоматически — сайт при этом остаётся статическим (без сервера). Для реального платежа банк или обменник применяет свой курс со спредом, поэтому значение здесь — ориентир.</p>',
     },
     {
       id: 'fuel-cost', title: 'Стоимость поездки по топливу', title_en: 'Fuel Cost',

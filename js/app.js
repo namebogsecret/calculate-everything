@@ -36,7 +36,25 @@ window.CE = (function () {
     return Number(x).toLocaleString('ru-RU', { maximumFractionDigits: 6 });
   }
 
-  return { CATEGORIES, registry, byId, register, fmt };
+  // ---- ленивый загрузчик тяжёлых библиотек (CAS и т.п.) ----
+  // Грузит <script> один раз, кэширует Promise. Так «серьёзная» математика
+  // (символьные производные/интегралы через math.js) живёт в браузере и
+  // подгружается ТОЛЬКО на своей странице — сервер не нужен, остальные
+  // калькуляторы не утяжеляются. Используется calc'ами, чей compute() async.
+  const _scripts = {};
+  function loadScript(src) {
+    if (_scripts[src]) return _scripts[src];
+    _scripts[src] = new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src; s.async = true;
+      s.onload = () => resolve();
+      s.onerror = () => { delete _scripts[src]; reject(new Error('Не удалось загрузить модуль: ' + src)); };
+      document.head.appendChild(s);
+    });
+    return _scripts[src];
+  }
+
+  return { CATEGORIES, registry, byId, register, fmt, loadScript };
 })();
 
 /* ============================================================
@@ -184,7 +202,9 @@ function CE_boot() {
     const out = el('div', { class: 'calc-out', id: 'out' });
     app.appendChild(out);
 
+    let _seq = 0;
     function recompute() {
+      const my = ++_seq;
       const vals = {};
       for (const f of (d.inputs || [])) {
         const raw = inputs[f.key].value;
@@ -195,7 +215,15 @@ function CE_boot() {
       let res;
       try { res = d.compute(vals); }
       catch (e) { res = { error: e.message }; }
-      renderOut(out, res);
+      // compute() может вернуть Promise (calc, грузящий тяжёлую CAS-библиотеку).
+      // Синхронные калькуляторы возвращают объект — путь не меняется.
+      if (res && typeof res.then === 'function') {
+        if (!out.querySelector('.outputs')) renderOut(out, { note: '⏳ Загружаю математический модуль…' });
+        res.then(r => { if (my === _seq) renderOut(out, r); })
+           .catch(e => { if (my === _seq) renderOut(out, { error: e.message }); });
+      } else {
+        renderOut(out, res);
+      }
     }
 
     function renderOut(out, res) {

@@ -276,6 +276,56 @@
       explain: '<p>Производная — мгновенная скорость изменения функции, наклон касательной. Калькулятор берёт её численно: <code>f′(x₀)≈[f(x₀+h)−f(x₀−h)]/2h</code> при малом h. Также даёт f″ — для исследования на выпуклость.</p>',
     },
     {
+      id: 'derivative-symbolic', title: 'Производная функции (символьно)', title_en: 'Symbolic Derivative',
+      desc: 'f′(x) в виде формулы для любого выражения — sin, cos, eˣ, ln, степени, цепное правило.',
+      tags: ['производная', 'символьная производная', 'derivative', 'дифференцирование', 'f прайм', 'найти производную', 'матан', 'cas'],
+      // Free-text выражение читаем из DOM (движок parseFloat-ит текстовые поля).
+      inputs: [
+        { key: 'expr', label: 'Функция f(x)', placeholder: 'x^2*sin(x)', default: 'x^2*sin(x)',
+          hint: 'Операторы + − * / ^; функции sin, cos, tan, exp, ln, log, sqrt, abs.' },
+        { key: 'vr', label: 'Переменная', placeholder: 'x', default: 'x' },
+        { key: 'x0', label: 'Точка x₀ (необязательно)', optional: true,
+          hint: 'Если заполнить — посчитаю f(x₀) и f′(x₀) численно.' },
+      ],
+      // compute async: тяжёлая CAS-библиотека (math.js, ~0.6 МБ) грузится ЛЕНИВО,
+      // только на этой странице, и живёт в браузере — сервер не нужен.
+      async compute(v) {
+        let expr = ((document.getElementById('in_expr') || {}).value || '').trim();
+        const vr = (((document.getElementById('in_vr') || {}).value || 'x').trim()) || 'x';
+        if (!expr) return { note: 'Введите функцию, например x^2*sin(x).' };
+        expr = expr.replace(/\bln\s*\(/gi, 'log(');  // ln → натуральный log (math.js: log = ln)
+        await window.CE.loadScript('/js/vendor/mathjs.min.js');
+        const math = window.math;
+        if (!math || !math.derivative) return { error: 'Математический модуль не загрузился.' };
+        let node, der, derStr;
+        try {
+          node = math.parse(expr);
+          der = math.derivative(node, vr);
+          derStr = math.simplify(der).toString();
+        } catch (e) {
+          return { error: 'Не разобрал выражение: ' + e.message };
+        }
+        const outputs = [
+          { label: 'f(' + vr + ')', text: node.toString() },
+          { label: "f′(" + vr + ')', text: derStr, primary: true },
+        ];
+        let note = 'Символьное дифференцирование (math.js, считается прямо в браузере). ln = натуральный логарифм.';
+        if (!Number.isNaN(v.x0)) {
+          try {
+            const scope = {}; scope[vr] = v.x0;
+            outputs.push({ label: 'f(' + F(v.x0) + ')', value: node.evaluate(scope), digits: 6 });
+            outputs.push({ label: "f′(" + F(v.x0) + ')', value: der.evaluate(scope), digits: 6 });
+          } catch (e) { note = 'Производную нашёл, но в точке не вычислил (проверьте область определения).'; }
+        }
+        return {
+          outputs,
+          formula: 'd⁄d' + vr + ' [ ' + node.toString() + ' ] = ' + derStr,
+          note,
+        };
+      },
+      explain: '<p>В отличие от численной производной, здесь результат — <b>формула</b> f′(x), а не число. Дифференцирование символьное: применяются правила суммы, произведения, частного и цепное правило. Тяжёлая CAS-библиотека (math.js) подгружается лениво только на этой странице и работает целиком в браузере — серверу считать ничего не нужно. Заполните точку x₀, чтобы заодно получить значения f и f′ в ней.</p>',
+    },
+    {
       id: 'definite-integral', title: 'Определённый интеграл (численно)', title_en: 'Definite Integral',
       desc: '∫ₐᵇ f(x)dx методом Симпсона — площадь под кривой.',
       tags: ['интеграл', 'определённый интеграл', 'integral', 'площадь под графиком', 'симпсон', 'матан'],

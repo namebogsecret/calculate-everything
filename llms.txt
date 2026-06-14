@@ -38,6 +38,7 @@
 - [Дроби — сложить, вычесть, умножить, разделить (Fraction Calculator)](https://calculators.podlevskikh.com/calc/fractions.html): a/b ∘ c/d с сокращением до несократимой дроби.
 - [Линейное уравнение (Linear Equation)](https://calculators.podlevskikh.com/calc/linear-equation.html): ax + b = 0 — найти корень.
 - [Производная в точке (численно) (Numerical Derivative)](https://calculators.podlevskikh.com/calc/derivative-point.html): Значение f′(x₀) методом центральной разности — для любой формулы.
+- [Производная функции (символьно) (Symbolic Derivative)](https://calculators.podlevskikh.com/calc/derivative-symbolic.html): f′(x) в виде формулы для любого выражения — sin, cos, eˣ, ln, степени, цепное правило.
 - [Определённый интеграл (численно) (Definite Integral)](https://calculators.podlevskikh.com/calc/definite-integral.html): ∫ₐᵇ f(x)dx методом Симпсона — площадь под кривой.
 
 ## Экономика
@@ -66,5 +67,6 @@
 - [Температура: °C ⇄ °F ⇄ K (Temperature Converter)](https://calculators.podlevskikh.com/calc/temperature.html): Перевод между Цельсием, Фаренгейтом и Кельвином.
 - [Конвертер длины (Length Converter)](https://calculators.podlevskikh.com/calc/length-converter.html): м, км, см, мм, миля, фут, дюйм, ярд.
 - [Конвертер массы (Weight Converter)](https://calculators.podlevskikh.com/calc/weight-converter.html): кг, г, т, фунт, унция, стоун.
+- [Конвертер валют (Currency Converter)](https://calculators.podlevskikh.com/calc/currency-converter.html): Перевод по курсу: рубль, доллар, евро, драм, дирхам, франк, лари, тенге — 51 валюта.
 - [Стоимость поездки по топливу (Fuel Cost)](https://calculators.podlevskikh.com/calc/fuel-cost.html): Расход, литры и деньги на дорогу.
 - [Сколько дней между датами (Date Difference)](https://calculators.podlevskikh.com/calc/date-diff.html): Дни, недели и месяцы между двумя датами.

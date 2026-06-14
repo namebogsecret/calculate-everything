@@ -29,6 +29,7 @@
   <url><loc>https://calculators.podlevskikh.com/calc/fractions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/linear-equation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/derivative-point.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/derivative-symbolic.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/definite-integral.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/compound-interest.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/loan-payment.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -51,6 +52,7 @@
   <url><loc>https://calculators.podlevskikh.com/calc/temperature.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/length-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/weight-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://calculators.podlevskikh.com/calc/currency-converter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/fuel-cost.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://calculators.podlevskikh.com/calc/date-diff.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
