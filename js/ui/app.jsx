@@ -175,7 +175,7 @@ function AppFooter(){
 /* ====================================================================== */
 function App(){
   const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-    "accent": "#2a6fdb",
+    "accent": "#9A6A28",
     "fontSize": 17,
     "radius": 16,
     "density": "regular"
@@ -216,7 +216,7 @@ function App(){
       <TweaksPanel title="Tweaks">
         <TweakSection label="Оформление"/>
         <TweakColor label="Акцент" value={t.accent} onChange={v=>setTweak('accent',v)}
-          options={['#2a6fdb','#1f8a5b','#d97757','#6b4fd8','#1b1a18']}/>
+          options={['#9A6A28','#1f8a5b','#d97757','#6b4fd8','#1b1a18']}/>
         <TweakToggle label="Тёмная тема" value={theme==='dark'} onChange={v=>setTheme(v?'dark':'light')}/>
         <TweakSection label="Типографика и плотность"/>
         <TweakSlider label="Размер текста" value={t.fontSize} min={15} max={19} step={1} unit="px" onChange={v=>setTweak('fontSize',v)}/>

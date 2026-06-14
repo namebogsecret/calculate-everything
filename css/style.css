@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,600&family=Manrope:wght@400;500;600;700&display=swap');
 :root {
-  --bg: #0b0e14;
-  --bg-2: #121722;
-  --card: #161c28;
-  --line: #232c3d;
-  --txt: #e6edf6;
-  --muted: #97a3b6;
-  --faint: #5f6b80;
-  --accent: #57c7ff;
-  --accent-2: #7df0c2;
-  --warn: #ffb454;
-  --err: #ff6b6b;
+  /* Бренд-слой podlevskikh: тёплая бумага + золото */
+  --bg: #F7F1E5;
+  --bg-2: #FCF8F0;
+  --card: #FFFFFF;
+  --line: #E5DCC9;
+  --txt: #211D16;
+  --muted: #6B6354;
+  --faint: #9A9182;
+  --accent: #9A6A28;
+  --accent-2: #6E4A19;
+  --warn: #B07A1E;
+  --err: #B0472F;
   --radius: 14px;
   --maxw: 980px;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", -apple-system, "Segoe UI", system-ui, sans-serif;
 }
+body { font-family: var(--sans); }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; letter-spacing: -.01em; }
+/* result.primary tint → gold */
+.result.primary { background: linear-gradient(180deg, rgba(154,106,40,.08), rgba(154,106,40,.02)) !important; }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 body {
