@@ -54,7 +54,7 @@
   var ORDER = ['school', 'physics', 'math', 'statistics', 'economics', 'everyday'];
   window.CATS = ORDER.filter(function (id) { return CE.CATEGORIES[id]; }).map(function (id) {
     var m = CATMETA[id] || { glyph: '·', cls: 'g-everyday', tab: 'other' };
-    return { id: id, name: CE.CATEGORIES[id].title, glyph: m.glyph, cls: m.cls, tab: m.tab };
+    return { id: id, name: CE.CATEGORIES[id].title, glyph: m.glyph, cls: m.cls, tab: m.tab, tut: !!CE.CATEGORIES[id].tut };
   });
   window.catById = function (id) { return window.CATS.find(function (c) { return c.id === id; }); };
 

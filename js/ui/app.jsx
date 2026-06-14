@@ -125,6 +125,33 @@ function StepsCard({steps, open, setOpen}){
 function Explain({html}){ if(!html) return null; return <div className="explain" dangerouslySetInnerHTML={{__html:html}}/>; }
 function FormulaChip({html}){ if(!html) return null; return <div className="formula mono" dangerouslySetInnerHTML={{__html:html}}/>; }
 
+/* ---------- монетизация: воронка на репетиторство + футер ---------- */
+function TutorCTA({cat}){
+  if(!cat || !cat.tut) return null; // показываем только на предметах, где Vladimir репетитор
+  return (
+    <section className="app-cta">
+      <div className="cta-h">Трудности с разделом «{cat.name}»?</div>
+      <p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p>
+      <div className="cta-btns">
+        <a className="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a>
+        <a className="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a>
+        <a className="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a>
+        <a className="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </section>
+  );
+}
+function AppFooter(){
+  return (
+    <footer className="app-foot">
+      <p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p>
+      <p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p>
+      <p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p>
+      <p className="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p>
+    </footer>
+  );
+}
+
 /* ====================================================================== */
 function App(){
   const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -225,6 +252,7 @@ function RootViewM({route, nav, theme, setTheme, query, setQuery, favs, toggleFa
             : route.v==='favs' ? <FavsM nav={nav} favs={favs} toggleFav={toggleFav} recents={recents}/>
             : route.v==='all'  ? <CatSectionsM cats={window.CATS} nav={nav} favs={favs} toggleFav={toggleFav} note="Каталог пополняется — скоро IT, здоровье, даты и другие разделы."/>
             : <HomeM nav={nav} favs={favs} toggleFav={toggleFav} recents={recents} cats={homeCats}/> }
+          <AppFooter/>
         </div>
       </div>
     </>
@@ -308,6 +336,8 @@ function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRe
                 <StepsCard steps={res&&res.steps} open={openSteps} setOpen={setOpenSteps}/>
                 <Explain html={calc.explain}/>
               </> }
+          <TutorCTA cat={cat}/>
+          <AppFooter/>
         </div>
       </div>
     </>
@@ -369,6 +399,7 @@ function DesktopApp({route, nav, theme, setTheme, query, setQuery, favs, toggleF
                 : route.v==='favs' ? <FavsD nav={nav} favs={favs} toggleFav={toggleFav} recents={recents}/>
                 : route.v==='all'  ? <><h1 className="dt-h1">Все калькуляторы</h1><p className="dt-lead">Полный каталог по разделам.</p><SectionsD cats={window.CATS} nav={nav} favs={favs} toggleFav={toggleFav} note="Каталог пополняется — скоро IT, здоровье, даты и другие разделы."/></>
                 : <HomeD nav={nav} favs={favs} toggleFav={toggleFav} recents={recents} cats={homeCats}/> }
+              <AppFooter/>
             </div> }
       </main>
     </div>
@@ -450,6 +481,8 @@ function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
               <Explain html={calc.explain}/>
             </div>
           </div> }
+      <TutorCTA cat={cat}/>
+      <AppFooter/>
     </div>
   );
 }
