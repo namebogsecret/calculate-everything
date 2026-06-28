@@ -198,6 +198,32 @@ body.embed .calc-head .en { display: none; }
 .embed-credit { margin: 16px 0 0; font-size: 12px; text-align: right; }
 .embed-credit a { color: var(--faint); }
 
+/* ── Воронка на репетиторство: CTA-баннер на экзаменных страницах (бумага+золото) ── */
+.tutor-cta { margin: 48px 0 0; }
+.tutor-cta-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 22px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(154,106,40,.10), rgba(154,106,40,.03));
+  border: 1px solid var(--accent); border-radius: 18px; padding: 24px 28px;
+}
+.tutor-cta-text { flex: 1 1 360px; }
+.tutor-cta-text h2 {
+  margin: 0 0 8px; font-size: 21px; color: var(--accent-2); letter-spacing: -.01em;
+}
+.tutor-cta-text p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.tutor-cta-btn {
+  flex: 0 0 auto; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px; padding: 13px 24px;
+  border-radius: 12px; background: var(--accent); border: 1px solid var(--accent);
+  color: #FCF8F0; font-weight: 700; font-size: 15.5px;
+}
+.tutor-cta-btn:hover { background: var(--accent-2); border-color: var(--accent-2); text-decoration: none; color: #FCF8F0; }
+body.embed .tutor-cta { display: none; }
+@media (max-width: 560px) {
+  .tutor-cta-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .tutor-cta-btn { width: 100%; justify-content: center; }
+}
+
 .footer { border-top: 1px solid var(--line); margin-top: 60px; }
 .footer-inner { max-width: var(--maxw); margin: 0 auto; padding: 28px 20px; color: var(--faint); font-size: 13.5px; }
 .footer-inner a { color: var(--muted); }

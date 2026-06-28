@@ -150,10 +150,10 @@ function TutorCTA({cat}){
   if(!cat || !cat.tut) return null; // показываем только на предметах, где Vladimir репетитор
   return (
     <section className="app-cta">
-      <div className="cta-h">Трудности с разделом «{cat.name}»?</div>
+      <div className="cta-h">Готовлю к ЕГЭ / IB / SAT по физике и математике — первая консультация бесплатно</div>
       <p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p>
       <div className="cta-btns">
-        <a className="cta-btn primary" href="https://tutor.podlevskikh.com" target="_blank" rel="noopener">🎓 Сайт репетитора</a>
+        <a className="cta-btn primary" href="https://tutor.podlevskikh.com?utm_source=calculators&utm_medium=cta" target="_blank" rel="noopener">🎓 Сайт репетитора</a>
         <a className="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a>
         <a className="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Telegram</a>
         <a className="cta-btn" href="https://wa.me/37455873402" target="_blank" rel="noopener">💬 WhatsApp</a>
