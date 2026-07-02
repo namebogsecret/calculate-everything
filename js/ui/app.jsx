@@ -256,7 +256,7 @@ function RootViewM({route, nav, theme, setTheme, query, setQuery, favs, toggleFa
   return (
     <>
       <header className="topbar flush">
-        <div className="tb-title tb-big">{titleBig}</div>
+        <h1 className="tb-title tb-big">{titleBig}</h1>
         <button className="iconbtn" aria-label="Тема" onClick={()=>setTheme(theme==='dark'?'light':'dark')}>{theme==='dark'?I.sun:I.moon}</button>
       </header>
       <div className="scroll" ref={scrollRef}>

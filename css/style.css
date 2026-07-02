@@ -221,6 +221,7 @@ body.embed .calc-head .en { display: none; }
 body.embed .tutor-cta { display: none; }
 @media (max-width: 560px) {
   .tutor-cta-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .tutor-cta-text { flex: 0 0 auto; }
   .tutor-cta-btn { width: 100%; justify-content: center; }
 }
 

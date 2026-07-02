@@ -115,6 +115,7 @@ body{
 .topbar.flush{ border-bottom-color:transparent; }
 .tb-title{ font-size:1.06rem; font-weight:640; letter-spacing:-.01em; flex:1; min-width:0;
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+h1.tb-title{ font-family:inherit; margin:0; }
 .tb-big{ font-size:1.72rem; font-weight:760; letter-spacing:-.025em; }
 .iconbtn{
   flex:none; width:38px; height:38px; border-radius:50%;
@@ -181,8 +182,8 @@ body{
 .row:active{ background:var(--surface-2); }
 .row .glyph{ width:34px; height:34px; font-size:16px; border-radius:32%; }
 .row .tx{ flex:1; min-width:0; }
-.row .tx b{ display:block; font-weight:560; font-size:1rem; letter-spacing:-.01em;
-  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.row .tx b{ display:-webkit-box; font-weight:560; font-size:1rem; letter-spacing:-.01em;
+  white-space:normal; overflow:hidden; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
 .row .tx span{ display:block; font-size:.83rem; color:var(--ink-2); margin-top:1px;
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .row .chev{ color:var(--ink-3); flex:none; }
@@ -191,7 +192,8 @@ body{
 .row .ext{ flex:none; color:var(--ink-3); font-size:.9rem; }
 
 /* favorite star button in rows */
-.favbtn{ border:none; background:transparent; cursor:pointer; padding:6px; margin:-6px;
+.favbtn{ border:none; background:transparent; cursor:pointer;
+  min-width:44px; min-height:44px; margin:-12px; display:grid; place-items:center;
   color:var(--ink-3); flex:none; }
 .favbtn.on{ color:#e8b23a; }
 .favbtn svg{ width:19px;height:19px; display:block; }
@@ -252,7 +254,10 @@ body{
 .field + .field::before{ content:""; position:absolute; left:16px; right:16px; top:0; height:1px; background:var(--line); }
 .field label{ font-size:.97rem; color:var(--ink); flex:none; width:42%; }
 .field label small{ display:block; color:var(--ink-3); font-size:.76rem; font-weight:400; }
-.field .inwrap{ flex:1; display:flex; align-items:center; justify-content:flex-end; gap:6px; }
+.field .inwrap{ flex:1; display:flex; align-items:center; justify-content:flex-end; gap:6px;
+  background:var(--field); border:1px solid var(--line); border-radius:10px; padding:0 10px;
+  transition:border-color .15s; }
+.field .inwrap:focus-within{ border-color:color-mix(in srgb,var(--accent) 55%, transparent); }
 .field input,.field select,.field textarea{
   font-family:inherit; font-size:1.06rem; color:var(--field-fg); background:transparent;
   border:none; outline:none; text-align:right; width:100%; min-width:0; padding:8px 0;
@@ -423,7 +428,7 @@ body{
 .card-calc .glyph{ width:38px; height:38px; font-size:18px; border-radius:30%; }
 .card-calc b{ font-size:1.04rem; font-weight:600; letter-spacing:-.01em; line-height:1.25; }
 .card-calc > span{ font-size:.86rem; color:var(--ink-2); line-height:1.45; }
-.card-calc .favbtn{ padding:4px; margin:-4px; }
+.card-calc .favbtn{ margin:-6px; }
 .card-calc .ext{ color:var(--ink-3); }
 
 .dt-back{ display:inline-flex; align-items:center; gap:4px; border:none; background:transparent; cursor:pointer;
