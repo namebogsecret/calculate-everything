@@ -74,7 +74,9 @@
   function looksLikeList(inp) {
     if (inp.area || inp.list) return true;
     var lbl = inp.label || '', ph = inp.placeholder || '';
-    if (/список|числа|через пробел|новой строки|выборк|ряд значений/i.test(lbl)) return true;
+    // «выборк» без уточнения ловил «Размер выборки n» (скаляр!) → textarea-баг;
+    // списком считаем только явные множественные формулировки.
+    if (/список|числа|через пробел|новой строки|значения выборки|ряд значений/i.test(lbl)) return true;
     if (/\d[\s,;]+\d/.test(ph)) return true; // плейсхолдер вида «4 8 15 16»
     return false;
   }
