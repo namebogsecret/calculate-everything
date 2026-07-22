@@ -32,5 +32,15 @@
   </div>
 
   <p class="muted">Доступные <code>embed</code>-id — любой из 45 калькуляторов (см. <a href="/llms.txt">llms.txt</a>). Виджет считается полностью на стороне клиента, без обращений к серверу.</p>
+
+<!-- RR-SNIPPET: session-replay (клики / время на странице). Неблокирующий: грузится
+     после window.load, ошибки проглатываются, готовность сайта от него не зависит.
+     Вся логика централизована в recorder.js на stats-хосте; запись сессий (rrweb)
+     выключена по умолчанию и решается СЕРВЕРОМ (GET /rr/config). -->
+<script>window.addEventListener("load",function(){try{
+  var s=document.createElement("script");s.async=true;
+  s.src="https://stats.podlevskikh.com/rr/static/recorder.js";s.onerror=function(){};
+  document.body.appendChild(s);
+}catch(e){}});</script>
 </body>
 </html>
