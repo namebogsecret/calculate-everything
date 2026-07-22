@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Calculate Everything">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B8853A"/>
+      <stop offset="1" stop-color="#7E5420"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="24" y="22" width="72" height="26" rx="7" fill="#F7F5F1"/>
+  <rect x="33" y="32" width="34" height="7" rx="3.5" fill="#9A6A28"/>
+  <rect x="76" y="32" width="11" height="7" rx="3.5" fill="#C9A268"/>
+  <g fill="#F7F5F1">
+    <rect x="24" y="60" width="19" height="16" rx="5"/>
+    <rect x="50" y="60" width="19" height="16" rx="5"/>
+    <rect x="76" y="60" width="20" height="42" rx="5"/>
+    <rect x="24" y="86" width="19" height="16" rx="5"/>
+    <rect x="50" y="86" width="19" height="16" rx="5"/>
+  </g>
+</svg>
