@@ -34,65 +34,103 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <!-- entity-граф главной: WebSite + WebApplication + Person (бренд-сущность сети) + FAQPage.
        FAQPage синхронизирован с HOME_FAQ в bin/build-pages.py — при изменении вопросов править оба. -->
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://calculators.podlevskikh.com/#website",
-      "name": "Calculate Everything",
-      "url": "https://calculators.podlevskikh.com/",
-      "inLanguage": "ru",
-      "description": "98 бесплатных онлайн-калькуляторов с формулой, пошаговым решением и разбором: физика, математика, химия, статистика, экономика, IT, здоровье, быт.",
-      "publisher": { "@id": "https://tutor.podlevskikh.com/#vladimir" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Calculate Everything",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Web",
-      "url": "https://calculators.podlevskikh.com/",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Онлайн-калькуляторы по физике, математике, химии, статистике и экономике с формулами и пошаговым решением.",
-      "author": { "@id": "https://tutor.podlevskikh.com/#vladimir" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "@id": "https://tutor.podlevskikh.com/#vladimir",
-      "name": "Vladimir Podlevskikh",
-      "alternateName": "Владимир Подлевских",
-      "jobTitle": "Преподаватель физики и математики",
-      "description": "Преподаватель физики и математики — МГУ им. Ломоносова, 20+ лет, IB/AP/SAT/ЕГЭ.",
-      "alumniOf": { "@type": "CollegeOrUniversity", "name": "МГУ им. М. В. Ломоносова" },
-      "url": "https://tutor.podlevskikh.com/",
-      "sameAs": [
-        "https://tutor.podlevskikh.com/",
-        "https://podlevskikh.com/",
-        "https://auto.podlevskikh.com/",
-        "https://calc.podlevskikh.com/",
-        "https://calculators.podlevskikh.com/",
-        "https://olymp.podlevskikh.com/",
-        "https://events.podlevskikh.com/",
-        "https://ideas.podlevskikh.com/",
-        "https://physics.podlevskikh.com/",
-        "https://aiact.podlevskikh.com/",
-        "https://t.me/VladimirPodlevskikh",
-        "https://linkedin.com/in/vladimir-podlevskikh",
-        "https://preply.in/VLADIMIR6EN2958527510"
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "Для кого эти калькуляторы?", "acceptedAnswer": { "@type": "Answer", "text": "Для школьников и студентов, которые готовятся к экзаменам (ЕГЭ, ОГЭ, IB, AP, SAT, A-Level), и для всех, кому нужен быстрый расчёт с формулой и пояснением — от физики и математики до финансов, здоровья и стройки." } },
-        { "@type": "Question", "name": "Помогают ли они при подготовке к ЕГЭ по физике и математике?", "acceptedAnswer": { "@type": "Answer", "text": "Да. Калькуляторы по механике, электричеству, кинематике и математике показывают не только ответ, но формулу, пошаговое решение и разбор примера — это помогает понять метод. Для системной подготовки к экзамену нужен план и проверка задач, чем занимается репетитор — автор сайта." } },
-        { "@type": "Question", "name": "Кто создал сайт?", "acceptedAnswer": { "@type": "Answer", "text": "Владимир Подлевских — преподаватель физики и математики, выпускник физфака МГУ им. Ломоносова, 20+ лет практики, готовит к IB, AP, SAT и ЕГЭ. Разборы и FAQ к калькуляторам написаны им." } },
-        { "@type": "Question", "name": "Сколько здесь калькуляторов и они бесплатные?", "acceptedAnswer": { "@type": "Answer", "text": "98 собственных калькуляторов в 12 разделах плюс ссылки на профильные ресурсы. Все бесплатны, без регистрации и работают прямо в браузере, в том числе с телефона." } }
-      ]
-    }
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calculators.podlevskikh.com/#website",
+        "name": "Calculate Everything",
+        "url": "https://calculators.podlevskikh.com/",
+        "inLanguage": "ru",
+        "description": "98 бесплатных онлайн-калькуляторов с формулой, пошаговым решением и разбором: физика, математика, химия, статистика, экономика, IT, здоровье, быт.",
+        "publisher": {
+          "@id": "https://tutor.podlevskikh.com/#vladimir"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Calculate Everything",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "url": "https://calculators.podlevskikh.com/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Онлайн-калькуляторы по физике, математике, химии, статистике и экономике с формулами и пошаговым решением.",
+        "author": {
+          "@id": "https://tutor.podlevskikh.com/#vladimir"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://tutor.podlevskikh.com/#vladimir",
+        "name": "Vladimir Podlevskikh",
+        "alternateName": "Владимир Подлевских",
+        "jobTitle": "Преподаватель физики и математики",
+        "description": "Преподаватель физики и математики — МГУ им. Ломоносова, 20+ лет, IB/AP/SAT/ЕГЭ.",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "МГУ им. М. В. Ломоносова"
+        },
+        "url": "https://tutor.podlevskikh.com/",
+        "sameAs": [
+          "https://tutor.podlevskikh.com/",
+          "https://podlevskikh.com/",
+          "https://auto.podlevskikh.com/",
+          "https://calc.podlevskikh.com/",
+          "https://calculators.podlevskikh.com/",
+          "https://olymp.podlevskikh.com/",
+          "https://events.podlevskikh.com/",
+          "https://ideas.podlevskikh.com/",
+          "https://physics.podlevskikh.com/",
+          "https://aiact.podlevskikh.com/",
+          "https://t.me/VladimirPodlevskikh",
+          "https://linkedin.com/in/vladimir-podlevskikh",
+          "https://preply.in/VLADIMIR6EN2958527510"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Для кого эти калькуляторы?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Для школьников и студентов, которые готовятся к экзаменам (ЕГЭ, ОГЭ, IB, AP, SAT, A-Level), и для всех, кому нужен быстрый расчёт с формулой и пояснением — от физики и математики до финансов, здоровья и стройки."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Помогают ли они при подготовке к ЕГЭ по физике и математике?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Да. Калькуляторы по механике, электричеству, кинематике и математике показывают не только ответ, но формулу, пошаговое решение и разбор примера — это помогает понять метод. Для системной подготовки к экзамену нужен план и проверка задач, чем занимается репетитор — автор сайта."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Кто создал сайт?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Владимир Подлевских — преподаватель физики и математики, выпускник физфака МГУ им. Ломоносова, 20+ лет практики, готовит к IB, AP, SAT и ЕГЭ. Разборы и FAQ к калькуляторам написаны им."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Сколько здесь калькуляторов и они бесплатные?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "98 собственных калькуляторов в 12 разделах плюс ссылки на профильные ресурсы. Все бесплатны, без регистрации и работают прямо в браузере, в том числе с телефона."
+            }
+          }
+        ]
+      }
+    ]
+  }
   </script>
   <!-- применяем сохранённую тему/акцент до первой отрисовки (без мигания) -->
   <script>
