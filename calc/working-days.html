@@ -2,6 +2,10 @@
 <html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
+  <script>window.__fbConfig={base:"https://stats.podlevskikh.com",themeKey:"ce_theme"};window.__fbErrors=[];(function(){function p(e){try{if(window.__fbErrors.length<25)window.__fbErrors.push(e)}catch(x){}}
+window.addEventListener("error",function(ev){var el=ev.target;if(el&&el!==window&&(el.tagName==="IMG"||el.tagName==="SCRIPT"||el.tagName==="LINK")){p({type:"resource",message:el.tagName+" failed: "+String(el.src||el.href||"").slice(0,300)});return}
+p({type:"error",message:String(ev.message||"error").slice(0,500),source:String(ev.filename||"").slice(0,300),line:ev.lineno,col:ev.colno,stack:String((ev.error&&ev.error.stack)||"").slice(0,1500),early:true})},true);
+window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({type:"unhandledrejection",message:String((r&&(r.message||r))||"rejection").slice(0,500),stack:String((r&&r.stack)||"").slice(0,1500),early:true})})})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -124,5 +128,6 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
     s.src="https://stats.podlevskikh.com/rr/static/recorder.js";s.onerror=function(){};
     document.body.appendChild(s);
   }catch(e){}});</script>
+  <script src="https://stats.podlevskikh.com/fb/static/feedback-widget.js?v=1" defer></script>
 </body>
 </html>
