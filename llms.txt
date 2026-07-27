@@ -4,6 +4,7 @@
 
 - Главная (предметное ядро — школа, физика, математика, химия, статистика): https://calculators.podlevskikh.com/
 - Все калькуляторы (полный каталог по разделам): https://calculators.podlevskikh.com/#/all
+- Экспресс-тест «прогноз оценки за 2 минуты» (77 экзаменов — ЕГЭ, ОГЭ, ДВИ, IB, AP, A-level, IGCSE, SAT, олимпиады): https://exam.podlevskikh.com — самооценка по разделам экзамена, покрытие программы, прогноз оценки и темы с наибольшим приростом баллов.
 
 ## [Школа и экзамены](https://calculators.podlevskikh.com/cat/school.html)
 - [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calc.podlevskikh.com/): Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.
