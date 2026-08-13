@@ -33,7 +33,7 @@
     {
       id: 'descriptive', title: 'Описательная статистика', title_en: 'Descriptive Statistics',
       desc: 'Среднее, медиана, мода, дисперсия, СКО по списку чисел.',
-      tags: ['среднее', 'медиана', 'мода', 'дисперсия', 'стандартное отклонение', 'mean', 'median', 'variance', 'std'],
+      tags: ['среднее', 'медиана', 'мода', 'дисперсия', 'стандартное отклонение', 'mean', 'median', 'variance', 'std', 'скО', 'разброс'],
       inputs: [{ key: 'data', label: 'Числа (через пробел, запятую или с новой строки)', placeholder: 'например: 4 8 15 16 23 42' }],
       compute(v) {
         const a = parseList(v.data);

@@ -162,21 +162,59 @@
     };
   }
 
-  /* ---------- сборка плоского реестра CALCS ---------- */
-  window.CALCS = CE.registry.map(function (def) {
+  /* ---------- сборка плоского реестра CALCS ----------
+     Каталог, поиск и счётчики разделов живут на МЕТАДАННЫХ (window.CE_CALC_INDEX,
+     22 КБ) — раньше ради них страница грузила все js/calculators/*.js, 412 КБ.
+     Полный объект (inputs + compute) есть сразу только у калькулятора, открытого
+     на этой странице; остальные дополняются на лету через window.CEensure(id).
+     Если индекса нет (локальный запуск без пересборки) — работаем как раньше,
+     целиком из CE.registry. */
+  function fill(entry, def) {
     var fields = (def.inputs || []).map(toField);
-    var c = {
-      id: def.id,
-      cat: def.cat,
-      title: def.title,
-      sub: def.sub,                 // обычно undefined → строка падает на desc
-      desc: def.desc,
-      explain: def.explain,         // HTML
-      faq: def.faq,                 // [{q,a}] — частые вопросы
-      fields: fields,
-      compute: def.compute ? wrapCompute(def, fields) : null
-    };
-    if (def.url || def.external) c.external = def.url || def.external; // EGE/ОГЭ → ссылка-наружу
-    return c;
+    entry.sub = def.sub;                                  // обычно undefined → строка падает на desc
+    entry.explain = def.explain;                          // HTML
+    entry.faq = def.faq;                                  // [{q,a}] — частые вопросы
+    entry.fields = fields;
+    entry.compute = def.compute ? wrapCompute(def, fields) : null;
+    if (def.url || def.external) entry.external = def.url || def.external;
+    return entry;
+  }
+
+  var loaded = {};
+  CE.registry.forEach(function (d) { loaded[d.id] = d; });
+  var index = window.CE_CALC_INDEX;
+  var source = (index && index.length) ? index : CE.registry;
+
+  window.CALCS = source.map(function (m) {
+    var e = { id: m.id, cat: m.cat, title: m.title, desc: m.desc, tags: m.tags || [],
+              fields: null, compute: null };
+    if (m.url || m.external) e.external = m.url || m.external;   // ЕГЭ/ОГЭ → ссылка-наружу
+    if (loaded[m.id]) fill(e, loaded[m.id]);
+    return e;
   });
+
+  /* Догрузка полного калькулятора: возвращает Promise с той же записью CALCS —
+     объект мутируется на месте, потому что на него уже ссылается UI. */
+  var pending = {};
+  window.CEensure = function (id) {
+    var entry = window.CALCS.find(function (c) { return c.id === id; });
+    if (!entry) return Promise.reject(new Error('нет калькулятора ' + id));
+    if (entry.fields || entry.external) return Promise.resolve(entry);
+    if (pending[id]) return pending[id];
+    var file = (window.CE_CALC_FILES || {})[id];
+    if (!file || !CE.loadScript) return Promise.reject(new Error('нечего грузить для ' + id));
+    var deps = (window.CE_CALC_DEPS || {})[file] || [];
+    var chain = deps.reduce(function (p, d) {
+      return p.then(function () { return CE.loadScript('/js/calculators/' + d + '.js'); });
+    }, Promise.resolve());
+    pending[id] = chain
+      .then(function () { return CE.loadScript('/js/calculators/' + file + '.js'); })
+      .then(function () {
+        var def = CE.byId[id];      // byId в движке — объект-словарь, не функция
+        if (!def) throw new Error('файл ' + file + ' загружен, но ' + id + ' в нём не нашёлся');
+        return fill(entry, def);
+      })
+      .catch(function (e) { delete pending[id]; throw e; });   // дать шанс повторной попытке
+    return pending[id];
+  };
 })();

@@ -22,7 +22,7 @@
     {
       id: 'calories-tdee', title: 'Калории: BMR и TDEE', title_en: 'Calories: BMR & TDEE',
       desc: 'Базовый обмен и суточная норма калорий по формуле Миффлина — Сан-Жеора.',
-      tags: ['калории', 'bmr', 'tdee', 'обмен веществ', 'похудение', 'набор массы', 'calories', 'metabolism'],
+      tags: ['калории', 'bmr', 'tdee', 'обмен веществ', 'похудение', 'набор массы', 'calories', 'metabolism', 'кбжу', 'бжу', 'норма калорий'],
       inputs: [
         { key: 'sex', label: 'Пол', options: [{ value: 'm', label: 'Мужчина' }, { value: 'f', label: 'Женщина' }], default: 'm' },
         { key: 'age', label: 'Возраст', unit: 'лет', default: 30 },

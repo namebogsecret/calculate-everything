@@ -49,7 +49,20 @@ function useMedia(q){ const [m,setM]=useState(()=>window.matchMedia(q).matches);
 function useCalcState(calc){
   const [raw,setRaw]=useState(()=>initRaw(calc));
   const [asyncRes,setAsyncRes]=useState(null);
-  useEffect(()=>{ setRaw(initRaw(calc)); setAsyncRes(null); },[calc.id]);
+  /* Каталог держит только метаданные (см. registry-adapter): у калькулятора, который
+     не принадлежит этой странице, ещё нет полей и compute. Догружаем его файл при
+     первом показе — это те же 20-40 КБ вместо 412 КБ на каждой загрузке страницы. */
+  const [booting,setBooting]=useState(()=> !calc.fields && !calc.external);
+  useEffect(()=>{
+    if(calc.fields || calc.external){ setBooting(false); return; }
+    setBooting(true);
+    let alive=true;
+    const done = ()=>{ if(alive) setBooting(false); };
+    if(window.CEensure) window.CEensure(calc.id).then(done, done);
+    else done();                       // индекса нет — работаем как раньше
+    return ()=>{ alive=false; };
+  },[calc.id]); // eslint-disable-line
+  useEffect(()=>{ setRaw(initRaw(calc)); setAsyncRes(null); },[calc.id, booting]);
   const setF=(k,v)=>setRaw(p=>({...p,[k]:v}));
   const baseParsed=parseVals(calc.fields,raw);
   const fields=calc.fieldsDyn?calc.fieldsDyn(baseParsed):calc.fields;
@@ -70,10 +83,10 @@ function useCalcState(calc){
   },[sig, calc.id]); // eslint-disable-line
 
   const res = promise ? asyncRes : sync;
-  const loading = !!promise && (!asyncRes || !!asyncRes.__loading);
+  const loading = booting || (!!promise && (!asyncRes || !!asyncRes.__loading));
   const hero=res&&res.outputs?(res.outputs.find(o=>o.primary)||res.outputs[0]):null;
   const rest=res&&res.outputs?res.outputs.filter(o=>o!==hero):[];
-  return {raw,setF,fields,res,hero,rest,loading};
+  return {raw,setF,fields:fields||[],res,hero,rest,loading,booting};
 }
 function copyVal(hero, showToast){ if(!hero) return; const txt= typeof hero.value==='number'? window.raw(hero.value):String(hero.value);
   try{ navigator.clipboard && navigator.clipboard.writeText(txt); }catch(e){} showToast('Результат скопирован'); }
@@ -86,7 +99,8 @@ function InputsCard({fields, raw, setF}){
     </div>
   );
 }
-function ResultCard({hero, rest, res, loading, onCopy}){
+function ResultCard({hero, rest, res, loading, booting, onCopy}){
+  if(booting) return <div className="result placeholder">Загружаю калькулятор…</div>;
   if(loading) return <div className="result placeholder">Загружаю математический модуль…</div>;
   if(res && res.error) return <div className="result placeholder">{res.error}</div>;
   if(!hero){
@@ -166,9 +180,18 @@ function Article({id}){
    а не как реклама. Разбор ответа показывается всегда, верным он был или нет.
    Данные: js/quiz.js (window.CE_QUIZ), наборы только для tut-разделов. */
 function Quiz({cat}){
+  const [, force] = useState(0);
   const set = cat && cat.tut ? (window.CE_QUIZ||{})[cat.id] : null;
   const [answers, setAnswers] = useState({});
   useEffect(()=>{ setAnswers({}); }, [cat && cat.id]);
+  /* Файл с вопросами подключён только на страницах предметных разделов. Если сюда
+     пришли переходом внутри SPA (например, с главной), догружаем его сами. */
+  useEffect(()=>{
+    if(set || !cat || !cat.tut || window.CE_QUIZ || !window.CE || !CE.loadScript) return;
+    let alive=true;
+    CE.loadScript('/js/quiz.js').then(()=>{ if(alive) force(n=>n+1); }).catch(()=>{});
+    return ()=>{ alive=false; };
+  },[cat && cat.id, !!set]); // eslint-disable-line
   if(!set) return null;
   const qs = set.questions;
   const done = Object.keys(answers).length;
@@ -326,8 +349,10 @@ function MobileShell({route, nav, theme, setTheme, query, setQuery, favs, toggle
 
 function RootViewM({route, nav, theme, setTheme, query, setQuery, favs, toggleFav, recents, scrollRef}){
   const q = query.trim().toLowerCase();
+  // теги пришли вместе с индексом каталога — ищем и по ним: «hex», «КБЖУ», «viete»
+  // раньше находились только если случайно попадали в название или описание
   const matches = q ? window.CALCS.filter(c=>{ const cat=catById(c.cat);
-    return (c.title+' '+(c.sub||'')+' '+(c.desc||'')+' '+(cat?cat.name:'')).toLowerCase().includes(q); }) : [];
+    return (c.title+' '+(c.sub||'')+' '+(c.desc||'')+' '+(c.tags||[]).join(' ')+' '+(cat?cat.name:'')).toLowerCase().includes(q); }) : [];
   const homeCats = window.CATS.filter(c=>c.tab==='home');
   const titleBig = route.v==='all' ? 'Все калькуляторы' : route.v==='favs' ? 'Избранное' : 'Калькуляторы';
   return (
@@ -408,7 +433,7 @@ function ListM({calcs, nav, favs, toggleFav}){
 }
 function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRef}){
   const cat = catById(calc.cat);
-  const {raw,setF,fields,res,hero,rest,loading} = useCalcState(calc);
+  const {raw,setF,fields,res,hero,rest,loading,booting} = useCalcState(calc);
   const [openSteps, setOpenSteps] = useState(false);
   useEffect(()=>{ pushRecent(calc.id); setOpenSteps(false); },[calc.id]);
   return (
@@ -429,7 +454,7 @@ function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRe
             ? <><a className="linkout" href={calc.external} target="_blank" rel="noopener">Открыть калькулятор {I.ext}</a><Explain html={calc.explain}/></>
             : <>
                 <InputsCard fields={fields} raw={raw} setF={setF}/>
-                <ResultCard hero={hero} rest={rest} res={res} loading={loading} onCopy={()=>copyVal(hero,showToast)}/>
+                <ResultCard hero={hero} rest={rest} res={res} loading={loading} booting={booting} onCopy={()=>copyVal(hero,showToast)}/>
                 <StepsCard steps={res&&res.steps} open={openSteps} setOpen={setOpenSteps}/>
                 <Explain html={calc.explain}/>
                 <Article id={calc.id}/>
@@ -450,8 +475,10 @@ function DesktopApp({route, nav, theme, setTheme, query, setQuery, favs, toggleF
   const onCalc = route.v==='calc';
   const calc = onCalc ? byId(route.id) : null;
   const q = query.trim().toLowerCase();
+  // теги пришли вместе с индексом каталога — ищем и по ним: «hex», «КБЖУ», «viete»
+  // раньше находились только если случайно попадали в название или описание
   const matches = q ? window.CALCS.filter(c=>{ const cat=catById(c.cat);
-    return (c.title+' '+(c.sub||'')+' '+(c.desc||'')+' '+(cat?cat.name:'')).toLowerCase().includes(q); }) : [];
+    return (c.title+' '+(c.sub||'')+' '+(c.desc||'')+' '+(c.tags||[]).join(' ')+' '+(cat?cat.name:'')).toLowerCase().includes(q); }) : [];
   const homeCats = window.CATS.filter(c=>c.tab==='home');
 
   const goCat = (id)=>{ if(route.v!=='all') nav('/all');
@@ -559,7 +586,7 @@ function CardGrid({calcs, nav, favs, toggleFav}){
 }
 function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
   const cat = catById(calc.cat);
-  const {raw,setF,fields,res,hero,rest,loading} = useCalcState(calc);
+  const {raw,setF,fields,res,hero,rest,loading,booting} = useCalcState(calc);
   const [openSteps, setOpenSteps] = useState(true);
   useEffect(()=>{ pushRecent(calc.id); setOpenSteps(true); },[calc.id]);
   return (
@@ -576,7 +603,7 @@ function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
         : <div className="dt-detail">
             <div className="dt-col"><InputsCard fields={fields} raw={raw} setF={setF}/></div>
             <div className="dt-col">
-              <ResultCard hero={hero} rest={rest} res={res} loading={loading} onCopy={()=>copyVal(hero,showToast)}/>
+              <ResultCard hero={hero} rest={rest} res={res} loading={loading} booting={booting} onCopy={()=>copyVal(hero,showToast)}/>
               <StepsCard steps={res&&res.steps} open={openSteps} setOpen={setOpenSteps}/>
               <Explain html={calc.explain}/>
             </div>

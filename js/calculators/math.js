@@ -6,7 +6,7 @@
     {
       id: 'quadratic', title: 'Квадратное уравнение', title_en: 'Quadratic Equation',
       desc: 'ax² + bx + c = 0 — корни и дискриминант.',
-      tags: ['квадратное', 'уравнение', 'дискриминант', 'корни', 'quadratic', 'roots'],
+      tags: ['квадратное', 'уравнение', 'дискриминант', 'корни', 'quadratic', 'roots', 'виета', 'парабола'],
       inputs: [
         { key: 'a', label: 'a', default: 1 },
         { key: 'b', label: 'b', default: 0 },
@@ -172,7 +172,7 @@
     {
       id: 'logarithm', title: 'Логарифм', title_en: 'Logarithm',
       desc: 'log по любому основанию, ln, lg.',
-      tags: ['логарифм', 'логарифмы', 'ln', 'lg', 'logarithm', 'log'],
+      tags: ['логарифм', 'логарифмы', 'ln', 'lg', 'logarithm', 'log', 'лог'],
       inputs: [{ key: 'x', label: 'Аргумент x' }, { key: 'base', label: 'Основание', default: 10 }],
       compute(v) {
         if (Number.isNaN(v.x) || v.x <= 0) return { note: 'x должен быть > 0.' };
