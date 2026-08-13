@@ -147,7 +147,7 @@ function Article({id}){
   const html=(window.CE_ARTICLES||{})[id];
   /* Страница грузит только СВОЙ файл разборов (иначе это 360 КБ на каждой из 98
      страниц ради одной статьи). Если внутри SPA перешли к калькулятору другого
-     раздела — догружаем его файл по индексу js/articles/_index.js и перерисовываемся. */
+     раздела — догружаем его файл по индексу js/articles/articles-index.js и перерисовываемся. */
   useEffect(()=>{
     if(html) return;
     const file=(window.CE_ARTICLE_FILES||{})[id];
