@@ -160,6 +160,69 @@ function Article({id}){
   return <article className="app-article" dangerouslySetInnerHTML={{__html:html}}/>; }
 
 /* ---------- монетизация: воронка на репетиторство + футер ---------- */
+/* ---------- лид-магнит: самопроверка по разделу ----------
+   Стоит между разбором и CTA: человек только что прочитал теорию, проверяет себя,
+   видит собственный пробел — и предложение разобрать тему читается как продолжение,
+   а не как реклама. Разбор ответа показывается всегда, верным он был или нет.
+   Данные: js/quiz.js (window.CE_QUIZ), наборы только для tut-разделов. */
+function Quiz({cat}){
+  const set = cat && cat.tut ? (window.CE_QUIZ||{})[cat.id] : null;
+  const [answers, setAnswers] = useState({});
+  useEffect(()=>{ setAnswers({}); }, [cat && cat.id]);
+  if(!set) return null;
+  const qs = set.questions;
+  const done = Object.keys(answers).length;
+  const right = qs.reduce((s,q,i)=> s + (answers[i]===q.correct ? 1 : 0), 0);
+  const verdict = () => {
+    if(right === qs.length) return ['База закрыта — можно брать задачи посложнее.',
+      'Все ответы верные. На таком уровне разбирать имеет смысл вторую часть и нестандартные задачи — приходите с конкретной задачей, которая не поддалась.'];
+    if(right >= qs.length - 1) return ['Почти всё уверенно, одна дыра.',
+      'Такие точечные пробелы закрываются за одно-два занятия — прочитайте разбор выше и посмотрите, где сломалась логика.'];
+    if(right >= qs.length / 2) return ['Половина темы держится, половина плавает.',
+      'Это типичная картина перед экзаменом: формулы знакомы, но применяются наугад. Разберём на бесплатной консультации, какие именно шаги теряются.'];
+    return ['Тему стоит собрать заново.',
+      'Отвечать наугад на экзамене дорого. Начните с бесплатной 20-минутной диагностики — я покажу, с какого места разматывать.'];
+  };
+  return (
+    <section className="app-quiz">
+      <h2>{set.title}</h2>
+      {set.lead && <p className="quiz-lead">{set.lead}</p>}
+      {qs.map((q,i)=>{
+        const picked = answers[i];
+        return (
+          <div className="quiz-q" key={i}>
+            <p className="quiz-text"><b>{i+1}.</b> {q.q}</p>
+            <div className="quiz-opts">
+              {q.options.map((opt,j)=>{
+                const state = picked===undefined ? '' :
+                  j===q.correct ? ' ok' : (j===picked ? ' no' : '');
+                return (
+                  <button className={'quiz-opt'+state} key={j} disabled={picked!==undefined}
+                    onClick={()=>setAnswers(a=>({...a,[i]:j}))}>{opt}</button>
+                );
+              })}
+            </div>
+            {picked!==undefined &&
+              <p className="quiz-why"><b>{picked===q.correct ? 'Верно. ' : 'Не так. '}</b>{q.why}</p>}
+          </div>
+        );
+      })}
+      {done===qs.length && (()=>{ const [head, text] = verdict(); return (
+        <div className="quiz-res">
+          <div className="quiz-score">{right} из {qs.length}</div>
+          <div className="quiz-head">{head}</div>
+          <p>{text}</p>
+          <div className="cta-btns">
+            <a className="cta-btn primary" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Бесплатная консультация 20 минут</a>
+            <a className="cta-btn" href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">✈️ Написать в Telegram</a>
+          </div>
+        </div>
+      ); })()}
+      {done>0 && done<qs.length && <p className="quiz-progress">Отвечено {done} из {qs.length}</p>}
+    </section>
+  );
+}
+
 function TutorCTA({cat}){
   if(!cat || !cat.tut) return null; // показываем только на предметах, где Vladimir репетитор
   return (
@@ -372,6 +435,7 @@ function CalcScreenM({calc, nav, fav, toggleFav, pushRecent, showToast, scrollRe
                 <Article id={calc.id}/>
                 <Faq items={calc.faq}/>
               </> }
+          <Quiz cat={cat}/>
           <TutorCTA cat={cat}/>
           <AppFooter/>
         </div>
@@ -518,6 +582,7 @@ function CalcDetailD({calc, nav, fav, toggleFav, pushRecent, showToast}){
             </div>
           </div> }
       { !calc.external && <><Article id={calc.id}/><Faq items={calc.faq}/></> }
+      <Quiz cat={cat}/>
       <TutorCTA cat={cat}/>
       <AppFooter/>
     </div>

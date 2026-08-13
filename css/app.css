@@ -477,6 +477,37 @@ h1.tb-title{ font-family:inherit; margin:0; }
 .cta-btn:active{ transform:scale(.96); }
 .cta-btn.primary{ background:var(--accent); color:#fff; border-color:transparent; }
 
+/* Самопроверка по разделу (лид-магнит перед CTA). Тона нейтральные: блок должен
+   читаться как часть учебного материала, а не как рекламная врезка — иначе теряется
+   весь смысл формата. Цветом выделяются только верный/неверный ответ и итог. */
+.app-quiz{ margin-top:20px; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:16px 16px 18px; }
+.app-quiz h2{ font-size:1.06rem; font-weight:740; letter-spacing:-.02em; margin:0 0 4px; }
+.quiz-lead{ color:var(--ink-2); font-size:.88rem; margin:0 0 14px; }
+.quiz-q{ padding:12px 0; border-top:1px solid var(--line-2); }
+.quiz-q:first-of-type{ border-top:none; padding-top:2px; }
+.quiz-text{ margin:0 0 10px; font-size:.95rem; line-height:1.5; }
+.quiz-opts{ display:flex; flex-direction:column; gap:7px; }
+.quiz-opt{ text-align:left; padding:9px 12px; border-radius:11px; border:1px solid var(--line);
+  background:var(--surface-2); color:var(--ink); font-family:inherit; font-size:.91rem;
+  cursor:pointer; transition:background .14s, border-color .14s, transform .1s; }
+.quiz-opt:hover:not(:disabled){ border-color:color-mix(in srgb, var(--accent) 45%, transparent); }
+.quiz-opt:active:not(:disabled){ transform:scale(.99); }
+.quiz-opt:disabled{ cursor:default; }
+.quiz-opt.ok{ background:color-mix(in srgb, var(--ok) 12%, transparent);
+  border-color:color-mix(in srgb, var(--ok) 45%, transparent); color:var(--ink); font-weight:600; }
+.quiz-opt.no{ background:color-mix(in srgb, var(--c-health) 12%, transparent);
+  border-color:color-mix(in srgb, var(--c-health) 45%, transparent); }
+.quiz-why{ margin:10px 0 0; padding:10px 12px; border-radius:10px; background:var(--field);
+  color:var(--ink-2); font-size:.88rem; line-height:1.55; }
+.quiz-progress{ margin:12px 0 0; color:var(--ink-3); font-size:.85rem; }
+.quiz-res{ margin-top:14px; padding:14px 14px 16px; border-radius:12px;
+  background:color-mix(in srgb, var(--accent) 7%, transparent);
+  border:1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+.quiz-score{ font-size:1.5rem; font-weight:760; letter-spacing:-.02em; color:var(--accent); }
+.quiz-head{ font-weight:680; margin:2px 0 6px; }
+.quiz-res p{ margin:0 0 12px; color:var(--ink-2); font-size:.92rem; line-height:1.55; }
+
 /* футер: домен + кредит + кросс-ссылка на ЕГЭ-калькулятор */
 .app-foot{ margin:26px 2px 6px; padding:16px 4px 6px; border-top:1px solid var(--line-2);
   color:var(--ink-3); font-size:.82rem; line-height:1.5; }
