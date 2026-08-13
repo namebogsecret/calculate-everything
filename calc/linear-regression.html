@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -94,7 +93,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Запишите уравнение y = a·x + b; при необходимости найдите R² = r².</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Данные: x = (1, 2, 3, 4, 5), y = (2, 4, 5, 4, 5).</p>
 <p><b>Средние:</b> x̄ = 3, ȳ = 4.</p>
 <p><b>Числитель наклона</b> Σ(x−x̄)(y−ȳ): 4 + 0 + 0 + 0 + 2 = <b>6</b> (как в примере с корреляцией).</p>
@@ -108,7 +107,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется / интерпретация</h2>
 <p>Регрессия — рабочая лошадка прогнозирования: цены жилья по площади, продажи по рекламному бюджету, расход по температуре. Наклон <code>a</code> читается как «на сколько меняется y при росте x на единицу», а <code>b</code> — значение y при x = 0 (имеет смысл, только если x = 0 реалистично). R² близко к 1 — прямая хорошо описывает данные; близко к 0 — линия почти бесполезна. Экстраполяция далеко за пределы наблюдённого диапазона x опасна: связь там может быть совсем иной.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Подгоняют прямую к явно нелинейным данным и доверяют прогнозу.</li>
 <li>Экстраполируют далеко за пределы данных, где модель не проверена.</li>
 <li>Толкуют наклон как причинность, а не как статистическую связь.</li>

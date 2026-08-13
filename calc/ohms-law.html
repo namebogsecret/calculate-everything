@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -92,7 +91,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Проверьте размерность ответа и его правдоподобность.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>К резистору сопротивлением <code>R = 4 Ом</code> приложено напряжение <code>V = 12 В</code>. Какой ток через него течёт?</p>
 <p>Используем <span class="eq">I = V ⁄ R = 12 ⁄ 4 = 3 А</span>.</p>
 <p>Через резистор течёт ток <b>3 ампера</b>. Проверка обратным ходом: <code>V = I · R = 3 · 4 = 12 В</code> — совпадает с условием.</p>
@@ -101,7 +100,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется</h2>
 <p>Закон Ома используют при подборе резисторов, расчёте предохранителей, проектировании блоков питания и зарядных устройств. В школе это базовая тема физики 8 класса и ОГЭ; в международных программах он встречается в IB Physics (раздел Electricity and magnetism) и AP Physics (DC circuits). Без него невозможно понять последовательное и параллельное соединение и закон Кирхгофа.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Путают единицы: оставляют сопротивление в килоомах или ток в миллиамперах, забывая перевести в СИ.</li>
 <li>Применяют закон ко всей сложной цепи сразу, хотя он действует для одного резистивного участка.</li>
 <li>Считают, что закон Ома работает всегда: для лампочек, диодов и нелинейных элементов сопротивление зависит от тока.</li>

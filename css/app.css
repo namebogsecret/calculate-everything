@@ -347,6 +347,19 @@ h1.tb-title{ font-family:inherit; margin:0; }
 .app-article th{ background:var(--surface-2); color:var(--ink); font-weight:640; }
 .app-article a{ color:var(--accent); text-decoration:none; font-weight:560; }
 .app-article a:hover{ text-decoration:underline; }
+/* Врезки статьи: «Разбор примера» (.example/.ex) и «Частые ошибки» (.mistakes/.warn).
+   Раньше оформление жило только у fallback-класса .article (css/style.css), и в живом
+   React-UI обе врезки шли голым текстом — карточка/жёлтая рамка терялись на всех
+   страницах калькуляторов. Здесь тот же смысл, но токенами дизайн-системы (темы). */
+.app-article .example,.app-article .ex{ margin:16px 0; padding:14px 16px;
+  background:var(--surface-2); border:1px solid var(--line); border-radius:12px; }
+.app-article .mistakes,.app-article .warn{ margin:16px 0; padding:14px 16px;
+  background:color-mix(in srgb, var(--warn) 8%, transparent);
+  border:1px solid color-mix(in srgb, var(--warn) 34%, transparent); border-radius:12px; }
+.app-article .example h3,.app-article .ex h3{ margin:0 0 8px; font-size:.95rem; color:var(--accent); }
+.app-article .mistakes h3,.app-article .warn h3{ margin:0 0 8px; font-size:.95rem; color:var(--warn); }
+.app-article .example > :last-child,.app-article .ex > :last-child,
+.app-article .mistakes > :last-child,.app-article .warn > :last-child{ margin-bottom:0; }
 .dt-content .app-article{ max-width:760px; }
 
 /* FAQ — частые вопросы */

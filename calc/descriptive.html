@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -98,7 +97,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Извлеките корень — это стандартное отклонение.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Набор: <code>2, 4, 4, 4, 5, 5, 7, 9</code> (n = 8).</p>
 <p><b>Среднее:</b> сумма = 2+4+4+4+5+5+7+9 = 40, значит x̄ = 40 / 8 = <b>5</b>.</p>
 <p><b>Медиана:</b> ряд уже упорядочен, два центральных — 4 и 5, медиана = (4 + 5) / 2 = <b>4.5</b>.</p>
@@ -111,7 +110,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется / интерпретация</h2>
 <p>Среднее удобно для симметричных данных, но его «тянут» выбросы (одна огромная зарплата сдвигает среднее по фирме). Медиана устойчива к выбросам — поэтому доходы и цены чаще описывают именно ею. СКО показывает типичное отклонение от центра: при σ = 2 и среднем 5 большинство значений лежит примерно в диапазоне 3–7. Сравнивая два набора с одинаковым средним, смотрят на СКО: меньше — данные стабильнее.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Путают дисперсию и СКО: дисперсия — в квадратах единиц, СКО — в исходных. Сравнивать с данными надо СКО.</li>
 <li>Делят на <code>n</code> там, где это выборка из большей совокупности — нужна поправка Бесселя (<code>n − 1</code>).</li>
 <li>Считают, что «мода всегда одна»: набор может быть бимодальным или не иметь моды вовсе.</li>

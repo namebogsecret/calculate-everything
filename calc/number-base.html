@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -98,7 +97,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Пример</h4>
+<h3>Пример</h3>
 <p>Переведём десятичное <code>255</code> в двоичную систему делением на 2:</p>
 <p>255 / 2 = 127, остаток 1; 127 / 2 = 63, остаток 1; … все восемь остатков получаются единицами.</p>
 <p>Результат: <code>11111111</code> (восемь единиц). Проверка: 128+64+32+16+8+4+2+1 = 255. А в шестнадцатеричной это <code>FF</code>.</p>
@@ -108,7 +107,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>Шестнадцатеричная запись используется для цветов в CSS, MAC-адресов, дампов памяти и байтовых данных. Двоичная нужна для понимания битовых масок, флагов и сетевых масок. Восьмеричная — это привычные права доступа Unix вроде <code>chmod 755</code>. Перевод систем счисления — базовый навык любого программиста и системного администратора.</p>
 
 <div class="mistakes">
-<h4>Осторожно</h4>
+<h3>Осторожно</h3>
 <ul>
 <li>Путают цифры разных систем: буква F допустима в HEX, но не в десятичной или двоичной.</li>
 <li>Забывают, что позиции считаются с нуля справа: крайняя правая цифра умножается на основание в степени 0.</li>

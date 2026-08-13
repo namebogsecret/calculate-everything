@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -95,7 +94,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Разбор примера</h4>
+<h3>Разбор примера</h3>
 <p>Вы кладёте <b>100 000 ₽</b> под <b>10% годовых</b> с капитализацией раз в год (<code>n = 1</code>) на <b>5 лет</b>, без довложений.</p>
 <p>Ставка за период: <code>i = 0,10 / 1 = 0,10</code>. Число периодов: <code>N = 1·5 = 5</code>.</p>
 <p>Множитель: <code>(1 + 0,10)⁵ = 1,1⁵ = 1,61051</code>.</p>
@@ -107,7 +106,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>Сложный процент лежит в основе банковских вкладов с капитализацией, доходности инвестиций, роста пенсионных накоплений и долгосрочного планирования. Чем чаще капитализация (больше <code>n</code>) и длиннее срок, тем выше итог. Тот же механизм работает «против вас» при долгах по кредитным картам.</p>
 
 <div class="mistakes">
-<h4>Частые ошибки</h4>
+<h3>Частые ошибки</h3>
 <ul>
 <li>Подставляют ставку в процентах (10) вместо доли (0,10).</li>
 <li>Путают годовую ставку <code>r</code> и ставку за период <code>i</code> — для месячной капитализации нужно делить на 12.</li>

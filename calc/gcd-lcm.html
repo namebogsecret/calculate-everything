@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -90,7 +89,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Для НОК умножьте исходные числа и разделите на найденный НОД.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Найдём НОД и НОК чисел <code>48</code> и <code>36</code>.</p>
 <p>Алгоритм Евклида: <span class="eq">48 mod 36 = 12</span> → <span class="eq">36 mod 12 = 0</span>. Остаток ноль, значит <code>НОД(48, 36) = 12</code>.</p>
 <p>НОК: <span class="eq">НОК = 48 · 36 / 12 = 1728 / 12 = 144</span>.</p>
@@ -100,7 +99,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется</h2>
 <p>НОД сокращает дроби (<code>36/48 = 3/4</code> после деления на 12), НОК даёт общий знаменатель при сложении дробей. В задачах ОГЭ это «через сколько дней события совпадут» (НОК) и распределение поровну (НОД). В программировании алгоритм Евклида — классика. В IB и AP — основа теории чисел, простых множителей и работы с рациональными выражениями.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Путают НОД и НОК: НОД ≤ меньшего числа, НОК ≥ большего.</li>
 <li>В алгоритме Евклида берут частное вместо остатка.</li>
 <li>Считают НОК как простое произведение <code>a·b</code>, забывая разделить на НОД.</li>

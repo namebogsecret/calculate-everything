@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -90,7 +89,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Разбор примера</h4>
+<h3>Разбор примера</h3>
 <p>Куртка стоит <b>5000 ₽</b>, скидка <b>30%</b>.</p>
 <p>Доля к оплате: <code>1 − 30/100 = 1 − 0,3 = 0,7</code>.</p>
 <p>Итоговая цена: <code>5000 · 0,7 = 3500 ₽</code>.</p>
@@ -101,7 +100,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>Формула применяется в рознице, при расчёте промокодов и оптовых прайсов. Важный нюанс: две скидки подряд (например, 20% и затем 10%) <b>не складываются</b> в 30%. Сначала цена умножается на 0,8, потом на 0,9, итог — множитель 0,72, то есть фактическая скидка 28%, а не 30%.</p>
 
 <div class="mistakes">
-<h4>Частые ошибки</h4>
+<h3>Частые ошибки</h3>
 <ul>
 <li>Складывают последовательные скидки (20% + 10% ≠ 30%).</li>
 <li>Умножают цену на <code>скидку/100</code> и забывают, что это сумма скидки, а не итоговая цена.</li>

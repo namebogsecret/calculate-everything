@@ -149,12 +149,12 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 24px 20px 80px; }
   margin: 18px 0; padding: 16px 18px; background: var(--bg-2);
   border: 1px solid var(--line); border-radius: 12px;
 }
-.article .example h4, .article .ex h4 { margin: 0 0 8px; font-size: 15px; color: var(--accent); }
+.article .example h3, .article .ex h3 { margin: 0 0 8px; font-size: 15px; color: var(--accent); }
 .article .mistakes, .article .warn {
   margin: 18px 0; padding: 14px 18px; background: rgba(255,180,84,.07);
   border: 1px solid rgba(255,180,84,.3); border-radius: 12px;
 }
-.article .mistakes h4 { margin: 0 0 8px; font-size: 15px; color: var(--warn); }
+.article .mistakes h3, .article .warn h3 { margin: 0 0 8px; font-size: 15px; color: var(--warn); }
 .article table { border-collapse: collapse; margin: 14px 0; width: 100%; font-size: 14.5px; }
 .article th, .article td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
 .article th { background: var(--bg-2); color: var(--muted); }

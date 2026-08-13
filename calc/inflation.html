@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -90,7 +89,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Разбор примера</h4>
+<h3>Разбор примера</h3>
 <p>Через <b>5 лет</b> у вас будет <b>1 000 000 ₽</b>. Средняя инфляция <b>7% в год</b>. Сколько это в сегодняшних деньгах?</p>
 <p>Множитель: <code>(1 + 0,07)⁵ = 1,07⁵ ≈ 1,40255</code>.</p>
 <p>Реальная стоимость: <code>1 000 000 / 1,40255 ≈ 712 986 ₽</code>.</p>
@@ -101,7 +100,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>Расчёт нужен, чтобы оценивать реальную доходность (ставка по вкладу минус инфляция), планировать целевые суммы на будущее с поправкой на рост цен, сравнивать зарплаты и цены разных лет. Если ставка по вкладу ниже инфляции, реальная доходность отрицательна — деньги тают.</p>
 
 <div class="mistakes">
-<h4>Частые ошибки</h4>
+<h3>Частые ошибки</h3>
 <ul>
 <li>Просто вычитают «инфляция × лет» из суммы вместо деления на <code>(1+i)ᵗ</code> — это даёт неточный результат на длинных сроках.</li>
 <li>Путают номинальную и реальную доходность.</li>

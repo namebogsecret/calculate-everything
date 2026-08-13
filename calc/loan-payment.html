@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -94,7 +93,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Разбор примера</h4>
+<h3>Разбор примера</h3>
 <p>Ипотека <b>3 000 000 ₽</b> под <b>12% годовых</b> на <b>20 лет</b>.</p>
 <p>Месячная ставка: <code>i = 0,12 / 12 = 0,01</code>. Число платежей: <code>N = 20·12 = 240</code>.</p>
 <p>Множитель: <code>A = (1,01)²⁴⁰ ≈ 10,8926</code>.</p>
@@ -108,7 +107,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>Аннуитет — стандартная схема ипотеки, автокредитов и потребительских займов. Зная платёж, можно проверить требование банка «платёж ≤ 40–50% дохода». Сократив срок или ставку, вы резко уменьшаете переплату — попробуйте подставить разные значения и сравнить.</p>
 
 <div class="mistakes">
-<h4>Частые ошибки</h4>
+<h3>Частые ошибки</h3>
 <ul>
 <li>Берут годовую ставку вместо месячной (<code>i = r/12</code>).</li>
 <li>Считают <code>N</code> в годах, а не в месяцах.</li>

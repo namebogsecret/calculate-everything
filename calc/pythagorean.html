@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -90,7 +89,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Извлеките квадратный корень из результата.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Катеты <code>a = 3</code> и <code>b = 4</code>. Найдём гипотенузу.</p>
 <p><span class="eq">c² = 3² + 4² = 9 + 16 = 25</span>, значит <span class="eq">c = √25 = 5</span>.</p>
 <p>Это знаменитый «египетский» треугольник 3-4-5. Проверим обратную задачу: если <code>c = 5</code>, <code>b = 4</code>, то <span class="eq">a = √(25 − 16) = √9 = 3</span> ✓.</p>
@@ -99,7 +98,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется</h2>
 <p>Расстояние между точками на плоскости — это прямое следствие теоремы (<code>d = √((x₂−x₁)² + (y₂−y₁)²)</code>). Она нужна в строительстве (проверка прямого угла «3-4-5»), навигации, физике (разложение вектора), геометрии ОГЭ и ЕГЭ. В IB и AP это Pythagorean theorem и distance formula. На ней же стоят тригонометрия и теорема косинусов.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Применяют теорему к не-прямоугольному треугольнику — она работает только при угле 90°.</li>
 <li>Складывают стороны без возведения в квадрат: <code>3 + 4 = 7 ≠ 5</code>.</li>
 <li>При поиске катета складывают вместо вычитания: гипотенуза всегда самая длинная сторона.</li>

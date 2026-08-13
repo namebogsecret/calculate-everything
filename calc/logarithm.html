@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -94,7 +93,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Для сложных выражений сначала упростите свойствами (сумма/разность/степень).</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Вычислим <span class="eq">log₈(32)</span>. Это «8 в какой степени равно 32?». Точного целого нет, переходим к основанию 2.</p>
 <p><span class="eq">log₈(32) = log₂(32) / log₂(8) = 5 / 3 ≈ 1.667</span> (так как <code>2⁵ = 32</code> и <code>2³ = 8</code>).</p>
 <p>Проверка: <span class="eq">8^(5/3) = (2³)^(5/3) = 2⁵ = 32</span> ✓.</p>
@@ -103,7 +102,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется</h2>
 <p>Логарифмы измеряют величины, меняющиеся в разы: шкала pH, децибелы, звёздные величины, шкала Рихтера, сложные проценты и период полураспада. В ЕГЭ профиль это задания 5 и 13 (логарифмические уравнения и неравенства), в IB Mathematics — logarithms и натуральный <code>ln</code>, в AP Calculus — производная и интеграл логарифма. Свойства логарифмов превращают сложные произведения в простые суммы.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Думают, что <code>log(x + y) = log(x) + log(y)</code> — нет, в сумму превращается логарифм ПРОИЗВЕДЕНИЯ.</li>
 <li>Берут логарифм нуля или отрицательного числа — он не определён.</li>
 <li>Путают, что в знаменателе формулы перехода стоит <code>ln(b)</code> (основание), а не <code>ln(x)</code>.</li>

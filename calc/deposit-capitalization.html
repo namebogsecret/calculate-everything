@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -92,7 +91,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Разбор примера</h4>
+<h3>Разбор примера</h3>
 <p>Вклад <b>100 000 ₽</b> под <b>16% годовых</b> на <b>1 год</b> с ежемесячной капитализацией, без пополнений.</p>
 <p>Ставка за месяц: <code>r⁄m = 0,16 / 12 ≈ 0,013333</code>. Периодов: <code>N = 12</code>.</p>
 <p>Множитель: <code>(1 + 0,013333)¹² ≈ 1,17227</code>.</p>
@@ -104,7 +103,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>Расчёт используют при выборе банковского вклада, при сравнении предложений с разной частотой капитализации, при планировании накоплений с регулярными взносами. Тот же механизм лежит в основе любых сложных процентов — инвестиций, накопительных счетов, реинвестирования купонов.</p>
 
 <div class="mistakes">
-<h4>Частые ошибки</h4>
+<h3>Частые ошибки</h3>
 <ul>
 <li>Сравнивают вклады по номинальной ставке, не приводя их к эффективной — частая капитализация выгоднее при равной ставке.</li>
 <li>Считают простой процент (ставка × срок) вместо сложного — это занижает результат.</li>

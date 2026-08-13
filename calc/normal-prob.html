@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -92,7 +91,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Если нужна быстрая прикидка для целых σ — примените правило 68–95–99.7.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>IQ распределён нормально с μ = 100 и σ = 15. Какова вероятность встретить человека с IQ меньше 130?</p>
 <p><b>Стандартизация:</b> z = (130 − 100) / 15 = 30 / 15 = <b>2</b>.</p>
 <p><b>CDF:</b> P(X &lt; 130) = Φ(2) ≈ <b>0.9772</b>, то есть около 97.7%.</p>
@@ -102,7 +101,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется / интерпретация</h2>
 <p>Используется в контроле качества (доля деталей в допуске), психометрии (IQ, тесты), финансах (оценка риска), биологии. Площадь = вероятность = доля популяции. Важно помнить: модель нормальна лишь приблизительно — реальные данные могут иметь скос или более тяжёлые хвосты, и тогда крайние вероятности (события «3+ сигмы») оцениваются особенно неточно.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Забывают, что Φ даёт вероятность «меньше x»; для «больше» нужно 1 − Φ(z).</li>
 <li>Применяют нормальную модель к явно ненормальным данным (доходы, время ожидания — обычно скошены).</li>
 <li>Путают σ и σ² при стандартизации.</li>

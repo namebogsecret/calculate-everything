@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -93,7 +92,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>При необходимости найдите среднее E[X] = n·p.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Бросаем честную монету n = 5 раз (p = 0.5). Какова вероятность ровно k = 3 орлов?</p>
 <p><b>Сочетания:</b> C(5, 3) = 5! / (3!·2!) = 120 / (6·2) = 120 / 12 = <b>10</b>.</p>
 <p><b>pᵏ:</b> 0.5³ = 0.125.</p>
@@ -105,7 +104,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется / интерпретация</h2>
 <p>Биномиальная модель используется в контроле качества (доля брака), медицине (доля выздоровевших), маркетинге (отклик на рассылку), азартных играх. Условия применимости: фиксированное число испытаний, два исхода, постоянная p, независимость. Если интересует «хотя бы k» успехов, складывают вероятности для k, k+1, …, n; удобный приём — «не менее одного» = 1 − P(0). При больших n биномиальное распределение приближается к нормальному (когда np и n(1−p) велики).</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Забывают множитель C(n, k) и считают только pᵏ·(1−p)ⁿ⁻ᵏ — это вероятность одной конкретной последовательности, а не «ровно k».</li>
 <li>Применяют формулу при зависимых испытаниях или меняющейся p (например, выбор без возвращения — там гипергеометрическое распределение).</li>
 <li>Путают «ровно k» и «не менее k»: для последнего нужна сумма вероятностей.</li>

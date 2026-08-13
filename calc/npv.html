@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -91,7 +90,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Разбор примера</h4>
+<h3>Разбор примера</h3>
 <p>Проект требует <b>100 000 ₽</b> сразу и приносит по <b>45 000 ₽</b> в конце каждого из <b>3 лет</b>. Ставка дисконтирования <b>r = 10%</b>.</p>
 <p>Год 1: <code>45 000 / 1,1 = 40 909,1 ₽</code>.</p>
 <p>Год 2: <code>45 000 / 1,21 = 37 190,1 ₽</code>.</p>
@@ -105,7 +104,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>NPV — главный инструмент оценки инвестпроектов, покупки оборудования, выбора между арендой и покупкой. Правило простое: <code>NPV > 0</code> — берём, <code>NPV < 0</code> — отказываемся, из нескольких проектов выбираем наибольший NPV. Ставка <code>r</code> отражает стоимость капитала или доходность лучшей альтернативы.</p>
 
 <div class="mistakes">
-<h4>Частые ошибки</h4>
+<h3>Частые ошибки</h3>
 <ul>
 <li>Не дисконтируют первый поток или дисконтируют вложения года 0 (их делить не нужно — это уже сегодняшние деньги).</li>
 <li>Берут ставку в процентах (10) вместо доли (0,10).</li>

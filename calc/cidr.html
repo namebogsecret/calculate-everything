@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -98,7 +97,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 </ol>
 
 <div class="example">
-<h4>Пример</h4>
+<h3>Пример</h3>
 <p>Подсеть <code>192.168.1.0/24</code>.</p>
 <p>Бит под хосты: 32 − 24 = 8. Всего адресов: 2⁸ = 256.</p>
 <p>Доступных хостов: 256 − 2 = <b>254</b>.</p>
@@ -109,7 +108,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <p>CIDR используют при проектировании корпоративных и домашних сетей, настройке маршрутизаторов и firewall, разбиении больших сетей на подсети (subnetting), составлении ACL и при работе с облачными VPC (AWS, GCP, Azure). Понимание масок необходимо любому сетевому инженеру и DevOps.</p>
 
 <div class="mistakes">
-<h4>Осторожно</h4>
+<h3>Осторожно</h3>
 <ul>
 <li>Назначают устройству адрес сети (<code>.0</code>) или broadcast (<code>.255</code>) — они зарезервированы.</li>
 <li>Забывают, что меньший префикс — это бо́льшая сеть: /16 крупнее /24.</li>

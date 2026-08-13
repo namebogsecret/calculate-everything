@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -90,7 +89,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Чтобы получить перцентиль, найдите Φ(z) — площадь под нормальной кривой слева от z (по таблице или калькулятору).</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Тест с μ = 70 и σ = 10. Студент набрал x = 85. Какова его z-оценка и перцентиль?</p>
 <p><b>Отклонение:</b> x − μ = 85 − 70 = 15.</p>
 <p><b>Z-оценка:</b> z = 15 / 10 = <b>1.5</b>. То есть результат на полтора стандартных отклонения выше среднего.</p>
@@ -101,7 +100,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется / интерпретация</h2>
 <p>Z-оценки лежат в основе стандартизированных тестов, контроля качества (правило «трёх сигм»: значение с |z| &gt; 3 — почти наверняка брак), обнаружения выбросов и сравнения разнородных шкал. Если ваш z по математике равен 1.2, а по физике 0.4 — относительно своих групп математика у вас сильнее, хотя «сырые» баллы могут быть любыми. Перцентиль через Φ(z) работает строго только если распределение близко к нормальному.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Делят на дисперсию <code>σ²</code> вместо стандартного отклонения <code>σ</code>.</li>
 <li>Путают знак: положительный z — выше среднего, отрицательный — ниже.</li>
 <li>Считают перцентиль через Φ(z) для явно ненормальных данных (скошенных, с тяжёлыми хвостами).</li>

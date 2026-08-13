@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -92,7 +91,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Проверьте корни по теореме Виета: <code>x₁ + x₂ = −b/a</code>, <code>x₁ · x₂ = c/a</code>.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Решим <span class="eq">2x² − 7x + 3 = 0</span>. Здесь <code>a = 2</code>, <code>b = −7</code>, <code>c = 3</code>.</p>
 <p>Дискриминант: <span class="eq">D = (−7)² − 4·2·3 = 49 − 24 = 25</span>. Значит <code>√D = 5</code>.</p>
 <p>Корни: <span class="eq">x₁ = (7 + 5) / 4 = 12/4 = 3</span> и <span class="eq">x₂ = (7 − 5) / 4 = 2/4 = 0.5</span>.</p>
@@ -102,7 +101,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется</h2>
 <p>Квадратные уравнения — это база школьной алгебры (ОГЭ задание 9 и 20, ЕГЭ профиль) и фундамент для физики (высота брошенного тела, время полёта), экономики (точка безубыточности) и геометрии. В IB Mathematics и AP Precalculus та же формула называется the quadratic formula, а дискриминант — discriminant. Без неё не обойтись при поиске вершины параболы и решении систем.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Теряют знак <code>b</code>: в формуле стоит <code>−b</code>, а при <code>b = −7</code> это <code>+7</code>, а не <code>−7</code>.</li>
 <li>Делят только числитель на <code>2a</code>, забыв, что <code>(2a)</code> в знаменателе у всего выражения <code>−b ± √D</code>.</li>
 <li>Считают, что при <code>D &lt; 0</code> корней «один» — действительных нет вовсе.</li>

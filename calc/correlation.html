@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -91,7 +90,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Поделите числитель на знаменатель — получите r; возведите в квадрат для r².</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Данные: x = (1, 2, 3, 4, 5), y = (2, 4, 5, 4, 5).</p>
 <p><b>Средние:</b> x̄ = 15/5 = 3, ȳ = 20/5 = 4.</p>
 <p><b>Отклонения x:</b> −2, −1, 0, 1, 2. <b>Отклонения y:</b> −2, 0, 1, 0, 1.</p>
@@ -105,7 +104,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется / интерпретация</h2>
 <p>Корреляция используется в экономике, медицине, психологии, машинном обучении (отбор признаков). Ориентиры по модулю r: до 0.3 — слабая связь, 0.3–0.7 — умеренная, выше 0.7 — сильная. Главное правило: <b>корреляция не означает причинность</b>. Высокое r может быть следствием третьего, скрытого фактора (мороженое и утопления оба растут летом — связаны, но не причина друг друга). Пирсон ловит только линейную связь: для параболической зависимости r может быть около 0 при очевидной связи.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Делают вывод о причине из корреляции — нужен эксперимент или контроль конфаундеров.</li>
 <li>Применяют Пирсона к явно нелинейной связи и заключают «связи нет».</li>
 <li>Не замечают, что один выброс способен резко исказить r.</li>

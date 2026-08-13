@@ -7,7 +7,7 @@
 - Экспресс-тест «прогноз оценки за 2 минуты» (77 экзаменов — ЕГЭ, ОГЭ, ДВИ, IB, AP, A-level, IGCSE, SAT, олимпиады): https://exam.podlevskikh.com — самооценка по разделам экзамена, покрытие программы, прогноз оценки и темы с наибольшим приростом баллов.
 
 ## [Школа и экзамены](https://calculators.podlevskikh.com/cat/school.html)
-- [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calc.podlevskikh.com/): Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.
+- [Куда поступить по баллам ЕГЭ (University Admission by Score)](https://calc.podlevskikh.com/postuplenie/): Баллы ЕГЭ и поступление — открыть калькулятор на calc.podlevskikh.com.
 - [Перевод первичных баллов ЕГЭ в тестовые (EGE Raw-to-Scaled Score)](https://calc.podlevskikh.com/): Перевод первичных баллов ЕГЭ в тестовые — открыть на calc.podlevskikh.com.
 - [ОГЭ: балл в оценку (OGE Score to Grade)](https://calc.podlevskikh.com/): Перевод первичного балла ОГЭ в оценку — открыть на calc.podlevskikh.com.
 - [Средний балл аттестата (GPA / Average Grade)](https://calculators.podlevskikh.com/calc/average-grade.html): Среднее арифметическое оценок — для аттестата, медали, «красного» диплома.

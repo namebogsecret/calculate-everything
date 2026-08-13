@@ -26,7 +26,6 @@ window.addEventListener("unhandledrejection",function(ev){var r=ev.reason;p({typ
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/app.css">
   <script src="/js/app.js"></script>
-  <script src="/js/calculators/data-vuz.js"></script>
   <script src="/js/calculators/data-rates.js"></script>
   <script src="/js/calculators/chemistry.js"></script>
   <script src="/js/calculators/construction.js"></script>
@@ -91,7 +90,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <li>Сокращайте дроби заранее, чтобы не считать огромные факториалы целиком.</li>
 </ol>
 
-<div class="example"><h4>Разбор примера</h4>
+<div class="example"><h3>Разбор примера</h3>
 <p>Из 7 человек выбираем команду из 3. Сколько способов, если порядок не важен?</p>
 <p><span class="eq">C(7, 3) = 7! / (3! · 4!) = (7 · 6 · 5) / (3 · 2 · 1) = 210 / 6 = 35</span>.</p>
 <p>А если порядок важен (например, распределяем 3 разные роли)?</p>
@@ -101,7 +100,7 @@ window.addEventListener("load",function(){try{window.goatcounter=window.goatcoun
 <h2>Где применяется</h2>
 <p>Комбинаторика — основа теории вероятностей: число благоприятных исходов часто считается через <code>C(n, r)</code>. В ЕГЭ это задание 4 (вероятность) и комбинаторные задачи; в IB Mathematics — binomial coefficients и треугольник Паскаля; в AP Statistics — биномиальное распределение. Применяется в лотереях, криптографии, планировании и спортивных турнирах.</p>
 
-<div class="mistakes"><h4>Частые ошибки</h4><ul>
+<div class="mistakes"><h3>Частые ошибки</h3><ul>
 <li>Путают сочетания и размещения: «выбрать команду» — сочетания, «распределить призовые места» — размещения.</li>
 <li>Считают <code>0! = 0</code> — на самом деле <code>0! = 1</code>.</li>
 <li>Вычисляют гигантские факториалы целиком вместо сокращения дроби.</li>
