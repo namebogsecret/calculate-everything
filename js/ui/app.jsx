@@ -142,7 +142,21 @@ function FormulaChip({html}){ if(!html) return null; return <div className="form
    HTML лежит в window.CE_ARTICLES[id] — загружается на страницах /calc/*.html
    (js/articles/*.js). На лёгкой главной статьи не подключены → компонент молча
    ничего не рисует, как и было; полный разбор живёт на странице калькулятора. */
-function Article({id}){ const html=(window.CE_ARTICLES||{})[id]; if(!html) return null;
+function Article({id}){
+  const [, force] = useState(0);
+  const html=(window.CE_ARTICLES||{})[id];
+  /* Страница грузит только СВОЙ файл разборов (иначе это 360 КБ на каждой из 98
+     страниц ради одной статьи). Если внутри SPA перешли к калькулятору другого
+     раздела — догружаем его файл по индексу js/articles/_index.js и перерисовываемся. */
+  useEffect(()=>{
+    if(html) return;
+    const file=(window.CE_ARTICLE_FILES||{})[id];
+    if(!file || !window.CE || !CE.loadScript) return;
+    let alive=true;
+    CE.loadScript(`/js/articles/${file}.js`).then(()=>{ if(alive) force(n=>n+1); }).catch(()=>{});
+    return ()=>{ alive=false; };
+  }, [id, html]);
+  if(!html) return null;
   return <article className="app-article" dangerouslySetInnerHTML={{__html:html}}/>; }
 
 /* ---------- монетизация: воронка на репетиторство + футер ---------- */

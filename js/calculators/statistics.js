@@ -55,8 +55,12 @@
             { label: 'Мода', text: mx > 1 ? mode.join(', ') : 'нет (все уникальны)' },
             { label: 'Минимум / Максимум', text: `${F(sorted[0])} / ${F(sorted[n - 1])}` },
             { label: 'Размах', value: sorted[n - 1] - sorted[0] },
-            { label: 'Дисперсия (выборочная s²)', value: varS },
-            { label: 'СКО выборочное (s)', value: Math.sqrt(varS), primary: true },
+            // при n = 1 выборочная дисперсия не определена (делитель n−1 = 0): показываем
+            // причину текстом, а не «NaN» (единственное число — законный ввод)
+            n > 1 ? { label: 'Дисперсия (выборочная s²)', value: varS }
+                  : { label: 'Дисперсия (выборочная s²)', text: '— нужно минимум 2 значения' },
+            n > 1 ? { label: 'СКО выборочное (s)', value: Math.sqrt(varS), primary: true }
+                  : { label: 'СКО выборочное (s)', text: '— нужно минимум 2 значения' },
             { label: 'СКО генеральное (σ)', value: Math.sqrt(varP) },
           ],
           formula: 'mean = Σx⁄n,&nbsp; s² = Σ(x−mean)² ⁄ (n−1)',
