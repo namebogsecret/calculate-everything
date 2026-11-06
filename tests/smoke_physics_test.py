@@ -101,6 +101,8 @@ def main():
             page.wait_for_timeout(300)
             cta = [u for u in outbound if "stats.podlevskikh.com/count" in u and "cta-to-tutor" in parse_qs(urlparse(u).query).get("p", [""])[0]]
             check(len(cta) >= 1, "клик по tutor → stats.podlevskikh.com/count?p=…/cta-to-tutor")
+            own = [u for u in outbound if "stats.podlevskikh.com/count" in u and parse_qs(urlparse(u).query).get("p", [""])[0] == "127.0.0.1:%d/cta-to-tutor-physics-test" % int(base.rsplit(":", 1)[1])]
+            check(len(own) == 1 and "e=true" in own[0], "клик по #pt-tutor → отдельный beacon /cta-to-tutor-physics-test (e=true)")
             check(not errors, "0 JS-ошибок в консоли (десктоп): %s" % errors)
             check(page.evaluate("document.documentElement.scrollWidth <= document.documentElement.clientWidth"), "нет горизонтального скролла (1000px, итог)")
             ctx.close()
@@ -135,6 +137,19 @@ def main():
             btn = page.locator("#pt-tutor").bounding_box()
             check(btn is not None and btn["x"] >= 0 and btn["x"] + btn["width"] <= 320, "320px: кнопка репетитора в пределах экрана")
             check(not errors, "0 JS-ошибок (320px): %s" % errors)
+            ctx.close()
+
+            # --- 3b. двойной клик по варианту не пропускает следующий вопрос ---
+            ctx, page, errors = run(browser, base, 1000, [])
+            page.goto(base + "/physics-test/index.html", wait_until="load")
+            page.click("#pt-start")
+            page.locator(".pt-opt").nth(0).dblclick()
+            page.wait_for_timeout(200)
+            check("Вопрос 2 из 10" in page.inner_text(".pt-step"), "dblclick: после двойного клика показан вопрос 2, а не 3")
+            page.locator(".pt-opt").nth(0).dblclick()
+            page.wait_for_timeout(200)
+            check("Вопрос 3 из 10" in page.inner_text(".pt-step"), "dblclick: второй двойной клик → вопрос 3")
+            check(not errors, "0 JS-ошибок (dblclick): %s" % errors)
             ctx.close()
 
             # --- 4. «Пройти ещё раз» ---

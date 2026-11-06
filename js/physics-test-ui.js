@@ -22,12 +22,13 @@
   }
 
   /* Событие прохождения: тот же счётчик, что и у кликов, без персональных данных. */
-  function countDone(level) {
+  function beacon(path) {
     try {
-      var u = 'https://stats.podlevskikh.com/count?p=' + encodeURIComponent(location.host + '/physics-test-done') + '&e=true';
+      var u = 'https://stats.podlevskikh.com/count?p=' + encodeURIComponent(location.host + path) + '&e=true';
       if (navigator.sendBeacon) navigator.sendBeacon(u); else (new Image()).src = u;
     } catch (e) {}
   }
+  function countDone() { beacon('/physics-test-done'); }
 
   function focusHeading() {
     var h = root.querySelector('[data-focus]');
@@ -54,7 +55,10 @@
     var opts = el('div', { class: 'pt-opts' });
     qu.options.forEach(function (text, i) {
       var b = el('button', { class: 'pt-opt', type: 'button', 'data-i': String(i), text: text });
-      b.addEventListener('click', function () { answers[current] = i; current++; current < total ? showQuestion() : showResult(); });
+      b.addEventListener('click', function (ev) {
+        // второй клик двойного тапа попал бы уже на следующий вопрос и пропустил бы его
+        if (ev.detail > 1) return;
+        answers[current] = i; current++; current < total ? showQuestion() : showResult(); });
       opts.appendChild(b);
     });
     root.appendChild(el('div', { class: 'pt-q' },
@@ -128,6 +132,8 @@
           el('p', { class: 'pt-creds', text: 'Владимир, преподаватель физики и математики онлайн: МГУ, IB/AP/SAT, Praxis 200/200.' })),
         el('a', { class: 'tutor-cta-btn', id: 'pt-tutor', href: T.tutorUrl(r.level), target: '_blank', rel: 'noopener', text: 'Как я разбираю такие темы →' })));
     root.appendChild(cta);
+    // отдельная метрика именно этого теста (общий /cta-to-tutor считает и футеры всех страниц)
+    cta.querySelector('#pt-tutor').addEventListener('click', function () { beacon('/cta-to-tutor-physics-test'); });
 
     var again = el('button', { class: 'btn pt-again', type: 'button', id: 'pt-again', text: 'Пройти ещё раз' });
     again.addEventListener('click', start);
