@@ -251,7 +251,7 @@ function TutorCTA({cat}){
   return (
     <section className="app-cta">
       <div className="cta-h">Готовлю к ЕГЭ / IB / SAT по физике и математике — первая консультация бесплатно</div>
-      <p>Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p>
+      <p>Я — Владимир, преподаю физику и математику 23 года (МГУ, IB/AP/SAT, Praxis 200/200). Разберём вашу задачу на бесплатной 20-минутной консультации.</p>
       <div className="cta-btns">
         <a className="cta-btn primary" href="https://tutor.podlevskikh.com?utm_source=calculators&utm_medium=cta" target="_blank" rel="noopener">🎓 Сайт репетитора</a>
         <a className="cta-btn" href="https://calendly.com/vladimir-podlevskikh/30min" target="_blank" rel="noopener">📅 Записаться</a>
@@ -265,7 +265,7 @@ function AppFooter(){
   return (
     <footer className="app-foot">
       <p>Calculate Everything · формула и пошаговое решение к каждому расчёту.</p>
-      <p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 20+ лет.</p>
+      <p>Физику и математику ведёт <a href="https://t.me/VladimirPodlevskikh" target="_blank" rel="noopener">Владимир</a> — МГУ, IB/AP/SAT, 23 года.</p>
       <p>Готовишься к экзаменам? <a href="https://calc.podlevskikh.com/" target="_blank" rel="noopener">Калькулятор баллов ЕГЭ и ОГЭ ↗</a></p>
       <p className="foot-dom"><a href="https://calculators.podlevskikh.com/">calculators.podlevskikh.com</a></p>
     </footer>

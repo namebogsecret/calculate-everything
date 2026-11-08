@@ -313,7 +313,7 @@ function CE_boot() {
       el('div', { class: 'cta-inner' },
         el('h2', null, 'Застряли в ' + c.title.toLowerCase() + '?'),
         el('p', null,
-          'Я — Владимир, преподаю физику и математику 20+ лет (МГУ, IB/AP/SAT, Praxis 200/200). ' +
+          'Я — Владимир, преподаю физику и математику 23 года (МГУ, IB/AP/SAT, Praxis 200/200). ' +
           'Разберём вашу задачу на бесплатной 20-минутной консультации.'),
         el('div', { class: 'cta-btns' },
           el('a', { class: 'btn primary', href: 'https://tutor.podlevskikh.com', target: '_blank', rel: 'noopener' }, '🎓 Мой сайт репетитора'),
