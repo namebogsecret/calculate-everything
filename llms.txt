@@ -27,6 +27,7 @@
 - [Давление (Pressure)](https://calculators.podlevskikh.com/calc/pressure.html): P = F / A. Заполните любые два.
 - [Волна: скорость · частота · длина (Wave Equation)](https://calculators.podlevskikh.com/calc/wave.html): v = f · λ. Заполните любые два.
 - [Тонкая линза (Thin Lens)](https://calculators.podlevskikh.com/calc/thin-lens.html): 1/f = 1/d₀ + 1/dᵢ.
+- [Уровень по физике за 5 минут (тест)](https://calculators.podlevskikh.com/physics-test/): 10 вопросов по механике, электричеству, оптике, термодинамике и колебаниям — уровень, результат по темам и разбор ошибок.
 
 ## [Математика](https://calculators.podlevskikh.com/cat/math.html)
 - [Квадратное уравнение (Quadratic Equation)](https://calculators.podlevskikh.com/calc/quadratic.html): ax² + bx + c = 0 — корни и дискриминант.
