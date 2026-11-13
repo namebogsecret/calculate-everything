@@ -57,6 +57,8 @@
       compute(v) {
         if (Number.isNaN(v.a) || Number.isNaN(v.b)) return { note: 'Введите оба числа.' };
         if (v.mode === 'of') return { outputs: [{ label: `${F(v.a)}% от ${F(v.b)}`, value: v.a / 100 * v.b, primary: true }], formula: 'X⁄100 · Y' };
+        if (v.mode === 'is' && v.b === 0) return { error: 'Y не может быть 0 — доля от нуля не определена.' };
+        if (v.mode === 'chg' && v.a === 0) return { error: 'Изменение в % от нуля не определено: Y₁ должно быть ненулевым.' };
         if (v.mode === 'is') return { outputs: [{ label: `${F(v.a)} от ${F(v.b)}`, value: v.a / v.b * 100, unit: '%', primary: true }], formula: 'X⁄Y · 100%' };
         const chg = (v.b - v.a) / v.a * 100;
         return { outputs: [{ label: 'Изменение', value: chg, unit: '%', primary: true }], formula: '(Y₂ − Y₁)⁄Y₁ · 100%', note: chg >= 0 ? 'Рост.' : 'Снижение.' };
@@ -154,7 +156,8 @@
       inputs: [{ key: 'a', label: 'Число a' }, { key: 'b', label: 'Число b' }],
       compute(v) {
         if (Number.isNaN(v.a) || Number.isNaN(v.b)) return { note: 'Введите два целых числа.' };
-        let a = Math.abs(Math.round(v.a)), b = Math.abs(Math.round(v.b));
+        if (!Number.isInteger(v.a) || !Number.isInteger(v.b)) return { error: 'НОД и НОК определены для целых чисел — введите целые a и b.' };
+        let a = Math.abs(v.a), b = Math.abs(v.b);
         if (a === 0 && b === 0) return { error: 'Хотя бы одно число должно быть ненулевым.' };
         const A = a, B = b;
         while (b) { [a, b] = [b, a % b]; }
@@ -247,7 +250,9 @@
       compute(v) {
         if (Number.isNaN(v.x) || Number.isNaN(v.n)) return { note: 'Введите x и n.' };
         const out = [{ label: `x^n`, value: Math.pow(v.x, v.n), primary: true }];
-        if (v.x >= 0) out.push({ label: `корень n-й степени из x`, value: Math.pow(v.x, 1 / v.n) });
+        if (v.n === 0) { /* корень нулевой степени не определён */ }
+        else if (v.x >= 0) out.push({ label: `корень n-й степени из x`, value: Math.pow(v.x, 1 / v.n) });
+        else if (Number.isInteger(v.n) && Math.abs(v.n) % 2 === 1) out.push({ label: `корень n-й степени из x (нечётная n)`, value: -Math.pow(-v.x, 1 / v.n) });
         return { outputs: out, formula: 'xⁿ&nbsp;&nbsp;|&nbsp;&nbsp;ⁿ√x = x^(1⁄n)' };
       },
       explain: '<p>Возведение в степень и обратная операция — корень: <code>ⁿ√x = x^(1/n)</code>.</p>',

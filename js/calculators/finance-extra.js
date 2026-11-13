@@ -10,7 +10,7 @@
       inputs: [
         { key: 'gross', label: 'Зарплата до налога (gross)', unit: '₽', default: 100000 },
         { key: 'period', label: 'Период', options: [{ value: 'month', label: 'в месяц' }, { value: 'year', label: 'в год' }], default: 'month' },
-        { key: 'scale', label: 'Шкала налога', options: [{ value: '2025', label: 'Прогрессивная шкала 2025' }, { value: 'flat13', label: 'Плоские 13%' }], default: '2025' },
+        { key: 'scale', label: 'Шкала налога', options: [{ value: '2025', label: 'Прогрессивная шкала (с 2025, в 2026 — та же)' }, { value: 'flat13', label: 'Плоские 13%' }], default: '2025' },
       ],
       compute(v) {
         if (Number.isNaN(v.gross) || v.gross < 0) return { note: 'Введите зарплату до налога.' };

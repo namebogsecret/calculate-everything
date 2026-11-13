@@ -1,6 +1,15 @@
 /* Химия — расширяет предметное ядро (мост в воронку репетиторства). */
 (function () {
   const F = (x, d) => window.CE.fmt(x, d);
+  // малые концентрации: 1e-4 → «1·10⁻⁴» (раньше F(x,2) округлял до «0»)
+  const SUP = { '-': '⁻', '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹' };
+  const sci = (x) => {
+    if (!(x > 0) || !isFinite(x)) return F(x);
+    if (x >= 0.001 && x < 1e4) return F(x, 4);
+    const e = Math.floor(Math.log10(x)); let m = x / Math.pow(10, e);
+    m = Math.round(m * 100) / 100;
+    return (m === 1 ? '' : F(m, 2) + '·') + '10' + String(e).split('').map(c => SUP[c]).join('');
+  };
 
   // Атомные массы (г/моль) ~60 распространённых элементов (IUPAC, округлённые).
   const ATOM = {
@@ -163,8 +172,8 @@
           outputs: [
             { label: 'pH', value: pH, digits: 2, primary: true },
             { label: 'Среда', text: env },
-            { label: '[H⁺]', text: F(h, h < 0.001 ? 2 : 4) + ' моль/л' },
-            { label: '[OH⁻]', text: F(oh, oh < 0.001 ? 2 : 4) + ' моль/л' },
+            { label: '[H⁺]', text: sci(h) + ' моль/л' },
+            { label: '[OH⁻]', text: sci(oh) + ' моль/л' },
             { label: 'pOH', value: pOH, digits: 2 },
           ],
           formula: 'pH = &minus;log&#8321;&#8320;[H⁺],&nbsp; pH + pOH = 14',
@@ -206,7 +215,7 @@
         { key: 'T', label: 'Температура T', unit: 'К', default: 273.15 },
       ],
       compute(v) {
-        const R = 8.314; // Дж/(моль·К)
+        const R = 8.314462618; // Дж/(моль·К), CODATA (в подписях округлено до 8.314)
         const need = ['P', 'V', 'n', 'T'].filter(k => k !== v.solve);
         if (need.some(k => Number.isNaN(v[k]))) return { note: 'Заполните три известных поля.' };
         // переводим во внутренние СИ-единицы для известных

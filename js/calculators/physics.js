@@ -99,13 +99,24 @@
       ],
       compute(v) {
         if ([v.v0, v.a, v.t].some(Number.isNaN)) return { note: 'Введите v₀, a и t.' };
+        if (v.t < 0) return { error: 'Время t не может быть отрицательным.' };
         const vt = v.v0 + v.a * v.t;
         const s = v.v0 * v.t + 0.5 * v.a * v.t * v.t;
+        // Путь ≠ перемещение, если скорость меняет знак внутри [0, t] (тело развернулось)
+        const tStop = v.a !== 0 ? -v.v0 / v.a : NaN;
+        let path = Math.abs(s);
+        if (tStop > 0 && tStop < v.t) {
+          const sStop = v.v0 * tStop + 0.5 * v.a * tStop * tStop;
+          path = Math.abs(sStop) + Math.abs(s - sStop);
+        }
+        const outs = [
+          { label: 'Конечная скорость v', value: vt, unit: 'м/с', primary: true },
+          { label: 'Перемещение s (проекция на ось)', value: s, unit: 'м' },
+        ];
+        if (Math.abs(path - Math.abs(s)) > 1e-9 * Math.max(1, path)) outs.push({ label: `Пройденный путь (разворот при t = ${F(tStop)} с)`, value: path, unit: 'м' });
+        else outs.push({ label: 'Пройденный путь', value: path, unit: 'м' });
         return {
-          outputs: [
-            { label: 'Конечная скорость v', value: vt, unit: 'м/с', primary: true },
-            { label: 'Пройденный путь s', value: s, unit: 'м' },
-          ],
+          outputs: outs,
           formula: 'v = v₀ + a·t&nbsp;&nbsp;|&nbsp;&nbsp;s = v₀·t + a·t²⁄2',
           steps: [
             `v = ${F(v.v0)} + ${F(v.a)}·${F(v.t)} = ${F(vt)} м/с`,
@@ -161,9 +172,13 @@
       ],
       compute(v) {
         if ([v.v0, v.ang, v.g].some(Number.isNaN)) return { note: 'Введите v₀ и угол.' };
+        if (v.v0 < 0) return { error: 'Скорость v₀ — модуль, она не может быть отрицательной.' };
+        if (v.ang < 0 || v.ang > 90) return { error: 'Угол к горизонту — от 0° до 90°.' };
+        if (v.g <= 0) return { error: 'Ускорение g должно быть больше нуля.' };
         const r = v.ang * Math.PI / 180;
         const T = 2 * v.v0 * Math.sin(r) / v.g;
-        const R = v.v0 * v.v0 * Math.sin(2 * r) / v.g;
+        let R = v.v0 * v.v0 * Math.sin(2 * r) / v.g;
+        if (Math.abs(R) < 1e-9 * (v.v0 * v.v0 / v.g + 1)) R = 0; // sin(180°) в плавающей точке ≈ 1e-16
         const H = (v.v0 * Math.sin(r)) ** 2 / (2 * v.g);
         return {
           outputs: [

@@ -113,8 +113,9 @@
           const p = normCdf(z(hi)) - normCdf(z(lo));
           return { outputs: [{ label: `P(${F(lo)} < X < ${F(hi)})`, value: p, digits: 4, primary: true }, { label: 'в процентах', value: p * 100, unit: '%', digits: 2 }], formula: 'P = Φ((b−μ)⁄σ) − Φ((a−μ)⁄σ)' };
         }
-        const pLess = normCdf(z(v.a));
-        return { outputs: [{ label: `P(X < ${F(v.a)})`, value: pLess, digits: 4, primary: true }, { label: `P(X > ${F(v.a)})`, value: 1 - pLess, digits: 4, primary: true }], formula: 'P(X<x) = Φ((x−μ)⁄σ)' };
+        const x = haveA ? v.a : v.b; // задана одна граница — любая из двух
+        const pLess = normCdf(z(x));
+        return { outputs: [{ label: `P(X < ${F(x)})`, value: pLess, digits: 4, primary: true }, { label: `P(X > ${F(x)})`, value: 1 - pLess, digits: 4, primary: true }], formula: 'P(X<x) = Φ((x−μ)⁄σ)' };
       },
       explain: '<p>Φ — функция распределения стандартной нормали. Вероятность попадания в интервал — разность значений Φ на границах. Используется приближение erf (погрешность &lt;1e−4).</p>',
       faq: [
@@ -148,7 +149,7 @@
             { label: 'Верхняя граница', value: v.mean + moe, digits: 4, primary: true },
           ],
           formula: 'CI = mean ± z · σ⁄√n',
-          note: `Истинное среднее с вероятностью ${F(v.conf)}% лежит в [${F(v.mean - moe, 3)}; ${F(v.mean + moe, 3)}].`,
+          note: `Истинное среднее с вероятностью ${F(v.conf)}% лежит в [${F(v.mean - moe, 3)}; ${F(v.mean + moe, 3)}].` + (v.n < 30 ? ' При n < 30 и σ, оценённом по выборке (s), точнее t-интервал Стьюдента — он шире (например, при n = 25 и 95%: t ≈ 2,064 вместо z ≈ 1,960).' : ''),
         };
       },
       explain: '<p>Доверительный интервал оценивает диапазон, в котором находится истинное среднее. Использует z-интервал (нормальное приближение) — подходит при большом n или известном σ. Погрешность <code>±z·σ/√n</code> уменьшается с ростом выборки.</p>',
