@@ -29,8 +29,22 @@
   // Парсер химической формулы с поддержкой скобок и множителей.
   // Возвращает { counts: {El:n,...} } или { error: 'текст' }.
   function parseFormula(str) {
-    const s = String(str || '').replace(/\s+/g, '');
-    if (!s) return { error: 'Введите формулу, например H2O.' };
+    const full = String(str || '').replace(/\s+/g, '');
+    if (!full) return { error: 'Введите формулу, например H2O.' };
+    // Кристаллогидраты: CuSO4·5H2O, CuSO4*5H2O, CuSO4.5H2O — части через «·», «*», «.» или «•»
+    const parts = full.split(/[·*•.\u22C5]/);
+    if (parts.length > 1) {
+      const total = {};
+      for (const part of parts) {
+        const m = part.match(/^(\d*)(.*)$/);
+        const k = m[1] === '' ? 1 : parseInt(m[1], 10);
+        const r = parseFormula(m[2]);
+        if (r.error) return r;
+        for (const el in r.counts) total[el] = (total[el] || 0) + r.counts[el] * k;
+      }
+      return { counts: total };
+    }
+    const s = full;
     let i = 0;
     function parseGroup() {
       const counts = {};

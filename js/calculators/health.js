@@ -200,7 +200,8 @@
         let agePart;
         if (diff < 0) agePart = 'дата ещё не наступила';
         else { const w = Math.floor(diff / 7), d = diff % 7; agePart = `${w} нед ${d} дн`; }
-        const tri = diff < 0 ? '—' : diff < 14 * 7 ? '1-й триместр' : diff < 28 * 7 ? '2-й триместр' : '3-й триместр';
+        if (diff > 300) agePart = 'ПДР уже прошла — проверьте дату';
+        const tri = diff < 0 || diff > 300 ? '—' : diff < 14 * 7 ? '1-й триместр' : diff < 28 * 7 ? '2-й триместр' : '3-й триместр';
         return {
           outputs: [
             { label: 'Предполагаемая дата родов', text: fmtDate(due), primary: true },
